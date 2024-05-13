@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/* 
+선택자의 종류
+1. 요소(태그, 타입)
+2. 그룹: ,
+3. 클래스 선택자: .이름
+*/
+div {
+    width: 1200px;
+    /* 콘텐츠를 가로 가운데 배치 */
+    margin: 0 auto;
+}
+.div1 {
+    background: yellow;
+    height: 100px;
+}
+.div2 {
+    background: tomato;
+    height: 300px;
+}
+.div3 {
+    background: orange;
+    height: 200px;
+}
+.div4 {
+    background: chocolate;
+    height: 100px;
+}

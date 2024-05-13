@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/* 
+선택자의 종류
+1. 요소(타입, 태그) 선택자
+2. 그룹 선택자:  ,
+ */
+/* div의 배경색을 노랑으로 지정 */
+/* only number 0 can come with no px */
+body {
+    margin: 0;
+}
+h1, p, div, a, span {
+    background: yellow;
+}

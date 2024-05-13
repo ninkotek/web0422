@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+/* <link> 태그로 연결하여 사용한다 */
+p {
+    font-size: 32px;
+}
+
