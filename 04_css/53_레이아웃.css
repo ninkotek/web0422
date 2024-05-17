@@ -102,6 +102,43 @@ w1200 tap -> width:1200px;
     float: left;
 }
 
-.container4 {    
+.container4{    
+    width: 1200px;
+    margin: 0 auto;    
+}
+.container4 .section {
     display: flex;
 }
+.container4 .header {
+    width: 200px;
+    height: 850px;
+    background: red;
+}
+.container4 .contents {
+    width: 1000px;
+}
+.container4 .slide {
+    background: yellow ;   
+    height: 400px;
+}
+.container4 .banner {
+    background: green ;    
+    height: 200px;
+}
+.container4 .notice {
+    background: burlywood ;    
+    height: 250px;
+}
+.container4 .footer {
+    background: tomato ;  
+    height: 100px
+}
+
+/* 레이아웃 유형3 : 가로 + 세로 */
+/* 사용한 class명: .container1~3, .boxSize, .div1~7, .header, .contents, .section, .footer , df -> display:flex;
+1. 요소(태그, 타입)
+2. 클래스
+3. 하위(자손): 같은 이름을 중복 해서 사용할 수 있다. 부모요소 자손요소 예> .container4 .section
+예> .container4 .notice
+4. 자식: 부모요소 > 자식요소(손자 사용 못함)
+*/
