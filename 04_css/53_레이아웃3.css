@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+.wrap {
+    display: flex;
+}
+.header {
+    width: 200px;
+    background: #999;
+}
+.right_wrap {
+    width: 1000px;
+}
+.slide {
+    background: #eee;
+    height: 400px;
+}
+.banner {
+    background: #ccc;
+    height: 200px;
+}
+.notice {
+    background: #aaa;
+    height: 250px;
+}

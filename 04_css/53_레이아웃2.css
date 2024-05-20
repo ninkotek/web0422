@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+
+
+.contents {
+    display: flex;
+    width: 1200px;
+}
+.contents div {
+    width: 400px;
+    height: 200px;
+}
+
+.tabs {
+    background: #eee;
+}
+
+.banner {
+    background: #ccc;
+}
+
+.shortcut {
+    background: #aaa;
+}

@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #eee;
+    height: 100px;
+}
+
+.s1 {
+    background: #ccc;
+    height: 300px;
+}
+
+.s2 {
+    background: #aaa;
+    height: 200px;
+}
+
+.footer {
+    background: #111;
+    height: 100px;
+}

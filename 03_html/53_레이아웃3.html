@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>layout flex 3</title>
-    <link rel="stylesheet" href="../04_css/53_레이아웃.css">
+    <link rel="stylesheet" href="../04_css/53_레이아웃3.css">
 </head>
 <body>
     <!-- 부모 요소 -->
-    <div class="container4">
-        <!-- 자식 요소 -->
-        <div class="header">헤더</div>
-        <div class="contents">
-            <div class="box1">box1</div>
-            <div class="box2">box2</div>
-            <div class="box3">box3</div>            
-        </div>
-        <div class="foot"></div>
-        
+    
+        <!-- 자식 요소 display:flex;에 영향을 받지 않는다-->
+        <div class="wrap">
+            <div class="header">헤더</div>
+            <div class="right_wrap">
+                <div class="slide">슬라이드</div>
+                <div class="banner">배너</div>
+                <div class="notice">공지사항</div>
+            </div>        
     </div>
 </body>
 </html>

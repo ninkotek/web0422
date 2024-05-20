@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>레이아웃2 flex</title>
-    <link rel="stylesheet" href="../04_css/53_레이아웃.css">
+    <link rel="stylesheet" href="../04_css/53_레이아웃2.css">
 </head>
 <body>
     <!-- 가로 400px 세로 200px -->
-    <!-- 부모요소: div.container4
-         자식요소: div.boxSize -->
+    <!-- 부모요소: contents -> display: flex; -> flex container
+         자식요소: tabs, banner, shortcut -> flex item--> 
   
     <div class="container4">
         <!-- css 우선순위
@@ -34,9 +34,11 @@
             5. flex-shrink
             6. flex-basis  
         -->
-        <div class="boxSize div5">박스1</div>
-        <div class="boxSize div6">박스2</div>
-        <div class="boxSize div7">박스3</div>
+        <div class="contents">
+            <div class="tabs">공지사항/갤러리</div>
+            <div class="banner">배너</div>
+            <div class="shortcut">바로가기</div>
+        </div>
         
     </div>
  
