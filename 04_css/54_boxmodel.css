@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* 
+box model:
+width: auto;-> 100%, 내용크기
+height: auto; -> 내용 크기
+border: 테두리
+border-style: 실선|점선|대시선; 선종류
+border-width: 선굵기
+border-color: 선색
+padding: 패딩 -> 내부 콘텐츠 사이 간격, 가로/세로 가운데 배치 가능, 좌우만 적용
+margin: 여백, 상하좌우 적용
+box-sizing: border-box;
+박스의 겉보기 크기: width -> border와 padding이 박스 안쪽으로 지정, border와 padding 크기 합이 width 절반 크기보다 작게 지정해야 한다.
+box-sizing: content-box; -> 기본값
+박스의 겉보기 크기: width + border + padding
+
+*/
+body {
+    margin: 0;
+}
+div {
+    background: yellow;
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    padding: 50px;
+    margin: 100px;
+    box-sizing: border-box;
+     
+
+}
+
+
+span {
+    background: yellowgreen;
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    padding: 50px;
+    margin: 100px;
+  
+}

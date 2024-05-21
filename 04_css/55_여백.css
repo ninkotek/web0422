@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+/* 
+여백
+margin: 값1 값2 값3 값4; -> 상1 우2 하3 좌4
+margin: 값1 값2 값3 -> 상1 좌우2 하3
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+padding: 마진과 동일하다
+
+*/
+body {
+    margin: 0px;
+}
+/* margin은 8의 배수가 좋다
+    위아래 여백은 큰 값으로 지정된다. 좌우 여백은 양쪽 다 적용된다
+    */
+.wrap {
+    display: flex;
+    margin: 0 auto;
+    width: 1100px;
+}
+
+.wrap div {
+    
+    width: 340px;
+    height: 620px;
+    background: yellow;
+   
+}
+/*
+.box1 {
+    margin: 0px 20px 0 0;
+}
+.box2 {
+    margin: 0 20px;
+}
+.box3 {
+    margin: 0 0 0 20px;
+}
+*/
+.box1 {
+    margin-right: 20px;
+}
+.box2 {
+    margin-right: 20px; margin-left:20px;
+}
+.box3 {
+    margin-left: 20px;
+}
