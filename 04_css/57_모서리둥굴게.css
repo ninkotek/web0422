@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+div {
+    width: 150px;
+    height: 150px;
+    border: 1px solid red;
+    margin: 20px;
+}
+
+div:nth-of-type(1) {
+    border-radius: 20px;
+}
+
+div:nth-of-type(2) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 40px;
+}
+div:nth-of-type(3) {
+    /* 상단왼쪽, 하단오른쪽 10px */
+    /* 상단오른쪽, 하단왼쪽 20px */
+    border-radius: 10px 20px;
+}
+div:nth-of-type(4) {
+    /* 상단왼쪽 10px
+    하단오른쪽 30px
+    상단오른쪽 하단왼쪽 20px*/
+    border-radius: 10px 20px 30px;
+}
+div:nth-of-type(5) {
+    border-radius: 10px 20px 30px 40px;
+}
+div:nth-of-type(6) {
+    border-radius: 50px;
+    /* 부모크기에 50% */
+    border-radius: 50%;
+}
+div:nth-of-type(7) {
+    width: 75px;
+    border-radius: 75px 0 0 75px;
+}
+div:nth-of-type(8) {
+    width: 75px;
+    height: 75px;
+    border-radius: 75px 0 0 0;
+}
