@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <link rel="stylesheet" href="디자인구성요소설계_강유식.css">
+    <style>
+        
+/* body */
+body {
+    width: 1200;
+    list-style: none;
+    margin: 0;
+
+}
+/* wrapper */
+.wrap {
+    display: flex;
+}
+/* header */
+header {
+    width: 196px;
+    height: 850px;
+    margin-right: 4px;
+    background: #bbb;
+}
+/* content area */
+.content .cont1 {
+    width: 1000px;
+    height: 396px;
+    margin-bottom: 4px;
+    background: #ccc;
+}
+
+.content .cont2 {
+    width: 1000px;
+    height: 200px;
+    margin-bottom: 4px;
+    background: #ddd;
+}
+
+.cont3 ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+}
+
+.cont3 ul li {
+    margin-bottom: 4px;
+    background: #eee;
+}
+
+.cont3 .sub1 {
+    background: #bbb;
+    width: 496px;
+    height: 246px;
+    margin-right: 4px;
+}
+
+.cont3 .sub2 {
+    background: #bbb;
+    width: 500px;
+    height: 246px;
+}
+/* footer */
+footer {
+    width: 1200px;
+    display: flex;
+}
+
+.footer .logo {
+    width: 196px;
+    height: 100px;
+    margin-right: 4px;
+    background: #000;
+}
+
+.footer .copy {
+    width: 796px;
+    height: 100px;
+    margin-right: 4px;
+    background: #000;
+}
+
+.footer .sns {
+    width: 200px;
+    height: 100px;
+    background: #000;
+}
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header></header>
+        <div class="content">
+            <div class="cont1"></div>
+            <div class="cont2"></div>
+            <div class="cont3">
+                <ul>
+                    <li class="sub1"></li>
+                    <li class="sub2"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="logo"></div>
+        <div class="copy"></div>
+        <div class="sns"></div>
+    </footer>
+</body>
+
+</html>
