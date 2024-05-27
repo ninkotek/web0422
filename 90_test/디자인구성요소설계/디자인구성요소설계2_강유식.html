@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Architects</title>
+    <link rel="stylesheet" href="디자인구성요소설계2_강유식.css">
+    <style>
+        /* web font */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+        @font-face {
+            font-family: 'NanumSquareNeo';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+        }
+
+        /* 공통사항 */
+        * {
+            list-style: none;
+        }
+
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: "NanumSquareNeo", sans-serif;
+            font-size: 24px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* header */
+        .wrap {
+            width: 1488px;
+            margin: 0 auto;
+        }
+
+        header {
+            height: 56px;
+            line-height: 56px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #bbb;
+        }
+
+        .logo {
+            padding-left: 36px;
+        }
+
+        nav {
+            padding-right: 36px;
+        }
+
+        .navi li {
+            display: inline-block;
+            padding-left: 36px;
+        }
+
+        /* section br architects */
+        .br-image {
+            height: 745px;
+            background: #ccc;
+        }
+
+        .br-image h2 {
+            text-align: center;
+            line-height: 745px;
+        }
+
+        /* Projects */
+        .projects {
+            height: 536px;
+        }
+
+        .projects h2 {
+            padding: 16px 0;
+            margin: 10px 0;
+            border-bottom: 1px solid #000;
+        }
+
+        .images ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .images ul li {
+            background: #ccc;
+            width: 360px;
+            height: 232px;
+            margin-right: 12px;
+            margin-bottom: 8px;
+            line-height: 232px;
+            text-align: center;
+        }
+
+        .products {
+            padding-left: 0;
+        }
+
+        /* About */
+
+        .about h2 {
+            border-bottom: 1px solid #000;
+            padding: 16px 0;
+            margin: 10px 0;
+
+        }
+
+        .about p {
+            font-size: 15px;
+        }
+
+        .uCard {
+            display: flex;
+            padding-left: 0;
+        }
+
+        .uCard li img {
+            width: 360px;
+            height: 240px;
+            margin-right: 10px;
+            background: #ddd;
+        }
+
+        .uCard .cont {
+            border: 1px solid #000;
+            width: 328px;
+            height: 24px;
+            text-align: center;
+            padding: 8px 16px;
+
+        }
+
+        /* contact */
+        .contact h2 {
+            font-size: 24px;
+            padding: 16px 0;
+            margin: 10px 0;
+            border-bottom: 1px solid #000;
+        }
+
+        .contact p {
+            font-size: 15px;
+        }
+
+        .small {
+            width: 1488px;
+            height: 280px;
+            margin-bottom: 36px;
+            background: #eee;
+        }
+
+        .big {
+            height: 845px;
+            width: 1488px;
+            background: #bbb;
+        }
+
+        /* footer */
+        footer {
+            background: #ccc;
+            height: 85px;
+        }
+
+        footer p {
+            font-size: 15px;
+            line-height: 85px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><a href="#">BR Architects</a></div>
+        <nav>
+            <ul class="navi">
+                <li>Projects</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="br-image">
+                <h2>BR Architects</h2>
+            </section>
+            <section class="projects">
+                <h2>Projects</h2>
+                <div class="images">
+                    <ul class="products">
+                        <li>Product1</li>
+                        <li>Product2</li>
+                        <li>Product3</li>
+                        <li>Product4</li>
+                        <li>Product5</li>
+                        <li>Product6</li>
+                        <li>Product7</li>
+                        <li>Product8</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="about">
+                <h2>About</h2>
+                <div class="charDesc">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos repudiandae ad deleniti
+                        laboriosam error nihil doloribus commodi voluptas voluptates provident aut unde assumenda
+                        suscipit eaque mollitia velit quas doloremque, et, adipisci atque quidem autem cum porro. Illo
+                        totam necessitatibus magni saepe quibusdam. Cupiditate eum tenetur iusto, repudiandae ipsa nam
+                        error perspiciatis id eos iure tempore facere, officiis quia minima, quos consectetur </p>
+                </div>
+                <div class="wrap-uCard">
+                    <ul class="uCard">
+                        <li>
+                            <img src="#" alt="">
+                            <h3>John Doe</h3>
+                            <div>CEO & Founder</div>
+                            <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, a!</p>
+                            <p class="cont">Contact</p>
+                        </li>
+                        <li>
+                            <img src="#" alt="">
+                            <h3>Jane Doe</h3>
+                            <div>Achitect</div>
+                            <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, a!</p>
+                            <p class="cont">Contact</p>
+                        </li>
+                        <li>
+                            <img src="#" alt="">
+                            <h3>Mike Ross</h3>
+                            <div>Achitect</div>
+                            <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, a!</p>
+                            <p class="cont">Contact</p>
+                        </li>
+                        <li>
+                            <img src="#" alt="">
+                            <h3>Dan Star</h3>
+                            <div>Achitect</div>
+                            <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, a!</p>
+                            <p class="cont">Contact</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+            <section class="contact">
+                <h2>Contact</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur</p>
+                <div class="btImage">
+                    <div class="small"></div>
+                    <div class="big"></div>
+                </div>
+            </section>
+    </main>
+    </div>
+    <footer>
+        <p>Copyright 2024 BR Architects. All rights reserved.</p>
+    </footer>
+
+
+
+</body>
+
+</html>
