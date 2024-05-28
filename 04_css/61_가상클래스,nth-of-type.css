@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/* :first-of-type
+            :last-of-type(1)
+            :nth-last-of-type()
+        */
+/* 자식 선택자:nth-of-type() -> type을 구분하지 않는다
+        자식 선택자:nth-child(n)->type(태그, 요소)을 구분*/
+/* 첫 번째 자식요소 p */
+/* p의 부모 즉, div의 자식 요소 중 첫 번째 p요소를 선택하여 글자색을 빨강으로 지정한다. */
+p:nth-of-type(1) {
+    color: blue;
+}
+
+h3:nth-child(5) {
+    color: red;
+}
+
+p:first-of-type {
+    color: yellow;
+}
+
+p:first-of-type {
+    color: blueviolet;
+}
+
+p:last-of-type {
+    color: lightpink;
+}
+
+h2:first-child {
+    color: tomato;
+}
+
+p:nth-of-type(2n) {
+    font-style: italic;
+}
+
+p:nth-child(2n+1) {
+    font-weight: bold;
+}

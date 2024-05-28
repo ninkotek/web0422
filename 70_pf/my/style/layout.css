@@ -29,11 +29,25 @@ nav li {
     display: inline-block;
     
 }
+
 nav section {
     display: flex;
     justify-content: flex-end;
     /* align-items: center; */
     /* height 100px이 같이 사용되야 함 section에 높이 지정필수 */
+}
+nav ul {
+    display: flex;
+}
+nav li:first-child::after {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 8px;
+    width: 6px;
+    height: 6px;
+    margin: 0 12px 4px;
+    background: #999;
 }
 header {
     /* height: 200px;    */
@@ -122,9 +136,7 @@ nav a {
 
 
 /* bg-color */
-nav {
-    background: #eee;
-}
+
 .home-icon {
     background: #eee;
 }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스 링크</title>   
+   <link rel="stylesheet" href="../04_css/60_가상클레스,링크.css">    
+
+</head>
+<body>
+    <h1>가상 클래스 선택자</h1>
+    <p>링크 관련하여 : link, :visited, :hover, :active가 있다.</p>
+    <p>가상 클래스는 :이름으로 쓴다.</p>
+    <p>링크 텍스트는 기본 스타일이 파란색 밑줄이다.</p>
+    <a href="#">링크</a>
+
+    <!--  a {color: blue; text-decoration: underline;} -->
+    <!--  
+    psudo class selector
+    마우스 이벤트(event)
+    a: link -> a tag only applied 방문전 
+    a: visited -> a tag only applied 방문후
+    선택자:hover -> 마우스 올렸을 때
+    선택자:active; -> 마우스 눌렀을 때
+
+    링크를 방문전 (클릭하기전)
+    4가지 상황을 사용하려면 아래 순으로 코딩한다
+     
+    a { font-size: 40px;}
+    a:link {color: blue;}
+    a링크를 방문후 (클릭후) 글자색 red이다 
+    a:visited {color: red;}
+    a링크에 마우스를 올리면 skyblue 
+    a:hover {color: yellow;}
+    a링크를 마우스로 누루고 있으면 색상이 orange이다 
+    a:active {color: black;} /* 
+        psudo class selector
+        마우스 이벤트(event)
+        a: link -> a tag only applied 방문전 
+        a: visited -> a tag only applied 방문후
+        선택자:hover -> 마우스 올렸을 때
+        선택자:active; -> 마우스 눌렀을 때
+
+        링크를 방문전 (클릭하기전)
+        4가지 상황을 사용하려면 아래 순으로 코딩한다
+         
+        a { font-size: 40px;}
+        a:link {color: blue;}
+        a링크를 방문후 (클릭후) 글자색 red이다 
+        a:visited {color: red;}
+        a링크에 마우스를 올리면 skyblue 
+        a:hover {color: yellow;}
+        a링크를 마우스로 누루고 있으면 색상이 orange이다 
+        a:active {color: black;}
+        */
+    -->
+</body>
+</html>

@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+a {
+    font-size: 50px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+    background-color: yellow;
+}
