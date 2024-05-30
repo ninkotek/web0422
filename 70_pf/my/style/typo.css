@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/* 전체 선택자 
+*/
+
+
+
+
+/* 
+color
+font 
+font-family: 글꼴
+font-size: 크기
+font-style: italic
+font-weight: 굵기 100~900
+text-align: 글자 맞춤
+line-height: 줄간격, 단위 생략 가능
+
+style guide
+nav, h1~h3: Georgia
+p, section a: Arial
+한글 제목: Noto Sans KR
+한글 본문: Noto Sans KR
+
+단위: rem, em, px, %
+
+font-size:
+h1 50px 700(font-weight), lh60px, 
+h2 30px 700, lh36px
+h3 22.5px 700 lh33.75px
+h3 span: 22.5px 지정안함 regular 400 lh33.75px
+Nav a: 20px, line-height: 100px
+Section a 15px
+body (p, read me)15px lh22.5px = 1.5 -> 150~200% 가독성이 좋다
+
+글자의 속성은 상속 받는다.
+*/
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font: 1.5rem/1.5 Arial, Helvetica, sans-serif;  
+
+}
+
+h1,
+h2,
+h3,
+nav a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+h1 {
+    font-size: 50px;
+    color: #fff;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.25rem;
+}
+
+h3 span {
+    font-weight: 400;
+}
+
+a {
+    color: #444;
+    text-decoration: underline;
+}
+nav a {
+    font-size: 2rem;
+    color: #444;
+    text-decoration: none;
+}
+
+

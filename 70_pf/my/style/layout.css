@@ -1,33 +1,19 @@
 @charset "utf-8";
+@import url(reset.css);
+@import url(typo.css);
 
-/* 전체 선택자 
-*/
-
-
-/* RESET */
-
-body, ul, h1, h2 {
-    margin: 0;
-}
-ul {
-    padding: 0;
-    list-style: none;
-  
-}
-
-
-a {text-decoration: none;}
 
 /* layout */
 /* 박스모델 속성, display, position */
 nav {
-   
+
     height: 100px;
     line-height: 100px;
 }
+
 nav li {
     display: inline-block;
-    
+
 }
 
 nav section {
@@ -36,9 +22,11 @@ nav section {
     /* align-items: center; */
     /* height 100px이 같이 사용되야 함 section에 높이 지정필수 */
 }
+
 nav ul {
     display: flex;
 }
+
 nav li:first-child::after {
     content: "";
     display: inline-block;
@@ -49,14 +37,17 @@ nav li:first-child::after {
     margin: 0 12px 4px;
     background: #999;
 }
+
 header {
     /* height: 200px;    */
-    line-height: 200px;   
+    line-height: 200px;
 }
+
 h2 {
     margin: 56px 0;
 }
-section { 
+
+section {
     width: 940px;
     margin: 0 auto;
 }
@@ -64,86 +55,25 @@ section {
 .home-card {
     display: flex;
     justify-content: space-between;
+
 }
+
 .home-icon {
     width: 100px;
     height: 100px;
 }
+
 .home-description {
     width: 790px;
-    height: 140px;
 }
+
 /* header */
-header {    
+header {
     /* 패렐렉스 스크롤링 기법 background-attachement: fixed; */
-    background: url(../assets/bg-light.png) no-repeat 50% 50%/cover fixed;    
+    background: url(../assets/bg-light.png) no-repeat 50% 50%/cover fixed;
 }
+
 /* section */
 /* footer */
 
 /* 
-color
-font 
-font-family: 글꼴
-font-size: 크기
-font-style: italic
-font-weight: 굵기 100~900
-text-align: 글자 맞춤
-line-height: 줄간격, 단위 생략 가능
-
-style guide
-nav, h1~h3: Georgia
-p, section a: Arial
-한글 제목: Noto Sans KR
-한글 본문: Noto Sans KR
-
-단위: rem, em, px, %
-
-font-size:
-h1 50px 700(font-weight), lh60px, 
-h2 30px 700, lh36px
-h3 22.5px 700 lh33.75px
-h3 span: 22.5px 지정안함 regular 400 lh33.75px
-Nav a: 20px, line-height: 100px
-Section a 15px
-body (p, read me)15px lh22.5px = 1.5 -> 150~200% 가독성이 좋다
-
-글자의 속성은 상속 받는다.
-*/
-
-
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-}
-h1, h2, h3, nav a {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-}
-h1 {
-    font-size: 50px;
-    color: #fff;
-   
-}
-h2 {
-    font-size: 30px;
-}
-h3 {
-    font-size: 22.5px;
-}
-nav a {
-    font-size: 20px;
-    color: #444;
-}
-
-
-
-/* bg-color */
-
-.home-icon {
-    background: #eee;
-}
-.home-description {
-    background: #ccc;
-}
