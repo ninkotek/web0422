@@ -68,12 +68,13 @@ section {
 .home-card {
     display: flex;
     justify-content: space-between;
-
 }
 
 .home-icon {
     width: 100px;
     height: 100px;
+    background: #ccc;
+    border-radius: 8px;
    
 }
 
