@@ -22,7 +22,7 @@
             
         }
         .gnb {
-            border: 1px solid;
+            background: #111;
         }
         /* 1depth */
         .main {
@@ -51,13 +51,16 @@
             transition: 1s;
             line-height: 2;
         }
-       
-        .main>li:hover .sub {
+       /* 선택자가 변경되어서 .main>li 유형1->.main li 유형2로 됨 */
+        .main:hover .sub {
             height: 150px;
             visibility: visible;
             opacity: 1;
         }
-        .sub li:hover {
+        .sub li a {
+            padding: 4px 16px;
+        }
+        .sub li:hover a {
             background: #111;
         }
 

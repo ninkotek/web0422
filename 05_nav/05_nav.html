@@ -11,55 +11,71 @@
         body {
             outline: 1px solid lime;
         }
-        header {
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-start;
-            border: 1px solid;
-            width: 1200px;
-            margin: 0 auto;
-            height: 100px;
+        header {           
             
+            width: 200px;           
+            height: 650px;
+            border: 1px solid;
         }
         .gnb {
-            border: 1px solid;
+            margin: 16px;            
+        
         }
         /* 1depth */
-        .main {
-            display: flex;
-        }
+    
         .main>li {
-            width: 160px;
-            height: 30px;
-            text-align: center;
-            line-height: 30px;
-        }
-        .main>li:hover {
+          
+            padding: 8px 0;
             background: #333;
+            border-bottom: 1px solid #111;
+            text-align: center;
         }
-
+     
 
         /* 2depth */
         .sub {
-            height: 0;
+         
             overflow: hidden;
             visibility: hidden;
-            opacity: 0;
-            padding: 10px 0 20px;
-            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;          
+            background: #777;
             border: 1px solid red;
             transition: 1s;
             line-height: 2;
+          
         }
-       
+       /* 선택자가 변경되어서 .main>li 유형1->.main li 유형2로 됨 */
         .main>li:hover .sub {
-            height: 150px;
+            
             visibility: visible;
             opacity: 1;
         }
+    
         .sub li:hover {
             background: #111;
         }
+    /* 유형 5 추가 코드 */
+    .main>li {
+    position: relative;
+}
+.sub {
+    z-index: -1;
+    position:absolute;
+    top: -10px;
+    left:100px;
+    width: 120px;
+}
+
+.main li:hover .sub {
+    z-index: 1;
+    left:160px;
+}
+.sub li {
+    border-bottom: 1px solid #fff;
+}
+.sub li:last-child {
+    border-bottom: none;
+}
 
     </style>
 </head>

@@ -22,7 +22,8 @@
             
         }
         .gnb {
-            border: 1px solid;
+            margin-top: 20px;            
+            background: #111;
         }
         /* 1depth */
         .main {
@@ -46,21 +47,49 @@
             visibility: hidden;
             opacity: 0;
             padding: 10px 0 20px;
-            background: rgba(0, 0, 0, 0.5);
+       
             border: 1px solid red;
             transition: 1s;
             line-height: 2;
         }
-       
-        .main>li:hover .sub {
+       /* 선택자가 변경되어서 .main>li 유형1->.main li 유형2로 됨 */
+        .main:hover .sub {
             height: 150px;
             visibility: visible;
             opacity: 1;
         }
-        .sub li:hover {
+        .sub li a {
+            padding: 4px 16px;
+        }
+        .sub li:hover a {
             background: #111;
         }
+.gnb {
+  position: relative;
 
+}
+.main {
+  border: 1px solid;
+  height: 30px;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 30px;
+  right: 0;
+  visibility: hidden;
+  width: 1200px;
+  height: 0px;
+  opacity:0;
+  transition: .3s;
+  background: rgba(0, 0, 0, 0.5);
+}
+.main:hover::before {
+  visibility: visible;
+  height: 150px;
+  opacity: 1;
+}
     </style>
 </head>
 <body>
