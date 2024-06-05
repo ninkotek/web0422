@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        * {
+            list-style: none;
+            padding: 0;
+        }
+        body {
+            width: 100%;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+        a {
+            text-decoration: none;
+            display: block;
+        }
+        .main {
+            display: flex;
+            position: relative;
+        }
+        .main>li>a {
+            width: 160px;
+            height: 50px;
+            line-height: 40px;
+            text-align: center;
+            background: #bbb;
+           
+        }
+        .sub>li>a {
+            line-height: 30px;
+            text-align: center;
+        }
+        .main>li:hover >a {
+            background: #010101;
+            color: #fff;
+        }
+        .sub {
+            visibility:hidden ;
+            opacity: 0;
+            height: 0;
+            transition: 0.7s;
+            background: #ddd;
+
+        }
+        .main:hover .sub {
+            visibility: visible;
+            opacity: 1;
+            height: 120px;
+        }
+        .sub>li:hover >a {
+            background: #ff6347;
+            color: #fff;
+        } 
+        .main::before {
+            position: absolute;
+
+            width: 100%;
+            z-index: -1;
+            visibility: hidden;
+            transition: 0.7s;
+            height: 0;
+            background: #eee;
+
+        }
+        .main:hover:: {
+            visibility: visible;
+            height: 300px;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="gnb">
+            <ul class="main">
+                <li>
+                    <a href="#">축제소개</a>
+                    <ul class="sub">
+                        <li><a href="#">Festival 소개</a></li>
+                        <li><a href="#">행사장 안내</a></li>
+                        <li><a href="#">조직위원회</a></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">예약안내</a>
+                    <ul class="sub">
+                       <li><a href="#">예약하기</a></li>
+                       <li><a href="#">예약확인/취소</a></li>
+                       <li><a href="#">단체예약문의</a></li>
+                     
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">아티스트</a>
+                    <ul class="sub">
+                        <li><a href="#">고릴라즈</a></li>
+                        <li><a href="#">메이저 레이저</a></li>
+                        <li><a href="#">아우스게인</a></li>
+                        <li><a href="#">타임로드</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">커뮤너티</a>
+                    <ul class="sub">
+                        <li><a href="#">공지사항</a></li>
+                       <li><a href="#">사진갤러리</a></li>
+                       <li><a href="#">영상갤러리</a></li>
+                    
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
