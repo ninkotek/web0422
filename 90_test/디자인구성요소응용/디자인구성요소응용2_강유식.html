@@ -1,82 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   
+    <title>네비게이션_강유식</title>
+
     <style>
-         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
         * {
             list-style: none;
             padding: 0;
         }
+
         body {
             width: 100%;
             font-family: "Noto Sans KR", sans-serif;
+            font-size: 15px;
         }
+
         a {
             text-decoration: none;
             display: block;
         }
+
+        header {
+            margin-top: 100px;
+        }
+
         .main {
+
             display: flex;
+            justify-content: center;
             position: relative;
         }
+
         .main>li>a {
             width: 160px;
             height: 50px;
-            line-height: 40px;
+            line-height: 50px;
             text-align: center;
             background: #bbb;
-           
+
         }
+
         .sub>li>a {
             line-height: 30px;
             text-align: center;
         }
-        .main>li:hover >a {
+
+        .main>li:hover>a {
             background: #010101;
             color: #fff;
+            font-weight: 500;
         }
+
         .sub {
-            visibility:hidden ;
+            visibility: hidden;
             opacity: 0;
             height: 0;
             transition: 0.7s;
-            background: #ddd;
+            background: rgb(0, 0, 0, 0.5);
+
 
         }
+
         .main:hover .sub {
             visibility: visible;
             opacity: 1;
             height: 120px;
         }
-        .sub>li:hover >a {
+
+        .sub>li:hover>a {
             background: #ff6347;
             color: #fff;
-        } 
-        .main::before {
-            position: absolute;
+        }
 
-            width: 100%;
+        .main::before {
             z-index: -1;
+            position: absolute;
+            content: "";
+            width: 100%;
             visibility: hidden;
-            transition: 0.7s;
             height: 0;
+            transition: 0.7s;
             background: #eee;
 
         }
-        .main:hover:: {
+
+        .main:hover::before {
             visibility: visible;
             height: 300px;
 
         }
-
-
-
     </style>
 </head>
+
 <body>
     <header>
         <nav class="gnb">
@@ -87,16 +107,16 @@
                         <li><a href="#">Festival 소개</a></li>
                         <li><a href="#">행사장 안내</a></li>
                         <li><a href="#">조직위원회</a></li>
-                        
+
                     </ul>
                 </li>
                 <li>
                     <a href="#">예약안내</a>
                     <ul class="sub">
-                       <li><a href="#">예약하기</a></li>
-                       <li><a href="#">예약확인/취소</a></li>
-                       <li><a href="#">단체예약문의</a></li>
-                     
+                        <li><a href="#">예약하기</a></li>
+                        <li><a href="#">예약확인/취소</a></li>
+                        <li><a href="#">단체예약문의</a></li>
+
                     </ul>
                 </li>
                 <li>
@@ -112,13 +132,15 @@
                     <a href="#">커뮤너티</a>
                     <ul class="sub">
                         <li><a href="#">공지사항</a></li>
-                       <li><a href="#">사진갤러리</a></li>
-                       <li><a href="#">영상갤러리</a></li>
-                    
+                        <li><a href="#">사진갤러리</a></li>
+                        <li><a href="#">영상갤러리</a></li>
+
                     </ul>
                 </li>
             </ul>
+            </div>
         </nav>
     </header>
 </body>
+
 </html>
