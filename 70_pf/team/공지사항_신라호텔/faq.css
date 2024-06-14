@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+
+* {
+    padding: 0;
+    list-style: none;
+}
+body {
+    width: 1920PX;
+    margin: 0 auto;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*  FAQ 배경 이미지 */
+.bg-image {
+    position: relative;
+}
+.bg-image img {    
+    width: 1920px;
+    height: 800px;     
+    overflow: hidden;    
+}
+.bg-image span {
+    display: block;
+    position: absolute;
+    font-size: 46px;
+    font-weight: 600;   
+    width: 600px;
+    height: 80px;
+    text-align: center;
+    background: #f6e9ca;
+    margin-left: 660px;
+    margin-top: 260px;
+}
+.bg-image::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    margin-left: 220px;
+    width: 1480px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.7);
+    display: block;
+}
+
+/* two tabs */
+.tabs {
+    width: 1400px;
+    display: flex;
+    padding: 2px;  
+    height: 850px;     
+    position: relative;
+    background: #f6e9ca;
+    margin-left: 260px;
+}
+
+.tab-common>label {
+    background: #2d2d2d;
+    color: #fff;
+    font-size: 32px;   
+    display: block;
+    width: 700px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    margin-top: -86px;
+    cursor: pointer;
+}
+.tab-common>input {
+    display: none;
+}
+.tab-common>div {
+    display: none;
+    position: absolute;     
+}
+.tab-common>input:checked + label {
+    background: #856f56;
+    color: #fff;
+
+}
+.tab-common> input:checked + label + .contents {
+    display: block;
+}
+.tab-common> input:checked + label + .inquiry-contents {
+    display: block;
+}
+
+.tab-menu {    
+    width: 1400px;
+    margin: 0 auto;
+}
+.tab-menu>ul {
+    display: flex;  
+    position: relative; 
+    
+}
+.tab-menu>ul>li {
+    width: 700px;
+    height: 120px;
+    line-height: 120px;
+    background: #2d2d2d;    
+    text-align: center;
+    border-bottom: none;
+    margin-top: -140px;   
+}
+.tab-menu>UL>li>a {
+    display: block;
+    font-size: 32px;
+    text-align: center;  
+    color: #fff; 
+    border: 1px solid #dddd;
+}
+.tab-menu>ul>li:hover >a {
+    background-color: #856f56;
+}
+
+h2 {
+    text-align: center;
+}
+.notice-announce {
+    width: 1400px;
+    font-size: 32px;
+    text-align: center;
+    border-bottom: double;
+    padding-bottom: 40px;
+    margin-top: 40px;   
+}
+/* table 내용 */
+.table-notice {
+    width: 1400px;
+    margin-top: 40px;
+}
+.table-head>tr>th {
+    background-color: #fff;
+}
+.table-head tr {
+    height: 40px;
+   
+}
+.table-data>td:nth-of-type(2) {
+    text-align: left;
+   
+}
+.table-data td {
+    border-bottom: 1px solid #ccc;
+}
+.table-notice th, .table-notice td {
+    padding: 10px;
+    text-align: center;
+    height: 30px;
+    font-size: 24px;
+}
+.table-notice th {
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+.tab-menu>ul>li:nth-child(2){
+    background-color: #fff;
+}
+
+/* 페이지 */
+.pagination {
+    width: 1400px;
+    text-align: center;
+    margin-top: 30px;    
+}
+.pagination span {
+    padding: 0 20px;
+    font-size: 24px;
+}
+
+/* 문의사항  contents*/
+
+.inquiry-contents {
+    position: absolute;
+    left: 0;   
+ }   
+
+ .inquiry-contents>p {
+    width: 1400px;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+ }
+ /* form 입력 */
+ form {
+    width: 800px;   
+    margin-left: 400px;
+    margin-top: 60px;   
+
+ }
+ form div label {
+    width: 200px;
+    display: block;
+ }
+form select {
+    width: 200px;
+    height: 34px;
+    margin-bottom: 10px;   
+}
+form textarea {
+    width: 600px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+form div input {
+    width: 400px;
+    height: 30px;
+    margin-bottom: 10px;   
+}
+.email-box {
+    width: 190px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.checkbox {
+    width: 20px;
+    height: 20px;  
+}
+
+/* 등록 버튼 */
+.btn {
+    width: 180px;   
+    margin-left: 600px;
+    margin-top: 30px;
+    display: flex;      
+ }
+
+ .btn button {
+    display: block;
+    width: 180px;
+    height: 30px;
+    line-height: 30px;
+    background: #2d2d2d;
+    color: #fff;
+    font-weight: bold;
+ }
