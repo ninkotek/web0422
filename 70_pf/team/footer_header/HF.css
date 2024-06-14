@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap');
+
+/* reset */
+* {box-sizing: border-box;}
+
+:root {font-size: 12px;}
+
+body,ul {margin: 0 auto;}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+a {
+    margin: 0;
+    text-decoration: none;
+    color: #4A433B;
+    font: 400 16px "Noto Sans KR",sans-serif;
+}
+
+/* //reset */
+
+/* header */
+header {
+    z-index: 3;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    background: #F6E9CA;
+    width: 100%;
+    height: 120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+header>div {
+    width: 1903px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header>div>h1 {
+    position: absolute;
+    left: 56px;
+    top: 10px
+}
+
+header>div>h1 a {
+    font: 400 20px "Asul",sans-serif;
+}
+
+/* .Rtop 1depth*/
+.Rtop {
+    width: 1903px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #4A433B;
+}
+
+.top {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top>li {
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.top>li a {
+    font: 400 14px "Noto Sans KR",sans-serif;
+}
+
+.top>li:hover a {
+    font: 500 14px "Noto Sans KR",sans-serif;
+    color: #101010;
+}
+
+/* .main 1depth */
+.main {
+    width: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main>li {
+    width: 180px;
+    height: 76px;
+    line-height: 76px;
+    text-align: center;
+}
+
+.main>li:hover {
+    border-bottom: 5px solid #856F56;
+}
+
+.main>li a {
+    font-size: 18px;
+}
+
+.main>li:hover a {
+    font: 700 20px #101010;
+}
+
+/* .sub 2depth */
+.sub {
+    height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px 0 10px;
+    background: #ffffff;
+    transition: .5s;
+    line-height: 4;
+}
+
+.main>li:hover .sub {
+    height: 210px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.main>li:nth-of-type(3):hover .sub {
+    height: 308px;
+}
+
+.sub li:hover {
+    background: #F6E9CA;
+}
+
+/* footer */
+footer {
+    z-index: 3;
+    background: #2d2d2d;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.centerbox {
+    width: 1903px;
+    position: relative;
+}
+
+.familysite {
+    height: 80px;
+    background: #6f6f6f;
+}
+
+.familysite>ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.familysite>ul ul {
+    display: flex;
+    line-height: center;
+}
+
+.familysite>ul>li:first-child li {
+    width: 260px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+
+.familysite>ul>li:first-child li a {
+    font: 400 24px "Asul",sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.familysite>ul>li:first-child li a:hover {
+    font: 400 24px "Asul",sans-serif;
+    color: #ffffff;
+}
+
+.familysite>ul>li:nth-child(2) li {
+    width: 72px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.familysite>ul>li:nth-child(2) a {
+    font: 400 14px "Noto Sans KR",sans-serif;
+    color: #ffffff;
+}
+
+footer>div>div:nth-of-type(2) {
+    /* width: 1920px; */
+    height: 300px;
+}
+
+.Ltext {
+    margin: 36px 56px;
+    line-height: 2;
+}
+
+.Ltext p {
+    color: #ffffff;
+    font: 300 15px "Noto Sans KR",sans-serif;
+    line-height: 1.5;
+}
+
+.Ltext a {
+    font: 400 20px "Asul",sans-serif;
+    color: #ffffff;
+    line-height: 2;
+    margin-right: 10px;
+}
+
+.Ltext>p:nth-child(1) {
+    font: 400 16px "Asul",sans-serif;
+    color: #ffffff;
+    line-height: 4;
+    margin-bottom: 12px;
+}
+
+.Ltext p:last-child {
+    margin-top: 12px;
+    line-height: 4;
+}
+
+.Rlist {
+    position: absolute;
+    top: 112px;
+    right: 56px;
+    display: flex;
+}
+
+.Rlist>ul {
+    margin-right: 20px;
+}
+
+.Linklist03 {
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    padding-left: 40px;
+    margin-left: 20px;
+}
+
+.Rlist li {
+    font: 200 16px "Noto Sans KR",sans-serif;
+    color: #ffffff;
+    line-height: 3;
+}
+
+.Rlist a {
+    font: 200 16px "Noto Sans KR",sans-serif;
+    color: #ffffff;
+}
+
+.Rlist a:hover {
+    text-decoration: underline;
+}
+
+.bottom {
+    height: 90px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.bottom>ul {
+    display: flex;
+    line-height: center;
+}
+
+.bottom li {
+    font: 200 15px "Noto Sans KR",sans-serif;
+    color: #ffffff;
+    width: 200px;
+    height: 90px;
+    line-height: 90px;
+    margin-left: 10px;
+    text-align: center;
+}

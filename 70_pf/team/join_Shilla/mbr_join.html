@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <link rel="stylesheet" href="mbr_join.css">
+</head>
+
+<body>
+
+  <div class="rwd-wrap"> <!-- reward 묶음 start-->
+    <h2>호텔신라 회원 혜택 미리보기</h2>
+    <p>
+      호텔신라 회원이 되시면 호텔 이용시 다양한 요금 할인 및 혜택이
+      제공됩니다. 지금 가입하시고 회원만의 다양한 혜택을 만나보세요.
+    </p>
+    <a href="#">자세히 보기</a>
+    <div class="rwd-icons">
+      <ul class="icons-list">
+        <li>
+          <a href="#"><img src="images/icon_bed.svg" alt="객실"></a>
+          <p>개실 시즌 패키지 10% 할인</p>
+        </li>
+        <li>
+          <a href="#"><img src="images/icon_restaurant.svg" alt="뷔페"></a>
+          <p>호텔 뷔페 10% 할인</p>
+        </li>
+        <li>
+          <a href="#"><img src="images/icon_swimming.svg" alt="수영장"></a>
+          <p>호텔 수영장 10% 할인</p>
+        </li>
+        <li>
+          <a href="#"><img src="images/icon_fitness.svg" alt="피트니스"></a>
+          <p>호텔 피트니스 클럽 10% 할인</p>
+        </li>
+        <li>
+          <a href="#"><img src="images/parking.svg" alt="주차"></a>
+          <p>호텔 주차료 10% 할인</p>
+        </li>
+      </ul>
+    </div>
+  </div> <!-- reward end-->
+  <div class="form-input">
+    <form action="join.jsp">
+      <p>입력필수</p>
+      <div class="form-data">
+        <label for="last_name" class="must-item">성명</label>
+        <input type="text" class="input-common input-boxName" id="last_name" name="성" placeholder="성을 입력해 주세요">
+        <input type="text" class="input-common input-boxName" id="first_name" name="이름" placeholder="이름을 입력해 주세요">
+      </div>
+      <div class="form-data">
+        <label for="user_num" class="must-item">연락처</label>
+        <input type="number" class="input-common input-box1" id="user_num" name="연락처" placeholder="번호만 입력해 주세요">
+      </div>
+      <div class="form-data">
+        <label for="user_pw" class="must-item">비밀번호</label>
+        <input type="password" class="input-common input-box1" id="user_pw" name="비밀번호" placeholder="비밀번호를 입력해 주세요">
+      </div>
+      <div class="form-data">
+        <label for="user_pw2nd" class="must-item">비밀번호 확인</label>
+        <input type="password" class="input-common input-box1" id="user_pw2nd" name="비밀번호 확인"
+          placeholder="비밀번호를 다시 입력해 주세요">
+      </div>
+      <div class="form-data form-email">
+        <div class="email-before">
+          <label for="user_email">이메일</label>
+          <input type="email" class="input-common input-email" id="user_email" name="이메일" placeholder="이메일 주소를 입력해 주세요">
+          <span class="at-mark">@</span>
+          <input type="email" class="input-common input-email">
+        </div>
+        <div class="email-after">
+          <select name="email" class="input-common" id="email-select">
+            <option value="">직접입력</option>
+            <option value="">gmail.com</option>
+            <option value="">naver.com</option>
+            <option value="">hotmail.com</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-data">
+        <label for="gender_male">성별</label>
+        <label for="gender_male">남</label>
+        <input type="radio" class="input-gender" id="gender_male" name="성별">
+        <label for="gender_female">여</label>
+        <input type="radio" class="input-gender" id="gender_female" name="성별">
+      </div>
+      <div class="form-data">
+        <label for="user_pvt">개인정보 활용동의</label>
+        <input type="checkbox" class="inputCheck" id="user_pvt" name="개인정보 활용동의">
+      </div>
+      <div class="form-textarea">
+        <label for="inquiry">문의내용</label>
+        <textarea name="문의사항" id="inquiry" placeholder="궁금하신 점이 있으시면 적어주세요"></textarea>
+      </div>
+      <div class="btn">
+        <button type="button" class="btn-submit">지금 가입</button>
+      </div>
+    </form> <!-- form end-->
+  </div> <!-- reward wrap end-->
+</body>
+
+</html>

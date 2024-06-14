@@ -1,0 +1,373 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jomolhari&display=swap');
+
+/* reset */
+* {box-sizing: border-box;}
+
+:root {font-size: 12px;}
+
+body,ul {margin: 0 auto;}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+a, p, h1, h2, h3 {
+    margin: 0;
+    text-decoration: none;
+    color: #4A433B;
+    font: 400 16px "Noto Sans KR",sans-serif;
+}
+
+/* //reset */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* section01 */
+/* banner01 */
+.banner01 {
+    position: relative;
+}
+
+/* banner text */
+.bannerText {
+    position: absolute;
+    bottom: 60px;
+    left: 260px;
+}
+
+.bannerText>div:first-child {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.bannerText p {
+    color: #ffffff;
+}
+
+.bannerText>div p:nth-of-type(1) {
+    display: inline-block;
+    border: 1px solid #ffffff;
+    padding: 8px 20px;
+    font: 400 16px "Noto Sans KR",sans-serif;
+}
+
+.bannerText>div p:nth-of-type(2) {
+    display: inline-block;
+    margin-left: 20px;
+    font: 600 22px "Noto Sans KR",sans-serif;
+}
+
+.bannerText h2 {
+    font: 400 32px "Jomolhari",sans-serif;
+    color: #ffffff;
+}
+
+/* banner image */
+.banner01>div:last-child {
+    width: 1903px;
+    height: 800px;
+    background: url(https://oceanflavorstarcandy.github.io/web0422//assets/team/index/section01/image1.png) no-repeat 50% 50%/100% 100%;
+}
+
+/* section02 */
+.SpecialOffers {
+    width: 1903px;
+    padding: 40px 280px;
+    margin: 40px 0;
+    position: relative;
+}
+
+.SpecialOffers>div:nth-of-type(1) {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 40px;
+}
+
+.SpecialOffers h2 {
+    font: 700 24px "Noto Sans KR",sans-serif;
+    color: #101010;
+    margin-right: 12px;
+}
+
+.SpecialOffers>div:nth-of-type(1) a {
+    color:#101010;
+    position: absolute;
+    right: 280px;
+    top: 52px;
+}
+
+.SpecialOffers>div:nth-of-type(2) {
+    width: 1440px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.offer {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+}
+
+.offer:nth-of-type(3) {
+    margin-right: 0;
+}
+
+.offer div {
+    width: 400px;
+    height: 225px;
+    margin-bottom: 20px;
+}
+
+.offer p {
+    color: #101010;
+    font: 400 16px "Noto Sans KR",sans-serif;
+    line-height: 3;
+}
+
+.offer h3 {
+    color: #856F56;
+    font: 500 22px "Noto Sans KR",sans-serif;
+    display: inline-block;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #6f6f6f;
+}
+
+.offer a {
+    color: #6f6f6f;
+    font: 400 20px "Noto Sans KR",sans-serif;
+    display: inline-block;
+    width: 400px;
+    border: 1px solid #6f6f6f;
+    text-align: center;
+    padding: 12px;
+    margin-top: 12px;
+}
+
+.offer a:hover {
+    color: #ffffff;
+    font: 600 20px "Noto Sans KR",sans-serif;
+    border: 1px solid #856F56;
+    background: #856F56;
+}
+
+/* offer image */
+.offerIMG01 {
+    background: url(https://oceanflavorstarcandy.github.io/web0422//assets/team/index/section02/offer01.jpg);
+}
+
+.offerIMG02 {
+    background: url(https://oceanflavorstarcandy.github.io/web0422//assets/team/index/section02/offer02.jpg);
+}
+
+.offerIMG03 {
+    background: url(https://oceanflavorstarcandy.github.io/web0422//assets/team/index/section02/offer03.jpg);
+}
+
+/* section03 */
+.Rewards {
+    margin-top: 40px;
+    width: 1903px;
+    height: 500px;
+    background: url(https://oceanflavorstarcandy.github.io/web0422//assets/team/index/section03/BGimage.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Rewards h2 {
+    color: #ffffff;
+    font: 500 24px "Noto Sans KR",sans-serif;
+    margin: 40px 0;
+}
+
+.Rewards>div {
+    display: flex;
+}
+
+.reward {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 120px;
+    border-right: 1px solid #ffffff;
+}
+
+.reward:nth-of-type(3) {
+    border: none;
+}
+
+.reward div {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 32px;
+}
+
+.reward h3 {
+    color: #ffffff;
+    font: 400 20px "Noto Sans KR",sans-serif;
+    line-height: 2;
+}
+
+.reward p {
+    color: #ffffff;
+    font: 300 16px "Noto Sans KR",sans-serif;
+    line-height: 2;
+}
+
+.Rewards a {
+    color: #ffffff;
+    font: 400 20px "Noto Sans KR",sans-serif;
+    display: inline-block;
+    width: 300px;
+    border: 1px solid #ffffff;
+    text-align: center;
+    padding: 12px;
+    margin-top: 40px;
+}
+
+.Rewards a:hover {
+    background: #856F56;
+}
+
+/* reward icons */
+.rewardIcon01 {
+    background: #000; /* 현재 임시 적용 중 */
+}
+
+.rewardIcon02 {
+    background: #000;
+}
+
+.rewardIcon03 {
+    background: #000;
+}
+
+/* section04 */
+.Events {
+    width: 1903px;
+    padding: 40px 300px;
+    margin: 40px 0;
+    position: relative;
+}
+
+.Events>div:nth-of-type(1) {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 40px;
+}
+
+.Events h2 {
+    font: 700 24px "Noto Sans KR",sans-serif;
+    color: #101010;
+    margin-right: 12px;
+}
+
+.Events>div:nth-of-type(2) {
+    display: flex;
+}
+
+.event {
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.event>li {
+    width: 324px;
+    height: 432px;
+}
+
+.event>li>div{
+    width: 324px;
+    height: 432px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.event>li>p {
+    color: #ffffff;
+    position: absolute;
+    bottom: 50px;
+    margin-left: 16px;
+    text-shadow: 2px 2px 2px rgba(16, 16, 16, 0.5);
+}
+
+.eventHover {
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    width: 324px;
+    height: 432px;
+    background: #ffffff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 115px;
+    padding: 36px;
+    transition: .5s;
+}
+
+.event>li:hover .eventHover {
+    visibility: visible;
+    opacity: 1;
+}
+
+.eventHover h3 {
+    font: 400 24px "Noto Sans KR",sans-serif;
+    color: #856F56;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.eventHover p {
+    font: 400 16px "Noto Sans KR",sans-serif;
+    color: #101010;
+    line-height: 2;
+}
+
+.eventHover p:nth-of-type(1) {
+    border-top: 1px solid #6f6f6f;
+    padding-top: 12px;
+}
+
+.eventHover a {
+    color: #ffffff;
+    font: 400 18px "Noto Sans KR",sans-serif;
+    display: inline-block;
+    width: 248px;
+    background: #856F56;
+    text-align: center;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+/* event bg images */
+.eventIMG01 {
+    background: url(https://oceanflavorstarcandy.github.io/web0422//assets/team/index/section04/event01.jpg);
+}
+
+.eventIMG02 {
+    background: url(https://oceanflavorstarcandy.github.io/web0422//assets/team/index/section04/event02.jpg);
+}
+
+.eventIMG03 {
+    background: url(https://oceanflavorstarcandy.github.io/web0422//assets/team/index/section04/event03.jpg);
+}
+
+.eventIMG04 {
+    background: url(https://oceanflavorstarcandy.github.io/web0422//assets/team/index/section04/event04.jpg);
+}

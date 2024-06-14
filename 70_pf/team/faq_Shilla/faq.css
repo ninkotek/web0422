@@ -4,18 +4,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
 
-* {
-    padding: 0;
-    list-style: none;
-}
-body {
-    width: 1920PX;
-    margin: 0 auto;
-    font-family: "Noto Sans KR", sans-serif;
+
+
+body, h1, ul, p, a {   
+    margin: 0;
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none;     
+}
+.container {
+    font-family: "Noto Sans KR", sans-serif;  
+    margin: 0 auto;
+    width: 1903px;
+}
+h1 {
+    margin-top: -7px;
 }
 
 /*  FAQ 배경 이미지 */
@@ -23,7 +27,7 @@ a {
     position: relative;
 }
 .bg-image img {    
-    width: 1920px;
+    width: 1903px;
     height: 800px;     
     overflow: hidden;    
 }
