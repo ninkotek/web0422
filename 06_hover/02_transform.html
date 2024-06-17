@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 2D 
+        translate (x, y)
+        translateX(x) 좌우
+        translateY(y) 상하
+        scale(x y) 가로 세로
+        rotate(deg) 각도 0 ~ 360 deg
+        skew (x deg, y deg)
+        skewX(x각도)
+        skewY(y각도)
+        3D
+        rotateX(각도)
+        rotateY(각도)
+        translateZ(z): 앞뒤 */
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            margin: 20px;
+            transition: .3s;
+        }
+        div div {
+            background: yellow;
+            margin: 0;
+        }
+        .trf1:hover div {
+            transform: translate(50px, 0);
+        }
+        .trf2:hover div {
+            transform: scale(2, 2);
+        }
+        .trf3:hover div {
+            transform: rotate(60deg);
+        }
+        .trf4:hover div {
+            transform: skew(60deg, 60deg);
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>변환(transform)</h1>
+    <p>변환이란? 이동(translate), 크기 조절(scale), 회전(rotate), 기울기(skew)를 말한다.</p>
+    <div class="trf1">
+        <div>이동</div>
+    </div>
+    <div class="trf2">
+        <div>크기 조절</div>
+    </div>
+    <div class="trf3">
+        <div>회전</div>
+    </div>
+    <div class="trf4">
+        <div>기울기</div>
+    </div>
+</body>
+</html>

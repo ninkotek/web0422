@@ -167,12 +167,10 @@ h2 {
 
 .table-head tr {
     height: 40px;
-
 }
 
 .table-data>td:nth-of-type(2) {
     text-align: left;
-
 }
 
 .table-data td {
@@ -232,7 +230,13 @@ form {
 
 form div label {
     width: 200px;
+    font-size: 16px;
     display: block;
+}
+::placeholder, select {
+    font-family: "Noto Sans KR" sans-serif;
+    color: #856f56;
+    font-size: 14px;  
 }
 
 form select {
@@ -249,13 +253,13 @@ form textarea {
 
 form div input {
     width: 400px;
-    height: 30px;
+    height: 34px;
     margin-bottom: 10px;
 }
 
 .email-box {
     width: 190px;
-    height: 30px;
+    height: 34px;
     margin-bottom: 10px;
 }
 
@@ -275,9 +279,10 @@ form div input {
 .btn button {
     display: block;
     width: 180px;
-    height: 30px;
-    line-height: 30px;
+    padding: 4px 0;
     background: #2d2d2d;
     color: #fff;
     font-weight: bold;
+    font-size: 16px;
+    border-radius: 3px;
 }
