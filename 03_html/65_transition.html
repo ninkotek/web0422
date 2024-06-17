@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-size: 10px;
+            background: tomato;
+            /* transition-property: 속성명;
+            transition-duration: 동작시간;
+            tansition-timing-function: 가속도;
+            tansfition-delay: 지연시간;
+             */
+            transition-property: background, font-size;
+            transition-duration: 1s .5s;
+            transition-timing-function: ease, ease-in;
+            transition-delay: 0s 1s;
+
+            transition: background 1s ease 0s, font-size .5s ease-in 1s;
+        
+        }
+        div:hover {
+            font-size: 20px;
+            background: skyblue;          
+        }
+    </style>
+</head>
+<body>
+    <h1>변환 (transition)</h1>
+    <div>색변환</div>
+</body>
+</html>

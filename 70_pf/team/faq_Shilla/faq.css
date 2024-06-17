@@ -5,19 +5,24 @@
 
 
 
-
-body, h1, ul, p, a {   
+body,
+h1,
+ul,
+p,
+a {
     margin: 0;
 }
 
 a {
-    text-decoration: none;     
+    text-decoration: none;
 }
+
 .container {
-    font-family: "Noto Sans KR", sans-serif;  
+    font-family: "Noto Sans KR", sans-serif;
     margin: 0 auto;
     width: 1903px;
 }
+
 h1 {
     margin-top: -7px;
 }
@@ -26,16 +31,19 @@ h1 {
 .bg-image {
     position: relative;
 }
-.bg-image img {    
+
+.bg-image img {
     width: 1903px;
-    height: 800px;     
-    overflow: hidden;    
+    height: 800px;
+    object-fit: cover;
+    overflow: hidden;
 }
+
 .bg-image span {
     display: block;
     position: absolute;
     font-size: 46px;
-    font-weight: 600;   
+    font-weight: 600;
     width: 600px;
     height: 80px;
     text-align: center;
@@ -43,6 +51,7 @@ h1 {
     margin-left: 660px;
     margin-top: 260px;
 }
+
 .bg-image::after {
     content: "";
     position: absolute;
@@ -58,8 +67,8 @@ h1 {
 .tabs {
     width: 1400px;
     display: flex;
-    padding: 2px;  
-    height: 850px;     
+    padding: 2px;
+    height: 850px;
     position: relative;
     background: #f6e9ca;
     margin-left: 260px;
@@ -68,7 +77,7 @@ h1 {
 .tab-common>label {
     background: #2d2d2d;
     color: #fff;
-    font-size: 32px;   
+    font-size: 32px;
     display: block;
     width: 700px;
     height: 80px;
@@ -77,95 +86,113 @@ h1 {
     margin-top: -86px;
     cursor: pointer;
 }
+
 .tab-common>input {
     display: none;
 }
+
 .tab-common>div {
     display: none;
-    position: absolute;     
+    position: absolute;
 }
-.tab-common>input:checked + label {
+
+.tab-common>input:checked+label {
     background: #856f56;
     color: #fff;
+}
 
-}
-.tab-common> input:checked + label + .contents {
-    display: block;
-}
-.tab-common> input:checked + label + .inquiry-contents {
+.tab-common>input:checked+label+.contents {
     display: block;
 }
 
-.tab-menu {    
+.tab-common>input:checked+label+.inquiry-contents {
+    display: block;
+}
+
+.tab-menu {
     width: 1400px;
     margin: 0 auto;
 }
+
 .tab-menu>ul {
-    display: flex;  
-    position: relative; 
-    
+    display: flex;
+    position: relative;
+
 }
+
 .tab-menu>ul>li {
     width: 700px;
     height: 120px;
     line-height: 120px;
-    background: #2d2d2d;    
+    background: #2d2d2d;
     text-align: center;
     border-bottom: none;
-    margin-top: -140px;   
+    margin-top: -140px;
 }
+
 .tab-menu>UL>li>a {
     display: block;
     font-size: 32px;
-    text-align: center;  
-    color: #fff; 
+    text-align: center;
+    color: #fff;
     border: 1px solid #dddd;
 }
-.tab-menu>ul>li:hover >a {
+
+.tab-menu>ul>li:hover>a {
     background-color: #856f56;
 }
 
 h2 {
     text-align: center;
 }
+
 .notice-announce {
     width: 1400px;
     font-size: 32px;
     text-align: center;
     border-bottom: double;
     padding-bottom: 40px;
-    margin-top: 40px;   
+    margin-top: 40px;
 }
+
 /* table 내용 */
 .table-notice {
     width: 1400px;
     margin-top: 40px;
 }
+
 .table-head>tr>th {
     background-color: #fff;
 }
+
 .table-head tr {
     height: 40px;
-   
+
 }
+
 .table-data>td:nth-of-type(2) {
     text-align: left;
-   
+
 }
+
 .table-data td {
     border-bottom: 1px solid #ccc;
 }
-.table-notice th, .table-notice td {
+
+.table-notice th,
+.table-notice td {
     padding: 10px;
     text-align: center;
     height: 30px;
     font-size: 24px;
 }
+
 .table-notice th {
     border-bottom: 1px solid #ccc;
     background-color: #fff;
 }
-.tab-menu>ul>li:nth-child(2){
+
+.tab-menu>ul>li:nth-child(2) {
     background-color: #fff;
 }
 
@@ -173,8 +200,9 @@ h2 {
 .pagination {
     width: 1400px;
     text-align: center;
-    margin-top: 30px;    
+    margin-top: 30px;
 }
+
 .pagination span {
     padding: 0 20px;
     font-size: 24px;
@@ -184,31 +212,35 @@ h2 {
 
 .inquiry-contents {
     position: absolute;
-    left: 0;   
- }   
+    left: 0;
+}
 
- .inquiry-contents>p {
+.inquiry-contents>p {
     width: 1400px;
     text-align: center;
     font-size: 24px;
     margin-top: 20px;
- }
- /* form 입력 */
- form {
-    width: 800px;   
-    margin-left: 400px;
-    margin-top: 60px;   
+}
 
- }
- form div label {
+/* form 입력 */
+form {
+    width: 800px;
+    margin-left: 400px;
+    margin-top: 60px;
+
+}
+
+form div label {
     width: 200px;
     display: block;
- }
+}
+
 form select {
     width: 200px;
     height: 34px;
-    margin-bottom: 10px;   
+    margin-bottom: 10px;
 }
+
 form textarea {
     width: 600px;
     height: 200px;
@@ -218,27 +250,29 @@ form textarea {
 form div input {
     width: 400px;
     height: 30px;
-    margin-bottom: 10px;   
+    margin-bottom: 10px;
 }
+
 .email-box {
     width: 190px;
     height: 30px;
     margin-bottom: 10px;
 }
+
 .checkbox {
     width: 20px;
-    height: 20px;  
+    height: 20px;
 }
 
 /* 등록 버튼 */
 .btn {
-    width: 180px;   
+    width: 180px;
     margin-left: 600px;
     margin-top: 30px;
-    display: flex;      
- }
+    display: flex;
+}
 
- .btn button {
+.btn button {
     display: block;
     width: 180px;
     height: 30px;
@@ -246,4 +280,4 @@ form div input {
     background: #2d2d2d;
     color: #fff;
     font-weight: bold;
- }
+}
