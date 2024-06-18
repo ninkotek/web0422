@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            padding-left: 0;
+            list-style: none;
+            margin: 0;
+        }
+
+        .slide {          
+            width: 500px;          
+            height: 150px;
+         
+            overflow: hidden;
+        
+        }
+
+        .slide img {
+            width: 500px;
+            height: 150px;
+            object-fit: contain;
+            vertical-align: top;
+        }
+
+        .slide ul {                                
+            animation: slide 12s infinite;
+        }
+
+      
+        .slide li span {
+            width: 100px;
+            height: 40px;
+            position: absolute;
+            padding: 55px 200px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* animation */
+
+        /* @keyframes slide1 {
+            0% {transform: translateY(0%);}
+            10% {transform: translateY(-25%);}
+            33% {transform: translateY(-25%);}
+            43% {transform: translateY(-50%);}
+            66% {transform: translateY(-50%);}
+            76% {transform: translateY(-75%);}
+            99.99% {transform: translateY(-75%);}
+            0% {transform: translateY(0%);}
+ 
+        } */
+
+        @keyframes slide {
+            0% {
+                top: 0%;
+            }
+
+            10% {
+                top: 100%;
+            }
+
+            33% {
+                top: 100%;
+            }
+
+            43% {
+                top: 200%;
+            }
+
+            66% {
+                top: 200%;
+            }
+
+            76% {
+                top: 300%;
+            }
+
+            99.99% {
+                top: 300%;
+            }
+
+            100% {
+                top: 0%;
+            }
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <ul>
+            <li><span>chocho</span><img src="images/double_chocolate_chip_20210315021500386.jpg" alt="초코칩"></li>
+            <li><span>mushroom</span><img src="images/Mushroom-soup_20231204012446176.png" alt="버섯스프"></li>
+            <li><span>oatmeal</span><img src="images/oatmeal_rasin_20210315021428482.jpg" alt="오트밀"></li>
+            <li><span>chocho</span><img src="images/double_chocolate_chip_20210315021500386.jpg" alt="초코칩"></li>
+        </ul>
+    </div>
+</body>
+
+</html>
