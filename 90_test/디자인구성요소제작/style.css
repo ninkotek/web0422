@@ -121,6 +121,11 @@ h1 {
 
 /* image slide */
 .slide-images {
+    width: 1200px;
+    height: 400px;
+    object-fit: cover;
+}
+.slide-images {
     position: relative;
 }
 
