@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valley-Festival_강유식</title>
+    <style>
+        
+
+        /* 초기화 */
+        * {
+            /* padding과 border가 width/height에 포함된다. */
+            box-sizing: border-box;
+        }
+        body, h1, p, ul {
+            margin: 0;
+        }
+        ul, li {
+            list-style: none;
+            padding: 0;            
+        }
+        a {
+            text-decoration: none;
+            color: #333
+        }
+
+        /* typo */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        body {
+            font: 15px/1.6 "Noto Sans KR", sans-serif;
+        }
+        /* :root, body {
+            height: 100%;
+        } */
+
+        /* 풀페이지 레이아웃 */
+        /* 헤더 */
+        .wrap {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        header {
+            height: 200px;
+            background: #bbb;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+
+        /* 로고 */
+        .logo {      
+            /* animation-name: balloon;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-delay: 3s;
+            animation-direction: alternate;
+            animation-timing-function: ease-out; */
+            margin-top: 0;
+            animation: logo 1s;
+           
+        }
+        @keyframes logo {
+            0% {margin-top: -100px; animation-timing-function: ease-in; }
+            50% {margin-top: 0px; animation-timing-function: ease-out; }
+            100% {margin-top: -100px; }
+        }
+
+        /* 내비게이션 */     
+
+    
+        .gnb {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            background: #ddd;
+            z-index: 9999;
+        }
+        /* 1depth */
+        .main {
+            display: flex;
+            height: 40px;
+        }
+        .main>li {
+            width: 160px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+        }
+        .main>li:hover {
+            background: rgba(255, 0, 0, 0.711);          
+        }
+
+        /* 2depth */
+        .sub {
+            height: 0; 
+            overflow: hidden;
+            opacity: 0;            
+            /* display:none; visibility:hidden; 은 transition속성이 지정되지 않는다 */
+            /* 메인 메뉴를 통하지 않고 서브에 마우스 오버시 서브 메뉴가 나타나지 않게 한다. */
+            visibility: hidden;     
+            padding: 10px 0 20px;      
+            border: 1px solid red;
+            transition: .3s;
+            line-height: 2;
+        }
+       /* 선택자가 변경되어서 .main>li 유형1->.main li 유형2로 됨 */
+        .main:hover .sub {
+            height: 150px;
+            visibility: visible;
+            opacity: 1;
+        
+        }
+        .sub li a {
+            padding: 4px 16px;
+            color: #fff;
+        }
+        .sub li:hover a {
+            background: #111;
+        }
+
+/* ::before ::after 가성요소 선택자 */
+.main::before {
+    /* display: block; 또는 display: inline-block; 또는 position: static;이 아니면 width/height가 지정된다. */
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 40px;
+  left: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 0px;
+  opacity:0;
+  transition: .3s;
+  background: rgba(0, 0, 0, 0.5);
+}
+.main:hover::before {
+  visibility: visible;
+  height: 150px;
+  opacity: 1;
+}
+
+        /* 슬라이드 */
+        .slide {
+            height: calc(100% - 340px);
+            overflow: hidden;
+              /* width: 500px; */
+        }
+        .slide ul {
+        
+            display: flex;
+            width: 400%;
+            height: 100%;
+            animation: slide 12s infinite;
+        } 
+        .slide li {
+            width: 25%;
+            height: 100%;
+            background: no-repeat 50% 50%/cover;
+            text-indent: -99000em;
+        }
+      
+        .slide li:nth-child(1) {
+            background-image: url(images/slide1.jpg);
+        }
+        .slide li:nth-child(2) {
+            background-image: url(images/slide2.jpg);
+        }
+        .slide li:nth-child(3) {
+            background-image: url(images/slide3.jpg);
+        }
+        .slide li:nth-child(4) {
+            background-image: url(images/slide1.jpg);
+        }    
+      
+   
+     
+        /* animation */
+
+        /* @keyframes slide {
+            0% {left: 0%;}
+            10% {left: -100%;}
+            33% {left: -100%;}
+            43% {left: -200%;}
+            66% {left: -200%;}
+            76% {left: -300%;}
+            99.99% {left: -300%;}
+            100% {left: 0%;}
+        } */
+        @keyframes slide { 
+            0% { transform: translate(0%, 0%); } 
+            10% { transform: translate(-25%, 0%); } 
+            33% { transform: translate(-25%, 0%); } 
+            43% { transform: translate(-50%, 0%); } 
+            66% { transform: translate(-50%, 0%); } 
+            76% { transform: translate(-75%, 0%); } 
+            99.99% { transform: translate(-75%, 0%); } 
+            100% { transform: translate(0%, 0%); } 
+        }
+
+        /* 푸터 */
+        footer {
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background: #777;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!-- 헤더(로고)  -->
+        <header>
+            <h1 class="logo"><a href="#">Valley Festival</a></h1>
+        </header>
+
+        <!-- 네비게이션  -->
+        <nav class="gnb">
+            <ul class="main">
+                <li>
+                    <a href="#">메인메뉴1</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴2</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴3</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴4</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- 슬라이드  -->
+        <div class="slide">
+            <ul>
+                <li>슬라이드 이미지</li>
+                <li>슬라이드 이미지</li>
+                <li>슬라이드 이미지</li>
+                <li>슬라이드 이미지</li>
+            </ul>
+        </div>
+        <!-- 푸터  -->
+        <footer>
+            <p>Copyright 2024. Valley-Festival. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
