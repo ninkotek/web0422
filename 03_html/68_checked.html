@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자
+        1. id선택자: #
+        2. 조상선택자 하위선택자 -> 조상은 부모 포함, 하위는 자식 포함
+        3. 부모 선택자>자식 선택자
+        4. 형선택자+제선택자 -> 인접형제 선택자
+        5. nth-of-type(), nth-child() -> 형제관계 선택자
+        6. 형선택자 ~ 동생들 선택자
+        7. 가상클래스 :checked
+        8. 가상요소 -> ::before, ::after
+        */
+        #subject1 {
+            display: none;
+        }
+        /* checked 안된 것 */
+        #subject1+label::before {
+            content: "";
+            display: inline-block;
+            border: 1px solid red;
+            background-image: url(../assets/Rectangle\ 1.svg) no-repeat;        
+            width: 14px;
+            height: 14px;
+            margin-right: 10px;
+            
+        }
+
+        /* checked 된 것 */
+        #subject1+label::before:checked {
+            content: "";
+            display: inline-block;
+            border: 1px solid red;
+            background-image: url(../assets/checked.svg);
+            background-repeat: no-repeat;
+            width: 14px;
+            height: 14px;
+            margin-right: 10px;
+        }
+        #subject1+label {
+            color: red;
+            cursor: pointer;
+        }
+        :checked {
+            /* width: 20px;
+            height: 20px; */
+            accent-color: red;  
+            border: 1px solid;
+            transform: scale(1.5);
+            margin-right: 10px;
+        }
+        label:nth-of-type(3)~label {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>checkbox 와 radio button</h1>
+    <p>필수 속성에 type, name, value이 있고, checked는 선택 속성이다</p>
+    <!-- 여러개 중에 여러개 선택 가능 -->
+     <!-- id와 for가 같은 값을 사용하여 연결 -> 글씨를 체크해도 체크된다 -->
+   
+    <input type="checkbox" name="chkgroup" value="rule1" id="subject1" class="subject" checked>
+    <label for="subject1">회칙1</label>
+    <input type="checkbox" name="chkgroup" value="css" id="subject2" class="subject">
+    <label for="subject2">회칙2</label>
+    <input type="checkbox" name="chkgroup" value="js" id="subject3" class="subject">
+    <label for="subject3">회칙3</label>
+
+    <!-- 여러개 중 하나만 선택 -->
+    <label><input type="radio" name="radiogroup" value="y" checked>동의함</label>
+    <label><input type="radio" name="radiogroup" value="n">동의하지 않음</label>
+  
+ 
+</body>
+</html>
