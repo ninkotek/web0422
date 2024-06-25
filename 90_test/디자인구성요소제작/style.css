@@ -55,17 +55,18 @@ header {
 }
 
 /* menu */
+nav {
+    position: relative;
+}
 .menu {
     display: flex;
-    justify-content: center;
-    position: relative;
-
+    justify-content: center;  
 }
 
 .menu>li {
     width: 200px;
-    height: 40px;
-    z-index: 1;
+    height: 40px;   
+    z-index: 3;
 }
 
 .menu>li {
@@ -110,40 +111,41 @@ header {
 
 .menu::before {
     content: "";
-    z-index: -1;
-    position: absolute;
+    z-index: 1;
+    position: absolute;   
+    top: 40px;
     width: 100%;
-    height: 0;
-    background: #bbb;
+    height: 0; 
+    background: rgba(186, 186, 186, 0.3);
     visibility: hidden;
+    transition: .7s;
 }
 
-.menu:hover::before {
+.menu:hover::before {   
     visibility: visible;
     height: 300px;
 }
 
 /* image slide */
-.slide-images {   
-    height: calc(100% - 340px);     
+.slide-images {     
+    height: calc(100% - 340px);  
+    overflow: hidden;   
 }
-
 .slide-images ul {
     display: flex;
     width: 400%;
     height: 100%;           
     animation: slide 8s infinite;       
 }
-
 .slide-images ul li {    
     width: 25%;  
     height: 100%;     
 }
-/* .slide-images img {
-    height: 100%;
+.slide-images img {
     width: 100%;   
+    height: 100%;   
     object-fit: cover;  
-} */
+} 
 
 @keyframes slide { 
     0% { transform: translate(0%, 0%); } 

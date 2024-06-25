@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+/* @import는 상단에 기록해야한다. */
+@import url(reset.css);
+@import url(typo.css);
+@import url(header.css);
+@import url(footer.css);
+
+/* 슬라이드 */
+#slide {
+    height: 350px;
+    background: rgba(240, 68, 103, 0.5);
+}
+
+/* 메인 콘텐츠 */
+#main_contents {
+    width: 1340px;
+    margin: -100px auto 0;
+    border: 1px solid;
+}
+
+/* 링크 */
+
+/* 링크 영역 */
+#link {
+    height: 100px;
+    padding: 20px;
+    background: bisque;
+}
+#link ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+#link li a {
+    display: flex;
+    align-items: center;
+}
+/* 아이콘 이미지 */
+#link ul li a span {
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    margin-right: 24px;
+}
+
+/* 배너 영역 */
+#banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: aliceblue;
+}
+
+/* 배너 이미지 */
+/* 플렉스 아이템 요소는 display:block; 이다. */
+#banner span {
+    width: 120px;
+    height: 100px;
+    background: #ccc;
+}
+
+/* 배너 타이틀 및 설명글 */
+#banner>div {
+    width: 1000px;
+    padding-right: 200px;
+}
+#banner>div h2 {
+    margin-bottom: 16px;
+}
+/* 탭 */
+@import url(tabs.css);
+#tab_wrap {
+    height: 300px;
+}
+
+.tabs {
+    position: relative;
+    left: 50px;
+    top: 30px;
+    width: 550px;
+    height: 220px;
+}
+
+.tabs input {
+    display: none;
+}
+
+/* 탭의 버튼 */
+.tabs label {
+    position: relative;
+    left: 24px;
+    top: 1px;
+    display: inline-block;
+    /* label의 높이는 4px */
+    padding: 4px 24px;
+    background: #999;
+    color: #777;
+    /* 손 모양 */
+    cursor: pointer;
+}
+
+/* .tabs 안의 하위요소인 체크된 input 아래 동생 label을 선택 */
+.tabs input:checked+label {
+    z-index: 99;
+    background: #fff;
+    color: #111;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+/* 탭의 콘텐츠 */
+.tabs>div {
+    display: none;
+    /* position:absolute;이면 width는 콘텐츠 크기 */
+    position: absolute;
+    width: 100%;
+    /* 32px은 label의 높이 */
+    height: calc(100% - 32px);
+    padding: 16px 24px;
+    border: 1px solid #ccc;
+}
+
+/* 체크된 input의 아래 label 아래 div만 보이게한다. */
+.tabs input:checked+label+div {
+    display: block;
+}
+
+/* 공지사항의 콘텐츠 */
+.tab1 li {
+    line-height: 2.3;
+    border-bottom: 1px dotted #ccc;
+}
+.tab1 li a {
+    display: inline-block;
+    width: 422px;
+}
+
+/* 갤러리의 콘텐츠 */
+.tab2 ul {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2.3;
+    margin-top: 8px;
+}
+.tab2 span {
+    display: block;
+    width: 150px;
+    height: 100px;
+    background: #ccc;
+}
+
+

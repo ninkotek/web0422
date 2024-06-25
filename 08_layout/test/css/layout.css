@@ -2,7 +2,17 @@
 @import url(rest.css);
 @import url(typo.css);
 
+.container {
+    width: 1340px;
+    margin: 0 auto;
+    border: 1px solid;
+}
+#slide {
+    height: 350px;
+    background-color: tomato   
+}
 @import url(header.css);
+
 @import url(link.css);
 @import url(banner.css);
 @import url(tabs.css);

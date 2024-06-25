@@ -1,0 +1,23 @@
+/* 배너 영역 */
+#banner {
+    width: 1340px;
+    padding: 50px;
+    background: #999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 배너 이미지 */
+#banner a div {
+    width: 120px;
+    height: 100px;
+    background: #eee;
+}
+/* banner title 설명글 */
+#banner>div {
+    width: 1000px;
+    padding-right: 200px;
+}
+#banner>div h2 {
+    margin-bottom: 16px;
+}

@@ -1,9 +1,7 @@
-@charset "utf-8";
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-/* 글자 크기 rem 단위 사용 */
-/* :root는 html과 같다 */
+/* 글자 크기 rem 단위 사용! */
+/* :root는 html와 같다. */
 /* rem 단위는 html에서 지정한 글자 크기의 배수 */
 html {
     font-size: 10px;
@@ -16,7 +14,7 @@ body {
     color: #666666;
 }
 
-/* 내비게이션 부분 */
+/* 내비게이션 */
 /* font의 위계 */
 /* 1depth, mainmenu */
 .main>li>a {
