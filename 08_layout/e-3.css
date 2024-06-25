@@ -1,89 +1,117 @@
 @charset "utf-8";
-
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
 /* @import는 상단에 기록해야한다. */
-@import url(reset.css);
-@import url(typo.css);
-@import url(header.css);
-@import url(footer.css);
+@import url(common/reset.css);
+@import url(common/typo.css);
 
-/* 슬라이드 */
-#slide {
-    height: 350px;
-    background: rgba(240, 68, 103, 0.5);
+/* 상단 영역 */
+.top_wrap {
+    display: flex;
+}
+
+
+/* 헤더 영역 */
+header {  
+    width: 200px;
+    padding: 0 20px;
+}
+
+/* 로고 */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px; 
+}
+
+/* 내비게이션 */
+#gnb {
+    margin-bottom: 24px;
+}
+
+/* 1depth */
+#gnb .main {  
+    /* height: 30px; */
+}
+
+#gnb .main>li {
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #eee;
+}
+
+#gnb .main>li:hover {
+    background: #333;
+}
+
+
+/* 2depth */
+#gnb .sub {
+    position: relative;
+    left: 160px;
+    top: -30px;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px 0 20px;
+    transition: .3s;
+    line-height: 2;
+    background: #ccc;
+}
+
+#gnb .main>li:hover .sub {
+    height: 150px;
+    visibility: visible;
+    opacity: 1;
+}
+
+#gnb .sub li a {
+    /* padding: 4px 16px; */
+    display: block;
+}
+
+#gnb .sub li:hover a {
+    background: #111;
+}
+
+/* spot메뉴 */
+header .spot_menu a:first-child::after {
+    content: "|";
+    margin: 0 4px;
+}
+header .spot_menu a:hover {
+    text-decoration: underline;
 }
 
 /* 메인 콘텐츠 */
 #main_contents {
-    width: 1340px;
-    margin: -100px auto 0;
+    width: 400px;   
     border: 1px solid;
 }
 
 /* 링크 */
 
-/* 링크 영역 */
-#link {
-    height: 100px;
-    padding: 20px;
-    background: bisque;
-}
-#link ul {
-    display: flex;
-    justify-content: space-evenly;
-}
-#link li a {
-    display: flex;
-    align-items: center;
-}
-/* 아이콘 이미지 */
-#link ul li a span {
-    width: 60px;
-    height: 60px;
-    background: #ccc;
-    margin-right: 24px;
-}
-
-/* 배너 영역 */
-#banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    background: aliceblue;
-}
-
-/* 배너 이미지 */
-/* 플렉스 아이템 요소는 display:block; 이다. */
-#banner span {
-    width: 120px;
-    height: 100px;
-    background: #ccc;
-}
-
-/* 배너 타이틀 및 설명글 */
-#banner>div {
-    width: 1000px;
-    padding-right: 200px;
-}
-#banner>div h2 {
-    margin-bottom: 16px;
-}
 /* 탭 */
 @import url(tabs.css);
 #tab_wrap {
     height: 300px;
 }
 
-.tabs {
-    position: relative;
-    left: 50px;
-    top: 30px;
-    width: 550px;
-    height: 220px;
+#banner span {
+    width: 50px;
+    height: 40px;
+    background-color: #ccc;
 }
 
-.tabs input {
-    display: none;
+#banner >div {
+    width: 300px;
+}
+
+#banner a {
+    width: 12px;
 }
 
 /* 탭의 버튼 */
@@ -150,4 +178,93 @@
     background: #ccc;
 }
 
+/* 슬라이드 이미지 */
+#slide {
+    width: calc(100% - 600px);
+    height: 700px;
+    background: tomato;
+}
+
+
+/* 푸터 영역 */
+footer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background: #111;
+    color: #fff;
+}
+footer a {
+    color:#fff;
+}
+
+/* 하단 로고 */
+footer .flogo {
+    width:190px;
+    text-align: center;
+}
+
+
+
+/* 주소 및 저작권 */
+footer p {
+    width: 850px;
+}
+
+/* sns */
+/* 폰트어썸 코드로 삽입하기 */
+footer .sns a {
+    margin: 0 8px;
+    font-size: 3rem;
+    color: #555;
+    transition: .3s;
+}
+footer .sns i {
+    transition: .3s;
+}
+footer .sns a:hover i {
+    transform: scale(1.2, 1.2);
+}
+footer .sns a:nth-child(1):hover i{
+    color: #1877f2;
+}
+footer .sns a:nth-child(2):hover i {
+    color: #1D9bf0;
+}
+footer .sns a:nth-child(3):hover i{
+    color: #bb0322;
+}
+
+/* sns 배경 이미지로 삽입하기 */
+/* footer .sns a {
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
+    display: inline-block;
+    text-indent: -99999em;
+    background: no-repeat 50% 50%;
+    transition: .5s;
+}
+footer .sns a:nth-child(1) {
+    background-image: url(images/fb.svg);
+}
+footer .sns a:nth-child(2) {
+    background-image: url(images/insta.svg);
+}
+footer .sns a:nth-child(3) {
+    background-image: url(images/twitter.svg);    
+}
+
+footer .sns a:hover {
+    transform: scale(1.2,1.2);
+}
+footer .sns a:nth-child(1):hover {
+    background-image: url(images/fb_hover.svg);
+}
+footer .sns a:nth-child(2):hover {
+    background-image: url(images/insta_hover.svg);
+}
+footer .sns a:nth-child(3):hover {
+    background-image: url(images/twitter_hover.svg);
+} */
 
