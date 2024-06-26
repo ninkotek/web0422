@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
-/* @import는 상단에 기록해야한다. */
 @import url(common/reset.css);
 @import url(common/typo.css);
 
@@ -9,11 +8,10 @@
     display: flex;
 }
 
-
 /* 헤더 영역 */
-header {  
+header {
     width: 200px;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 /* 로고 */
@@ -21,37 +19,31 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 110px; 
+    height: 110px;
 }
 
 /* 내비게이션 */
 #gnb {
     margin-bottom: 24px;
 }
-
 /* 1depth */
-#gnb .main {  
-    /* height: 30px; */
-}
-
 #gnb .main>li {
     width: 160px;
     height: 30px;
     text-align: center;
     line-height: 30px;
-    border: 1px solid #eee;
+    border: 1px solid #ccc;
 }
 
 #gnb .main>li:hover {
     background: #333;
 }
 
-
 /* 2depth */
 #gnb .sub {
     position: relative;
-    left: 160px;
-    top: -30px;
+    left:160px;
+    top: -40px;
     height: 0;
     overflow: hidden;
     visibility: hidden;
@@ -59,7 +51,7 @@ header {
     padding: 10px 0 20px;
     transition: .3s;
     line-height: 2;
-    background: #ccc;
+    background: red;
 }
 
 #gnb .main>li:hover .sub {
@@ -69,7 +61,6 @@ header {
 }
 
 #gnb .sub li a {
-    /* padding: 4px 16px; */
     display: block;
 }
 
@@ -77,7 +68,7 @@ header {
     background: #111;
 }
 
-/* spot메뉴 */
+/* 스팟 메뉴 */
 header .spot_menu a:first-child::after {
     content: "|";
     margin: 0 4px;
@@ -88,90 +79,64 @@ header .spot_menu a:hover {
 
 /* 메인 콘텐츠 */
 #main_contents {
-    width: 400px;   
+    width: 400px;
     border: 1px solid;
+    padding: 0 24px;
 }
 
-/* 링크 */
-
-/* 탭 */
-@import url(tabs.css);
-#tab_wrap {
-    height: 300px;
+/* 배너 영역 */
+#banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: aliceblue;
+    margin-bottom: 32px;
 }
 
+/* 배너 이미지 */
 #banner span {
-    width: 50px;
-    height: 40px;
-    background-color: #ccc;
+    width: 40px;
+    height: 30px;
+    background: #ccc;
 }
 
-#banner >div {
+/* 배너 타이틀 및 설명글 */
+#banner>div {
     width: 300px;
+}
+
+#banner>div h2 {
+    margin-bottom: 4px;
 }
 
 #banner a {
     width: 12px;
 }
 
-/* 탭의 버튼 */
-.tabs label {
-    position: relative;
-    left: 24px;
-    top: 1px;
-    display: inline-block;
-    /* label의 높이는 4px */
-    padding: 4px 24px;
-    background: #999;
-    color: #777;
-    /* 손 모양 */
-    cursor: pointer;
+/* 공지사항 */
+#notice {
+    margin-bottom: 48px;
 }
-
-/* .tabs 안의 하위요소인 체크된 input 아래 동생 label을 선택 */
-.tabs input:checked+label {
-    z-index: 99;
-    background: #fff;
-    color: #111;
-    border: 1px solid #ccc;
-    border-bottom: none;
-}
-
-/* 탭의 콘텐츠 */
-.tabs>div {
-    display: none;
-    /* position:absolute;이면 width는 콘텐츠 크기 */
-    position: absolute;
-    width: 100%;
-    /* 32px은 label의 높이 */
-    height: calc(100% - 32px);
-    padding: 16px 24px;
-    border: 1px solid #ccc;
-}
-
-/* 체크된 input의 아래 label 아래 div만 보이게한다. */
-.tabs input:checked+label+div {
-    display: block;
-}
-
-/* 공지사항의 콘텐츠 */
-.tab1 li {
+#notice li {
     line-height: 2.3;
     border-bottom: 1px dotted #ccc;
 }
-.tab1 li a {
+
+#notice li a {
     display: inline-block;
-    width: 422px;
+    width: 250px;
 }
 
-/* 갤러리의 콘텐츠 */
-.tab2 ul {
+/* 갤러리 */
+#gallery ul {
     display: flex;
     justify-content: space-between;
     line-height: 2.3;
     margin-top: 8px;
 }
-.tab2 span {
+
+#gallery span {
     display: block;
     width: 150px;
     height: 100px;
@@ -182,9 +147,8 @@ header .spot_menu a:hover {
 #slide {
     width: calc(100% - 600px);
     height: 700px;
-    background: tomato;
+    background: rgba(240, 68, 103, 0.5);
 }
-
 
 /* 푸터 영역 */
 footer {
@@ -194,77 +158,74 @@ footer {
     background: #111;
     color: #fff;
 }
+
 footer a {
-    color:#fff;
+    color: #fff;
 }
 
 /* 하단 로고 */
 footer .flogo {
-    width:190px;
+    width: 190px;
     text-align: center;
 }
-
-
 
 /* 주소 및 저작권 */
 footer p {
     width: 850px;
 }
 
-/* sns */
+/* SNS */
 /* 폰트어썸 코드로 삽입하기 */
 footer .sns a {
     margin: 0 8px;
     font-size: 3rem;
+}
+footer .sns a i {
     color: #555;
     transition: .3s;
 }
-footer .sns i {
-    transition: .3s;
-}
 footer .sns a:hover i {
-    transform: scale(1.2, 1.2);
+    transform: scale(1.2,1.2);
 }
-footer .sns a:nth-child(1):hover i{
-    color: #1877f2;
+footer .sns a:nth-child(1):hover i {
+    color: #1877F2;
 }
 footer .sns a:nth-child(2):hover i {
-    color: #1D9bf0;
+    color: #1D9BF0;
 }
-footer .sns a:nth-child(3):hover i{
-    color: #bb0322;
+footer .sns a:nth-child(3):hover i {
+    color: #B803EE;
 }
 
-/* sns 배경 이미지로 삽입하기 */
+/* 배경 이미지로 삽입하기 */
 /* footer .sns a {
-    width: 40px;
-    height: 40px;
-    margin: 0 8px;
     display: inline-block;
-    text-indent: -99999em;
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+    text-indent: -9999em;
     background: no-repeat 50% 50%;
     transition: .5s;
 }
 footer .sns a:nth-child(1) {
-    background-image: url(images/fb.svg);
+    background-image: url(images/facebook.svg);
 }
 footer .sns a:nth-child(2) {
-    background-image: url(images/insta.svg);
+    background-image: url(images/twitter.svg);
 }
 footer .sns a:nth-child(3) {
-    background-image: url(images/twitter.svg);    
+    background-image: url(images/instagram.svg);
 }
 
 footer .sns a:hover {
     transform: scale(1.2,1.2);
 }
 footer .sns a:nth-child(1):hover {
-    background-image: url(images/fb_hover.svg);
+    background-image: url(images/facebook_hover.svg);
 }
 footer .sns a:nth-child(2):hover {
-    background-image: url(images/insta_hover.svg);
+    background-image: url(images/twitter_hover.svg);
 }
 footer .sns a:nth-child(3):hover {
-    background-image: url(images/twitter_hover.svg);
+    background-image: url(images/instagram_hover.svg);
 } */
-
