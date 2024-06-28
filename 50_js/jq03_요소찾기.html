@@ -28,12 +28,11 @@
         <li>목록3</li>
         <li id="green">목록1</li>
         <li class="aqua">목록2</li>
-        <li class="aqua">목록2</li>
         <li>목록3</li>
     </ul>
-
-    <p class="aqua">나는 유엘 밖의 아쿠아</p>
-
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
     <script>
         // 변수 = 값; 오른쪽의 값을 왼쪽에 대입 할당한다. 
         //변수 == 값; 수학적으로 같다
@@ -42,28 +41,37 @@
         //변수 = 변수 가능
         //변수는 폴더, 값은 파일
         // 문서의 아이디가 오렌지인 요소를 가져와서 스타일 컬러를 "오렌지"로 지정(할당)한다
+// eq(2) 는 js의 index[] 와 같은 역할
+//형식
+//$(선택자)..eq(숫자);
+//$(선택자).메소드({속성:값, 속성:값, ...})
 
-        document.getElementById('orange').style.color="orange";
+       $('#orange').css("color", "orange");
+       $('#orange').css("background-color", "cyan");
         // index 순번 적용해야 함. 복수 Elements   []
-        document.getElementsByClassName('red')[0].style.color="red";
-        document.getElementsByTagName('li')[5].style.borderTop="1px solid";
+
+        //red:eq(0)은 eq선택자, .eq(5) 메소드
+
+        //문서에서 클래스가 첫 번째 red인 요소를 가져와서 글자색을 red로 지정
+        $('.red:eq(0)').css({"color":"red", "background-color": "blue"});
+      $('li').eq(5).css("borderTop", "1px solid");
 
         // 단일 요소 선택
-        document.querySelector('ul').style.borderLeft="5px solid";
-        document.querySelector('#green').style.width="400px";
-        document.querySelector('.aqua').style.borderTop="solid";
+        $('ul').css("borderLeft", "5px solid");
         // 같은 요소가 한 개 이상
-        document.querySelectorAll('.aqua')[2].style.color="aqua";
+      $('ul').eq(0).css("borderTop", "1px solid");
 
-        // 객체(주어): document
-        // 문장의 끝은 ;으로 끝난다. 단, 선언적 함수와 제어문은 제외
+
+
+        // 객체(주어): $()
+        // 문장의 끝은 ;으로 끝난다.
 
         //대입 연산자: =
         // literal 값: 문자열 데이터 -> "orange"
         
         // 객체.style.css속성
 
-        // 메소드(서술어): getElementById() - 동작
+        //메소드(서술어): eq(숫자), css("문자열", "문자열") - 동작
         //함수: function()
         // 속성(목적어, 보어): style, color
         // 대입 연산자: =
