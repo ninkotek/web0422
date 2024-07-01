@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>변수</h1>
+    <p>변수는 뎅터(값)을 저장하는 공간이다.</p>
+    <script>
+        //문(statement)
+        //표현식(expression)? 결과 값이 있는 식
+        //키워드 식별자 =(대입 또는 할당 연산자) 값;
+        //식별자: 첫 글자는 영문자, 두 번째 글자부터 숫자의 조합, 대소문자를 구별한다.
+        //=은 대입(할당) 연산자로 오른쪽의 값을 왼쪽 식별자에 넣는다. 
+
+        //변수 선언 및 할당 동시에 한 것
+        var a = 5;
+        //변수 = 변수 가능 ex) var a5 = a;
+        var a2 = "오";
+        var a3 = true;
+        var a4 = function (){};
+        var a5 = document.querySelector('h1').style;
+        a5.fontSize = "20px";
+        a5.color = "red";
+        a5.border = "1px solid red";
+
+        document.querySelector('p').style.color = "blue";
+        document.querySelector('p').style.border = "1px solid red";
+
+
+        var a;
+        a = 5
+
+        var a6 = a2;
+        console.log("a6= ", a6); // +대신 ,를 사용 가능
+
+        //변수 = 표현식;
+        var a7 = 5+2;
+        //b는 NaN not a number
+        var a8 = a + b;
+        console.log("b=", b)
+        console.log("a7=", a7);
+        console.log("a8=", a8);
+
+
+
+        //b를 변수로 정의한다.
+        var b;
+        //b를 변수로 할당한다.
+        b =2;
+
+        //e, f는 undefined가 할당된다.
+        var c=5, d=2, e, f;
+     
+        console.log("a =",a);
+        console.log("b =",b);
+        console.log("c =",c);
+        console.log("d =",d);
+        console.log("e =",e);
+        console.log("f =",f);    
+      
+
+    </script>
+</body>
+</html>
