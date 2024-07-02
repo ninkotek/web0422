@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>이벤트</h1>
+    <p>이벤트(Event)는 어떤 사건을 의미합니다. 브라우저에서의 사건이란 사용자가 "클릭을 했을 때", "스크롤을 했을 때", "무언가 입력했을 때" 등의 상호작용으로 인해 일어나는 사건을 의미한다. 이벤트는 일반적으로 함수에 연결되며, 이 함수를 이벤트 핸들러(Event Handler) 라고 합니다.</p>
+
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
+    <div class="box4">박스4</div>
+    <p>여기에 표시됩니다.</p>
+
+    <script>
+        //이벤트? 브라우저에서 발생하는 사용자 상호 작용이다. 이벤트핸들러? 이벤트 발생했을 때 실해되는 함수.
+        // element.on이벤트 = function(){실행코드};
+        // element.onclick = function(){};
+        // element.addEventListener("이벤트", function(){실행코드});
+        //이벤트 전파: 자식 -> 부모(bubbling)
+        
+        // 이벤트: click, mouseenter, mouseleave, resize, scroll 
+            //변수 선언: 요소 찾기
+        const eleBox1 =  document.querySelector('.box1');
+        const eleBox2 =  document.querySelector('.box2');
+            //요소에 스타일 적용하기
+        eleBox1.style.width = "200px";
+        eleBox1.style.height = "200px";
+        eleBox1.style.border = "solid";
+        eleBox1.style.marginBottom = "5px";
+
+        eleBox2.style.width = "200px";
+        eleBox2.style.height = "200px";
+        eleBox2.style.border = "solid";
+        eleBox2.style.marginBottom = "10px";
+
+            //이벤츠 처리 방법 3가지
+        eleBox1.onmouseenter = function(){
+            eleBox1.style.background = "red";        
+        };
+
+        eleBox1.onmouseleave = reset;        
+        function reset(){
+            eleBox1.style.background = "transparent";        
+        } //선언적 함수에는 ;생략
+
+        console.log(eleBox1.style.background);
+
+
+        eleBox2.addEventListener("mouseenter", function(){
+            eleBox2.style.background = "red";
+        });
+
+        eleBox2.addEventListener("mouseleave", reset2);
+        
+        function reset2(){
+            eleBox2.style.background = "transparent";
+        }
+
+    </script>
+
+</body>
+</html>

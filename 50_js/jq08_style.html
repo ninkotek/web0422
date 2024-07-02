@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>요소에 css 스타일 적용하기</h1>
+    <div>박스1</div>
+    <div>박스2</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        /*  
+        객체 
+            {속성:값, 속성:값, ...}
+
+        element
+                {
+                    length: 30, 
+                    속성:함수, 
+                    css: function(){},
+                    ...                    
+                    }
+            속성들 중에 특별히 그 값이 함수인 속성을 메서드라고 한다.
+            객체는 속성과 메서드를 가지고 있다.
+            메서드는 속성이다.
+            함수를 값으로 한 속성을 메서드라고 한다.
+
+        함수
+            function(){}
+        
+        js: element.style.css속성명 = "속성값";
+
+            jQ: 객체. 메서드(인수, 인수2); 
+            jQ: 방법1   element.css("속성명", "속성 값"); 
+            jQ: 방법2   element.css({"속성":값, "속성":값, ...}); 
+                        객체 형식으로 작성하면 속성명에 ""을 생략할 수 있다
+                        css속성명으로 기록하면 ""를 사용하고, 카멜표기법으로 표기하면 ""을 생략할 수 있다.
+
+            jQ: element.css({속성:값, 속성:값, ...}); 
+                element.eq(숫자)
+
+
+
+           
+           요소(element) 찾기
+            js: document.querySelectorAll('선택자')    
+
+            jQ: $("선택자").eq(숫자)
+       
+        */
+       //변수 선언
+        const eleDiv = $('div').eq(0);
+
+        //실행 코드
+        eleDiv.css({
+            width:"100px", 
+            height:100, 
+            backgroundColor: "orange",
+            borderRadius: 50
+        });
+
+        //backgroundColor: "orange" = "background-color": "orange"
+        // eleDiv.css("width", "100px");
+        // eleDiv.css("height", "100px");
+        // eleDiv.css("backgroundColor", "orange");
+
+                // document.querySelectorAll('div')[1].style.background = "blue";
+
+
+    </script>
+
+   
+</body>
+
+</html>

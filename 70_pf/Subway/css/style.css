@@ -8,9 +8,10 @@ html {
 
 /* 헤더 영역 */
 header {
-    /* position fixed, absolute인 경우 width가 콘텐츠 크기로 줄어든다 */
+    /* position이 fixed나 absolute이면 width가 콘텐츠 크기 */
     position: fixed;
-    width: 100%;
+    z-index: 9999;
+    width:100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +28,15 @@ nav ul li {
 }
 
 /* 섹션1 */
+#sec1 {
+    position: relative;
+    padding-top: 54px;
+}
 #sec1 h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     letter-spacing: 4px;
     font-weight: 400;
 }
@@ -39,45 +48,36 @@ nav ul li {
     margin-right: 16px;
 }
 
-#sec1 section {
-    position: relative;
-    /* display: flex;
-    justify-content: center;  */
-    border: 1px solid red;
-}
-
-#sec1 h2 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -110px;
-    margin-top: -16px;
-    /* 
-        transform: translate(-50%,-50%); 
-    */
-}
 
 #sec1 div {
-    width: 1496px;
+    width: 1480px;
     margin: 0 auto;
     height: 745px;
     background: #ccc;
 }
 
-/* 섹션 2, 3, 4 공통 */
+/* 섹션1,2,3,4 공통 */
 section {
     width: 1480px;
     margin: 0 auto;
-    padding-top: 80px 0;
+    padding-top: 96px;
+}
+
+/* 섹션2,3 공통 */
+section li {
+    width: 355px;
+}
+
+section li:not(:nth-of-type(4n)) {
+    margin-right: 20px;
 }
 
 
 /* 섹션2 */
-
 #sec2 h2 {
     border-bottom: 1px solid #ccc;
     padding-bottom: 24px;
-    margin-top: 72px;
+    /* margin-top: 72px; */
     margin-bottom: 48px;
 }
 
@@ -87,18 +87,9 @@ section {
 }
 
 #sec2 li {
-    width: 355px;
     height: 240px;
-    margin-right: 20px;
     margin-bottom: 20px;
 }
-
-#sec2 li:nth-of-type(4n) {
-    margin-right: 0;
-}
-/* #sec2 li:not(li:nth-of-type(4n)) {
-    margin-right: 20px;
-} */
 
 #sec2 h3 {
     position: absolute;
@@ -113,7 +104,6 @@ section {
 }
 
 /* 섹션3 */
-
 #sec3 h2 {
     border-bottom: 1px solid #111;
     padding-bottom: 24px;
@@ -126,15 +116,6 @@ section {
 
 #sec3 ul {
     display: flex;
-}
-
-#sec3 li {
-    width: 355px;
-    margin-right: 20px;
-}
-
-#sec3 li:nth-child(4n) {
-    margin-right: 0;
 }
 
 #sec3 div {
@@ -151,18 +132,22 @@ section {
     margin: 24px 0;
 }
 
-#sec3 a {    display: block;
+#sec3 a {
+    display: block;
     background: #ccc;
     text-align: center;
     padding: 12px 0;
 }
 
 /* 섹션4 */
-
-#sec4  h2 {
+#sec4 {
+    padding-bottom: 8px;
+}
+#sec4 h2 {
     border-bottom: 1px solid #111;
     padding-bottom: 24px;
     margin-bottom: 24px;
+   
 }
 #sec4 p {
     margin-bottom: 24px;
@@ -181,7 +166,7 @@ section {
     background: #000;
 }
 
-.map {
+#sec4 .map {
     /* width: 1480px; */
     height: 845px;
     background: #ccc;
