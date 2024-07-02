@@ -34,7 +34,7 @@ nav ul li {
 }
 #sec1 h2 {
     position: absolute;
-    left: 50%;
+    left: 20%;
     top: 50%;
     transform: translate(-50%,-50%);
     letter-spacing: 4px;
@@ -53,7 +53,23 @@ nav ul li {
     width: 1480px;
     margin: 0 auto;
     height: 745px;
-    background: #ccc;
+    background: #fbc200;
+}
+#sec1 div p {
+   transform: translate(150px, -400px);
+   font-size: 32px;
+   color: #fff;
+   font-weight: 700;
+}
+
+#sec1 div p span {
+    color: #004816;
+    font-size: 58px;
+    padding-left: 8px;
+}
+
+#sec1 div img {
+    transform: translate(600px, 100px);
 }
 
 /* 섹션1,2,3,4 공통 */
@@ -98,9 +114,10 @@ section li:not(:nth-of-type(4n)) {
     padding: 8px 24px;
 }
 
+
 #sec2 div {
-    height: 100%;
-    background: #ccc;
+    height: 100%; 
+   
 }
 
 /* 섹션3 */
