@@ -147,12 +147,16 @@ section li:not(:nth-of-type(4n)) {
 
 #sec3 div {
     height: 240px;
-    background: #ccc;
+    background: #fff;
 }
 
 #sec3 h3 {
     font-size: 2.4rem;
     margin: 24px 0;
+}
+
+#sec3 li img {
+    transform: translateY(10px);
 }
 
 #sec3 li p {
@@ -161,7 +165,7 @@ section li:not(:nth-of-type(4n)) {
 
 #sec3 a {
     display: block;
-    background: #ccc;
+    background: #fff;
     text-align: center;
     padding: 12px 0;
 }
