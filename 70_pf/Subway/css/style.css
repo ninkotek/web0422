@@ -6,6 +6,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: #fff;
+}
+
 /* 헤더 영역 */
 header {
     /* position이 fixed나 absolute이면 width가 콘텐츠 크기 */
@@ -35,7 +39,7 @@ nav ul li {
 #sec1 h2 {
     position: absolute;
     left: 20%;
-    top: 50%;
+    top: 55%;
     transform: translate(-50%,-50%);
     letter-spacing: 4px;
     font-weight: 400;
@@ -56,7 +60,7 @@ nav ul li {
     background: #fbc200;
 }
 #sec1 div p {
-   transform: translate(150px, -400px);
+   transform: translate(150px, -400px);  
    font-size: 32px;
    color: #fff;
    font-weight: 700;
@@ -66,10 +70,11 @@ nav ul li {
     color: #004816;
     font-size: 58px;
     padding-left: 8px;
+   
 }
 
 #sec1 div img {
-    transform: translate(600px, 100px);
+    transform: translate(600px, 180px);
 }
 
 /* 섹션1,2,3,4 공통 */
@@ -105,6 +110,11 @@ section li:not(:nth-of-type(4n)) {
 #sec2 li {
     height: 240px;
     margin-bottom: 20px;
+    border: 1px solid;   
+}
+#sec2 img {
+    width: 350px;
+    height: 238px;
 }
 
 #sec2 h3 {
