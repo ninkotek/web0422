@@ -37,10 +37,11 @@
         eleBox2.style.border = "solid";
         eleBox2.style.marginBottom = "10px";
 
-            //이벤츠 처리 방법 3가지
+            //이벤츠 처리 방법 4가지
         eleBox1.onmouseenter = function(){
             eleBox1.style.background = "red";        
         };
+        
 
         eleBox1.onmouseleave = reset;        
         function reset(){
@@ -54,11 +55,40 @@
             eleBox2.style.background = "red";
         });
 
+
         eleBox2.addEventListener("mouseleave", reset2);
         
         function reset2(){
             eleBox2.style.background = "transparent";
         }
+
+
+        
+
+/*
+        const box3 = document.querySelector('.box3');
+        const box4 = document.querySelector('.box4');
+
+        box3.style.width = "100px";
+        box3.style.height = "100px";      
+        box3.style.backgroundColor = "blue";
+
+        box3.addEventListener("click", function(){
+            box3.style.backgroundColor = "red";
+        });
+
+        box4.onmouseenter = color3;
+        box4.onmouseleave = color4;
+
+        box4.addEvenListener("mouseenter", color4);
+
+        function color3(){
+            box4.style.backgroundColor = "tomato";
+        }
+        function color4(){
+            box4.style.backgroundColor ="transparent";
+        }
+*/
 
     </script>
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: solid;
+            margin: 5px;
+        }
+ 
+    </style>
+</head>
+<body>
+    <h1>이벤트</h1>
+    
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>    
+    <p>여기에 표시됩니다.</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        //이벤트? 브라우저에서 발생하는 사용자 상호 작용이다. 이벤트핸들러? 이벤트 발생했을 때 실행되는 함수.
+        // 객체.이벤트(함수);       
+        // 객체.on("이벤트", function(){실행코드});  
+        
+      
+            //변수 선언: 요소 찾기
+        const eleBox1 =  $('.box1');
+        const eleBox2 =  $('.box2');
+
+
+            //이벤츠 처리 방법 
+
+            //방법 1
+        eleBox1.mouseenter(function(){
+            eleBox1.css({background: "red"});        
+        });        
+
+        //방법 2
+        eleBox1.mouseleave(reset);    
+
+        function reset(){
+            eleBox1.css({background: "red"});        
+        } //선언적 함수에는 ;생략
+
+       
+        //방법 3
+        //eleBox2를 클릭하면
+        eleBox2.on("click", function(){
+            //eleBox1의 배경색을 yelow로 지정한다
+            eleBox1.css({background: "yellow"});
+        });
+
+        //방법 4
+        eleBox2.on("mouseleave", reset);
+        
+        function reset(){
+            eleBox1.css({background: "transparent"});
+        }
+
+    </script>
+
+</body>
+</html>
