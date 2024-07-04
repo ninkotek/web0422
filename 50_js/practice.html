@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tabs>div {
+            display: none;
+
+        }
+        #tabs>div.on {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4"></div>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#tab1">btn1</a></li>
+            <li><a href="#tab2">btn2</a></li>
+            
+        </ul>
+        <div class="on" id="tab1">first sentence</div>
+        <div id="tab2">second sentence</div>      
+    </div>
+
+
+    <script>
+
+        const btn1 = document.querySelectorAll('#tabs a')[0];
+        const btn2 = document.querySelectorAll('#tabs a')[1];
+        const cont1 = document.querySelectorAll('#tabs>div')[0];
+        const cont2 = document.querySelectorAll('#tabs>div')[1];
+
+        btn1.onclick = first;
+        function first(){
+            cont1.classList.add('on');
+            cont2.classList.remove('on');
+        }
+
+        btn2.onclick = second;
+        function second(){
+            cont2.classList.add('on');
+            cont1.classList.remove('on');
+        }
+
+
+
+
+
+
+        const box1 = document.querySelector('.box1');
+        const box2 = document.querySelector('.box2');
+        const box3 = document.querySelector('.box3');
+        const box4 = document.querySelector('.box4');
+
+        box1.style.width = "100px";
+        box1.style.height = "100px";
+        box1.style.border = "1px solid"
+
+        box2.style.width = "100px";
+        box2.style.height = "100px";
+        box2.style.border = "1px solid"
+
+        box3.style.width = "100px";
+        box3.style.height = "100px";
+        box3.style.border = "1px solid"
+
+        box4.style.width = "100px";
+        box4.style.height = "100px";
+        box4.style.border = "1px solid"
+
+        box1.onclick = function(){
+            box1.style.background = "red";
+        };
+        box1.onmouseleave = function(){
+            box1.style.background = "transparent";
+        };
+
+        box2.onclick = blue;
+        box2.onmouseleave = yellow;
+      
+        function blue(){
+            box2.style.background = "blue";
+        }
+        function yellow(){
+            box2.style.background = "yellow";
+        }
+
+        box3.addEventListener("click", tomato);
+        function tomato(){
+            box3.style.background = "tomato";
+        }
+        box3.addEventListener("mouseleave", black);
+        function black(){
+            box3.style.background = "black";
+        };
+
+       box4.addEventListener("click", img);
+       function img(){
+            box4.style.backgroundImage = "url(../assets/facebook.png)";
+       }
+
+
+
+
+
+    </script>
+</body>
+</html>

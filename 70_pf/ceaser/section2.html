@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceasars</title>
+    <link rel="stylesheet" href="../ceaser/css/section2.css">
+</head>
+
+<body>
+    <!-- 섹션2 -->
+    <section id="s2">
+        <div class="inner">
+            <h2>여름 시즌 여행지</h2>
+            <p>최근 한 달 동안 고객님들이 가장 많이 좋아하신 여름 시즌 여행지입니다.</p>
+
+            <!-- 탭 -->
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tab1">전체</a></li>
+                    <li><a href="#tab2">20~30대</a></li>
+                    <li><a href="#tab3">40~50대</a></li>
+                    <li><a href="#tab4">60~70대</a></li>
+                </ul>
+                <div id="tab1" class="on">
+                    <ul>
+                        <li>
+                            <a href="#" class="rank1"><img src="../ceaser/assets/r1.png" alt="1위"></a>
+                            <h3 class="rank1"><a href="">1위. 수박주스</a></h3>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../ceaser/assets/r2.png" alt="2위"></a>
+                            <h3><a href="">2위 스무디</a></h3>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../ceaser/assets/r3.png" alt="3위"></a>
+                            <h3><a href="">3위 감자빵</a></h3>
+                        </li>
+                    </ul>
+                </div>
+                <div id="tab2">
+                    <!-- 준비중 -->   
+                    <ul>
+                        <li>
+                            <a href="#" class="rank1"><img src="../ceaser/assets/r4.png" alt="1위"></a>
+                            <h3 class="rank1"><a href="">1위. 수박주스</a></h3>
+                        </li>
+                        <li>
+                            <a href="#"><img src="" alt="2위"></a>
+                            <h3><a href="">2위 스무디</a></h3>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../ceaser/assets/r3.png" alt="3위"></a>
+                            <h3><a href="">3위 감자빵</a></h3>
+                        </li>
+                    </ul>                 
+                </div>
+                <div id="tab3">
+                    <!-- 준비중 -->
+                </div>
+                <div id="tab4">
+                    <!-- 준비중 -->
+                </div>
+            </div> <!-- //.inner-->
+
+    </section>
+
+    <script>
+        const btn1 = document.querySelectorAll('#tabs a').item(0);
+        const btn2 = document.querySelectorAll('#tabs a').item(1);
+        const cont1 = document.querySelectorAll('#tabs>div')[0];
+        const cont2 = document.querySelectorAll('#tabs>div')[1];
+
+//이벤트처리
+        btn1.onclick = function(){                     
+            cont1.classList.add('on');
+            cont2.classList.remove('on');
+        }
+
+        btn2.onclick = function(){
+            cont2.classList.add('on');
+            cont1.classList.remove('on');
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tabs>div {
+            font-size: 20px;     
+            display: none;   
+        }
+        #tabs>div.on {
+            display: block;            
+        }
+    </style>
+</head>
+<body>
+    <h1>탭</h1>
+    <div id="tabs">
+        <ul>
+            <li><a href="#tab1">공지사항</a></li>
+            <li><a href="#tab2">갤러리</a></li>
+        </ul>
+        <div class="on" id="tab1">첫 번째 콘텐츠</div>
+        <div id="tab2">두 번째 콘텐츠</div>
+    </div>
+    
+
+    <script>
+        
+        //요소 찾기
+       
+        // p.style.color = "red";
+        //p에 on클래스를 추가한다.
+        // p.classList.add('on');
+     
+    
+        const btn1 = document.querySelectorAll('#tabs a').item(0);
+        const btn2 = document.querySelectorAll('#tabs a').item(1);
+        const cont1 = document.querySelectorAll('#tabs>div')[0];
+        const cont2 = document.querySelectorAll('#tabs>div')[1];
+
+
+        // console.log(cont1);
+        // console.log(cont2);
+
+//이벤트처리
+        btn1.onclick = function(){          
+            //cont1.style.display = "block";  
+            //cont2.style.display = "none";  
+            cont1.classList.add('on');
+            cont2.classList.remove('on');
+        }
+
+        btn2.onclick = function(){
+            //cont2.style.display = "block";  
+            //cont1.style.display = "none";  
+            cont2.classList.add('on');
+            cont1.classList.remove('on');
+        }
+
+        // btn1.style.width = "20px";
+        // btn1.style.height = "20px";
+        // btn1.style.border = "1px solid";
+
+        // btn2.style.width = "20px";
+        // btn2.style.height = "20px";
+        // btn2.style.border = "1px solid";
+
+        // btn1.addEventListener('click', redColor);
+        // function redColor(){
+        //     p.style.color = "red";
+        // }
+
+        // btn2.addEventListener('click', black);
+        // function black(){
+        //     p.style.color = "black";
+        // }
+
+    </script>
+</body>
+</html>
