@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ceasars</title>
-    <link rel="stylesheet" href="../ceaser/css/section2.css">
+    <title>MEDIA HILLS</title>
+    <link rel="stylesheet" href="../dashcam/css/section2.css">
 </head>
 
 <body>
     <!-- 섹션2 -->
     <section id="s2">
         <div class="inner">
-            <h2>여름 시즌 여행지</h2>
-            <p>최근 한 달 동안 고객님들이 가장 많이 좋아하신 여름 시즌 여행지입니다.</p>
+            <h2>프리미엄 블랙박스의 기준</h2>
+            <p>해외사장에서 품질과 기술력을 인정받는 블랙박스 전문업체 미디어힐스입니다.</p>
 
             <!-- 탭 -->
             <div id="tabs">
                 <ul>
-                    <li><a href="#tab1">전체</a></li>
+                    <li><a href="#tab1"></a></li>
                     <li><a href="#tab2">20~30대</a></li>
                     <li><a href="#tab3">40~50대</a></li>
                     <li><a href="#tab4">60~70대</a></li>
@@ -26,24 +26,23 @@
                 <div id="tab1" class="on">
                     <ul>
                         <li>
-                            <a href="#" class="rank1"><img src="../ceaser/assets/r1.png" alt="1위"></a>
+                            <a href="#" class="rank1"><img src="../dashcam/assets/r1.png" alt="1위"></a>
                             <h3 class="rank1"><a href="">1위. 수박주스</a></h3>
                         </li>
                         <li>
-                            <a href="#"><img src="../ceaser/assets/r2.png" alt="2위"></a>
+                            <a href="#"><img src="../dashcam/assets/r2.png" alt="2위"></a>
                             <h3><a href="">2위 스무디</a></h3>
                         </li>
                         <li>
-                            <a href="#"><img src="../ceaser/assets/r3.png" alt="3위"></a>
+                            <a href="#"><img src="../dashcam/assets/r4.png" alt="3위"></a>
                             <h3><a href="">3위 감자빵</a></h3>
                         </li>
                     </ul>
                 </div>
-                <div id="tab2">
-                    <!-- 준비중 -->   
+                <div id="tab2">                     
                     <ul>
                         <li>
-                            <a href="#" class="rank1"><img src="../ceaser/assets/r4.png" alt="1위"></a>
+                            <a href="#" class="rank1"><img src="../dashcam/assets/r3.png" alt="1위"></a>
                             <h3 class="rank1"><a href="">1위. 수박주스</a></h3>
                         </li>
                         <li>
@@ -51,37 +50,62 @@
                             <h3><a href="">2위 스무디</a></h3>
                         </li>
                         <li>
-                            <a href="#"><img src="../ceaser/assets/r3.png" alt="3위"></a>
+                            <a href="#"><img src="../dashcam/assets/r1.png" alt="3위"></a>
                             <h3><a href="">3위 감자빵</a></h3>
                         </li>
                     </ul>                 
                 </div>
                 <div id="tab3">
-                    <!-- 준비중 -->
+                    준비중..
                 </div>
                 <div id="tab4">
-                    <!-- 준비중 -->
+                     준비중...
                 </div>
             </div> <!-- //.inner-->
 
     </section>
 
+    <!-- <script src="section2.js/tab.js"></script> -->
     <script>
+        //for loop으로 간결화
         const btn1 = document.querySelectorAll('#tabs a').item(0);
         const btn2 = document.querySelectorAll('#tabs a').item(1);
-        const cont1 = document.querySelectorAll('#tabs>div')[0];
-        const cont2 = document.querySelectorAll('#tabs>div')[1];
+        const btn3 = document.querySelectorAll('#tabs a').item(2);
+        const btn4 = document.querySelectorAll('#tabs a').item(3);
+        //console.log(btn1, btn2, btn3, btn4);
+
+        const cont1 = document.querySelector('#tab1');
+        const cont2 = document.querySelector('#tab2');
+        const cont3 = document.querySelector('#tab3');
+        const cont4 = document.querySelector('#tab4');
 
 //이벤트처리
-        btn1.onclick = function(){                     
+        btn1.onclick = function(){                
+            resetF();
             cont1.classList.add('on');
-            cont2.classList.remove('on');
+        }
+        btn2.onclick = function(){                     
+            resetF();
+            cont2.classList.add('on');
+           
+        }
+        btn3.onclick = function(){                     
+            resetF();
+            cont3.classList.add('on');
+            
+        }
+        btn4.onclick = function(){                     
+            resetF();
+            cont4.classList.add('on');
         }
 
-        btn2.onclick = function(){
-            cont2.classList.add('on');
+        function resetF(){
             cont1.classList.remove('on');
+            cont2.classList.remove('on');
+            cont3.classList.remove('on');
+            cont4.classList.remove('on');
         }
+        
 
     </script>
 </body>

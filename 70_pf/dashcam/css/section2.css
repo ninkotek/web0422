@@ -71,9 +71,10 @@
     text-wrap: nowrap;
 }
 
+/* 탭의 기능 핵심 */
 #tabs>div {   
     display: none;   
 }
 #tabs>div.on {
-    display: block;            
+    display: block;  
 }
