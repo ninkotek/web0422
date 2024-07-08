@@ -40,11 +40,16 @@
         const cont1 = document.querySelectorAll('#tabs>div')[0];
         const cont2 = document.querySelectorAll('#tabs>div')[1];
 
+        //const btn1 = document.querySelectorAll('#tabs a')[0];
+        //const btn2 = document.querySelectorAll('#tabs a')[1];
+      
+
 
         // console.log(cont1);
         // console.log(cont2);
 
 //이벤트처리
+/*
         btn1.onclick = function(){          
             //cont1.style.display = "block";  
             //cont2.style.display = "none";  
@@ -57,6 +62,21 @@
             //cont1.style.display = "none";  
             cont2.classList.add('on');
             cont1.classList.remove('on');
+        }
+*/
+        btn1.onclick = function(){
+            resetF()
+            cont1.classList.add("on");
+        }
+
+        btn2.onclick = function(){
+            resetF()
+            cont2.classList.add("on");
+        }
+
+        function resetF(){
+            cont1.classList.remove("on");
+            cont2.classList.remove("on");
         }
 
         // btn1.style.width = "20px";
