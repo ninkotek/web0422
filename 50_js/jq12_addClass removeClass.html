@@ -21,7 +21,7 @@
     </div>
     <p>나는 단락이다</p>
     
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         // 버튼 1을 클릭하면 p선택하여 글자의 색상을 red로 지정한다. 그리고 버튼 2를 클릭하면 p를 선택하여 글자의 색상을 블랙으로 지정한다. 단 classList를 사용할 것
 
@@ -31,19 +31,17 @@
         //p에 on클래스를 추가한다.
         // p.classList.add('on');
 
-        const btn1 = document.querySelector('.red');
-        const btn2 = document.querySelector('.black');
-        const p = document.querySelector('p');
+        const btn1 = $('.red');
+        const btn2 = $('.black');
+        const p = $('p');
 
-        btn1.onclick = function(){
-            // p에 클래스 on을 추가한다. 
-            p.classList.add('on');
-        }
+        btn1.click(function(){           
+            p.addClass('on')});        }
 
-        btn2.onclick = function(){
-            // p에 클래스 on을 추가한다. 
-            p.classList.remove('on');
-        }
+        btn2.click(function(){           
+                p.addClass('on')});        }
+    
+      
         // btn1.style.width = "20px";
         // btn1.style.height = "20px";
         // btn1.style.border = "1px solid";

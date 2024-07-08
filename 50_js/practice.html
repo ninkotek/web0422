@@ -12,6 +12,7 @@
         #tabs>div.on {
             display: block;
         }
+
     </style>
 </head>
 <body>
@@ -23,15 +24,18 @@
     <div id="tabs">
         <ul>
             <li><a href="#tab1">btn1</a></li>
-            <li><a href="#tab2">btn2</a></li>
-            
-        </ul>
+            <li><a href="#tab2">btn2</a></li>            
+        </ul>    
+
         <div class="on" id="tab1">first sentence</div>
         <div id="tab2">second sentence</div>      
     </div>
 
 
     <script>
+
+
+
 
         const btn1 = document.querySelectorAll('#tabs a')[0];
         const btn2 = document.querySelectorAll('#tabs a')[1];
@@ -106,6 +110,8 @@
        function img(){
             box4.style.backgroundImage = "url(../assets/facebook.png)";
        }
+
+
 
 
 
