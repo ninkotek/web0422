@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+* {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    display: block;
+}
+.tabs-container {
+    width: 100%;
+    height: 250px;  
+    
+}
+.sub-container {
+    width: calc(100% - 200px);
+    margin: 0 auto;
+    border: solid;
+   
+}
+#tabs>ul {
+    display: flex;
+}
+#tabs>ul>li>a {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #eee;
+}
+
+/* 공지사항 */
+.content-wrap {
+    width: 100%;
+    height: 200px;
+}
+
+#notice>a {
+    padding: 4px 0;
+    margin-left: 10px;
+}
+#notice span {
+    display: inline-block;
+    transform: translateX(60px);
+}
+.content-wrap {
+    position: relative;
+    display: flex;
+    border: solid blue;
+}
+#content-wrap>div.on {
+    display: block;
+}
+#content-wrap>div {
+    display: none; 
+}
+#gallery {
+    border: solid red;
+    position: absolute;
+    left: 20px;
+    
+}
+
+#gallery img {    
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+
