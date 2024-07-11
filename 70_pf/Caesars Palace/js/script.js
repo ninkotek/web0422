@@ -12,18 +12,86 @@ jQuery(document).ready(function () {
 
 });
 
-const downArrow = document.querySelectorAll('.family-site>a')[0];
-const upArrow = document.querySelectorAll('.family-site>a')[1];
+//casino
+const game1 = document.querySelectorAll('.game-common>li>div>a>img')[0];
+const game2 = document.querySelectorAll('.game-common>li>div>a>img')[1];
+const game3 = document.querySelectorAll('.game-common>li>div>a>img')[2];
+const game4 = document.querySelectorAll('.game-common>li>div>a>img')[3];
+
+console.log(game1);
+
+game1.onclick = function(){
+    game1.style.transform ="scale(1.1)";
+};
+
+//shows
+const illust1 = document.querySelectorAll('.slider>a')[0];
+const illust2 = document.querySelectorAll('.slider>a')[1];
+const illust3 = document.querySelectorAll('.slider>a')[2];
+const showMouse = document.querySelector('.fades');
+
+const showFrames = {
+    translate: ['100px 0', 0],
+   
+};
+
+const option = {
+    duration: 2000,   
+    iteration: 'Infinity',    
+};
+
+showMouse.onmouseenter = function(){
+    illust1.animate(showFrames, option);
+    illust2.animate(showFrames, option);
+    illust3.animate(showFrames, option);
+};
+
+
+//shop
+const shop1 = document.querySelector('.shop1-content');
+const shop2 = document.querySelector('.shop2-content');
+const shopMouse = document.querySelector('.shop');
+
+const keyframes = {
+    opacity: [0, 1],
+    translate: ['-200px 0', 0]
+}
+const keyframes2 = {
+    opacity: [0, 1],
+    translate: ['200px 0', 0]
+}
+
+const options = {
+    duration: 2000,
+    easing: 'ease'
+};
+
+shopMouse.onmouseenter = function(){
+    shop1.animate(keyframes, options);
+    shop2.animate(keyframes2, options);
+};
+
+
+
+// footer 
+const downArrow = document.querySelector('.family-site>a>img');
+// const upArrow = document.querySelectorAll('.family-site>a')[1];
 
 const option1 = document.querySelector('#options');
 
 
-upArrow.onclick = function () {
+downArrow.onclick = function () {
     option1.style.display = "block";
+    downArrow.style.transform = "rotate(180deg)";
+   
     // downArrow.style.transform = "rotate(180deg)";
 };
+
+
+
+/*
 downArrow.onclick = function(){
     option1.style.display = "none";
 };
 
-
+*/
