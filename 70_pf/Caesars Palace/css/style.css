@@ -80,7 +80,7 @@ nav {
     visibility: hidden;
     height: 0;
     opacity: 0;
-    transition: 0.3s;
+    transition: 0.7s;
 }
 .menu>li:hover .sub {
     visibility: visible;
@@ -148,6 +148,7 @@ select {
     visibility: hidden;
     width: 100%;
     height: 0;
+    transition: 0.9s;
     background-color: #fff;
 }
 .sub:hover::before {
@@ -508,8 +509,15 @@ select {
 .slider .illust {
     position: absolute;
     right: 23%;
-    top: 10%;
-   
+    top: 10%;   
+}
+.slider>a:nth-of-type(2) {
+    right: 25%;
+    top: 14%;
+}
+.slider>a:nth-of-type(3) {
+    right: 20%;
+    top: 16%;
 }
 
 
@@ -607,7 +615,7 @@ select {
 /* footer */
 
 footer {
-   margin: 0 auto;
+    
     background-color: #000;
     width: 100%;
     height: 370px;
@@ -646,11 +654,6 @@ footer {
     padding-bottom: 20px;
     color: #fff;
 }
-.footer-right {
-   
-    width: 240px;
-    border: solid;
-}
 .copyright {
     color: #ffffff85;
     font-weight: 100;
@@ -659,6 +662,12 @@ footer {
     font-size: 14px; 
 }
 
+/* footer-right */
+.footer-right {
+   
+    width: 300px;
+   
+}
 .family-site {
     display: flex;
     justify-content: space-between;

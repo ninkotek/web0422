@@ -28,22 +28,27 @@ game1.onclick = function(){
 const illust1 = document.querySelectorAll('.slider>a')[0];
 const illust2 = document.querySelectorAll('.slider>a')[1];
 const illust3 = document.querySelectorAll('.slider>a')[2];
+const illust4 = document.querySelectorAll('.slider>a')[3];
+const illust5 = document.querySelectorAll('.slider>a')[4];
 const showMouse = document.querySelector('.fades');
 
 const showFrames = {
-    translate: ['100px 0', 0],
-   
+    translate: ['300px 0', 0],   
+    rotate: ['x 360deg', 0],
 };
 
 const option = {
-    duration: 2000,   
-    iteration: 'Infinity',    
-};
+    duration: 4000,   
+    fill: 'forwards',
+    iterations: Infinity,
+    };
 
 showMouse.onmouseenter = function(){
     illust1.animate(showFrames, option);
     illust2.animate(showFrames, option);
     illust3.animate(showFrames, option);
+    illust4.animate(showFrames, option);
+    illust5.animate(showFrames, option);
 };
 
 
