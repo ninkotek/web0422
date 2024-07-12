@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>연산자</h1>
+    <h2>산술 연산자</h2>
+    <script>
+
+        const a = 7, b = 2, c=5;
+       
+        //write()는 html태그도 인식한다.
+       
+        document.write(`5 + 2 = " + (a + b) + "<br>`);
+
+        document.write("문자열" + "<br>");
+        //탬플릿 리터럴(백틱: backticks ``)
+        //backticks안에 내용은 모두 문자열로 취급한다.
+         //{연산식} ${표현식 또는 변수}
+
+        document.write(`오+2 = ${"오"+b}<br>`);
+        document.write(`오+2= + "오" + b + "<br>`);
+
+        //문자 + 숫자 -> 연결
+       
+        document.write(`${a}-${b} = ${a - b} <br>`);
+        
+        document.write(`${a}*${b}= {a * b} <br>`);
+     
+        document.write("5/2=" + a / b + "<br>");
+      
+        document.write(`5%2= ${a % b}`); // 나머지
+   
+     
+    </script>
+</body>
+</html>

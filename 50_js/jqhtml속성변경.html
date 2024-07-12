@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+        }
+        div {
+            margin: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #d01717;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: .3s;
+        }
+        a:hover {
+            box-shadow: 0 0 5px 2px red;
+          
+        }
+    </style>
+</head>
+<body>
+    <h1>html속성 변경하기/가져오기</h1>
+    <div>
+        <a href="#" id="prev">이전 버튼</a>
+        <a href="#" id="next">다음 버튼</a>
+    </div>
+    <img src="../assets/image1.jpg" alt="꽃1">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //요소찾기
+        const img = $("img");
+        const btn1 = $('#prev');
+        const btn2 = $('#next');
+        
+        //html 속성 변경하기
+        //img.src = "../assets/image2.jpg";
+        //img.alt = "구슬";
+        //img.setAttribute("src","../assets/image2.jpg");
+
+        //이벤트
+        
+
+        btn1.click(function(){
+            //img.src = "../assets/image2.jpg";
+            //img.alt = "구슬";
+            img.attr({
+                src: "../assets/image1.jpg",
+                alt: "구슬"                
+
+        });
+        });
+
+        btn2.click(function(){
+            //img.src = "../assets/image2.jpg";
+            //img.alt = "꽃";
+            img.attr({
+                src: "../assets/image2.jpg",
+                alt: "꽃"
+        });
+        });
+/* 
+        btn1.addEventListener('click', imgChange1);
+        function imgChange1(){
+            img.src = "../assets/image1.jpg";
+            img.alt = "구슬";
+            //img.setAttribute("src","../assets/image1.jpg");
+        }
+        btn2.addEventListener('click', imgChange2);
+        function imgChange2(){
+            img.src = "../assets/image2.jpg";
+            img.alt = "구슬";
+            //img.setAttribute("src","../assets/image2.jpg");
+        }
+*/
+    </script>
+</body>
+</html>
