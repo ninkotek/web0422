@@ -40,7 +40,7 @@ const showFrames = {
 const option = {
     duration: 4000,   
     fill: 'forwards',
-    iterations: Infinity,
+    iterations: Infinity,    
     };
 
 showMouse.onmouseenter = function(){
