@@ -12,9 +12,24 @@
         //+ 연산자는 숫자는 더하기, 문자는 연결한다. 1+2 => 3. "일"+2 -> 일2
         const d = new Date();
         document.write(d + "<br>");
+        //년
+        const yy = d.getFullYear();
+        //getMonth()는 0~11 -> +1
+        const mm = d.getMonth()+1;
+        //일은 1~31
+        const dd = d.getDate();
+        //시단은 0~23
+        const hh = d.getHours();
+        //분은 0~59
+        const mi = d.getMinutes();
+        //초는 0~59
+        const ss = d.getSeconds();
 
-        const y = d.getFullYear();
-        document.write(y);
+        document.write("<hr>"+yy+"년" + mm +"월" + dd +"일<br>"+hh+":"+mi+":"+ss);
+
+        document.write(`<hr>${yy}년${mm}월${dd}일<br>${hh}:${mi}:${ss}`);
+
+   
 
         
     </script>

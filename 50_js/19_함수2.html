@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수</h1>
+    <script>
+/*
+        
+        전역변수: 전지역에 사용 가능
+        지역변수: 블록{} 내부에서만 사용 가능한 변수
+        매개변수: (parameter1, parameter1, ....)
+
+*/
+
+
+ //함수는 실행 코드를 저장하는 변수이다
+ //함수는 어디에 사용하는가? 
+ // 1. 실행 코드의 실행 시점을 제어
+ // 2. 코드의 재사용, 반복할 때
+
+       //형식 선언 (사용자 함수)
+        //1. 선언적 함수는 이름이 있는 함수. ;을 끝에 붙이지 않는다. function 함수명(매개변수, 매개변수, ...){실행 코드};
+
+        //b는 전역변수
+
+        //fn1(parameter1, parameter2)
+        const b = "헬로우";
+        function fn1(x, y, z=1){
+            //a는 지역변수  
+            const a = "hi"; 
+    
+            document.write("2." + (x+y) +"<br>");
+          
+        }
+        document.write("1."+b+"<br>");
+
+
+
+        //2. 익명 함수는 const fn = function(){}; event시 익명함수 사용
+       
+        //변수 선언 키워드: var, let, const
+        const fn2 = function(){
+
+            document.write("hello");
+
+        };
+
+        //3. 화살표 함수는 const fn = ()=>{};
+        //함수는 변수이다. 
+        //실행 코드가 한 문장이면 {}생략 가능 
+
+
+        const fn3 = ()=>{
+
+            document.write("bye");
+
+        };
+        //함수 호출 함수명(전달값1 aguement1, 전달값2 aguement2, ....) 
+
+        fn1("엑스", "와이");
+        fn1(10, 20);
+        fn2();
+        fn3();
+  
+
+    </script>
+</body>
+</html>

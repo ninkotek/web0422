@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수</h1>
+    <script>
+/*
+      이벤트
+      요소.onclick = function(매개변수){지역변수}
+
+*/
+
+
+
+     
+    //익명 함수
+       const fn1 = function (x, y, z=3){
+            
+        document.write(`${x+y+z}<br>`);          
+        }
+      
+    //화살표 함수: 코드 실행문이 한 줄이면 {}생략가능, 매개변수가 1개이면 ()생략 가능
+    
+        const fn2 = (x, y, z=3)=>{        
+
+        document.write(`${x+y+z}<br>`);          
+    };
+    //const fn2 = x => document.write(`${x}<br>);
+        //함수 호출 함수명(전달값1 aguement1, 전달값2 aguement2, ....) 
+
+        fn1("엑스", "와이");
+        fn1(1, 2);
+    
+  
+
+    </script>
+</body>
+</html>

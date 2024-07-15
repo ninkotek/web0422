@@ -17,13 +17,13 @@
  //함수는 실행 코드를 저장하는 변수이다
  //함수는 어디에 사용하는가? 
  // 1. 실행 코드의 실행 시점을 제어
- // 2. 코드의 재사용
+ // 2. 코드의 재사용, 반복할 때
 
        //형식 선언 (사용자 함수)
         //1. 선언적 함수는 이름이 있는 함수. ;을 끝에 붙이지 않는다. function 함수명(매개변수, 매개변수, ...){실행 코드};
         function fn1(){
 
-            alert("message");
+            document.write("message");
         }
 
         //2. 익명 함수는 const fn = function(){}; event시 익명함수 사용
@@ -31,7 +31,7 @@
         //변수 선언 키워드: var, let, const
         const fn2 = function(){
 
-            alert("메세지");
+            document.write("메세지");
 
         };
 
@@ -42,7 +42,7 @@
 
         const fn3 = ()=>{
 
-            alert("メッセージ");
+            document.write("メッセージ");
 
         };
 
