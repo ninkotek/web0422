@@ -54,8 +54,25 @@ const tabsWrap3 = document.querySelectorAll('#tabs-wrap>ul>li>a')[2];
 tabsWrap1.addEventListener('click', function(){
     tabsWrap1.style.backgroundColor = "red";
     tabsWrap1.style.color = "#ffffff";
+    tabsWrap1.style.borderRadius = "15px 0 0 15px";
+ 
+});
+tabsWrap2.addEventListener('click', function(){
+    tabsWrap2.style.backgroundColor = "red";
+    tabsWrap2.style.color = "#ffffff";
+   });
+tabsWrap3.addEventListener('click', function(){
+    tabsWrap3.style.backgroundColor = "red";
+    tabsWrap3.style.color = "#ffffff";
+    tabsWrap3.style.borderRadius = "0 15px 15px 0";
    
 });
+
+
+
+
+
+
 
 // content-wrap
 const tab1 = document.querySelectorAll('#tabs-wrap>ul>li>a')[0];
