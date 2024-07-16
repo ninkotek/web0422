@@ -1,5 +1,51 @@
 
+//event-promotion
+//Access the next / prev button
+const nextBtn = document.querySelector('.next-btn'); 
+const prevBtn = document.querySelector('.prev-btn'); 
 
+const slideImages = document.querySelectorAll('.slideImages>a');
+
+//Access the indicators
+const dots = document.querySelectorAll('.dot');
+
+let counter = 0;
+
+//Code for the next button
+nextBtn.addEventListener('click', slideNext);
+function slideNext(){
+    slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+    if(counter >= slideImages.length-1){
+        counter = 0;
+    }
+    else {
+        counter++;
+    }
+    slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+    // indicators();}
+
+}
+//Code for the prev button
+
+prevBtn.addEventListener('click', slidePrev);
+function slidePrev(){
+    slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+    if(counter == 0){
+        counter = slideImages.lengh-1;
+    }
+    else {
+        counter--;
+    }
+    slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
+    // indicators();
+}
+
+
+
+
+
+
+// Access tabs
 const tabsWrap1 = document.querySelectorAll('#tabs-wrap>ul>li>a')[0];
 const tabsWrap2 = document.querySelectorAll('#tabs-wrap>ul>li>a')[1];
 const tabsWrap3 = document.querySelectorAll('#tabs-wrap>ul>li>a')[2];
@@ -41,5 +87,4 @@ function reset(){
     ongoing.classList.remove('on');
     closing.classList.remove('on');
 }
-
 

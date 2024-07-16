@@ -40,34 +40,51 @@ a {
     width: 100%;
     height: 360px;  
     position: relative;
-    border: solid;
-}
-.main-image {
-    border: solid blue;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.main-image>div {
-    display: flex;
-}
-.main-image>div>a>img {
-    
+    background: #bbb;
 }
 
+
 .imageText {
-   
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
     border: solid;
 }
 .imageText>p {
+    
     margin-bottom: 12px;
 }
+.text1 {
+    font-size: 28px;
+    color: #292929;
+}
 .text1>span {
-    color: #555;
+    color: #009223;
+    font-size: 22px;
     font-weight: 600;
 }
+.text2 {
+    margin: 20px 0 40px 0;
+    font-size: 16px;
+    color: #666666;
+}
 .text3 {
-    margin-top: 140px;
+    margin-top: 60px;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #777;
+    border-radius: 15px;
+    text-align: center;
+   
+}
+.text3>a {
+    color: #fff;
+    font-weight: bold;
 }
 
 /* buttons */
@@ -111,11 +128,70 @@ a {
     display: inline-block;
     width: 10px;
     height: 10px;
-    margin-right: 2px;
-    border: 3px solid #fff;
+    margin-right: 4px;
+    border: 3px solid #333333;    
     border-radius: 50%;
-    background-color: #555;
+    background-color: #ddd;
 }
+
+/* click event animation */
+@keyframes next1 {
+    from {
+        left: 0%;        
+    }
+    to {
+        left: -100%;
+    }
+}
+@keyframes next2 {
+    from {
+        left: 100%;        
+    }
+    to {
+        left: 0%;
+    }
+}
+@keyframes prev1 {
+    from {
+        left: 0%;        
+    }
+    to {
+        left: 100%;
+    }
+}
+@keyframes prev2 {
+    from {
+        left: -100%;        
+    }
+    to {
+        left: 0%;
+    }
+}
+
+
+.main-image .slideImages {
+    display: flex;
+    width: 650px;
+    height: 260px;
+    position: relative;
+    left: 80px;
+    object-fit: cover;
+    overflow: hidden;
+    
+    
+}
+.main-image .slideImages img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.main-image .slideImages img:not(.active) {
+    top: 0;
+    left: -100%;
+}
+
+
 
 /* tabs-wrap */
 #content-wrap {
