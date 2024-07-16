@@ -4,7 +4,7 @@
 const nextBtn = document.querySelector('.next-btn'); 
 const prevBtn = document.querySelector('.prev-btn'); 
 
-const slideImages = document.querySelectorAll('.slideImages>a');
+const slideImages = document.querySelectorAll('.slideImages img');
 
 //Access the indicators
 const dots = document.querySelectorAll('.dot');

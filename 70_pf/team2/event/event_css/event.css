@@ -51,8 +51,7 @@ a {
     top: 0;
     right: 30px;
     display: flex;
-    flex-direction: column;
-    border: solid;
+    flex-direction: column;   
 }
 .imageText>p {
     
@@ -221,6 +220,7 @@ a {
 #tabs-wrap>ul>li:nth-child(1) {
     border-radius: 15px 0 0 15px; 
 }
+
 #tabs-wrap>ul>li:nth-child(3) {
     border-radius: 0 15px 15px 0; 
 } 
@@ -281,7 +281,7 @@ a {
     object-fit: cover;
 }
 
-/* js 숨기기 */
+/* 버튼 js 숨기기 */
 #content-wrap div {
     display: none;
 }
