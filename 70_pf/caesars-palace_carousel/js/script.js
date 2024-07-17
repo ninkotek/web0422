@@ -173,17 +173,28 @@ shopMouse.onmouseenter = function(){
 
 // footer - family site
 const downArrow = document.querySelector('.family-site>a>img');
-// const upArrow = document.querySelectorAll('.family-site>a')[1];
+const option1 = document.querySelector('#options');
+
+
+downArrow.addEventListener('click', down);
+downArrow.addEventListener('click', up);
+
+function down(){
+    option1.style.display = "block";   
+    downArrow.style.transform = "rotate(180deg)";  
+}
+function up(){
+    option1.style.display = "block";   
+    downArrow.style.transform = "rotate(-180deg)";  
+}
+
+/*
 
 const option1 = document.querySelector('#options');
 
 let count = 0;
 
-// downArrow.onclick = function () {
-//     option1.style.display = "block";
-//     downArrow.style.transform = "rotate(180deg)";    
-//     // downArrow.style.transform = "rotate(180deg)";  
-// };
+
 downArrow.onclick = function () {
     option1.style.display = "block";
     downArrow[count].style.transform = "rotate(180deg)";  
@@ -198,7 +209,7 @@ downArrow.onclick = function () {
       
     }
 } 
-
+*/
 
 
 
