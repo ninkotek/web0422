@@ -1,6 +1,6 @@
 
 // Access the Images
-const slideImages = document.querySelectorAll('.slides>img');
+const slideImages = document.querySelectorAll('.slides>ul>li>img');
 
 //Access the next prev buttons
 const next = document.querySelector('.next');
@@ -85,7 +85,6 @@ function switchImage(currentImage){
         }
         indicators();
 }
-
 
 
 
