@@ -37,14 +37,15 @@ a {
 /* image-right */
 .image-right img {
     width: 340px;
-    height: 670px;
+    height: 500px;
     position: absolute;
     right: 0;
 }
 .login-left {
     width: 440px;
-    height: 670px;
+    height: 500px;
     border: 1px solid #ccc;
+    position: relative;
 }
 .login-left>ul {
     display: flex;
@@ -62,7 +63,7 @@ a {
 }
 /* member */
 #mbConts {
-    border: solid;
+   
     padding: 30px 40px 0;
 }
 .login-id, .login-pw {
@@ -76,15 +77,15 @@ a {
     margin-bottom: 20px;
 }
 .login-smallbtns input {
+    display: inline-block;
     margin-right: 4px;
+    width: 18px;
+    height: 18px;
 }
 .label1 {
     margin-right: 30px;
 }
-/* non-member */
-#nonmbConts {
-    padding: 30px 40px 0;
-}
+
 .login-bigbtn {
     margin-bottom: 24px;
 }
@@ -110,4 +111,45 @@ a {
     margin: 40px 0 34px 0;
     width: 360px;
     text-align: center;
+}
+.login-icons .kakao {
+    transform: translateY(10px);
+}
+/* non-member */
+#nonmbConts {   
+    position: absolute;
+    top: 50px;
+    padding: 30px 40px 0;
+}
+.order-num, .order-pw {
+    width: 360px;
+    height: 34px;
+}
+.order-pw {
+    margin: 10px 0 10px 0;
+}
+#nonmbConts>p {
+    margin-bottom: 34px;
+}
+.login-bigbtn2 {
+    margin-bottom: 24px;
+}
+.login-btn2>a {
+    display: block;
+    width: 360px;
+    height: 50px;
+    line-height: 50px;
+    background: #4aaf70;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* js tabs */
+.login-left>div.tab-on {
+    display: block;
+}
+.login-left>div {
+    display: none;
 }

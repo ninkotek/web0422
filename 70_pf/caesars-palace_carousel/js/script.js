@@ -175,6 +175,10 @@ shopMouse.onmouseenter = function(){
 };
 
 
+/* games */
+
+
+
 
 // footer - family site
 const downArrow = document.querySelector('.family-site>a>img');
@@ -225,3 +229,5 @@ downArrow.onclick = function(){
 };
 
 */
+
+

@@ -15,8 +15,7 @@
 body { 
     background-color: #fff;
     font-family: "Noto Sans KR", sans-serif;
-    font-size: 15px;
-    
+    font-size: 15px;   
 
 }
 a {
@@ -245,6 +244,7 @@ span.next:hover, span.prev:hover{
     transform: translateX(-50%);
 }
 .dotsContainer .dot{
+    cursor: pointer;
     width: 15px;
     height: 15px;
     margin: 0px 2px;
@@ -314,14 +314,15 @@ span.next:hover, span.prev:hover{
     overflow: hidden;  
 }
 .rest-wrap>li {  
-    height: 40px;
-    line-height: 40px;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
     text-align: center;
     /* background-color: #666;    */
 }
-.rest-wrap>li>a {
-    width: 150px;
+.rest-wrap>li>a {   
     color: #fff;
+    transition: .3s;
 }
 .rest-wrap>li:hover >a {
     /* color: #111;    */
@@ -332,6 +333,7 @@ span.next:hover, span.prev:hover{
 .rest-wrap img {
     margin: 20px 30px;
     border-radius: 15px;
+    transition: 0.5s;
 }
 .rest-wrap img:hover {
     opacity: 0.8;
@@ -482,6 +484,10 @@ span.next:hover, span.prev:hover{
     background-attachment: fixed;   
     background-image: url(../images/img4.jpg);  
 }
+
+/* game text - scrolling motion */
+
+
 
 /* shows */
 #shows {
@@ -663,6 +669,7 @@ span.next:hover, span.prev:hover{
     /* transform: translateX(80px); */
 }
 
+/* video */
 
 /* footer */
 
