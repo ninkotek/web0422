@@ -1,4 +1,10 @@
 
+
+
+
+
+
+
 // Access the Images
 const slideImages = document.querySelectorAll('.slides>ul>li>img');
 
@@ -41,7 +47,7 @@ function slidePrev(){
 
 // Auto sliding
 function autoSliding(){
-    deletInterval = setInterval(timer, 3000);
+    deletInterval = setInterval(timer, 4000);
     function timer(){
         slideNext();
         indicators();

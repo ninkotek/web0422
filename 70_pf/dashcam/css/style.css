@@ -76,11 +76,11 @@ header {
 }
 .bx-wrapper .bx-prev {
     left: 160px;
-    background: url(../assets/prev.png) no-repeat 0px 0px;
+    background: url(../assets/prev06.png) no-repeat 0px 0px;
 }
 .bx-wrapper .bx-next {
     right: 160px;
-    background: url(../assets/next.png) no-repeat 0px 0px;
+    background: url(../assets/next06.png) no-repeat 0px 0px;
 }
 /* next 버튼 호버시 사라지는 현상 초기화 */
 .bx-wrapper .bx-next:focus, .bx-wrapper .bx-next:hover {
