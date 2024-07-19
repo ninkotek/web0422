@@ -45,6 +45,8 @@ function slidePrev(){
 
 
 
+
+
 // Access tabs
 const tabsWrap1 = document.querySelectorAll('#tabs-wrap>ul>li>a')[0];
 const tabsWrap2 = document.querySelectorAll('#tabs-wrap>ul>li>a')[1];
@@ -52,25 +54,47 @@ const tabsWrap3 = document.querySelectorAll('#tabs-wrap>ul>li>a')[2];
 
 
 tabsWrap1.addEventListener('click', function(){
-    tabsWrap1.style.backgroundColor = "red";
+    tabsWrap1.style.backgroundColor = "#555";
     tabsWrap1.style.color = "#ffffff";
-    tabsWrap1.style.borderRadius = "15px 0 0 15px";
- 
-});
-tabsWrap2.addEventListener('click', function(){
-    tabsWrap2.style.backgroundColor = "red";
-    tabsWrap2.style.color = "#ffffff";
-   });
-tabsWrap3.addEventListener('click', function(){
-    tabsWrap3.style.backgroundColor = "red";
-    tabsWrap3.style.color = "#ffffff";
-    tabsWrap3.style.borderRadius = "0 15px 15px 0";
+    tabsWrap1.style.borderRadius = "15px 0 0 15px"
+    reset1()
    
 });
+tabsWrap2.addEventListener('click', function(){
+    tabsWrap2.style.backgroundColor = "#555";
+    tabsWrap2.style.color = "#ffffff";
+    reset2()
 
+    // tabsWrap1.style.borderRadius = "15px 0 0 15px"
+   
+});
+tabsWrap3.addEventListener('click', radius);
+function radius(){
+    tabsWrap3.style.backgroundColor = "#555";
+    tabsWrap3.style.color = "#ffffff";
+    tabsWrap3.style.borderRadius = "0 15px 15px 0";
+    reset3()
+}
 
+function reset1(){   
+    tabsWrap2.style.backgroundColor = "";
+    tabsWrap3.style.backgroundColor = "";   
+    tabsWrap2.style.color = "";
+    tabsWrap3.style.color = "";
+}
+function reset2(){
+    tabsWrap1.style.backgroundColor = "";   
+    tabsWrap3.style.backgroundColor = "";
+    tabsWrap1.style.color = "";    
+    tabsWrap3.style.color = "";
+}
 
-
+function reset3(){
+    tabsWrap1.style.backgroundColor = "";
+    tabsWrap2.style.backgroundColor = "";  
+    tabsWrap1.style.color = "";
+    tabsWrap2.style.color = "";  
+}
 
 
 

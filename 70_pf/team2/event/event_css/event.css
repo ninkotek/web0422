@@ -1,4 +1,5 @@
 @charset "uft-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +9,7 @@
 body {
     font-size: 15px;
     background-color: #ccc;
-   
+    font-family: "Noto Sans KR", sans-serif;
 }
 a {
     text-decoration: none;  
@@ -32,9 +33,9 @@ a {
     text-align: center;
     padding: 80px 0;
 } 
-.event-wrap>h2> span::after {
-    display: block;  
-    background-image: url(../event_images/dot.svg);
+.event-wrap>h2>span::after {  
+    content: "ㆍ";    
+  
 }
 .event-promotion {
     width: 100%;
@@ -210,26 +211,29 @@ a {
     margin: 20px 0;
 }
 #tabs-wrap>ul>li {
-   width: 200px;
+   width: 140px;
    height: 30px;
    line-height: 30px;
-   background-color: #eee; 
+   background-color: #eee;   
    text-align: center; 
   
 }
-#tabs-wrap>ul>li:nth-child(1) {
+#tabs-wrap>ul>li>a {
+    color: #111;
+}
+.round1 {
     border-radius: 15px 0 0 15px; 
 }
 
-#tabs-wrap>ul>li:nth-child(3) {
+.round2 {
     border-radius: 0 15px 15px 0; 
 } 
-
-/* #tabs-wrap>ul>li:hover >a {
+/* 
+#tabs-wrap>ul>li:hover >a {
     background-color: #555;
     color: #fff;
     font-weight: bold;
-} */
+}  */
 
 
 /* total-list */

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+        p {
+            position: fixed;
+        }
+    </style>
+    <script>
+        //load ~ html, image, video 포함 모든 내용을 읽었을 때 
+        //DOMContentLoaded: html 내용이 모두 읽혀지면 
+        window.addEventListener('DOMContentLoaded', function(){
+            const p = document.querySelector('p');
+            //scroll event
+            window.addEventListener('scroll', function(){
+                p.innerHTML = Math.floor(pageYOffset);
+
+                if(p.innerHTML >= 300){
+                    document.body.style.background = "yellow";
+                }else {
+                    document.body.style.background = "transparent"
+                }
+                
+            });
+           
+        });
+        
+    </script>
+</head>
+<body>
+    <h1>스크롤에 따라 배경색이 바뀐다</h1>
+    <p>스크롤하면 배경색이 바뀐다</p>
+    
+</body>
+</html>

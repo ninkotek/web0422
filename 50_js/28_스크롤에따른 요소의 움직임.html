@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, h1, h2, p {
+            margin: 0;
+        }
+        header {
+            z-index: 999;
+            position: fixed;
+        }
+        header p {
+            font-size: 5rem;
+        }
+        .section {
+            height: 100vh;
+        }
+        #s1 {
+            background: tomato;
+        }
+        #s2 {
+            background: #ccc;
+        }
+        #s3 {
+            background: #777;
+            position: relative;
+        }
+        #s3 .mbx {
+            position: absolute;
+            left: 50%;
+            top: 90%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            padding: 100px;
+            border: 1px solid #000;
+            transition: 1s;
+            opacity: 0;
+        }
+        #s3 .mbx.active {
+            top: 50%;
+            opacity: 1;
+        }
+        #s4 {
+            background: #222;
+        }
+       
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", function(){
+            const p = document.querySelector('p');
+            const mbx = document.querySelector('.mbx');
+
+            //scroll event
+            window.addEventListener('scroll', function(){
+
+                //스크롤 양을 p요소에 넣기
+                p.innerHTML = Math.floor(pageYOffset);
+
+                //스크롤 양 비교
+                if(p.innerHTML>=1750){
+                    // .active클래스 추가하고 
+                    mbx.classList.add('.active');
+                } else{
+                    mbx.classList.remove('.active');
+                }
+
+           
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>스크롤에 따른 요소의 움직임</h1>   
+        <p>여기에 스크롤 양이 기록된다</p>
+    </header>    
+    <div id="s1" class="section">
+        <h2>섹션1</h2>
+    </div>
+    <div id="s2" class="section">
+        <h2>섹션2</h2>
+    </div>
+    <div id="s3" class="section">
+        <h2>섹션3</h2>
+        <div class="mbx active">스크롤하면 내가 움직여요~~</div>
+    </div>
+    <div id="s4" class="section">
+        <h2>섹션4</h2>
+    </div>
+    
+</body>
+</html>
