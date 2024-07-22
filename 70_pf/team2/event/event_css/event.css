@@ -42,7 +42,6 @@ a {
     background: #fff;
 }
 
-
 .imageText {
     width: 400px;
     height: 300px;
@@ -85,35 +84,34 @@ a {
 }
 
 /* buttons */
-.next-btn, .prev-btn {
+span.next-btn, span.prev-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
     user-select: none;
+    padding: 14px;
+    border-radius: 50%;  
     transition: 0.5s;
 }
 .next-btn {
     right: 10px;
 }
 
-.next-btn img:hover, .prev-btn img:hover {    
-    width: 30px;
-    height: 30px; 
-    border-radius: 50%;  
-    background-color: #777;     
+.evBtn>a>img {  
+   
+    width: 10px;
+    height: 20px;
+    object-fit: cover;   
+}
+span.next-btn:hover, span.prev-btn:hover {     
+
+    background-color: hsla(0, 0%, 47%, 0.5);     
 }
 
 .prev-btn {
     left: 10px;
 }
-
-.evBtn>a>img {  
-    width: 10px;
-    height: 20px;
-    object-fit: cover;   
-}
-
 
 /* dots */
 .dots-container {

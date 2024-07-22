@@ -67,7 +67,6 @@ function indicators(){
     dots[counter].className += ' active';
 }
 
-
 // Add click event to the indicator
 function switchImage(currentImage){
     currentImage.classList.add('active');

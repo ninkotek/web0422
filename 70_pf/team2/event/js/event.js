@@ -51,7 +51,7 @@ function indicators(){
 // Add click event to the indicators
 function imageSwitch(currentImage){
     currentImage.classList.add('eventon');
-    let imageId = currentImage.getAttribute('attr');
+    let imageId = currentImage.getAttribute('data-attr');
     if(imageId > counter){
         slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
         counter = imageId;
