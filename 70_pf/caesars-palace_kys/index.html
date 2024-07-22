@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CEASARS PALACE</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="head-container">
+        <h1 class="logo">
+          <a href="#"><img src="images/caesars-palace.png" alt="logo" /></a>
+        </h1>
+        <nav>
+          <ul class="menu">
+            <li>
+              <a href="#rest">RESTAURANTS</a>
+              <ul class="sub">
+                <li><a href="#steak">STEAK HOUSE</a></li>
+                <li><a href="#">BUFFET</a></li>
+                <li><a href="#">CAFE</a></li>
+                <li><a href="#">BURGERS</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#games">CASINO</a>
+              <ul class="sub">
+                <li><a href="#">ROLETTE</a></li>
+                <li><a href="#">POKER GAMES</a></li>
+                <li><a href="#">SLOTS</a></li>
+                <li><a href="#">SPORTS</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#shows">SHOWS</a>
+              <ul class="sub">
+                <li><a href="#">ADELE</a></li>
+                <li><a href="#">GARTH BROOK</a></li>
+                <li><a href="#">THE KILLERS</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#shops">SHOPS</a>
+              <ul class="sub">
+                <li><a href="#">THE FORUM SHOPS</a></li>
+                <li><a href="#">APPIAN WAY SHOPS</a></li>
+                <li><a href="#">MIRACLE MILE</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/nightlife/nite.html" target="_blank">NIGHTLIFE</a>
+              <ul class="sub">
+                <li><a href="#"></a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-right">
+          <div class="login"><a href="#">Sign In</a></div>
+          <div class="join"><a href="#">Join</a></div>
+          <div class="lang">
+            <!-- <a href="#"><img src="images/language.png" alt="" /></a>       -->
+            <select name="langs" id="language">
+              <option value="kr">English</option>
+              <option value="kr">Korean</option>
+              <option value="sp">Spanish</option>
+              <option value="jp">Japanese</option>
+              <option value="cn">Chinese</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- carousel slider -->
+    <div id="section1" class="bodyWrap">
+      <div class="slide-container">
+        <div class="slides">
+          <ul>
+            <li>
+              <img src="images/image01.jpg" class="active" alt="" />
+              <!-- <p class="text1">ROOM FROM $81</p> -->
+            </li>
+            <li>
+              <img src="images/image02.jpg" alt="" />
+              <P class="text2">CAESARS PALACE <br>SILVER LAS VEGAS GRAND <br>PRIX</P>  
+            </li>
+            <li>
+              <img src="images/image03.jpg" alt="" />
+              <!-- <P class="text3">DISCO SHOW</P> -->
+            </li>
+            <li>
+              <img src="images/image04.jpg" alt="" />
+              <p class="text4"></p>
+            </li>
+            <li>
+              <img src="images/image05.jpg" alt="" />
+              <p class="text5"></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <span class="next"><img src="images/next3333.svg" alt="" /></span>
+      <span class="prev"><img src="images/prev3333.svg" alt="" /></span>
+    </div>
+    <div class="dotsContainer">
+      <div class="dot active" attr="0" onclick="switchImage(this)"></div>
+      <div class="dot" attr="1" onclick="switchImage(this)"></div>
+      <div class="dot" attr="2" onclick="switchImage(this)"></div>
+      <div class="dot" attr="3" onclick="switchImage(this)"></div>
+      <div class="dot" attr="4" onclick="switchImage(this)"></div>
+    </div>
+
+    <!-- slide images 종료 -->
+
+    <!-- restaurant TAB-->
+    <div id="rest">
+      <h2><a href="#">RESTAURANTS</a></h2>
+      <ul class="rest-wrap">
+        <li class="active">
+          <a href="#" id="steak">STEAKHOUSE</a>
+          <div class="sub-wrap">
+            <ul class="steak">
+              <li>
+                <a href="#">
+                  <img src="images/steak101.svg" alt="" />
+                </a>
+                <p><a href="#">NEW YORK PRIME</a></p>
+              </li>
+              <li>
+                <a href="#"><img src="images/steak02.svg" alt="" /></a>
+                <p><a href="#">STANTON SOCIAL PRIME</a></p>
+              </li>
+              <li>
+                <a href="#"><img src="images/steak03.svg" alt="" /></a>
+                <p><a href="#">BRASSERIE B</a></p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">BUFFET</a>
+          <div class="sub-wrap">
+            <ul class="buffet">
+              <li>
+                <a href="#"><img src="images/buffet01.svg" alt="" /></a>
+                <p><a href="#">BACCHANAL BUFFET</a></p>
+              </li>
+              <li>
+                <a href="#"><img src="images/buffet02.svg" alt="" /></a>
+                <p><a href="#">BEIJING NOODLE</a></p>
+              </li>
+              <li>
+                <a href="#"><img src="images/buffet03.svg" alt="" /></a>
+                <p><a href="#">DOMINIQUE ANSEL</a></p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">CAFE</a>
+          <div class="sub-wrap">
+            <ul class="cafe">
+              <li>
+                <a href="#"><img src="images/cafe01.svg" alt="" /></a>
+                <p><a href="#">BRIOCHE BY GUY SAVOY</a></p>
+              </li>
+              <li>
+                <a href="#"><img src="images/cafe02.svg" alt="" /></a>
+                <p><a href="">STARBUCKS</a></p>
+              </li>
+              <li>
+                <a href="#"><img src="images/cafe04.svg" alt="" /></a>
+                <p><a href="#">GORDEN RAMSAY PUB</a></p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">GRILLS</a>
+          <div class="sub-wrap">
+            <ul class="burgers">
+              <li>
+                <a href="#"><img src="images/sandwitch02.svg" alt="" /></a>
+                <p><a href="#">FORUM FOOD HALL</a></p>
+              </li>
+              <li>
+                <a href="#"><img src="images/sandwitch03.svg" alt="" /></a>
+                <p><a href="#">NO PANTS AT ABSINTHE</a></p>
+              </li>
+              <li>
+                <a href="#"><img src="images/sandwitch04.svg" alt="" /></a>
+                <p><a href="#">IN-ROOM DELIVERY</a></p>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- casino-->
+    <div id="games">
+      <h2><a href="#">CASINO</a></h2>
+      <div class="games-wrap">
+        <ul class="game1 game-common">
+          <li>
+            <div>
+              <a href="#games">ROULETTE</a>
+              <a href="#games"><img src="images/roulette01.svg" alt="" /></a>
+            </div>
+            <p class="gp1">
+              The purest game of chance. Roulette gives players a chance to test
+              their luck by picking numbers on a wheel, choosing from 1 to 36,
+              with a 0 and 00.
+            </p>
+          </li>
+        </ul>
+        <ul class="game2 game-common">
+          <li>
+            <div>
+              <a href="#games">POKER</a>
+              <a href="#games"><img src="images/poker01.svg" alt="" /></a>
+            </div>
+            <p class="gp2">
+              Caesars Palace poker recently relocated to the heart of the gaming
+              floor between The Colosseum and the Race & Sports Book. Step into
+              our 4,500-square-foot casino poker room and let the excitement
+              spread.
+            </p>
+          </li>
+        </ul>
+        <ul class="game3 game-common">
+          <li>
+            <div>
+              <a href="#games">BLACK JACK</a>
+              <a href="#games"><img src="images/blackjack01.svg" alt="" /></a>
+            </div>
+            <p class="gp3">
+              Of all the casino table games, there is none more classic than
+              Blackjack, also known as 21. Hit, stand, split and double - get
+              closer than the dealer to 21 without going over and win big.
+            </p>
+          </li>
+        </ul>
+        <ul class="game4 game-common">
+          <li>
+            <div>
+              <a href="#games">TABLE GAME</a>
+              <a href="#games"><img src="images/tablegame01.svg" alt="" /></a>
+            </div>
+            <p class="gp4">
+              When the dice roll, something special happens. The whole table can
+              win together, making Craps a game with a social component like no
+              other.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- shows -->
+    <div id="shows">
+      <h2><a href="#">SHOWS</a></h2>
+      <div class="show-container">
+        <div class="content">
+          <h3>EXPERIENCE LEGENDARY ENTERTAINMENT</h3>
+          <p>
+            See the biggest names in music and comedy perform live or witness
+            the spectacle of the Strip's most unforgettable variety show for an
+            only-in-Vegas experience.
+          </p>
+        </div>
+        <div class="fades">
+          <ul class="fade-slide">
+            <li class="slider slider1">
+              <img src="images/adele.svg" alt="" />
+              <a href="#" class="illust"
+                ><img src="images/illust02.png" alt=""
+              /></a>
+              <a href="#" class="illust"
+                ><img src="images/illust02.png" alt=""
+              /></a>
+              <a href="#" class="illust"
+                ><img src="images/illust02.png" alt=""
+              /></a>
+
+              <p>WEEKENDS WITH ADELE <span>at the Colosseum</span></p>
+            </li>
+            <li class="slider slider2">
+              <img src="images/garth.svg" alt="" />
+              <a href="#" class="illust"
+                ><img src="images/illust03.png" alt=""
+              /></a>
+              <p>GARTH BROOKS/PLUS ONE</p>
+            </li>
+            <li class="slider slider3">
+              <img src="images/killers 2.svg" alt="" />
+              <a href="#" class="illust"
+                ><img src="images/illust04.png" alt=""
+              /></a>
+              <p>
+                THE KILLERS: LIVE IN LAS VEGAS <span>20 Years of Hot Fuss</span>
+              </p>
+            </li>
+          </ul>
+          <!-- <div class="carousel-btn">
+            <a href="#" class="prev-btn"><img src="images/prev.png" alt=""></a>
+            <a href="#" class="next-btn"><img src="images/next.png" alt=""></a>
+          </div> -->
+        </div>
+        <!-- .fades end-->
+      </div>
+    </div>
+
+    <!-- shops  -->
+    <div id="shops" class="shop">
+      <h2>SHOPS</h2>
+      <div class="shop-wrap">
+        <div class="shop1">
+          <div class="shop1-wrap">
+            <div class="shop1-content">
+              <span class="forum">THE FORUM SHOPS</span>
+              <p>Sunday - Thursday | 10AM - 8 PM</p>
+              <p>Friday & Saturday | 10AM - 10PM</p>
+              <p><span>Contact:</span> 702-893-4800</p>
+              <p><span>Lost & Found:</span> 702-893-2466</p>
+            </div>
+            <a class="shop1-image" href="#"
+              ><img src="images/shop1.png" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="shop2">
+          <div class="shop2-wrap">
+            <div class="shop2-content">
+              <span class="appian">APPIAN WAY SHOPS</span>
+              <p>Appian Way Essentials</p>
+              <p>Daily | 9 AM - 12 AM</p>
+            </div>
+            <a class="shop2-image" href="#"
+              ><img src="images/shop2.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-wrap">
+        <div class="logo_btm">
+          <a href="#"><img src="images/footer_logo.png" alt="" /></a>
+        </div>
+        <div class="footer-center">
+          <div class="sisters">
+            <a href="#"><img src="images/footer_aff01.png" alt="" /></a>
+            <a href="#"><img src="images/footer_aff02.png" alt="" /></a>
+            <a href="#"><img src="images/footer_aff05.png" alt="" /></a>
+            <a href="#"><img src="images/footer_aff02.png" alt="" /></a>
+            <a href="#"><img src="images/footer_aff07.png" alt="" /></a>
+            <a href="#"><img src="images/footer_aff05.png" alt="" /></a>
+          </div>
+          <div class="short-cuts">
+            <div class="scLists1">
+              <span><a href="#">Hotel</a></span>
+              <span><a href="#">Casino</a></span>
+              <span><a href="#">Sportsbook</a></span>
+              <span><a href="#">Restaurants</a></span>
+              <span><a href="#">My Rewards</a></span>
+              <span><a href="#">Lost & Found</a></span>
+              <span><a href="#">Shopping</a></span>
+              <span><a href="#">Nightlife</a></span>
+            </div>
+            <div class="scLists2">
+              <span><a href="#">Copy of My Bill</a></span>
+              <span><a href="#">Weddings</a></span>
+              <span><a href="#">Salon</a></span>
+              <span><a href="#">Golf</a></span>
+              <span><a href="#">Pool</a></span>
+            </div>
+          </div>
+          <div class="copyright">
+            <p>
+              3570 Las Vegas Blvd South Las Vegas, NV 89109 Phone: 866-227-5938
+            </p>
+            <p>© 2024 Caesars Entertainment. All Rights Reserved</p>
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="family-site">
+            <h3>FAMILY SITES</h3>
+            <div name="" id="options" class="updown">
+              <p><a href="#">horseshoe</a></p>
+              <p><a href="#">planet hollywood</a></p>
+              <p><a href="#">eldorado</a></p>
+              <p><a href="#">caesars sports</a></p>
+            </div>
+            <a href="#options"
+              ><img src="images/family_downarrow.png" alt=""
+            /></a>
+            <a href="#options"
+              ><img class="hidden" src="images/uparrow.png" alt=""
+            /></a>
+          </div>
+          <div class="sns">
+            <a href="#"><img src="images/instagram01.png" alt="" /></a>
+            <a href="#"><img src="images/facebook01.png" alt="" /></a>
+            <a href="#"><img src="images/x.png" alt="" /></a>
+            <a href="#"><img src="images/youtube01.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
