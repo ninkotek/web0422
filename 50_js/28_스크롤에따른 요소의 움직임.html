@@ -62,14 +62,30 @@
                 //스크롤 양 비교
                 if(p.innerHTML>=1750){
                     // .active클래스 추가하고 
-                    mbx.classList.add('.active');
+                    mbx.classList.add('active');
                 } else{
-                    mbx.classList.remove('.active');
+                    mbx.classList.remove('active');
                 }
 
            
             });
         });
+
+        /*
+        const p = document.querySelector('p');
+        const mbx = document.querySeletor('.mbx');
+
+        window.addEventListener('scroll', function(){
+            p.innerHTML = Math.floor(pageYOffset);
+            if(p.innerHTML >= 1750){
+                mbx.classList.add('active');                
+            } else {
+                mbx.classList.remove('active');
+                }
+        });
+    
+        */
+
     </script>
 </head>
 <body>
