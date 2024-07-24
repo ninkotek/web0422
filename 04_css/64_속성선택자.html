@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        속성 선택자
+        [속성] -> 속성을 갖고 있는 요소
+        [속성="값"] -> 속성=값을 갖고 있는 요소
+
+        [속성~="값"] -> 포함하는 en en- en_ en us us-en us_en us en ko 공백으로 구분된 단어 포함하는
+        [속성|="값"] -> 시작하는 en en- en_ en us us-en us_en us en ko 공백으로 구분된 단어 포함하는
+        
+        */
+        [title] {
+            text-decoration: none;
+        }
+        [target] {
+            color: tomato;
+        }
+          /* title속성이 com을 포함하는 요소 */
+        [title="en"] {border-bottom: 2px solid #333}
+        [title~="en"] {border: 1px solid red} 
+        [title|="en"] {border: 1px solid}
+        [title^="en"] {border: 1px solid}
+        [title$="en"] {border: 1px solid}
+        [title*="en"] {border: 1px solid}
+        [title="en"] {border: 1px solid}
+      
+    
+
+    </style>
+</head>
+<body>
+    <h1>속성 선택자</h1>
+    <a href="#" title="en com">링크1</a>
+    <a href="#" title="en-">링크2</a>
+    <a href="#" title="en_">링크3</a>
+    <a href="#" title="en us">링크4</a>
+    <a href="#" title="us-en">링크5</a>
+    <a href="#" title="us_en">링크6</a>
+    <a href="#" title="us en">링크7</a>
+    <a href="#" title="us en ko">링크8</a>
+    <a href="#"">링크9</a>
+    
+
+
+
+
+
+
+
+    <!-- <a href="https://www.w3schools.com" title="en w3school.comn">w3schools.com</a>
+    <a href="https://www.google.com" target="_self" title="en-us Google.com">Google.com</a>
+    <a href="https://www.microsoft.com" target="_blank" title="en-ko Microsoft.com ">Microsoft.com</a>
+    <a href="https://www.naver.com" target="_blank" title=" ko Naver.com">Naver.com</a>
+    <a href="https://feweb.rf.gd" target="_blank" title="ja feweb.rf.gd">Feweb</a> -->
+
+    <!-- tilde 값(단어)을 포함-->
+    <!-- <h2>[속성~="값"]</h2>
+    <a href="https://www.w3schools.com" title="en w3school.comn">w3schools.com</a>
+    <a href="https://www.google.com" target="_self" title="en-us Google.com">Google.com</a>
+    <a href="https://www.microsoft.com" target="_blank" title="en-ko Microsoft.com ">Microsoft.com</a>
+    <a href="https://www.naver.com" target="_blank" title=" ko Naver.com">Naver.com</a>
+    <a href="https://feweb.rf.gd" target="_blank" title="ja feweb.rf.gd">Feweb</a> -->
+
+    <!-- vertical bar or pipe  |는 값으로 시작하는
+    <h2>[속성|="값"]</h2>
+
+    <!-- caret ^는 test 값으로 시작하는 요소선택 -->
+    <!-- <h2>[속성^="값"]</h2> -->
+    <!-- dollar sign $는  값으로 끝나는 요소-->
+    <!-- <h2>[속성$="값"]</h2> -->
+    <!-- asterisk는 값을 포함한 -->
+    <!-- <h2>[속성*="값"]</h2>
+
+    <div class="first_test">The first div element.</div>
+    <div class="second">The second div element.</div>
+    <div class="test">The third div element.</div>
+    <div class="test_ex">The fourth div element.</div>
+    <p class="test">This is a paragraph.</p>
+    <p class="test_ex">This is a paragraph.</p> 
+ -->
+
+ 
+</body>
+</html>

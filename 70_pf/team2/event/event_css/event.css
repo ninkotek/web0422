@@ -1,5 +1,11 @@
 @charset "uft-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -205,12 +211,12 @@ span.next-btn:hover, span.prev-btn:hover {
     width: 100%;
     /* height: 100vh; */
     background-color: #eee;    
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 #content-wrap {
-    position: relative;
-    margin: 30px 0 20px 0;
+    /* position: relative; */
+    margin: 30px 0 0 0;
 }
 #content-wrap p {
     padding: 20px 0 0px 8px;
@@ -232,6 +238,7 @@ span.next-btn:hover, span.prev-btn:hover {
 /* thumb image border 10px */
 #total-list>ul>li {
     position: relative;
+    border: 1px solid #ccc;
 }
 
 #total-list>ul>li>a::after{
@@ -248,8 +255,10 @@ span.next-btn:hover, span.prev-btn:hover {
 #total-list>ul>li:hover ::after{    
     opacity: 1;    
 }
+
 #ongoing-list>ul>li {
     position: relative;
+    border: 1px solid #ccc; 
 }
 #ongoing-list>ul>li>a::after {
     content: "";
@@ -264,11 +273,26 @@ span.next-btn:hover, span.prev-btn:hover {
 }
 #ongoing-list>ul>li:hover ::after{    
     opacity: 1;    
+} 
+
+#closing-list>ul>li {
+    position: relative;
+    border: 1px solid #ccc;
 }
-
-
-
-
+#closing-list>ul>li>a::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 10px solid #009223;
+    transition-duration: 0.2s;
+    opacity: 0;    
+}
+#closing-list>ul>li:hover ::after{    
+    opacity: 1;    
+}
 
 #total-list>ul>li:nth-of-type(1) {
     transform: translateX(35px);
@@ -383,3 +407,83 @@ span.next-btn:hover, span.prev-btn:hover {
 #content-wrap div.on {
     display: block;
 }
+
+/* event 더보기 */
+
+.eventMoreBtn {
+    width: 450px;
+    height: 50px;
+    margin: 40px 0 140px 0;
+    font-size: 18px;
+    color: #999;
+    border: none;
+    border-radius: 30px;
+    background: #e5e5e5;   
+    transform: translateX(360px);
+    cursor: pointer;
+}
+#eventmore-wrap {
+    width: 100%;
+
+}
+.eventmore-items {
+  
+    display: none;
+    background-color: #eee;  
+}
+/* #eventmore-wrap>div.event-active {
+    display: block;
+}
+#eventmore-wrap>div {
+    display: none;
+} */
+.eventmore-items>ul {
+    margin-left: 68px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.eventmore-items>ul>li {
+    margin-right: 30px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px; 
+}
+.eventmore-items p {
+    padding: 20px 0 0px 8px;
+}
+
+.eventmore-items span {   
+    display: inline-block;
+    font-weight: 500;
+    color: rgba(219, 16, 16, 0.866);
+    margin-bottom: 4px;  
+    padding: 20px 0 0px 8px;
+}
+
+.eventmore-items>ul>li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.eventmore-items>ul>li>a::after{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 10px solid #009223;
+    transition-duration: 0.2s;
+    opacity: 0;    
+}
+.eventmore-items>ul>li:hover ::after{    
+    opacity: 1;    
+}
+
+/* tablet 768px 이하 */
+
+@media (max-width:768px) {
+  #event-container {
+    width: 15%;
+  }
+
+/* phone 360px 이하 */

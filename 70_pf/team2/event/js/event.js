@@ -80,12 +80,14 @@ tabsWrap1.addEventListener('click', function(){
     tabsWrap1.style.backgroundColor = "#555";
     tabsWrap1.style.color = "#ffffff";
     tabsWrap1.style.borderRadius = "15px 0 0 15px"
+    eventmoreItems.style.display = 'none';
     reset1()
    
 });
 tabsWrap2.addEventListener('click', function(){
     tabsWrap2.style.backgroundColor = "#555";
     tabsWrap2.style.color = "#ffffff";
+    eventmoreItems.style.display = 'none';
     reset2()
 
     // tabsWrap1.style.borderRadius = "15px 0 0 15px"
@@ -96,6 +98,7 @@ function radius(){
     tabsWrap3.style.backgroundColor = "#555";
     tabsWrap3.style.color = "#ffffff";
     tabsWrap3.style.borderRadius = "0 15px 15px 0";
+    eventmoreItems.style.display = 'none';
     reset3()
 }
 
@@ -152,3 +155,10 @@ function reset(){
     closing.classList.remove('on');
 }
 
+// 더보기 버튼
+const eventMore = document.querySelector('.eventMoreBtn');
+const eventmoreItems = document.querySelector('.eventmore-items');
+
+eventMore.addEventListener('click', function(){
+    eventmoreItems.style.display = 'block';
+});

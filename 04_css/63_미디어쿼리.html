@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* width, height 크기에 border와 padding이 포함된다 */
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* typo */
+        body {
+            font-family: "Lucida Sans", sans-serif;
+            color: var(--white);
+        }
+        /* 색상 */
+        :root {
+            /* 변수 */
+            --violet: #93c;
+            --sky: #0099cc;
+            --skyblue: #33b5e5;
+            --white: #fff;
+            --gray: #333;
+        }
+
+        /* typo */
+        .header {
+            background: #93c;
+            padding: 15px;
+        }
+
+
+        /* section */
+        body,
+        ul {
+            margin: 0;
+        }
+        /*  선택자 css스타일의 적용 우선순위        
+            0. !important
+            1. Inline styles - Example: <h1 style="color: pink;">
+            2. IDs - Example: #navbar
+            3. Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+            4. Elements and pseudo-elements - Example: h1, ::before 
+            
+        */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+
+        .nav, main, section, aside {
+           
+            padding: 15px;
+        }
+
+        html {
+            font-family: "Lucida Sans", sans-serif;
+        }
+
+        .header {
+            background-color: var(--violet);
+            padding: 15px;
+        }
+
+        /* section */
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: #33b5e5;
+
+            /* box-shadow: x위치 y위치 흐림 퍼짐(생략가능) 색, ... 반복 가능 */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: 0.3s;
+        }
+
+        .menu li:hover {
+            background-color: var(--sky);
+        }
+
+        /* main 콘텐츠 */
+        .main {
+            color: var(--gray);
+        }
+
+        /* 사이드 콘텐츠 */
+        .aside {
+            background-color: #33b5e5;
+            padding: 15px;
+
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        /* footer: */
+        .footer {
+            background-color: #0099cc;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+            padding: 15px;
+        }
+
+        /*  576 이상, tablet, desktop 에도 적용*/
+        @media (min-width: 576px) { 
+
+            /*  
+            flex-grow : 1 성장하지 않는다
+            flex-shrink : 0 수축되지 않는다
+            flex-basis : px, %..단위 들어감
+            flex: grow shrink basis;
+            
+            */
+            .section {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .menu {
+                flex: 33%;
+            }
+            .main {
+                flex: 67%;
+            }
+            .aside {
+                flex: 100%;
+            }
+
+         }
+ /*  768이상, desktop 적용*/
+
+        @media (min-width: 768px) {
+            .section {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .menu {
+                flex: 25%;
+            }
+            .main {
+                flex: 50%;
+            }
+            .aside {
+                flex: 25%;
+            }
+        }
+       
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Chania</h1>
+    </div>
+
+    <section class="section">
+        <!-- 왼쪽 메뉴 -->
+        <!-- col-*는 데스크탑, col-s-*는 태블릿, col지정 않하면 phone 1~12 -->
+        <nav class="menu">
+            <ul>
+                <li>The Flight</li>
+                <li>The City</li>
+                <li>The Island</li>
+                <li>The Food</li>
+            </ul>
+        </nav>
+        <!-- 메인 -->
+        <div class=" main">
+            <h1>The City</h1>
+            <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts,
+                the old town and the modern city.</p>
+        </div>
+        <!-- 사이드 콘텐츠 -->
+       
+            <aside class="aside">
+                <div>
+                    <h2>What?</h2>
+                    <p>Chania is a city on the island of Crete.</p>
+                    <h2>Where?</h2>
+                    <p>Crete is a Greek island in the Mediterranean Sea.</p>
+                    <h2>How?</h2>
+                    <p>You can reach Chania airport from all over Europe.</p>
+                </div>
+            </aside>
+      
+    </section>
+    <!-- 푸터 -->
+    <div class="footer">
+        <p>Copyright 2024 Chania. All rights reserved.</p>
+    </div>
+</body>
+
+</html>
