@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*폰  */
+
+        /*공통 */
+        body * {
+            outline: 1px dotted lime;
+        }
+
+
+        .bx div {
+            width: 300px;
+            height: 300px;
+            background: yellow;
+            font-size: 50px;
+            margin: 16px;
+        }
+
+        /*phone */
+        .bx {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /*태블릿  */
+        @media (min-width: 576px) {
+            body {
+                background: lightblue;
+            }
+
+            .bx {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;             
+            }
+        }
+
+        /*데스크탑  */
+        @media (min-width: 992px) {
+            body {
+                background: rgb(162, 112, 112);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h2>미디어쿼리 테스트</h2>
+        <div class="bx">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </section>
+</body>
+
+</html>

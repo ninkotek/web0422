@@ -481,9 +481,15 @@ span.next-btn:hover, span.prev-btn:hover {
 
 /* tablet 768px 이하 */
 
-@media (max-width:768px) {
-  #event-container {
-    width: 15%;
-  }
+@media screen and (max-width:768px) {
+    .next-btn {
+        right: 40px;       
+    }
+    .event-promotion {
+        transform: translateX(80px);
+    }
 
 /* phone 360px 이하 */
+@media screen and (max-width360px){
+    
+}
