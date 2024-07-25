@@ -32,7 +32,10 @@
             background: #93c;
             padding: 15px;
         }
-
+        img {
+            width: 100%;
+            height: auto;
+        }
 
         /* section */
         body,
@@ -51,7 +54,6 @@
             display: flex;
             flex-wrap: wrap;
         }
-
 
 
         .nav, main, section, aside {
@@ -92,6 +94,12 @@
         /* main 콘텐츠 */
         .main {
             color: var(--gray);
+
+          
+        }
+        .main img:first-of-type {
+            display: none;
+
         }
 
         /* 사이드 콘텐츠 */
@@ -142,6 +150,12 @@
             .aside {
                 flex: 100%;
             }
+            .main img:first-of-type {
+                display: inline-block;
+            }
+            .main img:last-of-type {
+                display: none;
+            }
 
          }
  /*  768이상, desktop 적용*/
@@ -187,6 +201,8 @@
             <h1>The City</h1>
             <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts,
                 the old town and the modern city.</p>
+                <img src="https://www.w3schools.com/css/img_flowers.jpg" width="460" height="345">
+                <img src="https://www.w3schools.com/css/img_smallflower.jpg" width="460" height="345">
         </div>
         <!-- 사이드 콘텐츠 -->
        

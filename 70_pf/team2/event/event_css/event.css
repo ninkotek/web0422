@@ -481,15 +481,36 @@ span.next-btn:hover, span.prev-btn:hover {
 
 /* tablet 768px 이하 */
 
-@media screen and (max-width:768px) {
+@media (max-width: 992px) {
+    .slideImages img {
+        max-width: 100%;
+    }
+    .imageText {
+        display: block;
+       
+    }
     .next-btn {
         right: 40px;       
     }
     .event-promotion {
         transform: translateX(80px);
     }
+    #tabs-wrap {
+        /* transform: translateX(-240px); */
+    }
+    #content-wrap img {
+        max-width: 100%;
+    }
+    #content-wrap {
+        margin-left: -50px;
+    }
+    #total-list>ul {
+        display: block;
+        /* flex-direction: row; */
+        /* align-items: center; */
+    }
 
 /* phone 360px 이하 */
-@media screen and (max-width360px){
+@media (max-width: 576px){
     
 }
