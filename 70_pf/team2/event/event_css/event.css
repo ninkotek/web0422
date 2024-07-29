@@ -18,7 +18,9 @@
 }
 body {
     /* font-size: 15px;    */
+    font-family: ;
     font-family: "Noto Sans KR", sans-serif;
+    background: #faf9f5;
 }
 a {
     text-decoration: none;  
@@ -50,7 +52,7 @@ a {
     height: 360px;  
     position: relative;
     margin-left: -80px;
-    background: #fff;   
+    /* background: #fff;    */
 }
 
 .imageText {
@@ -555,9 +557,11 @@ span.next-btn:hover, span.prev-btn:hover {
     .event-details {
         background-color: #fff;
     }
+    /*
     #content-wrap {
         
     }
+    */
     #tabs-wrap>ul {
         transform: translateX(120px);
     } 
