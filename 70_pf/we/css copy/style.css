@@ -1,0 +1,47 @@
+@charset "uft-8";
+
+body * {
+    outline: 1px solid red;
+}
+/* reset*/
+body {
+    margin: 0;
+    color: #333333;
+    background: #fff;
+}
+a {
+    color: #333333;
+}
+
+/* A*/
+header {    
+    height: 100px;
+    width: 1340px;
+    margin: 0 auto;
+}
+/* B*/
+#slide {
+    height: 350px;
+}
+/* C D 공통*/
+.container {
+    width: 1340px;
+    margin: 0 auto;
+    position: relative;
+    top: -100px;
+}
+#link {
+    height: 100px;
+    background: #e31a40;
+}
+#banner {
+    height: 150px;
+}
+#board {
+    height: 300px;
+}
+/* D*/
+footer {
+    height: 100px;   
+   
+}
