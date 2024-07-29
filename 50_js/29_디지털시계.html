@@ -18,7 +18,7 @@
             const mi = document.querySelectorAll("span")[2];
             const se = document.querySelectorAll("span")[4];
             
-            // setInterval(함수, 밀리초);
+            // setInterval(함수, 밀리초); 
             setInterval(clock, 1000);
 
             function clock() {
@@ -46,7 +46,10 @@
                         예) 2 + 5
 
                     조건 연산자
-                    (조건) ? 참 : 거짓;
+                    (조건) ? 참 : 거짓; let hou = d.getHours(); (hou < 10) ? hou = "0"+ hou : hou = hou; ho.innerHTML = hou;
+                    let min = d.getMinutes(); (min < 10) ? min = "0"+ min : min = min; mi.innerHTML = min;
+                    let sec = d.getSeconds(); (sec < 10) ? sec = "0"+ sec : sec = sec; se.innerHTML = sec;
+                    function ze(num) { return(num < 10) ? num = "0"+ num: num = num;}
 
                 */
                

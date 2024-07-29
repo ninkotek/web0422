@@ -17,3 +17,17 @@ img, video {
     max-width: 100%; */
     height: auto;
 }
+.col-md {
+    position: relative;
+}
+.me::before {
+    content: "";
+    width: 2rem;
+    height: 1.7rem;
+    position: absolute;
+    background-image: url(../images/person.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(-30px);
+    vertical-align: bottom;
+}
