@@ -160,11 +160,19 @@ a {
 }
 
 @media (max-width: 992px) {
-
   
-
+    .login-header {
+        display: none;
+    }
     .sub-container {
-        margin-left: 60px;
+        margin-left: 34px;
+        margin-top: 40px;
+    }
+    .login-left>ul>li {
+        border-bottom: none;
+    }
+    .login-left>ul>li:first-child {
+        border-right: none;
     }
     .sub-container .image-right {
         transform: translateX(120px);
@@ -175,15 +183,15 @@ a {
     .login-left {
         width: 440px;
         height: 600px;
-        border: 1px solid #ccc;
-     
+        border: 1px solid #ccc;     
     }
     .login-icons>a>img {
-        display: none;
+        display: none;       
     }
     .login-icons>a {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 10px;    
+        
         width: 360px;
         height: 34px;
         border: 1px solid #ccc;
@@ -192,21 +200,26 @@ a {
         background-image: url(../login_images/naver.png);
         background-repeat: no-repeat;
         background-size: contain;
+        background-position: 80px;
+        /* transform: translateX(); */
     }
     .login-icons>a:nth-of-type(2) {
         background-image: url(../login_images/kakao.png);
         background-repeat: no-repeat;
         background-size: contain;
+        background-position: 80px;
     }
     .login-icons>a:nth-of-type(3) {
         background-image: url(../login_images/google.png);
         background-repeat: no-repeat;
         background-size: contain;
+        background-position: 80px;
     }
     .login-icons>a:nth-of-type(4) {
         background-image: url(../login_images/apple.png);
         background-repeat: no-repeat;
         background-size: contain;
+        background-position: 80px;
     }
 
     .image-right {
@@ -216,6 +229,8 @@ a {
 }
 
 @media (max-width: 576px) {
-
+    .login-left>ul>li {
+        margin-bottom: 4px;
+    }
 
 }

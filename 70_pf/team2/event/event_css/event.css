@@ -17,8 +17,7 @@
     font-size: 1rem;
 }
 body {
-    /* font-size: 15px;    */
-    font-family: ;
+    /* font-size: 15px;    */   
     font-family: "Noto Sans KR", sans-serif;
     background: #faf9f5;
 }
@@ -472,9 +471,12 @@ span.next-btn:hover, span.prev-btn:hover {
     #content-wrap {
         transform: translateX(28px);
     }
+    .dots-container {
+        display: none;
+    }
 
     .slideImages {
-        transform: translateX(44px);
+        transform: translateX(60px);
     }
     .slideImages img {
         max-width: 100%;
@@ -534,17 +536,12 @@ span.next-btn:hover, span.prev-btn:hover {
         /* max-width: 100%; */
         /* transform: translateX(100px); */
         /* text-align: center;  */
-        font-size: 2vw;
-        margin-left: 200px;
-    }
-    .event-wrap h2 {
-        max-width: 100%;
-        transform: translateX(-20px);
-        /* text-align: center; */
         font-size: 6vw;
+        margin-left: 200px; 
     }
+ 
     .slideImages {
-    transform: translateX(-34px); 
+    transform: translateX(-14px); 
     }
     .slideImages img {
         max-width: 100%;
@@ -552,16 +549,14 @@ span.next-btn:hover, span.prev-btn:hover {
         transform: scale(0.85);          
     }
     .dots-container {
-        transform: translateX(140px);
+        display: none;
+        /* transform: translateX(140px); */
     } 
     .event-details {
+        transform: translateY(-40px);
         background-color: #fff;
-    }
-    /*
-    #content-wrap {
-        
-    }
-    */
+    }   
+ 
     #tabs-wrap>ul {
         transform: translateX(120px);
     } 
@@ -585,10 +580,10 @@ span.next-btn:hover, span.prev-btn:hover {
         transform: scale(1);
     }
     #content-wrap {
-        transform: translateX(160px);
+        transform: translateX(140px);
     }
     .eventMoreBtn {
-        margin-left: 120px;
+        margin-left: 90px;
         transform: scale(0.5);
         font-size: 5vw;
      }
