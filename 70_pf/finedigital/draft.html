@@ -4,39 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>파인디지털_강유식</title>
-   
+
     <style>
         @media (max-width: 992px) {
-          div img{
-            background-image: url(../finedigital/tablet.png);
-            background-repeat: no-repeat;
-            background-position: center;
-          }
-    
-     
+            .desktop {
+            display: none;
+            }       
+            .phone {
+                display: none;
+            }     
+        }
         @media (max-width: 576px) {
-           div img {
-            background-image: url(../finedigital/phone.png);
-            background-repeat: no-repeat;
-            background-position: center;
-           }
+            .phone {
+                display: block;
+            }
+            .desktop {
+                display: none;
+            }
+            .tablet {
+                display: none;
+            }
+                   
         }
-    }
+    </style>
+   
 
-    </style>
-    <style>
-        body {
-            margin: 0;
-        }
-        img{
-            width: 100%;
-            vertical-align: top;
-        }
-    </style>
 </head>
 <body>
-    <div><img src="desktop.png" alt="시안"></div>
-   
+    <div class="desktop"><img src="desktop.png" alt="시안"></div> 
+    <div class="tablet"><img src="tablet.png" alt="시안"></div> 
+    <div class="phone"><img src="phone.png" alt="시안"></div> 
 
 </body>
 </html>
