@@ -28,13 +28,13 @@ a {
 
 #event-container {
     width: 100%;
-    height: 100vh;   
+    /* height: 100vh;    */
  }
 
 
 .event-wrap {
     width: 1200px;    
-    height: 100%;
+    /* height: 100%; */
     margin: 0 auto;
  
 }
@@ -200,7 +200,7 @@ span.next-btn:hover, span.prev-btn:hover {
 }
 .main-image .slideImages img {
     width: 100%;
-    height: 100%;
+    height: auto;
     position: absolute;
 }
 
@@ -390,6 +390,7 @@ span.next-btn:hover, span.prev-btn:hover {
     margin: 40px 0 140px 0;
     font-size: 18px;
     color: #999;
+    font-weight: 600;
     border: none;
     border-radius: 30px;
     background: #e5e5e5;   
@@ -467,23 +468,32 @@ span.next-btn:hover, span.prev-btn:hover {
  
     .event-promotion{             
         margin-top: -40px;
+        border: solid yellow;
     }
     #content-wrap {
         transform: translateX(28px);
     }
-    .dots-container {
-        display: none;
+    .main-image {
+        border: solid red;
     }
 
     .slideImages {
         transform: translateX(60px);
+        margin-left: 4px;
+        border: solid blue;
     }
     .slideImages img {
         max-width: 100%;
         height: auto;
         /* transform: scale(0.8); */
     }
+    .dots-container {
+        display: none;
+    }
+    
     .event-details img {
+        width: 100%;
+        height: auto;
         transform: scale(0.8);
     }
     .imageText {
@@ -517,17 +527,28 @@ span.next-btn:hover, span.prev-btn:hover {
         flex-wrap: wrap;
         margin-left: 12px;       
      }
+     /* .eventmore-items>ul {
+        flex-wrap: nowrap;
+     }  */
+     .eventmore-items {
+        border: solid blue;
+        /* transform: translateX(-20px); */
+     }
      .eventmore-items>ul {
         display: flex;
-     }
-     .eventmore-items {
+        
+    }
+     .eventmore-items>ul>li {        
         transform: translateX(-30px);
      }
-
+     .eventmore-items img {
+        transform: scale(0.8);
+     }
      .eventMoreBtn {
         margin-left: 160px;
         transform: scale(0.5);
         font-size: 3vw;
+      
      }
 }
 /* phone 576px 이하 */
