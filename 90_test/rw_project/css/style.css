@@ -594,6 +594,7 @@ address {
 }
 
 @media (max-width: 992px) {
+    
     .rest-wrap img {
         transform: scale(0.8);
     }
@@ -604,6 +605,9 @@ address {
 }
 @media (max-width: 576px) {
 
+    .rest-wrap img {
+        transform: scale(0.7);
+    }
 
 
 
