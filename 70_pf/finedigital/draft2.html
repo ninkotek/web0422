@@ -10,32 +10,33 @@
             margin: 0;
             
         }
-        div {
-            width: 100%;
-            height: 5000px;
-            background-image: url(phone.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 0 0;
-            /*background-attachment: fixed; 패럴렉스 스크롤링시 사용*/
-            background: url(phone.png) no-repeat 0 0/100%;
-        
-        }
+     div {
+        background-image: url(desktop.png);  
+        background-repeat: no-repeat;
+        background-position: 0 0;      
+        background-size: 100%;
+     }
       
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
             div {
                 height: 4000px;
-                background-image: url(tablet.png);        
+                background-image: url(tablet.png);  
+                background-repeat: no-repeat;
+                background-position: 0 0;      
+                background-size: 100%;
         
         }
             
         }
-        @media (min-width: 920px) {
+        @media (max-width: 586px) {
           
             div {
                
                 height: 4000px;
-                background-image: url(desktop.png);             
+                background-image: url(phone.png);      
+                background-repeat: no-repeat;
+                background-position: 0 0;      
+                background-size: 100%;       
             
             }
         }
