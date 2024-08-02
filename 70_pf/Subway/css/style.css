@@ -41,6 +41,7 @@ nav ul li:not(:first-child) {
     padding-top: 54px;
 }
 #sec1 h2 {
+    
     position: absolute;
     left: 20%;
     top: 55%;
@@ -53,7 +54,7 @@ nav ul li:not(:first-child) {
     background: #000;
     color: #fff;
     padding: 8px 16px;
-    margin-right: 16px;
+    margin-right: 16px; 
 }
 
 
@@ -92,7 +93,7 @@ section {
 section li {
     width: 355px;
 }
-
+/* li요소중 4의 배수 마지막 li제외 */
 section li:not(:nth-of-type(4n)) {
     margin-right: 20px;
 }

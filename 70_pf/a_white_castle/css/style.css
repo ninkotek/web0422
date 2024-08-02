@@ -7,10 +7,12 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background-color: #fff;
     font-family: "Noto Sans KR, sans-serif";
 }
+
 header {
     position: fixed;
     z-index: 9999;
@@ -22,20 +24,67 @@ header {
     padding: 0 30px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
-nav ul {
-    display: flex;
+
+nav {
+    display: none;
 }
-nav ul li:not(:first-child) {
-    margin-left: 40px;
+/* 섹션1 */
+#sec1 {
+    position: relative;
+    padding-top: 54px;
 }
 
+#sec1 h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#sec1 b {
+    padding: 8px 16px;
+    margin-right: 16px;
+}
+#sec1 span {
+    display: none;
+}
+
+/* 섹션2 */
+
+
+/* 섹션1,2,3,4 공통 */
+
+
+/* 섹션2,3 공통 */
 
 /* 768이상, 태블릿, 테스크탑 */
 @media (min-width: 768px) {
 
+    nav ul li {
+        margin-left: 40px;
+    }
+
+    nav ul {
+        display: flex;
+    }
+    #sec1 h2 {       
+        
+        top: 50%;       
+    }
 }
 
 /* 992이상, 테스크탑 */
 @media (min-width: 992px) {
-    
+    section {        
+        padding-top: 94px;
+    }
+
+    #sec1 div {
+        width: 1480px;
+        height: 745px;
+        margin: 0 auto;
+        object-fit: contain;
+        object-position: center;
+        overflow: hidden;
+    }
 }
