@@ -53,7 +53,30 @@ button {
     
 }
 
+/* 배경색 */
 /* 헤더 */
+header {
+    background: #fff;
+}
+#sec1 b {
+    background: #fff;
+}
+#sec1 div {
+    background: #fbc200;
+}
+#sec3>ul>li>a {
+    background: #f1f1f1;
+}
+#sec4 button {
+    background: #000;
+}
+#sec4 .map {
+    background: #ccc;
+}
+footer {
+    background: #000;
+}
+/* font color */
 /* 섹션1 */
 #sec1 h2 {
     letter-spacing: 4px;
@@ -62,11 +85,17 @@ button {
 #sec1 b {  
     color: #fff; 
 }
+#sec1 div p {
+    color: #fff;
+}
+#sec1 div p span {
+    color: #004816;
+}
 /* 섹션2 */
-/* 섹션3 */
 #sec2 h3 {  
     color: #fff;
 }
+/* 섹션3 */
 /* 섹션4 */
 /* 푸터 */
 footer {

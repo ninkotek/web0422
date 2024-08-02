@@ -1,8 +1,41 @@
 @charset "utf-8";
 
-* {
-    list-style: none;
+@import url('reset.css');
+@import url('common.css');
+
+/* 공통 영역: 폰, 태블릿, 테스크탑 */
+html {
+    scroll-behavior: smooth;
 }
-a {
-    text-decoration: none;
+body {
+    background-color: #fff;
+    font-family: "Noto Sans KR, sans-serif";
+}
+header {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    padding: 0 30px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+nav ul {
+    display: flex;
+}
+nav ul li:not(:first-child) {
+    margin-left: 40px;
+}
+
+
+/* 768이상, 태블릿, 테스크탑 */
+@media (min-width: 768px) {
+
+}
+
+/* 992이상, 테스크탑 */
+@media (min-width: 992px) {
+    
 }
