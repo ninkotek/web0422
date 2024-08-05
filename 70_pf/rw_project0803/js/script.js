@@ -47,7 +47,7 @@ menuClose.addEventListener('click', function(){
 		translate: [0, '100vw']
 	}, menuOptions);
 	sideItems.forEach((sideItem)=>{
-		sideItems.animate({opacity:[1, 0]}, menuOptions);
+		sideItem.animate({opacity:[1, 0]}, menuOptions);
 	});
 })
 
@@ -217,3 +217,38 @@ function rest4(){
     tabs[3].classList.add('active');
 } 
 
+// Side-menu phone
+const submenuBtn = document.querySelectorAll('.side-main>li img');
+const sidePanelBtn = document.querySelector('.side-panel');
+const sideMenu = document.querySelectorAll('.side-sub');
+
+//sidePanel.animate({translate: ['100vw', 0]}, menuOptions);
+
+submenuBtn[0].onclick = function (){
+    hide()
+    sideMenu[0].style.display = "block";
+    
+};
+submenuBtn[1].onclick = function (){
+    hide()
+    sideMenu[1].style.display = "block";
+    
+};
+submenuBtn[2].onclick = function (){
+    hide()
+    sideMenu[2].style.display = "block";
+   
+};
+submenuBtn[3].onclick = function (){
+    hide()
+    sideMenu[3].style.display = "block";
+   
+
+};
+
+function hide(){
+    sideMenu[0].style.display = "none";
+    sideMenu[1].style.display = "none";
+    sideMenu[2].style.display = "none";
+    sideMenu[3].style.display = "none";
+}

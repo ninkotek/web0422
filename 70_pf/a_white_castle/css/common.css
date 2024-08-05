@@ -44,6 +44,7 @@ button {
 #sec1 h2 {
     letter-spacing: 4px;
     font-weight: 400;
+    font-size: 3.6rem;
 }
 #sec1 b {
     color: var(--white);
@@ -71,27 +72,28 @@ header {
 #sec1 b {
     background: var(--black);
 }
+#sec1 span {
+    font-weight: 600;
+}
 #sec1 div {
     background: var(--grayc);
 }
 /* 섹션2 */
 #sec2 div {
-    background: var(--grayc);
+    /* background: var(--grayc); */
 }
 /* 섹션3 */
 #sec3 div {
-    background:  var(--grayc);
+    /* background:  var(--grayc); */
 }
 #sec3 a {
-    background: var(--grayc);
+    /* background: var(--grayc); */
 }
 /* 섹션4 */
 #sec4 button {
     background: var(--black);
 }
-#sec4 .map {
-    background:  var(--grayc);
-}
+
 /* 푸터 */
 footer {
     background: var(--black);
