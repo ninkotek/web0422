@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+    <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bx슬라이더 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <script>
+        // 1. html를 <body> 태그 사이에 붙인다. 
+        // 2. img태그 이미지 경로 파일 변경한다. alt속성 추가
+        // 3. js 코드를 <script>태그 사이에 붙여 넣기 위해 로드 이벤트를 작성한 후 붙여 넣는다. 
+        // 4. 제이쿼리, bxslider 라이브러리 파일을 연결한다. 
+        // 5. 가) 제이쿼리.min.js -><script>, 나) bx슬라이더.min.js -> <script>, 다) bx슬라이더.min.css -> <link>
+        // 라이브러리 파일 찾기: cdn js.com
+        //로드 이벤트
+        /*window.addEventListener("DOMContentLoaded", ()=>{
+        });
+        $(document).ready(()=>{}); */
+        $(()=>{
+            $('.bxslider').bxSlider({
+                auto: true,
+                autoControls: true,
+                stopAutoOnClick: true,
+                pager: true,
+                slideWidth: 600
+              });
+        });
+
+    </script>
+</head>
+<body>
+    <!-- https://bxslider.com/examples/auto-show-start-stop-controls -->
+    <div class="bxslider">
+        <div><img src="/assets/pic4.jpg" alt="slide 1"></div>
+        <div><img src="/assets/pic5.jpg" alt="slide2"></div>
+        <div><img src="/assets/pic6.jpg" alt="slide3"/></div>
+      </div>
+</body>
+</html>

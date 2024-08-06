@@ -13,7 +13,12 @@ ul {
 }
 img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    /*  contain은 100% 이미지 잘림없이 보여지며 빈공간이 생길 수 있다. 
+    cover의 경우는 빈공간이 생기지 않지만 이미지 일부가 잘릴 수 있다*/
+    object-fit: cover;
+    /* object-position: x위치 y위치 */
+    object-position: 50% 50%;
     vertical-align: top;
 }
 a {
