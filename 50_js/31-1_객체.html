@@ -6,139 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        window.addEventListener("DOMContentLoaded", ()=>{
-     
-        /* 
-            객체 생성     
-            new Object() -> 대문자 O
-            {}
-            const 변수 = {
-                속성: 값,
-                속성: 값,
-                속성: 값,
-                .....
-                }
-                속성은 ""안에 사용 가능, 숫자 데이터의 경우 ""을 묶지 않는 것이 원칙, 숫자형 문자 데이터는 묶을 수 있다 ex)모델:"500"
-                */
+        window.addEventListener("DOMContentLoaded", () => {
+
+
+            /* 
+                객체 생성
+                    const 변수 = {
+                        속성: 값,
+                        속성: 값,
+                        속성: 값,
+                        ...
+                    };
+            */
 
             const person = {
-                firstName: "존", // 이름: "존"
+                // 속성은 ""을 묶어 사용 가능    
+                firstName: "존",
                 lastName: "도",
                 age: 50,
-                "이름": "존",
                 "남자니?": true,
-                "성과이름": function(){
+                성과이름: function () {
+                    // return person.firstName + " " + person.lastName
+                    // this는 객체 자신을 가리킨다.
                     return this.firstName + " " + this.lastName
-                    /* return person.firstName + " " + person.lastName */
-                    //this는 객체 자신 즉 person을 가리킨다
-                  
                 },
                 myCar: {
-                    type: "Fiat",
+                    type: "피아트",
+                    // 숫자 데이터의 경우 ""을 묶지 않는 것이 원칙!
+                    // 숫자형 문자 데이터의 경우는 묶을 수 있다.
                     model: "500",
-                    color: "white"
+                    color: "흰색"
                 }
             };
 
-                console.log(person.firstName);
-                console.log(person["firstName"]);
+            // 요소 찾기
+            const div = document.querySelector("div");
 
-                console.log(person.lastName);
-                console.log(person["lastName"]);
-                console.log(person.age);
-                console.log(person["남자니?"]);
-                console.log("객체.메소드()");
-                console.log(person.성과이름()); //function 이라 ()필요
+            // 출력
+            /* 
+                <div>여기에 출력됩니다.</div>
+    
+                div의 내용으로 출력하기
+                    div.innerText = "값"
+                    div.textContent = "값"
+                    div.innerHTML = "값"
+            */
+            /* 
+                객체 접근 방법
+                    객체.속성
+                    객체["속성"] 
+                    
+                    객체.객체.속성
+            */
 
-             
-                console.log(person.myCar.type);
-                console.log(person.myCar.model);
-                console.log(person.myCar.color);
+            div.innerHTML = "이름은 " 
+            + person.firstName
+            + " 성은 "
+            + person.lastName
+            + " 나이는 " 
+            + person.age
+            // + person.남자니? -> 에러
+            + "세<br>"
+            + "너 남자니? "
+            /* 
+                if (조건) {
+                    참
+                } else {
+                    거짓
+                }
 
-                div.innerHTML = "이름은" + person.firstName;
-                div.innerHTML += person.lastName;
-                div.innerHTML += person.age;
-
-                div.innerHTML = "이름은"
-                + person.firstName
-                + "성은"
-                + person.lastName
-                + person.myCar.type
-                + perosn.myCar.color
-                + "입니다."
-
-                //피연산자> 조건 ? 참 : 거짓 => 실행코드 1개일 때 사용 가능
-
- 
-                
-                // 객체.객체.속성 const div = document.querySelector('div');
-
-                div.innerText = "car.type";
-                div.innerText = "car.model";
-                div.innerText = "car.color";
-                
-                console.log(car.type);
-                console.log(car.model);
-                console.log(car.color);
-                
-                console.log(car["type"]);
-                console.log(car["model"]);
-                console.log(car["color"]);
-
-                
-                
-                
-
-      
-
-        /* 출력 
-        div의 내용으로 출력하기 
-        div.innerText = "값"
-        div.textContent = "값"
-        div.innerHTML = "값"
-
-        객체 접근 방법
-            객체.속성
-            객체["속성"]        
-        */
-  
-      
-        // 
-        person1.firstName;
-        person1["firstName"];
-        person1.lastName;
-        person1["lastName"];
-
-        console.log(person1["이름"]);
-
-        console.log(person1["이름"]);
-        console.log(person1["이름"]);
+                조건(삼항) 연산자
+                    조건 ? 참 : 거짓
+                    true ? "예" : "아니오"
+            */
+            + (person["남자니?"] ? "예" : "아니오")
+            + "<br>이름을 다시 한 번 성과 함께 말해주세요?<br>"
+            + person.성과이름()
+            + "입니다. 차를 가지고 있군뇨! 어떤 차인가요?<br>"
+            + person.myCar.type
+            + " 이구요. 모델명은 "
+            + person.myCar.model
+            + " 이구요. <br>색깔은 "
+            + person.myCar.color
+            + "입니다."
 
 
-        /* person2.fullname(); */
+            // 속성 값 변경 및 추가
+            person.firstName = "John";
+            person.lastName = "Doe";
+            person.age = 50;
+            person.eyeColor = "blue";
+            
+            console.log(person);
 
-        // 객체 리터럴로 객체 생성
-      
-
-        // 속성 추가 값 갱신
-        person2.firstName = "John";
-        person2.lastName = "Doe";
-        person2.age = 50;
-        person2.eyeColor = "blue";
-
-
-        console.log(person2);
-
-        // new 키워드로 객체 생성
-        const person3= new Object();
-
-        // 속성 추가
-        firstName = "John";
-        lastName = "Doe";
-        age = 50;
-      
-
-    }); //DOMContentedLoaded end
+        }); //DOMContentLoaded
     </script>
 </head>
 

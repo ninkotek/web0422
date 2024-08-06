@@ -6,151 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        window.addEventListener("DOMContentLoaded", ()=>{
-     
-       
+        window.addEventListener("DOMContentLoaded", () => {
 
             const person = {
-                firstName: "존", // 이름: "존"
+                "first Name": "존",
                 lastName: "도",
                 age: 50,
-                "이름": "존",
                 "남자니?": true,
-                "성과이름": function(){
-                    return this.firstName + " " + this.lastName
-               
+                "성과 이름": function () {
+                    return this["first Name"] + " " + this.lastName
                 },
                 myCar: {
-                    type: "Fiat",
+                    type: "피아트",
                     model: "500",
-                    color: "white"
+                    color: "흰색"
                 }
             };
 
-                console.log(person.firstName);
-                console.log(person["firstName"]);
+            // 요소 찾기
+            const div = document.querySelector("div");
 
-                console.log(person.lastName);
-                console.log(person["lastName"]);
-                console.log(person.age);
-                console.log(person["남자니?"]);
-                console.log("객체.메소드()");
-                console.log(person.성과이름()); //function 이라 ()필요
+            // 출력
+            div.innerHTML = `<b>이름이 어떻게 되세요?</b> ${person["first Name"]}<br><b>성은 어떻게 되세요?</b> ${person.lastName} <br><b>나이는 어떻게 되세요?</b> ${person.age}세<br><b>남자 입니까?</b> ${(person["남자니?"] ? "예" : "아니오")}<br><b>이름을 다시 한 번 성과 함께 말해주세요?</b> ${person["성과 이름"]()}입니다. <br><b>차를 가지고 있군뇨! 어떤 차인가요?</b> ${person.myCar.type} 이구요. 모델명은 ${person.myCar.model}이구요. 색깔은 ${person.myCar.color}입니다.`
 
-             
-                console.log(person.myCar.type);
-                console.log(person.myCar.model);
-                console.log(person.myCar.color);
+            const b = document.querySelectorAll("b");
 
-                div.innerHTML = "이름은" + person.firstName;
-                div.innerHTML += person.lastName;
-                div.innerHTML += person.age;
+            // console.log(b.length);
 
-                div.innerHTML = "이름은"
-                + person.firstName
-                + "성은"
-                + person.lastName
-                + person.myCar.type
-                + perosn.myCar.color
-                + "입니다."
+            /* 
+                HTML컬렉션 객체
+                    length: 개수
+            */
+            /* 
+                객체.forEach(function(currentValue, index){}) (ver.ES5)            
+            */
+            // 화살표함수의 매개변수 괄호는 매개변수 1개일때만 생략할 수 있다.
+            // c는 b[0]~b[5]를 의미한다.
+            // b.forEach(cv => {
+            //     cv.style.color = "#333";
+            //     cv.style.lineHeight = 2;
+            //     cv.style.fontWeight = "normal";
+            //     cv.style.fontSize = ".7rem";
+            // });
 
-            
-                div.innerText = "car.type";
-                div.innerText = "car.model";
-                div.innerText = "car.color";
-                
-                console.log(car.type);
-                console.log(car.model);
-                console.log(car.color);
-                
-                console.log(car["type"]);
-                console.log(car["model"]);
-                console.log(car["color"]);
+            /* 
+                for ~ of (ver.ES6)
+                for(let 변수명 of HTML컬렉션) {
+                    변수명.코드;
+                }       
+            */
+            // for ~ of -> HTML컬렉션(Nodelist)
+            // b 요소 개수 만큼 for문을 반복한다.
+            for (let x of b) {
+                x.style.color = "#333";
+                x.style.lineHeight = 2;
+                x.style.fontWeight = "normal";
+                x.style.fontSize = ".7rem";
+            }
 
-                
-                // length 개수 : HTMLCollection 개첵의 개수 요소의 개수 만큼만 반복
-                //for ~ of 컬렉션(Nodelist). 배열 반복에 사용
-                //for ~ in -> 객체 반복시
-                //for (let변수명 of HTML걸렉션) { 변수명.속성 = 값; 변수명.메소드();}
-                 /* 
-                 객체.forEach(function(현재값, index){})
-                 
-            // x는 b[0]~[5]를 의미한다. x, i는 아무거나 정해도 된다
-        */  b.forEach((x, i)=>{
-            x[i].style.color = "#333";
-            x[i].style.lineHeight = 2;
-            x[i].style.fontWeight = "normal";
-            x[i].style.fontSize = ".7rem";
-        });
-            
-        }
-        // x는 현재 값 b[0].style..b[5].style과 같은 의미
-                for(let x of b){
-                    x.style.color = "#333";
-                    x.style.lineHeight = 2;
-                    x.style.fontWeight = "normal";
-                    x.style.fontSize = ".7rem";
-                }
-                for(let i=0; i<b.length; i++){
-                    b[i].style.color = "#333";
-                    b[i].style.lineHeight = 2;
-                    b[i].style.fontWeight = "normal";
-                    b[i].style.fontSize = ".7rem";
-                }
-                
-                
-
-      
-
-        /* 출력 
-            
-        */
-        div.innerHTML = 
-        `이름이 어떻게 되세요?<br>
-        ${person.firstName}
-        성은<br>
-        ${person.lastName}
-        나이는${person.age}
-        세 
-        너 남자니?${(person["남자니?"]?"예" : "아니오")`
-  
-      
-        // 
-        person1.firstName;
-        person1["firstName"];
-        person1.lastName;
-        person1["lastName"];
-
-        console.log(person1["이름"]);
-
-        console.log(person1["이름"]);
-        console.log(person1["이름"]);
+            // length는 객체의 총 개수
+            // for(let i = 0; i < b.length; i++) {
+            //     b[i].style.color = "#333";
+            //     b[i].style.lineHeight = 2;
+            //     b[i].style.fontWeight = "normal";
+            //     b[i].style.fontSize = ".7rem";
+            // }
 
 
-        /* person2.fullname(); */
+            // 속성 값 변경 및 추가
+            person["first Name"] = "John";
+            person.lastName = "Doe";
+            person.age = 50;
+            person.eyeColor = "blue";
 
-        // 객체 리터럴로 객체 생성
-      
+            // console.log(person);
 
-        // 속성 추가 값 갱신
-        person2.firstName = "John";
-        person2.lastName = "Doe";
-        person2.age = 50;
-        person2.eyeColor = "blue";
-
-
-        console.log(person2);
-
-        // new 키워드로 객체 생성
-        const person3= new Object();
-
-        // 속성 추가
-        firstName = "John";
-        lastName = "Doe";
-        age = 50;
-      
-
-    }); //DOMContentedLoaded end
+        }); //DOMContentLoaded
     </script>
 </head>
 
