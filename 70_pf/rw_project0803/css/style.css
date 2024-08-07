@@ -764,7 +764,7 @@ address {
         transform: translateY(-10px);       
     }
     .rest-wrap>li>a {        
-        display: none;  
+        display: none;   
         transform: translateX(12px);
        
         /* margin-bottom: 80px; */
@@ -793,10 +793,10 @@ address {
         transform: translateY(-120px);
     }
     .navi {
-        display: block;
+        display: block; 
     }
     .golf {
-        display: block;
+        display: block; 
     }
     .action {
         display: block;
@@ -872,8 +872,5 @@ address {
     top: -140px;
     right: -90px;  
 }
-
-
-
 
 }
