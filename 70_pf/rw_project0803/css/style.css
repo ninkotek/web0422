@@ -145,6 +145,8 @@ nav {
     position: absolute;
     top: -400px;
     right: 0;
+    object-fit: cover;
+    object-position: center;
 }
 
 .image-fade .p1 { 

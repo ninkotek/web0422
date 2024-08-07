@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bxSlider sliding</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        
+        body {
+            margin: 0;
+        }
+        img {
+            width: 100%;
+            /*
+            rem는 root(html)기준
+            em은 부모 기준
+             %는 일반적으로 부모 기준, vw, vh, vmin, vmax - viewport 
+            100vw: 창기준으로 화면 가로 가득 찬것*/
+            height: 100vh;
+            object-fit: cover; 
+            object-position: top;
+        }
+        #slidewrap {
+            /*height: 450px;  */
+            position: relative; 
+            /* width: 1200px; */      
+            margin: 0 auto;
+        }
+        .bx-wrapper {
+            height: 100%;
+            box-shadow: none;
+            border: none;
+            margin-bottom: 0;
+           
+        }
+        .bx-viewport {
+            height: 100% !important;
+        }
+        /* 인디케이터(pagination) 위치 조정 */      
+        .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+            bottom: 35%;
+            left: calc(50% - 77px);
+            width: auto;
+            transform: translateX(-50%);          
+            
+        }
+     
+          /* 인디케이터 색상 변경 */ 
+          .bx-wrapper .bx-pager.bx-default-pager a:focus,
+        .bx-wrapper .bx-pager.bx-default-pager a:hover,
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            /* 인디케이터 전체 색상 */
+            
+            /* 인디케이터 간 간격 */
+            margin: 0 12px;
+            width: 30px;
+            height: 30px;
+            background: url(../assets/chilsong/mainRoll_indi.png);
+            border: none;
+           
+        }
+
+        /* 실행 일시정지 버튼 */
+        .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+            height: 30px;
+            right: calc(50% - 77px);
+            bottom: 35%;
+            width: auto;
+        }
+        /* 실행버튼 */
+    
+        .bx-wrapper .bx-controls-auto .bx-start {       
+            width: 10px;
+            height: 11px;        
+            background: url(../assets/chilsong/btn_play.png) 0px 0px no-repeat;
+            margin: 0 3px;
+        }
+        .bx-wrapper .bx-controls-auto .bx-start:focus,
+        .bx-wrapper .bx-controls-auto .bx-start:hover,
+        .bx-wrapper .bx-controls-auto .bx-start.active {
+            /* start버튼 사라지는 현상 제거 */
+            background-position: 0px 0px;
+         
+        }
+         /* 일시정지 버튼 색상 변경*/  
+        .bx-wrapper .bx-controls-auto .bx-stop {
+            display: block;
+            text-indent: -9999px;
+            width: 9px;
+            height: 11px;
+            outline: 0;
+            background: url(../assets/chilsong/btn_pause.png) 0px 0px no-repeat;
+            margin: 0 12px;
+        }
+        .bx-wrapper .bx-controls-auto .bx-stop:focus,
+        .bx-wrapper .bx-controls-auto .bx-stop:hover,
+        .bx-wrapper .bx-controls-auto .bx-stop.active {
+            background-position: 0px 0px;           
+       }
+        .bx-wrapper .bx-pager.bx-default-pager a.active {
+            /* 인디케이터 현재 활성화 색상 */
+           /* transform: scale(2, 2); 
+            a.active란 a(중앙에 있는 동그라미) 중에서 선택된 a태그 */
+            background: #fff;
+            width: 30px;
+            height: 30px;
+            border: none;
+            background: transparent url(../assets/chilsong/mainRoll_indi_on.png);      
+        }
+         /* prev next button */
+        .bx-wrapper .bx-controls-direction a {
+            /*display: block;*/
+            width: 50px;
+            height: 76px;       
+            margin-top: 0px;    /* 버튼의 수직 중앙 배치 (기본값 -16px) */
+            transform: translateY(-50%);
+            background: url(../assets/slider/ico_comm_sp.png) no-repeat;
+        }
+
+        .bx-wrapper .bx-controls-direction a.bx-prev {
+            left: 40px;
+            /* background: url() no-repeat x위치 y위치/60px 60px  */
+          
+            background-position: 0 -129px;
+        }
+
+        .bx-wrapper .bx-controls-direction a.bx-next {
+            right: 40px;
+            background-position: -55px -129px;
+        }
+         /* next 버튼 호버시 사라지는 현상 초기화 */
+            .bx-wrapper .bx-next:focus,
+            .bx-wrapper .bx-next:hover {
+            background-position: 0 0;
+        }
+        /* 텍스트 모션 */
+        #slidewrap p {
+            z-index: 999;
+            position: absolute;
+            left: 50%;
+            top: 35%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 60px;
+            /* p태그 안에서 가로 가운데 */
+            text-align: center;
+        }
+
+       
+
+    </style>
+    <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bx슬라이더 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <script>
+       
+        $(()=>{
+            //<body> 태그의 <div>태그의 class이름과 선택자가 같으면 된다.
+            $('.slider').bxSlider({               
+                auto: true,
+                autoControls: true, //play, pause 보여 줄려면 true
+                stopAutoOnClick: true,
+                pager: true, //true가 기본값                
+                controls: true,
+              });
+        });
+
+    </script>
+</head>
+<body>
+    <!-- https://bxslider.com/examples/auto-show-start-stop-controls -->
+    <div id="slidewrap">
+        <div class="slider">
+            <div>              
+                <img src="/assets/chilsong/pic01.jpg" alt="slide1">
+                <p>언제 어디서나, 모든 순간<br>
+                    고객의 곁에서 함께합니다.</p>
+            </div>
+            <div>              
+                <img src="/assets/chilsong/pic02.jpg" alt="slide2">
+                <p>맑고 깨끗한 제품으로,
+                    <br>건강한 생태계 환경을 만듭니다.</p>
+            </div>
+            <div>                
+                <img src="/assets/chilsong/pic03.jpg" alt="slide3">
+                <p>끊임없는 혁신과 변화를 통해,
+                    <br>더 큰 미래를 향해 나아갑니다.</p>
+            </div>         
+          </div>
+    </div>
+</body>
+</html>

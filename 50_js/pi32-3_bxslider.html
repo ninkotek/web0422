@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bxSlider sliding</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+    <style>
+        body {
+            margin: 0;
+        }
+        img {
+            width: 100%;
+            min-height: 350px;
+            object-fit: cover; 
+            object-position: top;
+        }
+        #slidewrap {
+            /*height: 450px;  */
+            position: relative; 
+            /* width: 1200px; */          
+            margin: 0 auto;
+        }
+        .bx-wrapper {
+            height: 100%;
+            box-shadow: none;
+            border: none;
+            margin-bottom: 0;
+        }
+        .bx-viewport {
+            height: 100% !important;
+        }
+        /* 인디케이터 위치 조정 */      
+        .bx-wrapper .bx-pager {
+            bottom: 20px;
+        }
+          /* 인디케이터 색상 변경 */ 
+          .bx-wrapper .bx-pager.bx-default-pager a:focus,
+        .bx-wrapper .bx-pager.bx-default-pager a:hover,
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            /* 인디케이터 전체 색상 */
+            
+            /* 인디케이터 간 간격 */
+            margin: 0 8px;
+            width: 8px;
+            height: 8px;
+            background: none;
+            border: 2px solid #fff;
+            border-radius: 0;
+        }
+       
+        .bx-wrapper .bx-pager.bx-default-pager a.active {
+            /* 인디케이터 현재 활성화 색상 */
+           /* transform: scale(2, 2); */
+            background: #fff;
+            width: 12px;
+            height: 18px;
+            border: none;
+            background: #009ee3;      
+        }
+         /* prev next button */
+        .bx-wrapper .bx-controls-direction a {
+            /*display: block;*/
+            width: 50px;
+            height: 76px;       
+            margin-top: 0px;    /* 버튼의 수직 중앙 배치 (기본값 -16px) */
+            transform: translateY(-50%);
+            background: url(../assets/slider/ico_comm_sp.png) no-repeat;
+        }
+
+        .bx-wrapper .bx-controls-direction a.bx-prev {
+            left: 0px;
+            /* background: url() no-repeat x위치 y위치/60px 60px  */
+            background-position: 0 -129px;
+        }
+
+        .bx-wrapper .bx-controls-direction a.bx-next {
+            right: 0px;
+            background-position: -55px -129px;
+        }
+         /* next 버튼 호버시 사라지는 현상 초기화 */
+            .bx-wrapper .bx-next:focus,
+            .bx-wrapper .bx-next:hover {
+            background-position: 0 0;
+        }
+        @media (min-width: 768px) {
+            img {
+                height: auto;
+            }
+        }
+
+       
+
+    </style>
+    <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bx슬라이더 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <script>
+       
+        $(()=>{
+            //<body> 태그의 <div>태그의 class이름과 선택자가 같으면 된다.
+            $('.slider').bxSlider({               
+                auto: true,
+                autoControls: false, //play, pause 보여 줄려면 true
+                stopAutoOnClick: true,
+                pager: true, //true가 기본값                
+                controls: true,
+              });
+        });
+
+    </script>
+</head>
+<body>
+    <!-- https://bxslider.com/examples/auto-show-start-stop-controls -->
+    <div id="slidewrap">
+        <div class="slider">
+            <div>              
+                <img src="/assets/slider/pic01.jpg" alt="slide1">
+            </div>
+            <div>              
+                <img src="/assets/slider/pic02.png" alt="slide2">
+            </div>
+            <div>                
+                <img src="/assets/slider/pic03.jpg" alt="slide3">
+            </div>
+            <div>                
+                <img src="/assets/slider/pic04.png" alt="slide3">
+            </div>
+            <div>                
+                <img src="/assets/slider/pic05.png" alt="slide3">
+            </div>
+          </div>
+    </div>
+</body>
+</html>
