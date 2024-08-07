@@ -65,7 +65,7 @@ nav {
 }
 
 .main>li>a {
-    width: 160px;
+    width: 160px;  
     height: 30px;
     line-height: 30px;
     text-align: center;
@@ -215,7 +215,7 @@ nav {
     display: none;   
 }
 
-/*  section 2 carousel */
+/*  section2 carousel */
 
 .bodyWrap {
     width: 100%;
@@ -224,9 +224,7 @@ nav {
     justify-content: center;
     align-items: center; 
 }
-.slides img {
-    max-width: 100%;
-}
+
 .slide-container {    
     position: relative;  
     width: 100%;
@@ -243,7 +241,7 @@ nav {
 .slide-container .slides img {
     width: 100%;
     height: 100%; 
-    position: absolute;
+    position: absolute; 
     object-fit: cover;
 }
 .slide-container .slides img:not(.active) {
@@ -645,6 +643,9 @@ address {
     .slides img {
         max-width: 100%;
         height: auto;       
+    }
+    .buttons {
+        display: none;
     }
    /* 섹션3 */
    .rest-wrap img {
