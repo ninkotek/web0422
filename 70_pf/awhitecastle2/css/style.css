@@ -41,6 +41,13 @@ section li {
     position: relative;
     padding: 54px 0 0; 
 }
+#sec1 div {
+    /*
+    1903 : 745px = 100 : x => 39.148%
+
+    */
+    height: 39.15vw;
+}
 
 #sec1 h2 {
     position: absolute;
@@ -68,18 +75,28 @@ section li {
 /* 섹션3 */
 #sec3 li {
     margin-bottom: 48px;
+    position: relative;
 }
 
 #sec3>p {
     margin-bottom: 48px;
 }
+#sec3 li h3 {
+    /*  아래 3개를 같이 사용해야 ... 효과 나옴 */
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
-#sec3 h3,
+#sec3 li h3,
 #sec3 li p:last-of-type {
     margin: 24px 0;
 }
 
-#sec3 a {
+
+
+#sec3 li a {
+    
     display: block;
     text-align: center;
     padding: 12px 0;
@@ -103,10 +120,17 @@ section li {
 }
 
 #sec4 .map {
-    height: 260px;
+  /*  height: 260px; */
     margin-bottom: 8px;
 }
-
+/* 섹션4 */
+#sec4 .map {
+    /* height: 845px; 
+    1903 : 845 = 100 : x => 44.403%
+    */
+    margin-bottom: 8px;
+    height: 44.4vw;
+}
 /* 푸터 */
 footer {
     text-align: center;
@@ -160,12 +184,26 @@ nav {
     section li:not(:nth-of-type(2n)) {
         margin-right: 20px;
     }
-
-    /* 섹션4 */
-    #sec4 .map {
-        height: 420px;
+    /*
+    #sec3 li {
+        position: relative;
     }
     
+
+#sec3 li p:last-of-type {
+    margin: 24px 0 64px;
+}
+    #sec3 a {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+*/
+    /* 섹션4 */
+   /* #sec4 .map {
+        height: 420px;
+    }
+    */
 }
 
 /* 992이상: 데스크탑 */
@@ -203,9 +241,6 @@ nav {
         width: calc(25% - 15px);
      
     }
-    /* 섹션4 */
-    #sec4 .map {
-        height: 845px;
-    }
+     
 
 }

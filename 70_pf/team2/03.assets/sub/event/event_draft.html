@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설빙</title>
+    <style>
+        /* reset */
+        /* 속성 선택자 [alt*="de"] */
+        body {
+            margin: 0;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+            height: auto;
+        }
+        /* phone */
+        .desktop, tablet {display: none;}
+
+        @media (min-width: 768px) {
+            /* tablet */
+            .phone {display: none;}
+            .tablet {display: block;}
+        }
+
+        @media (min-width: 992px) {
+            /* desktop */
+            .tablet {display: none;}
+            .desktop {display: block;}
+        }
+
+    </style>
+</head>
+<body>
+    <!-- https://www.w3schools.com/html/html_images_imagemap.asp -->
+    <!--이미지 맵좌표 사이트:  https://www.image-map.net/ -->
+    <!-- 파일명령 규칙: 시안 -->
+    <img class="desktop" src="../event/event_desktop.png" alt="desktop">
+    <img class="tablet" src="../event/event_tablet.png" alt="tablet">
+    <img class="phone" src="../event/event_mobile.png" alt="phone">
+</body>
+</html>

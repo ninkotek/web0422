@@ -64,9 +64,9 @@ $(document).ready(function(){
 const texts = document.querySelectorAll('.image-fade>a>p');
 const showMouse = document.querySelector('.image-fade');
 
-const frames = {
+const frames = {   
     translate: ['-300px 0', 0],
-}
+};
 
 const option = {
     duration: 3000,   
@@ -275,7 +275,7 @@ const videoframes = {
 
 const videooptions = {
     duration: 2000,
-    easing:' ease'
+    easing:'ease'
 };
 
 videowrap.onmouseenter = function(){

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {box-sizing: border-box;}
+        img {
+            width: 100%;
+        }
+        div { 
+            border: solid red;
+            /*background: url(../assets/jon.jpg) no-repeat 0 0/cover; */
+            /*height: 427px;*/
+            /*padding-top이 100%이면 가로/세로 가 1:1
+            640x = 470 * 100 -> 66.718%*/
+
+            padding-top: 66.718%;
+        }
+        h2 {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>제목글자만큼 박스가 커진다</h2>
+        <!-- width: 100% -> 부모크기에 100%
+             height는 높이 지정하지 않으면 기본값 auto, 요소 자식 크기 만큼 높이 갖음 -->
+        <!-- <img src="../assets/jon.jpg" alt="car"> -->
+    </div>
+</body>
+</html>

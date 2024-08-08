@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,21 @@
     <style>
         #slideWrap {
             position: absolute;
-            left: 50%;
-            top: 50%;
+            left:50%;
+            top:50%;
             transform: translate(-50%, -50%);
-            width: 1210px;
-            border: 1px solid red;
-        
+            width: 1430px;     
         }
         .bx-wrapper {
-            width: 1210px;
-            overflow: hidden;
-            
+            height: 100%;
+            box-shadow: none;
+            border: none;
+            margin-bottom: 0;
         }
+        .bx-viewport {
+            height: 100% !important;
+        }
+
         /* 이전/다음 버튼 */
         .bx-wrapper .bx-controls-direction a {
             /* 크기 */
@@ -29,18 +33,18 @@
             transform: translateY(-50%);
             /* 기존 bx슬라이더의 여백 초기화 (기본값: -16px) */
             margin-top: 0;
-            background: #C0C0C0 url(../assets/desert39/btn-slider-arrow-white.svg) no-repeat 50% 50%/35px 35px;
+            background: #c0c0c0 url(../assets/desert39/btn-slider-arrow-white.svg) no-repeat 50%/35px;
         }
 
         /* 이전 */
         .bx-wrapper .bx-controls-direction a.bx-prev {
-            left: 40px;
+            left: -120px;
             transform: translateY(-50%) rotate(180deg);
         }
 
         /* 다음 */
         .bx-wrapper .bx-controls-direction a.bx-next {
-            right: 40px;          
+            right: -120px;
         }
 
         /* 다음 버튼 호버시 사라지는 현상 초기화 */
@@ -53,44 +57,42 @@
             background-position: 50%;
         }
     </style>
-    <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- bx슬라이더 라이브러리 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
     <script>
-     
-        $(()=>{
-            $('.bxslider').bxSlider({
+        $(() => {
+            $('.slider').bxSlider({
                 auto: true,
-                autoControls: false,
                 stopAutoOnClick: true,
+                // autoControls: true,
                 pager: false,
-                /* Carousel option  */
-                slideWidth: 270, //슬라이드 아이템 1개 가로 크기, 기본값 0
-                minSlides: 1, //반응형, 최소 슬라이드 수 , 기본값 1
-                maxSlides: 5, //반응형, 최대 슬라이드 수, 기본값 1
-                moveSlides: 1, //1개의 슬라이드 이동, 기본값 0
-                slideMargin: 20  //슬라이드 사이 간격, 기본값 0
 
-              });
-        });
-
+                // Carousel 옵션
+                slideWidth: 270, // 슬라이드 가로 크기 (기본값: 0)
+                //minSlides: 1, // 최소 슬라이드 수, (기본값: 1)
+                maxSlides: 5, // 최대 슬라이드 수, (기본값: 1)
+                moveSlides: 1, // 이동 슬라이드 수 (기본값: 0)
+                slideMargin: 20 // 슬라이드 사이 간격 (기본값: 0)
+            });
+        }); // 로드 이벤트
     </script>
 </head>
+
 <body>
-    <!-- https://bxslider.com/examples/auto-show-start-stop-controls -->
-    <div id="slidewrap">
-        <div class="bxslider">
-            <div><img src="/assets/desert39/pic01.png" alt="slide 1"></div>
-            <div><img src="/assets/desert39/pic02.png" alt="slide 2"></div>
-            <div><img src="/assets/desert39/pic03.png" alt="slide 3"></div>
-            <div><img src="/assets/desert39/pic04.png" alt="slide 4"></div>
-            <div><img src="/assets/desert39/pic05.png" alt="slide 5"></div>
-            <div><img src="/assets/desert39/pic06.png" alt="slide 6"></div>
-            <div><img src="/assets/desert39/pic07.png" alt="slide 7"></div>
-            <div><img src="/assets/desert39/pic08.png" alt="slide 8"></div>
-            <div><img src="/assets/desert39/pic09.png" alt="slide 9"></div>
-          </div>
+    <div id="slideWrap">
+        <div class="slider">
+            <div><img src="../assets/desert39/pic01.png" alt="슬라이드이미지1"></div>
+            <div><img src="../assets/desert39/pic02.png" alt="슬라이드이미지2"></div>
+            <div><img src="../assets/desert39/pic03.png" alt="슬라이드이미지3"></div>
+            <div><img src="../assets/desert39/pic04.png" alt="슬라이드이미지4"></div>
+            <div><img src="../assets/desert39/pic05.png" alt="슬라이드이미지5"></div>
+            <div><img src="../assets/desert39/pic06.png" alt="슬라이드이미지6"></div>
+            <div><img src="../assets/desert39/pic07.png" alt="슬라이드이미지7"></div>
+            <div><img src="../assets/desert39/pic08.png" alt="슬라이드이미지8"></div>
+            <div><img src="../assets/desert39/pic09.png" alt="슬라이드이미지9"></div>
+
+        </div>
     </div>
 </body>
+
 </html>
