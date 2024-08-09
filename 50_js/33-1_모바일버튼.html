@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body, ul {
+            margin: 0;
+            ul {
+                padding: 0;
+                list-style: none;                
+            }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        h1 {
+            margin: 0;
+            line-height: 1;
+        }
+
+        /* 헤더 */
+        header {   
+                position: fixed;
+                z-index: 9999;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 54px;
+                padding: 0 30px;
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            }        
+
+      
+
+        /* 768이상: 테블릿 */
+@media (min-width: 768px) {
+
+    /* 내비게이션 */
+
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-left: 30px;
+    }
+    .collapsedMenuIcon {
+        display: none;
+    }
+}
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+
+            const collapsedMenuIcon = document.querySelector(".collapsedMenuIcon");
+            const nav = document.querySelector('nav');
+
+            //이벤트 처리
+            collapsedMenuIcon.onclick = () => {
+                //함수 호출
+                btnMotion(event.currentTarget);
+
+            };
+            /*  collapsedMenuIcon.onclick = function(){
+                  //익명함수 이벤트 내에서는 this는 이벤트 객체이다. 
+                  //함수 호출
+                  btnMotion(this);
+              }; */
+
+            function btnMotion(x) {
+                //햄버거 버튼이 x로 변경 
+                x.classList.toggle("change");
+
+                //nav태그에 class가 추가
+                nav.classList.toggle("change");
+
+            }
+
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <h1>로고</h1>
+        <!-- 내비게이션 -->
+        <nav>
+            <ul>
+                <li><a href="#sec2">영화</a></li>
+                <li><a href="#sec3">이벤트</a></li>
+                <li><a href="#sec4">고객센터</a></li>
+            </ul>
+        </nav>
+        <!-- 모바일 버튼 -->
+        <div class="collapsedMenuIcon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </header>
+
+</body>
+
+</html>

@@ -5,63 +5,253 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- 슬릭 css라이브러리 필요 -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
-     <!-- 슬릭 테마 css라이브러리 필요 -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-      <!-- 사용자 css -->
+    <!--slick 슬라이더 CSS 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <!--slick 슬라이더 테마 CSS 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <!-- 사용자 CSS -->
     <style>
+        /* reset */
         body {
-            background: #777;
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        /* typo */
+        html {
+            font-size: 10px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        /* slick 슬라이드 */
+        .slider {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            /* 슬라이드 전체 크기 */
+            max-width: 260px;
+        }
+
+        /* 슬라이드 아이템 */
+        .slick-slide {
+            margin: 8px 10px;
+            background: #fff;
+            border-radius: 15px;
+            /* 이미지 상단 영역 모서리 둥글게 보이기 */
+            overflow: hidden;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, .1);
+        }
+
+        /* 설명글 */
+        .slick-slide .tit {
+            padding: 8px 24px;
+        }
+
+        /* 이전(prev)/다음(next) 버튼 */
+        .slick-prev,
+        .slick-next {
+            z-index: 9999;
+            width: 30px;
+            height: 30px;
+            padding: 4px;
+            border-radius: 50%;
+            background: #ccc;
+        }
+
+        .slick-prev:hover,
+        .slick-next:hover {
+            background: #ccc;
+        }
+
+        .slick-prev::before,
+        .slick-next::before {
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 0px;
+            background: url(../assets/desert39/btn-slider-arrow-white.svg);
+        }
+
+        .slick-prev {
+            left: min(-7vw, -40px);
+        }
+
+        .slick-next {
+            right: min(-7vw, -40px);
+        }
+
+        .slick-prev::before {
+            transform: rotate(180deg);
+        }
+
+
+        @media (min-width: 768px) {
+            .slider {
+                max-width: 620px;
+            }
+
+            .slick-slide {
+                margin: 8px 12px;
+            }
+            .slick-prev,
+            .slick-next {
+                width: 44px;
+                height: 44px;
+                padding: 6px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .slider {
+                max-width: 1210px;
+            }
+
+            .slick-slide {
+                margin: 8px 16px;
+            }
+
+            .slick-prev,
+            .slick-next {
+                width: 50px;
+                height: 50px;
+                padding: 8px;
+            }
         }
     </style>
-    <!-- jQuery 라이브러리 필요 -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <!-- 슬릭 슬라이더 라이브러리 필요 -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- slick 슬라이더 JS 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
     <script>
-        $(() => {
+        // 벤치: https://dessert39.com/main.php 
 
+        $(() => {
             $('.slider').slick({
+                // 데스크탑
+                // 자동 슬라이드
                 autoplay: true,
                 autoplaySpeed: 2000,
-                slidesToShow: 3,
                 slidesToScroll: 1,
-                centerMode: true,
-                centerPadding: '60px',
+                // 현재 보이는 슬라이드 수
                 slidesToShow: 3,
+                centerMode: true,
+                centerPadding: '145px',
                 responsive: [
                     {
-                        breakpoint: 768,
+                        // 992 이하 테블릿
+                        breakpoint: 992,
                         settings: {
-                            arrows: false,
+                            // arrows: false -> 좌우버튼 숨기기
                             centerMode: true,
-                            centerPadding: '40px',
-                            slidesToShow: 3
+                            centerPadding: '180px',
+                            slidesToShow: 1
                         }
                     },
                     {
-                        breakpoint: 480,
+                        // 768 이하 폰
+                        breakpoint: 768,
                         settings: {
-                            arrows: false,
+                            // arrows: false -> 좌우버튼 숨기기
                             centerMode: true,
-                            centerPadding: '40px',
+                            centerPadding: '30px',
                             slidesToShow: 1
                         }
                     }
                 ]
             });
-        }); //ready event
+        }); // ready 이벤트
     </script>
 </head>
 
 <body>
     <div class="slider">
-        <div>your content</div>
-        <div>your content</div>
-        <div>your content</div>
-      </div>
+        <!--  
+        에밋 기능 사용시
+            1. 기호
+                *   개수
+                >   자식
+                []  속성    ->  [속성=값 속성=값 ...]
+                $   색인번호, 1부터~
+                +   형제
+
+            2. 마지막 글자를 다시쓰고 tab
+            3. ctrl+sp -> tab
+            div*9>img[src="../assets/dessert39/이미지명" alt="슬라이드 이미지$"]
+        -->
+        <div>
+            <img src="../assets/desert39/pic01.png" alt="슬라이드 이미지1">
+            <div class="tit">
+                <h3>[24년 8월 신메뉴]저칼로리 딸기 음료 출시!</h3>
+                <p>2024-08-02</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/desert39/pic02.png" alt="슬라이드 이미지2">
+            <div class="tit">
+                <h3>[24년 8월 신메뉴]피스타치오크림 음료 3종 출시!</h3>
+                <p>2024-08-02</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/desert39/pic03.png" alt="슬라이드 이미지3">
+            <div class="tit">
+                <h3>[24년 7월 신메뉴]오레오 쉐이크 3종 출시!</h3>
+                <p>2024-07-29</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/desert39/pic04.png" alt="슬라이드 이미지4">
+            <div class="tit">
+                <h3>[24년 7월 신메뉴]카라멜 인절미 퐁 라떼 출시!</h3>
+                <p>2024-07-29</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/desert39/pic05.png" alt="슬라이드 이미지5">
+            <div class="tit">
+                <h3>[24년 7월~8월 이벤트]디저트39 X 사이퍼즈...</h3>
+                <p>2024-07-25</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/desert39/pic06.png" alt="슬라이드 이미지6">
+            <div class="tit">
+                <h3>[24년 7월 신메뉴]설탕 무첨가 과일 슬러시 4종...</h3>
+                <p>2024-07-18</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/desert39/pic07.png" alt="슬라이드 이미지7">
+            <div class="tit">
+                <h3>[24년 7월 신메뉴]애사비 탄산수 3종 출시!</h3>
+                <p>2024-07-18</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/desert39/pic08.png" alt="슬라이드 이미지8">
+            <div class="tit">
+                <h3>[24년 7월 신메뉴]코코넛 프라페 2종 출시!</h3>
+                <p>2024-07-09</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/desert39/pic09.png" alt="슬라이드 이미지9">
+            <div class="tit">
+                <h3>[24년 8월 신메뉴]저칼로리 & 라이스 슬림...</h3>
+                <p>2024-08-02</p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
