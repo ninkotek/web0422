@@ -175,8 +175,8 @@ nav {
     right: -65%;
     width: 65%;
     height: 100vh;
-    background: #777;
-    transition: .3s ease-in-out;
+    background: rgba(119, 119, 119, 0.7);    
+    transition: .3s ease-in-out;    
 }
 
 nav.change {
@@ -243,13 +243,21 @@ nav.change {
     #sec3 li p:last-of-type {
         margin: 24px 0 64px;
     }
+ 
 
-    #sec3 a {
+    /* 이 걸 살리면 데스크탑과 태블릿 이미지가 텍스트 위로 올라감 */
+    /* #sec3 a {
         position: absolute;
         width: 100%;
         bottom: 0;
+    } */
+ 
+    #sec3>ul>li>a {
+       transform: translateY(20px);       
     }
-
+    #sec3 .move {
+        transform: translateY(0px);
+    }
 }
 
 /* 992이상: 데스크탑 */
