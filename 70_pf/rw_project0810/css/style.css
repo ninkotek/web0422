@@ -759,6 +759,13 @@ address {
   }
 }
 
+/* @media (max-width: 768px) {
+
+  .mid05 {
+    transform: translate(-400px, 160px);
+  }
+} */
+
 @media (max-width: 576px) {
   .side-main > li > a:nth-of-type(2) {
     display: block;
