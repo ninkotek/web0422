@@ -1,5 +1,12 @@
 @charset "utf-8";
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 * {
     list-style: none;
     margin: 0;
@@ -10,7 +17,7 @@
     height: 100vh;
 }
 body {
-    font-size: 1rem;
+   background: #fff;
 }
 a {
     text-decoration: none;    
@@ -29,8 +36,7 @@ a {
 }
 .sub-container {
     display: flex;
-    position: relative;
-   
+    position: relative;   
 }
 
 
@@ -117,9 +123,13 @@ a {
     width: 360px;
     text-align: center;
 }
-.login-icons .kakao {
-    transform: translateY(10px);
+.login-icons {
+    margin-top: 20px;
 }
+.login-icons a {
+    margin: 0 16px;
+}
+
 /* non-member */
 #nonmbConts {   
     position: absolute;
@@ -160,6 +170,12 @@ a {
 }
 
 @media (max-width: 992px) {
+
+    .login-container {
+        position: absolute;
+        left: 16%;
+        top: 20%;             
+    }
   
     .login-header {
         display: none;
@@ -171,12 +187,7 @@ a {
     .login-left>ul>li {
         border-bottom: none;
     }
-    .login-left>ul>li:first-child {
-        border-right: none;
-    }
-    .sub-container .image-right {
-        transform: translateX(120px);
-    }
+
     .simple-login>p {
         display: none;
     }
@@ -200,26 +211,26 @@ a {
         background-image: url(../login_images/naver.png);
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: 80px;
+        background-position: center;
         /* transform: translateX(); */
     }
     .login-icons>a:nth-of-type(2) {
         background-image: url(../login_images/kakao.png);
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: 80px;
+        background-position: center;
     }
     .login-icons>a:nth-of-type(3) {
         background-image: url(../login_images/google.png);
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: 80px;
+        background-position: center;
     }
     .login-icons>a:nth-of-type(4) {
         background-image: url(../login_images/apple.png);
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: 80px;
+        background-position: center;
     }
 
     .image-right {
@@ -229,8 +240,15 @@ a {
 }
 
 @media (max-width: 576px) {
-    .login-left>ul>li {
-        margin-bottom: 4px;
+
+    .login-container {
+        /* position: absolute; */
+        left: 0;
+        top: 20%;           
     }
+    form {
+        margin-top: 10px;
+    }
+  
 
 }
