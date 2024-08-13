@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        #modal .popup {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 400px;
+            background: #d8f6a4;
+            padding: 20px;
+        }
+
+        #modal .popup button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- 콘텐츠 -->
+    <div id="notice">
+        <ul>
+            <li><a href="#">목록1</a></li>
+            <li><a href="#">목록2</a></li>
+            <li><a href="#">목록3</a></li>
+            <li><a href="#">목록4</a></li>
+        </ul>
+    </div>
+
+    <!-- 모달 팝업 -->
+    <div id="modal">
+        <div class="popup">
+            <h2>모달 팝업</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet magnam voluptates corrupti aliquam
+                accusamus eaque magni mollitia nesciunt? Praesentium quidem odio aperiam officiis debitis beatae,
+                architecto tempora magni! Repellat, exercitationem.</p>
+            <button>닫기</button>
+        </div>
+    </div>
+
+    <!-- 스크립트 -->
+    <script>
+        // 요소 찾기
+        const firstList = document.querySelectorAll("#notice a").item(0);
+        const modal = document.querySelector("#modal");
+        const closeBtn = modal.querySelector("button");
+        console.log(modal);
+        
+        // 이벤트 처리
+        firstList.onclick = function(){
+            modal.style.display = "block";
+        };
+        closeBtn.onclick = function(){
+            modal.style.display = "none";
+        };
+    </script>
+</body>
+
+</html>
