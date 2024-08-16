@@ -1,28 +1,35 @@
+/*
+$(() => {
+    
+    // 슬라이드 이미지
+    let idx = 0;
+    setInterval(autoSlide, 2000);
+
+    function autoSlide() {
+
+        idx === 2 ? (idx = 0) : idx++;
+
+        $("#slide li").eq(idx).fadeIn(1000, function () {
+            if (idx === 0) idx = 3;
+            $("#slide li").eq(idx - 1).fadeOut(1000);
+            if (idx === 3) idx = 0;
+        });
+    }
+
+});
+*/
+
+
+$(document).ready(function(){
+
+    $('.image-slide>li a:gt(0)').hide();
+    setInterval(function(){
+        $('.image-slide>li a:first-child').fadeOut().next('a').fadeIn().end().appendTo('.image-slide>li');
+    }, 3000);
+});
 
 
 
-
-// $(document).ready(function(){
-
-//  // 요소 찾기
-//  const firstList = $("#notice a").item(0);
-//  const modal = $("#modal");
-//  const closeBtn =$("button");
-//  console.log(modal);
- 
-//  // 이벤트 처리
-//  // 객체.이벤트(function(){})
-//  firstList.click(()=>{modal.css({display:"block"}); 
-     
-//  });
-
-
-//  closeBtn.click(()=>{
-//     modal.css({display: "none"});
-//  });
-
-
-// });
 
 
 const popup = document.querySelectorAll('.notice>ul>li>a');
@@ -40,6 +47,7 @@ const closingBtn = document.querySelector('button');
 
 //event.preventDefault(); => a 태그로 인한 3위로 팅기는 것 방지
 // event.preventDefault();
+
 popup[0].addEventListener('click', function(){
     modal.style.display = "block";
 });

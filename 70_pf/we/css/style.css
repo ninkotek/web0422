@@ -69,8 +69,26 @@ nav {
 #slide {
     width: 100%;
     height: 350px;
-    overflow: hidden;
+    overflow: hidden; 
+
 }
+.image-slide {
+    width: 100%;
+    height: 350px;
+    position: relative;   
+}
+.image-slide li {
+    width: 100%;
+    height: 350px;
+    position: absolute;   
+}
+.image-slide img {   
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/*
 #slide ul {
     display: flex;
     width: 400%;
@@ -98,7 +116,7 @@ nav {
     99.99% {transform: translateX(-75%)}
     100% {transform: translateX(0%)}
 }
-
+*/
 #modal {
     display: none;
     position: fixed;
