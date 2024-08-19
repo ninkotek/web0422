@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+
+            box-sizing: border-box;
+        }
+        body {
+            background: #f8f8f8;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 800px;
+            margin: 0 auto;
+            height: 300px;         
+            border-spacing: 0 20px;
+         
+        }
+        caption {
+            margin-bottom: 48px;
+        }
+        tr:not(thead>tr) {
+            background: #fff;
+        }
+  
+        td {           
+            height: 56px;
+            border-bottom: 1px solid #e6e6e6;
+            border-top: 1px solid #000;
+        }
+        tr td:first-child {
+            text-align: center;
+            border-left: 1px solid #e6e6e6;
+            border-radius: 5px 0 0 5px;
+        }
+        tr td:last-child {
+            text-align: center;
+            border-right: 1px solid #e6e6e6;
+            border-radius: 0 5px 5px 0;
+        }
+        tr td:nth-child(2)~td {
+            text-align: center;
+        }
+        tfoot {
+            text-align: center;
+        }
+        /*  
+        text-align -> 인라인요소(텍스트)의 가로 맞춤
+        vertical-arlign ->인라인요소의 세로 맞춤
+        */
+
+ 
+
+
+    </style>
+</head>
+
+<body>
+    <h1>파리 2024</h1>    
+
+    <table>
+        <!-- 
+        필수: <table>, <tr>, <td>
+        선택: 나머지는 선택 그러나 <th>는 대체로 사용한다
+            모드 요소는 <table>인에 사용한다.
+                <th>, <td>는 <tr>안에 사용한다.
+        <table> : 표
+            <caption>:표의 제목
+            <col>: 열
+            <colgroup>: 열을 그룹핑
+            <tr>:행
+            <th>: 셀의 제목
+            <td>: 셀의 내용
+
+            <thead>: <th>를 그룹핑
+            <tbody>: <td>를 그룹핑, 본문
+            <tfoot>: <td>를 그룹핑, 집계(하볘, 평균...)
+            -->
+
+            <!-- 표 제목 -->
+        <caption>메달순위표</caption>
+        <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>    
+              <!-- 제목 영역 -->
+        <thead>
+            <tr>
+                <th>순서</th>
+                <th>NOC</th>
+                <th>금</th>
+                <th>은</th>
+                <th>동</th>
+            </tr>
+        </thead>
+        <!-- 집계 영역 -->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>미국</td>
+                <td>40</td>
+                <td>44</td>
+                <td>42</td>              
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>중화인민공화국</td>
+                <td>40</td>
+                <td>27</td>
+                <td>24</td>              
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>일본</td>
+                <td>20</td>
+                <td>12</td>
+                <td>13</td>              
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>오스트레일리아</td>
+                <td>18</td>
+                <td>19</td>
+                <td>16</td>              
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>프랑스</td>
+                <td>16</td>
+                <td>26</td>
+                <td>22</td>              
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>네덜란드</td>
+                <td>15</td>
+                <td>7</td>
+                <td>12</td>              
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>영국</td>
+                <td>14</td>
+                <td>22</td>
+                <td>29</td>              
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>대한민국</td>
+                <td>13</td>
+                <td>9</td>
+                <td>10</td>              
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>이탈리아</td>
+                <td>12</td>
+                <td>13</td>
+                <td>15</td>              
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>독일</td>
+                <td>12</td>
+                <td>13</td>
+                <td>8</td>              
+            </tr>
+        
+        </tbody>
+        <!-- 집계를 낼 때 사용 -->
+        <tfoot>
+            <tr>
+                <td colspan="2">합계</td>
+                <td>200</td>
+                <td>192</td>
+                <td>191</td>
+            </tr>
+
+        </tfoot>
+
+   
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+
+            box-sizing: border-box;
+        }
+        table {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            /* border-collapse: separate; table에만 사용 속성*/
+            /* border-collapse: collapse; table에만 사용 속성*/
+            border-collapse: collapse;
+        }
+        td {
+           
+            border: 1px solid #000;
+        }
+        /*  
+        text-align -> 인라인요소(텍스트)의 가로 맞춤
+        vertical-arlign ->인라인요소의 세로 맞춤
+        */
+
+        tr:first-child td:first-child {
+            text-align: center;
+            vertical-align: bottom;
+        }
+        tr:nth-child(2) td:first-child {
+            text-align: right;
+            vertical-align: top;
+         
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>테이블의 셀 합치기</h1>
+    <!--  
+        <table> : 블록레벨요소이며 display: table;
+            <tr>: 블록레벨요소이며 display: table-row; -> 테두리 x
+                <td> : 블록레벨요소이며 display: table-cell;
+                    
+        <thead> : 테이블 헤더
+        <tbody> : 테이블 바디
+        <tfoot> : 테이블 푸터
+                    -->
+
+    
+
+    <table>
+        <tr>
+            <!-- 1행 1열과 1행 2열 병합 -->
+            <td colspan="2">1</td>        
+            <td rowspan="2">3</td>
+        </tr>
+        <tr>
+            <!-- 2행 1열과 3행1열을 합치기 -->
+            <td rowspan="2">4</td>
+            <td>5</td>
+        
+        </tr>
+        <tr>      
+            <td colspan="2">8</td>            
+        </tr>
+    </table>
+</body>
+
+</html>
