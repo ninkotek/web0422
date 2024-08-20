@@ -24,7 +24,8 @@ a {
 }
 
 .login-container {
-    width: 820px;
+    width: 820px; 
+    /* width: 42vw; */
     margin: 0 auto;
 }
 .login-header {
@@ -42,14 +43,18 @@ a {
 
 /* image-right */
 .image-right img {
-    width: 340px;
-    height: 500px;
+    width: 340px; 
+    /* width: 17.86vw; */
+    height: 500px; 
+    /* height: 26.27vw; */
     position: absolute;
     right: 0;
 }
 .login-left {
-    width: 440px;
-    height: 500px;
+    width: 440px; 
+    /* width: 23.12vw; */
+    height: 500px; 
+    /* height: 26.27vw; */
     border: 1px solid #ccc;
     position: relative;
 }
@@ -58,8 +63,10 @@ a {
     justify-content: space-between;
 }
 .login-left>ul>li {
-    width: 220px;
-    height: 50px;
+    width: 220px; 
+    /* width: 11.56vw; */
+    height: 50px; 
+    /* height: 2.62vw; */
     line-height: 50px;
     text-align: center;  
     border-bottom: 1px solid #ccc;
@@ -73,8 +80,10 @@ a {
     padding: 30px 40px 0;
 }
 .login-id, .login-pw {
-    width: 360px;
-    height: 34px;
+    width: 360px; 
+    /* width: 18.91vw; */
+    height: 34px; 
+    /* height: 1.78vw; */
 }
 .login-pw {
     margin: 10px 0 20px 0;
@@ -98,8 +107,10 @@ a {
 }
 .login-bigbtn>a {
     display: block;
-    width: 360px;
-    height: 50px;
+    width: 360px; 
+    /* width: 18.91vw; */
+    height: 50px; 
+    /* height: 2.62vw; */
     line-height: 50px;
     background: #4aaf70;
     font-size: 20px;
@@ -120,15 +131,16 @@ a {
 }
 .simple-login {
     margin: 40px 0 34px 0;
-    width: 360px;
+    width: 360px; 
+    /* width: 18.91vw; */
     text-align: center;
 }
 .login-icons {
     margin-top: 20px;
 }
-.login-icons a {
+/* .login-icons a {
     margin: 0 16px;
-}
+} */
 
 /* non-member */
 #nonmbConts {   
@@ -137,8 +149,10 @@ a {
     padding: 30px 40px 0;
 }
 .order-num, .order-pw {
-    width: 360px;
-    height: 34px;
+    width: 360px; 
+    /* width: 18.91vw; */
+    height: 34px; 
+    /* height: 1.78vw; */
 }
 .order-pw {
     margin: 10px 0 10px 0;
@@ -151,8 +165,10 @@ a {
 }
 .login-btn2>a {
     display: block;
-    width: 360px;
-    height: 50px;
+    width: 360px; 
+    /* width: 18.91vw; */
+    height: 50px; 
+    /* height: 2.62vw; */
     line-height: 50px;
     background: #4aaf70;
     font-size: 20px;
@@ -168,13 +184,16 @@ a {
 .login-left>div {
     display: none;
 }
-
+/* tablet */
 @media (max-width: 992px) {
 
     .login-container {
         position: absolute;
-        left: 16%;
-        top: 20%;             
+        left: 16%;  
+        /* left: 2.6vw; */
+        top: 10%;               
+        /* top: 10vw; */
+        
     }
   
     .login-header {
@@ -201,8 +220,7 @@ a {
     }
     .login-icons>a {
         display: block;
-        margin-bottom: 10px;    
-        
+        margin-bottom: 10px;        
         width: 360px;
         height: 34px;
         border: 1px solid #ccc;
@@ -244,7 +262,7 @@ a {
     .login-container {
         /* position: absolute; */
         left: 0;
-        top: 20%;           
+        /* top: 20%;             */
     }
     form {
         margin-top: 10px;
