@@ -40,7 +40,6 @@ a {
     position: relative;   
 }
 
-
 /* image-right */
 .image-right img {
     width: 340px; 
@@ -75,8 +74,7 @@ a {
     border-right: 1px solid #ccc;
 }
 /* member */
-#mbConts {
-   
+#mbConts {   
     padding: 30px 40px 0;
 }
 .login-id, .login-pw {
@@ -138,10 +136,6 @@ a {
 .login-icons {
     margin-top: 20px;
 }
-/* .login-icons a {
-    margin: 0 16px;
-} */
-
 /* non-member */
 #nonmbConts {   
     position: absolute;
@@ -188,11 +182,16 @@ a {
 @media (max-width: 992px) {
 
     .login-container {
+        width: 800px;        
         position: absolute;
-        left: 16%;  
-        /* left: 2.6vw; */
-        top: 10%;               
-        /* top: 10vw; */        
+        left: 20px;       
+        top: 100px;    
+    }
+
+    .login-left {
+        width: 600px;
+        height: 500px;
+        margin: 0 auto;
     }
   
     .login-header {
@@ -258,10 +257,13 @@ a {
 
 @media (max-width: 576px) {
 
-    .login-container {
-        /* position: absolute; */
-        left: 0;
-        /* top: 20%;             */
+    .login-container { 
+        position: absolute;  
+        left: -170px;
+        top: 5%;
+        transform: scale(0.8);
+    }
+   
     }
     form {
         margin-top: 10px;

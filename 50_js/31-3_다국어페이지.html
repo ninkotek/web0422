@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daewoo</title>
+    <script>
+        // 다국어 객체
+
+        /* 
+        const 객체 = {
+          속성1: {
+                속성2:값.
+                속성3: 값,
+                속성4: 값,
+          ...
+          }  
+        
+        };
+        객체접근
+            객체.속성1
+            객체["속성1"]
+            객체.속성1.속성2
+            객체["속성1"]["속성2"]
+        
+        */
+        const main_data = {
+            // 영어
+            en: {
+                logo: "../assets/daewoo/en/logo.png",
+                gnb: ["About Us", "Business", "PR Center", "Contact"],
+                tit: ["GREAT", "POSSIBILITY"],
+                flogo: "../assets/daewoo/en/footer_logo.png",
+                fmenu: ["About DAEWOO E&C", "Sitemap", "Contact", "Email Security"],
+                addr: "04548 DAEWOO E&C 170 Eulji-ro, Jung-gu, Seoul, Republic of Korea"
+
+            },
+            // 한국어
+            ko: {
+                logo: "../assets/daewoo/ko/logo.png",
+                gnb: ["회사소개", "사업분야", "홍보센터", "고객센터"],
+                tit: ["BUILD", "TOGETHER"],
+                flogo: "../assets/daewoo/ko/footer_logo.png",
+                fmenu: ["회사소개", "사이트맵", "개인정보처리방침", "이메일수집거부"],
+                addr: "04548 서울특별시 중구 을지로 170 ㈜대우건설"
+            }
+        }
+
+        window.addEventListener("DOMContentLoaded", () => {
+            const sel = document.querySelector("select");
+            const logo = document.querySelector(".logo img");
+            const gnb = document.querySelectorAll(".gnb a");
+            const tit = document.querySelectorAll(".tit span");
+            const flogo = document.querySelector(".flogo img");
+            const fmenu = document.querySelectorAll(".fmenu a");
+            const addr = document.querySelector(".addr");
+
+            //console.log(sel,logo,gnb,tit,flogo,fmenu,addr);
+
+            /* 
+            이벤트 종류
+                onclick - 클릭
+                onmouseenter - 마우스를 요소 위에 올렸을 때
+                onmouseleave - 마우스가 요소에서 벗어 났을 때
+                onchange - select태그에서 option이 바뀔 때
+            
+            */
+            //select의 값이 바뀔 때, 매개변수 사용하지 않을 경우 event.currentTarget.value해도 됨
+            sel.onchange = (e) => {
+                //value 속성은 select의 값을 가져온다.
+                let opt = e.currentTarget.value;
+                let data = main_data[opt];
+            
+
+                //로고 변경
+                //객체.setAttribute("html 속성", "값", ) -> html의 속성값 변경
+                logo.setAttribute("src", `${data["logo"]}`);
+                //console.log(data["logo"]);
+
+                // 메인 타이틀 변경
+                tit.forEach((ele, idx) =>
+                    ele.innerText = data["tit"][idx]);
+
+                // 메뉴 변경
+                gnb.forEach((ele, idx) =>
+                    ele.innerText = data["gnb"][idx]);
+
+                // 푸터 메뉴 변경
+                fmenu.forEach((ele, idx) =>
+                    ele.innerText = data["fmenu"][idx]);
+
+                //푸터 로고 변경
+                flogo.setAttribute("src", `${data["flogo"]}`);
+                //console.log(data["flogo"]);
+
+                // 주소 변경
+                addr.innerText = data["addr"];
+            };
+        });
+
+
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><a href="#"><img src="../assets/daewoo/en/logo.png" alt="logo"></a></h1>
+        <nav class="gnb">
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">PR Center</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <select>
+            <option value="en">ENG</option>
+            <option value="ko">KOR</option>
+        </select>
+    </header>
+
+    <section>
+        <h2 class="tit"><span>GREAT</span><span>POSSIBILITY</span></h2>
+    </section>
+
+    <footer>
+        <div class="flogo"><a href="#"><img src="../assets/daewoo/en/footer_logo.png" alt="footer logo"></a></div>
+        <div class="fmenu">
+            <ul>
+                <li><a href="#">About DAEWOO E&amp;C</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Email Security</a></li>
+            </ul>
+        </div>
+        <p class="addr">04548 DAEWOO E&C 170 Eulji-ro, Jung-gu, Seoul, Republic of Korea</p>
+        <p class="copy">Copyright DAEWOO ENGINEERING & CONSTRUCTION Co., Ltd. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

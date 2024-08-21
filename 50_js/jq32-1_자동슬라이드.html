@@ -82,6 +82,12 @@
             for(let i = 0; i < slideListItem.length; i++){
                 slideListItem[i].style.width = 100 + "%";    
             }*/
+
+            /* 
+            제어문 > 반복문 > for, for of(컬렉션, 배열), for in(객체), while
+            메소드: forEach()
+            
+            */
       
             
           
@@ -110,16 +116,21 @@
             // 자동 슬라이드 함수 선언
             function autoSlide() {
               idx++;
+           
               slideList.style.left = -100 * idx + "%";
               slideList.style.transition = speed/2000 + "s";
           
+              // 순간이동 코드 4->0
               if (idx === slideCount) {
+                //원 위치 0%로 이동 -> 이때는 지연 시간은 0으로 하여 이동하는 것을 인식하지 못하게 한다.
                 idx = 0;
                 slideList.style.left = "0%";
                 slideList.style.transition = "0s";
+
+                //0% 위치 이동 후 즉시 왼쪽으로 이동(-100% 위치)
                 setTimeout(() => {
-                  idx = 1;
-                  slideList.style.left = -100 * idx + "%";
+                  //idx = 1;
+                  slideList.style.left = "-100%";
                   slideList.style.transition = speed/2000 + "s";
                 }, 0);
               }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.svg">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+    <script src="js/mlang.js" type="module"></script>
 </head>
 
 <body>
@@ -16,15 +17,21 @@
     <header>
         <!-- 로고 -->
         <h1 class="logo">
-            <a href="#"><b>WC</b>Castle</a>
+            <a href="#"><b>WC</b><span>Castle</span></a>
         </h1>
         <!-- 내비게이션 -->
-        <nav>
+        <nav class="gnb">
             <ul>
                 <li><a href="#sec2">WHITE CASTLE</a></li>
                 <li><a href="#sec3">MENU</a></li>
                 <li><a href="#sec4">EVENT</a></li>
                 <li><a href="sub/notice.html">NOTICE</a></li>
+                <li>
+                    <select name="" id="">
+                        <option value="ko">KOR</option>
+                        <option value="en">ENG</option>
+                    </select>
+                </li>
             </ul>
         </nav>
         
