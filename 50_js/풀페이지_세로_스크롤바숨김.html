@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullPage - 세로up</title>
+    <style>
+        /* reset.css */
+        body,
+        h2 {
+            margin: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* fullPage Layout */
+        body {
+            overflow: hidden;
+        }
+        .sec {
+            height: 100vh;
+            transition: .3s ease-out;
+        }
+
+        #sec1 {
+            background: lightblue;
+        }
+
+        #sec2 {
+            background: lightcoral;
+        }
+
+        #sec3 {
+            background: lightseagreen;
+        }
+
+        #sec4 {
+            background: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <section id="sec1" class="sec">
+            <h2>섹션1</h2>
+        </section>
+        <section id="sec2" class="sec">
+            <h2>섹션2</h2>
+        </section>
+        <section id="sec3" class="sec">
+            <h2>섹션3</h2>
+        </section>
+        <section id="sec4" class="sec">
+            <h2>섹션4</h2>
+        </section>
+    </div>
+
+    <script>
+        /* 
+            // wheel 이벤트 형식
+            요소.onwheel = function(e){
+                if (e.deltaY < 0) {
+                    // 마우스휠을 위로 올림
+                } else {
+                    // 마우스휠을 아래로 내림
+                }
+            };
+
+            // error(에러, bug): debugging(디버깅) ~ 에러 수정
+            // error 처리: try ~ catch
+            try {
+                실행 코드
+            } catch(err) {
+                에러시 처리할 내용
+            }
+        */
+        const docEle = document.documentElement; //html 의미
+        const sec = document.querySelectorAll('.sec');
+        const wh = window.innerHeight; //윈도우 높이(읽기 전용)
+
+        
+
+        //for ~ of
+        //forEach() -> 색인번호 사용 가능
+
+        for (let x of sec) {
+            x.onwheel = (e) => {
+                console.log(docEle.scrollTop);
+                // 기본 이벤트 방지, 없어도 문제없음
+                e.preventDefault();
+                if (e.deltaY > 0) {
+                    // 마우스휠 내림
+                    // e.currentTarget는 이벤트가 발생한 요소, 마지막 섹션에서 휠 이벤트가 발생하면 return(함수 또는 제어문 탈출)
+                    //wh(html)의 스크롤량 > 창높이 * (4-2) + 1
+                    if (docEle.scrollTop > wh * (sec.length - 2)+100) return;//조건 참이면 return
+                    let next = e.currentTarget.nextElementSibling.offsetTop;
+                    
+                    console.log("current target: ", e.currentTarget);
+
+                    docEle.scrollTop = next;
+                } else if (e.deltaY < 0) {
+                    // 마우스휠 올림
+                    if (docEle.scrollTop < wh) return;
+                    let prev = e.currentTarget.previousElementSibling.offsetTop;
+                    console.log("current target: ", e.currentTarget);
+                    docEle.scrollTop = prev;
+                }
+            };
+        }
+
+    </script>
+</body>
+
+</html>

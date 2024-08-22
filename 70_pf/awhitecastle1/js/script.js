@@ -21,5 +21,18 @@ window.addEventListener("DOMContentLoaded", () => {
         // nav 태그에 change가 추가
         nav.classList.toggle("change");
     }
+    
+
+});
+
+$(document).ready(function(){
+
+    $('.sec-wrap').bxSlider({
+        auto: true,
+        autoControls: false,
+        stopAutoOnClick: true,
+        pager: true,
+        // slideWidth: 600
+      });
 
 });

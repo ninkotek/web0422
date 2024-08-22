@@ -38,7 +38,9 @@ section li {
 }
 
 /* 섹션1 */
-#sec1 {
+#sec1 {    
+  
+    /* overflow: hidden; */
     position: relative;
     padding: 54px 0 0;
 }
@@ -267,6 +269,7 @@ nav.change {
     section {
         margin: 0 auto;
     }
+   
 
     /* 섹션2,3 공통 */
     section li {
@@ -281,7 +284,9 @@ nav.change {
 
 /* 1480이상: 데스크탑 */
 @media (min-width: 1500px) {
-
+    /* .sec-wrap {
+        display: flex;
+    } */
     /* 섹션 공통 */
     section {
         width: 1480px;
@@ -292,6 +297,6 @@ nav.change {
     #sec1 div {
         width: 1480px;
         height: 745px;
+        display: flex;
     }
-
 }

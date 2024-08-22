@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            left: 0px;
+            top: 0px;
+            width: 300px;
+            height: 300px;
+            background: yellow;
+            margin-left: 30px;
+            margin-top: 30px;
+            /* offsetLeft 또는 offsetTop이 적용되지 않는다 */
+            transform: translate(100px, 100px);
+            transition: 0.3s;
+        }
+
+        div.move {
+            left: 200px;
+            top: 200px;
+        }
+        button {
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+           
+            const div = document.querySelector('div');
+    
+
+            console.log("left: ", div.offsetLeft);
+            console.log("top:", div.offsetTop);
+        });
+    </script>
+</head>
+
+<body>
+ 
+    <div>박스</div>
+</body>
+
+</html>
