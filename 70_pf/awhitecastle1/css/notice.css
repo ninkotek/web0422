@@ -1,0 +1,228 @@
+@charset "utf-8";
+@charset "utf-8";
+@import url("reset.css");
+@import url("common.css");
+
+/* 공통 영역 */
+
+/* 헤더 */
+header {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    padding: 0 30px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+/* top 영역 */
+#top {
+    padding-top: 54px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background: #333;
+    color: #fff; 
+    line-height: 1;
+}
+#top h2 {
+    margin: 20px 0 40px 0;
+}
+#top a+a::before {
+    content: "〉";
+    margin: 0 12px;
+}
+/* 섹션 */
+/* odd(). 2n-1, 2n+1
+   even(), 2n */
+#notice {   
+    text-align: center;
+}
+#notice>p {
+    margin: 32px 0;
+}
+#notice .paging {
+    margin-top: 20px;
+}
+#notice .paging a {
+    border: 1px solid #ddd;
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+#notice .paging a:nth-child(2) {
+    background: #352461;
+    color: #fff;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 32px 0;
+}
+
+/*///////////////// 폰 ////////////////*/
+/* 모바일 버튼 */
+.collapsedMenuIcon {
+    display: inline-block;
+    right: 30px;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 3px;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+/* 섹션 */
+#notice {
+    padding: 48px 20px;  
+}
+/* 검색 폼 */
+#notice form div {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    text-align: left;
+}
+#notice select {
+    flex: 0 0 27%;
+    height: 40px;
+    vertical-align: top;
+    border: 1px solid #ddd;
+}
+#notice [type="search"] {
+    flex: 66%;
+    height: 40px;
+    vertical-align: top;
+    border: 1px solid #ddd;
+}
+#notice [type="submit"] {
+    display: block;
+    width: 100%;
+    background: #352461;
+    color: #fff;
+    padding: 6px 0;
+    margin: 8px 0 48px 0;
+}
+
+
+#board th{
+    padding: 12px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ddd;
+}
+#board th:nth-last-of-type(4) {
+    width: 260px;
+}
+#board tr:hover {
+    background: #f1f1f1;
+}
+#board td {
+    padding: 12px 0;    
+}
+
+/* odd(). 2n-1, 2n+1
+   even(), 2n */
+
+#board th:nth-last-of-type(odd), #board td:nth-last-of-type(2n-1) {
+    display: none;
+   }
+#board td:nth-of-type(2) a {
+    padding-right: 16px;
+    display: block;
+
+    width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+}
+#board td:nth-of-type(2) a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: -65%;
+    width: 65%;
+    height: 100vh;
+    background: rgba(119, 119, 119, 0.7);    
+    transition: .3s ease-in-out;    
+}
+
+nav.change {
+    right: 0;
+}
+
+#sec1 span {
+    display: none;
+}
+
+/*////////////////////////////////////*/
+
+
+/* 768이상: 테블릿 */
+@media (min-width: 768px) {
+
+    #top {
+  
+        height: 400px;
+   
+    }
+
+    /* 내비게이션 */
+    nav {
+        display: block;
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        transition: none;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-left: 40px;
+    }
+
+    .collapsedMenuIcon {
+        display: none;
+    }
+
+   
+}
+/* 992이상: 데스크탑 */
+@media (min-width: 992px) {
+
+}
+
+/* 1480이상: 데스크탑 */
+@media (min-width: 1500px) {
+
+
+}

@@ -184,7 +184,7 @@ a {
     .login-container {
         width: 800px;        
         position: absolute;
-        left: 20px;       
+        /* left: 20px; */
         top: 100px;    
     }
 
@@ -201,9 +201,9 @@ a {
         margin-left: 34px;
         margin-top: 40px;
     }
-    .login-left>ul>li {
+    /* .login-left>ul>li {
         border-bottom: none;
-    }
+    } */
 
     .simple-login>p {
         display: none;
@@ -258,16 +258,16 @@ a {
 @media (max-width: 576px) {
 
     .login-container { 
-        position: absolute;  
-        left: -170px;
-        top: 5%;
+        width: 100%;       
+        /* position: absolute;   */
+        /* left: -60px;  */
+        top: 5%; 
         transform: scale(0.8);
     }
-   
-    }
+
+
     form {
         margin-top: 10px;
     }
-  
 
 }

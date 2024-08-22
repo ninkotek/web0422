@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Castle::서브탬플릿</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../css/temp.css">
+</head>
+<body>
+    <header>
+        <!-- 로고 -->
+        <h1 class="logo">
+            <a href="../index.html"><b>WC</b>Castle</a>
+        </h1>
+        <!-- 내비게이션 -->
+        <nav>
+            <ul>
+                <li><a href="#sec2">WHITE CASTLE</a></li>
+                <li><a href="#sec3">MENU</a></li>
+                <li><a href="#sec4">EVENT</a></li>
+                <li><a href="sub/notice.html">NOTICE</a></li>
+            </ul>
+        </nav>
+        
+        <!-- 모바일 버튼 -->
+        <div class="collapsedMenuIcon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </header>
+
+    <!-- top 영역 -->
+    <div id="top">
+        <!-- #top을 flex적용하면 .inner를 수직 중앙 배치 할 수 있다. -->
+        <div class="inner">
+            <span>WC News</span>
+            <h2>WC NOTICE</h2>
+            <div>
+                  <a href="../index.html">Home</a>
+                  <a href="notice.html">WC News</a>
+                  <a href="notice.html">Notice</a>
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- 섹션영역 -->
+    <section>
+        <h2>WHITE CASTLE NOTICE</h2>
+        <p>Latest News from White Castle</p>
+
+        <!-- 검색 영역 -->
+    </section>
+    <form action="notice.jsp">
+        <select name="" id="">
+            <option value="">Title</option>
+            <option value="">Content</option>
+            <option value="">Author</option>
+        </select>
+        <input type="search" placeholder="Explore what you like to find out">
+        <input type="submit" value="search">
+    </form>
+
+    <!-- 공지사항 게시판 -->
+     <table>
+        <tr>
+            <th>No.</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Date</th>
+            <th>Clicks</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>How to make slider hamburgers</td>
+            <td>Jannifer</td>
+            <td>Aug 10 2024</td>
+            <td>23</td>
+       
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>How to make your orders without waiting long</td>
+            <td>Steve</td>
+            <td>Aug 11 2024</td>
+            <td>45</td>
+
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>What is the best option for quick eaters</td>
+            <td>Mike</td>
+            <td>Aug 12 2024</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>When the WC festival opens</td>
+            <td>Jason</td>
+            <td>Aug 14 2024</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Monthly sales begins with benefit offering</td>
+            <td>Tim</td>
+            <td>Aug 9 2024</td>
+            <td>60</td>
+        </tr>
+     </table>
+     <div><a href="#">first</a></div>
+     <div><a href="#">1</a></div>
+     <div><a href="#">last</a></div>
+     <footer>
+        <p>Copyright Hanatour. All rights reserved.</p>
+    </footer>
+</body>
+</html>
