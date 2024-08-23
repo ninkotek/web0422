@@ -222,6 +222,11 @@ nav.change {
     #sec1 span {
         display: inline-block;
     }
+  
+    #sec1 .bx-pager {
+        position: absolute;
+        bottom: -450px;
+    }
 
     /* 섹션2,3 공통 */
     section ul {
@@ -265,7 +270,7 @@ nav.change {
 
 /* 992이상: 데스크탑 */
 @media (min-width: 992px) {
-
+ 
     section {
         margin: 0 auto;
     }
@@ -284,9 +289,14 @@ nav.change {
 
 /* 1480이상: 데스크탑 */
 @media (min-width: 1500px) {
-    /* .sec-wrap {
-        display: flex;
-    } */
+
+    #sec1 .bx-pager {
+        display: flex;         
+        width: 200px;
+        height: 60px;
+        transform: translate(660px, -440px);
+    }
+  
     /* 섹션 공통 */
     section {
         width: 1480px;
@@ -297,6 +307,13 @@ nav.change {
     #sec1 div {
         width: 1480px;
         height: 745px;
-        display: flex;
+        /* display: flex; */
+      
     }
+
+    #sec2>ul>li, #sec3>ul>li {
+        border: 1px solid #bbb;
+    }
+
+ 
 }
