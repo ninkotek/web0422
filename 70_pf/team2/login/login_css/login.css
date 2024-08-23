@@ -260,11 +260,11 @@ a {
     .login-container { 
         width: 100%;       
         /* position: absolute;   */
-        /* left: -60px;  */
+        left: -60px;  
         top: 5%; 
         transform: scale(0.8);
+       
     }
-
 
     form {
         margin-top: 10px;
