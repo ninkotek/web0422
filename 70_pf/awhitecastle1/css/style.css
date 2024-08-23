@@ -189,7 +189,9 @@ nav.change {
 #sec1 span {
     display: none;
 }
-
+/* #sec1 .bx-pager {
+    display: none;
+} */
 /*////////////////////////////////////*/
 
 
@@ -277,6 +279,7 @@ nav.change {
    
 
     /* 섹션2,3 공통 */
+
     section li {
         width: calc(25% - 15px);
     }
@@ -291,10 +294,10 @@ nav.change {
 @media (min-width: 1500px) {
 
     #sec1 .bx-pager {
-        display: flex;         
-        width: 200px;
+        display: flex;          
+        width: 100px;
         height: 60px;
-        transform: translate(660px, -440px);
+        transform: translate(660px, -440px);       
     }
   
     /* 섹션 공통 */
@@ -308,7 +311,6 @@ nav.change {
         width: 1480px;
         height: 745px;
         /* display: flex; */
-      
     }
 
     #sec2>ul>li, #sec3>ul>li {
