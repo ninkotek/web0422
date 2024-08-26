@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="practice.css">
+    <script src="practice.js" defer></script>
+
+</head>
+<body>
+    <div class="sliderWrap">
+        <div class="slides">
+            <ul>
+                <li class="active">
+                    <img src="images/pic1.jpg" alt=""></a>
+                    <span>Woods</span>
+                </li>
+                <li>
+                    <img src="images/pic2.jpg" alt=""></a>
+                    <span>River</span>
+                </li>
+                <li>
+                    <img src="images/pic4.jpg" alt=""></a>
+                    <span>Valley</span>
+                </li>
+                <li>
+                    <img src="images/pic7.jpg" alt=""></a>
+                    <span>Fine Tree</span>
+                </li>
+                <li>
+                    <img src="images/pic8.jpg" alt=""></a>
+                    <span>Mounts</span>
+                </li>             
+            </ul>
+        </div>
+        <div class="buttons">
+            <span class="next"><img src="images/next3333.svg" alt="button next"></span>
+            <span class="prev"><img src="images/prev3333.svg" alt="button prev"></span>
+        </div>
+        <div class="dotsContainer">
+            <div class="dot active" data-attr="0" onclick="dotEvent(this)"></div>
+            <div class="dot" data-attr="1" onclick="dotEvent(this)"></div>
+            <div class="dot" data-attr="2" onclick="dotEvent(this)"></div>
+            <div class="dot" data-attr="3" onclick="dotEvent(this)"></div>
+            <div class="dot" data-attr="4" onclick="dotEvent(this)"></div>
+        </div>
+    </div>
+</body>
+</html>
