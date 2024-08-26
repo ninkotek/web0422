@@ -24,13 +24,35 @@
         a {
             text-decoration: none;
         }
+        header {
+            width: 200px;
+            height: 650px;
+            border: 1px solid;
+            padding: 16px;
+        }
+        .main>li {
+            background: #777;
+            text-align: center;
+            border-bottom: 1px solid red;
+        }
 
         .main li a {
             font-size: 16px;
-            color: #999;
+            color: #fff;
         }
         .main li a:hover {
-            color: #fff;
+            color: #111;
+        }
+        .sub {
+            height: 0;
+            overflow: hidden; 
+            /* visibility: hidden; */
+            /* opacity: 0; */
+            transition: 0.7s;
+            border-top: ;
+        }
+        .main>li:hover .sub {
+            height: 150px;
         }
         .sub li a {
             font-size: 14px;
