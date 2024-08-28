@@ -6,10 +6,12 @@
     padding: 0;
 }
 .sliderWrap {
-    display: flex;
+    /* display: flex; */
     position: relative;
-    width: 800px;
-    height: 350px;
+    width: 800px; 
+    height: 350px; 
+    /* height: 100vh; */
+    margin: 0 auto;
 
 }
 .slides {
@@ -31,10 +33,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-    background: rgba(119, 119, 119, 0.5);
+    background: rgba(119, 119, 119, 0.4);
     width: 200px;
     height: 30px;
     line-height: 30px;
+    font-weight: 500;
+    font-size: 18px;
     text-align: center;
 }
 .slides ul li:not(.active) {
@@ -73,12 +77,13 @@ span.next:hover, span.prev:hover {
    height: 30px; 
    line-height: 30px;  
     background-color: rgba(255, 255, 255, 0.077);
+    text-align: center;
 }
 .dotsContainer .dot {
     cursor: pointer;
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border: 1px solid #ccc;
     border-radius: 50%;
     margin: 0 2px;
