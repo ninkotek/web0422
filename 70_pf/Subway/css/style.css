@@ -134,6 +134,23 @@ section li:not(:nth-of-type(4n)) {
     height: 100%;    
 }
 
+#sec2 ul li:first-child {
+   position: relative;
+   
+}
+#sec2 ul li:first-child span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: 0.7s;
+}
+#sec2 ul li:first-child:hover >span{
+     visibility: visible;
+}
+
+
 /* 섹션3 */
 #sec3 h2 {
     border-bottom: 1px solid #111;
