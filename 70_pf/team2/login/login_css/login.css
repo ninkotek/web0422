@@ -5,6 +5,9 @@ body {
 }
 
 /* 전체 */
+.login-wrap {
+    margin-top: 160px;
+}
 
 .login-container {
     width: 820px; 
@@ -60,6 +63,7 @@ body {
 #mbConts {   
     padding: 30px 40px 0;
 }
+
 .login-id, .login-pw {
     width: 360px; 
     /* width: 18.91vw; */
@@ -118,7 +122,18 @@ body {
 }
 .login-icons {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
+.login-icons a {
+    display: inline;
+    margin-left: 8px;
+}
+.login-icons a img {
+    width: 40px;
+    height: 40px;    
+}
+
 /* non-member */
 #nonmbConts {   
     position: absolute;
@@ -184,9 +199,7 @@ body {
         margin-left: 34px;
         margin-top: 40px;
     }
-    /* .login-left>ul>li {
-        border-bottom: none;
-    } */
+    
 
     .simple-login>p {
         display: none;
@@ -210,8 +223,7 @@ body {
         background-image: url(../login_images/naver.png);
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: center;
-        /* transform: translateX(); */
+        background-position: center;       
     }
     .login-icons>a:nth-of-type(2) {
         background-image: url(../login_images/kakao.png);
@@ -243,10 +255,9 @@ body {
     .login-container { 
         width: 100%;       
         /* position: absolute;   */
-        left: -60px;  
+        left: -46px;  
         top: 5%; 
-        transform: scale(0.8);
-       
+        transform: scale(0.8);       
     }
 
     form {

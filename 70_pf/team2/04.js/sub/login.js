@@ -1,6 +1,6 @@
 //tabs
  
-const loginTab1 = document.querySelector('.mb');
+const loginTab1 = document.querySelector('.login-mb');
 const loginTab2 = document.querySelector('.non-mb');
 
 const loginCont = document.querySelectorAll('.login-left>div');
@@ -22,13 +22,7 @@ loginTab2.addEventListener('click', function(){
     loginTab1.style.borderBottom = "1px solid #cccccc";
 });
 
-//tablet login icons
-// const loginIcons = document.querySelectorAll('.login-icons>a');
 
-// loginIcons[0].innerHTML = "네이버로 로그인";
-// loginIcons[1].innerHTML = "카카오로 로그인";
-// loginIcons[2].innerHTML = "구글로 로그인";
-// loginIcons[3].innerHTML = "애플로 로그인";
 
 
 

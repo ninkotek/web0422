@@ -1,237 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 설빙</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>로그인 설빙</title>
-  <script src="../../login/login_js/login.js" defer></script>
-  <link rel="stylesheet" href="../../02.css/reset.css">
-  <link rel="stylesheet" href="../../02.css/typo.css">
-  <link rel="stylesheet" href="../../02.css/header.css">
-  <link rel="stylesheet" href="../../login/login_css/login.css">
+    <link rel="stylesheet" href="../../02.css/reset.css" />
+    <link rel="stylesheet" href="../../02.css/typo.css" />
+    <link rel="stylesheet" href="../../02.css/header.css" />
+    <link rel="stylesheet" href="../../login/login_css/login.css" />
+    <script src="../../04.js/sub/login.js" defer></script>
+    <script src="../../04.js/header.js"></script>
+  </head>
 
-  <script src="../../04.js/header.js"></script>
-</head>
-
-<body>
-  <!-- header pc -->
-  <header class="pc">
-    <div class="logo">
-      <div>
-        <a href="../../index.html">
-          <img src="../../03.assets/index/logo.svg" alt="header_logo">
-        </a>
-      </div>
-    </div><!-- //logo -->
-    <nav>
-      <ul class="main">
-        <li class="main_menu" id="main_menu1">
-          <a href="brand.html">브랜드</a>
-          <ul class="sub_menu" id="sub_menu1">
-            <li><a href="brand.html">브랜드</a></li>
-            <li><a href="#">설빙 광고/영상</a></li>
-            <li><a href="#">뉴스&공지사항</a></li>
-          </ul><!-- //#sub1 -->
-        </li><!-- //#main1 -->
-        <li class="main_menu" id="main_menu2">
-          <a href="menu.html">메뉴</a>
-          <ul class="sub_menu" id="sub_menu2">
-            <li><a href="menu.html">신제품</a></li>
-            <li><a href="menu.html">설빙</a></li>
-            <li><a href="menu.html">디저트</a></li>
-            <li><a href="menu.html">음료</a></li>
-            <li><a href="#">MD</a></li>
-          </ul><!-- //#sub2 -->
-        </li><!-- //#main2 -->
-        <li class="main_menu" id="main_menu3">
-          <a href="event.html">이벤트</a>
-          <ul class="sub_menu" id="sub_menu3">
-            <li><a href="event.html">이벤트</a></li>
-            <li><a href="#">e쿠폰</a></li>
-          </ul><!-- //#sub3 -->
-        </li><!-- //#main3 -->
-        <li class="main_menu" id="main_menu4">
-          <a href="#main_s4">매장찾기</a>
-          <ul class="sub_menu" id="sub_menu4">
-            <li><a href="#main_s4">매장찾기</a></li>
-          </ul><!-- //#sub4 -->
-        </li><!-- //#main4 -->
-        <li class="main_menu" id="main_menu5">
-          <a href="faq.html">고객지원</a>
-          <ul class="sub_menu" id="sub_menu5">
-            <li><a href="faq.html">고객센터</a></li>
-            <li><a href="#">제휴/제안</a></li>
-          </ul><!-- //#sub5 -->
-        </li><!-- //#main5 -->
-
-      </ul><!-- //.main -->
-    </nav><!-- //nav -->
-    <div class="logo2">
-      <div class="serch">
-        <input type="search">
-        <div><img src="../../03.assets/index/serch_ico.svg" alt="serch"></div>
-      </div><!-- //.serch -->
-      <div class="my_page">
-        <a href="login.html"><img src="../../03.assets/index/My_page_ico.svg" alt="my_page"></a>
-      </div>
-    </div>
-  </header><!-- //header pc -->
-
-  <!-- header mb tb -->
-  <header class="mb tb">
-    <div id="hd1">
+  <body>
+    <!-- header pc -->
+    <header class="pc">
       <div class="logo">
-        <a href="index.html">
-          <img src="../../03.assets/index/logo.svg" alt="header_logo">
-        </a>
-      </div>
-      <div class="icon">
-        <div id="x_logo">
-          <div id="bar1"><!-- hambuger btn --></div>
-          <div id="bar2"><!-- hambuger btn --></div>
-          <div id="bar3"><!-- hambuger btn --></div>
-        </div>
-        <div class="serch">
-          <div>
-            <img src="../../03.assets/index/serch_ico.svg" alt="검색창">
-          </div>
-          <input type="text" placeholder="검색하기.">
-        </div>
-        <div class="my_page">
-          <a href="login.html"><img src="../../03.assets/index/My_page_ico.svg" alt="마이페이지"></a>
+        <div>
+          <a href="../../index.html">
+            <img src="../../03.assets/index/logo.svg" alt="header_logo" />
+          </a>
         </div>
       </div>
-    </div><!-- //div -->
-
-    <!-- mobile nav -->
-    <nav>
-      <div id="mb_container">
-        <div class="nav_my">
-          <div class="mb_nav_left">
-            <div>
-              <img src="../../03.assets/index/nav_my.png" alt="my">
-            </div>
-            <p class="p2">
-              <a href="login.html">로그인을 해주세요.</a>
-            </p>
-          </div>
-          <div class="nav_btn"><a href="login.html">로그인</a></div>
-        </div>
+      <!-- //logo -->
+      <nav>
         <ul class="main">
-          <li class="main_menu" id="main_mb_1">
-            <a href="#">브랜드</a>
-            <ul class="sub_menu" id="sub_mb_1">
+          <li class="main_menu" id="main_menu1">
+            <a href="brand.html">브랜드</a>
+            <ul class="sub_menu" id="sub_menu1">
               <li><a href="brand.html">브랜드</a></li>
               <li><a href="#">설빙 광고/영상</a></li>
               <li><a href="#">뉴스&공지사항</a></li>
             </ul>
+            <!-- //#sub1 -->
           </li>
-          <li class="main_menu" id="main_mb_2">
-            <a href="#">메뉴</a>
-            <ul class="sub_menu" id="sub_mb_2">
+          <!-- //#main1 -->
+          <li class="main_menu" id="main_menu2">
+            <a href="menu.html">메뉴</a>
+            <ul class="sub_menu" id="sub_menu2">
               <li><a href="menu.html">신제품</a></li>
               <li><a href="menu.html">설빙</a></li>
               <li><a href="menu.html">디저트</a></li>
               <li><a href="menu.html">음료</a></li>
               <li><a href="#">MD</a></li>
             </ul>
+            <!-- //#sub2 -->
           </li>
-          <li class="main_menu" id="main_mb_3">
-            <a href="#">이벤트</a>
-            <ul class="sub_menu" id="sub_mb_3">
+          <!-- //#main2 -->
+          <li class="main_menu" id="main_menu3">
+            <a href="event.html">이벤트</a>
+            <ul class="sub_menu" id="sub_menu3">
               <li><a href="event.html">이벤트</a></li>
               <li><a href="#">e쿠폰</a></li>
             </ul>
+            <!-- //#sub3 -->
           </li>
-          <li class="main_menu" id="main_mb_4">
+          <!-- //#main3 -->
+          <li class="main_menu" id="main_menu4">
             <a href="#main_s4">매장찾기</a>
-            <ul class="sub_menu" id="sub_mb_4">
+            <ul class="sub_menu" id="sub_menu4">
               <li><a href="#main_s4">매장찾기</a></li>
             </ul>
+            <!-- //#sub4 -->
           </li>
-          <li class="main_menu" id="main_mb_5">
-            <a href="#">고객지원</a>
-            <ul class="sub_menu" id="sub_mb_5">
-              <li><a href="faq.html">고객지원</a></li>
+          <!-- //#main4 -->
+          <li class="main_menu" id="main_menu5">
+            <a href="faq.html">고객지원</a>
+            <ul class="sub_menu" id="sub_menu5">
+              <li><a href="faq.html">고객센터</a></li>
               <li><a href="#">제휴/제안</a></li>
             </ul>
+            <!-- //#sub5 -->
           </li>
+          <!-- //#main5 -->
         </ul>
-      </div>
-      <div class="nav_sub">
-        <ul>
-          <li><a href="faq.html">고객센터</a></li>
-          <li><a href="faq.html">공지사항</a></li>
-          <li><a href="#">보도자료</a></li>
-          <li><a href="#">칭찬점포</a></li>
-        </ul>
-        <div class="kakao">
-          <p class="p2">설빙 선물하기</p>
-          <a href="#">카카오톡 선물하기</a>
+        <!-- //.main -->
+      </nav>
+      <!-- //nav -->
+      <div class="logo2">
+        <div class="serch">
+          <input type="search" />
+          <div>
+            <img src="../../03.assets/index/serch_ico.svg" alt="serch" />
+          </div>
+        </div>
+        <!-- //.serch -->
+        <div class="my_page">
+          <a href="login.html"
+            ><img src="../../03.assets/index/My_page_ico.svg" alt="my_page"
+          /></a>
         </div>
       </div>
-    </nav><!-- //nav -->
+    </header>
+    <!-- //header pc -->
 
-  </header><!-- //header mb tb -->
-  <!-- //header -->
-   
-  <!-- 로그인시작 -->
-  <div class="login-container">
-    <div class="login-header">
-      <a href="#">로그인</a>
-      <a href="#">회원가입</a>
-    </div>
-    <div class="sub-container">
-      <div class="login-left">
-        <ul>
-          <li class="mb"><a href="#mbConts">회원 로그인</a></li>
-          <li class="non-mb"><a href="#nonmbConts">비회원 주문확인</a></li>
-        </ul>
-        <div id="mbConts" class="tab-on">
-          <form action="#">
-            <input class="login-id" type="text" placeholder="아이디를 입력하세요">
-            <input class="login-pw" type="text" placeholder="비밀번호를 입력하세요">
-          </form>
-          <div class="login-smallbtns">
-            <input type="radio" name="attend" checked="checked" /><label class="label1" for="">로그인 상태 유지</label>
-            <input type="radio" name="attend"><label for="">아이디 저장</label>
+    <!-- header mb tb -->
+    <header class="mb tb">
+      <div id="hd1">
+        <div class="logo">
+          <a href="index.html">
+            <img src="../../03.assets/index/logo.svg" alt="header_logo" />
+          </a>
+        </div>
+        <div class="icon">
+          <div id="x_logo">
+            <div id="bar1"><!-- hambuger btn --></div>
+            <div id="bar2"><!-- hambuger btn --></div>
+            <div id="bar3"><!-- hambuger btn --></div>
           </div>
-          <div class="login-bigbtn">
-            <a href="#">로그인</a>
+          <div class="serch">
+            <div>
+              <img src="../../03.assets/index/serch_ico.svg" alt="검색창" />
+            </div>
+            <input type="text" placeholder="검색하기." />
           </div>
-          <div class="id-query">
-            <span>아이디 찾기</span>
-            <span>비밀번호 찾기</span>
-            <span></span>
+          <div class="my_page">
+            <a href="login.html"
+              ><img
+                src="../../03.assets/index/My_page_ico.svg"
+                alt="마이페이지"
+            /></a>
           </div>
-          <div class="simple-login">
-            <p>또는 간편하게 로그인</p>
-            <div class="login-icons">
-              <a href="#"><img src="../../login/login_images/naver.png" alt="네이버"></a>
-              <a href="#"><img class="kakao" src="../../login/login_images/kakao.png" alt="카카오"></a>
-              <a href="#"><img src="../../login/login_images/google.png" alt="구글"></a>
-              <a href="#"><img src="../../login/login_images/apple.png" alt="애플"></a>
+        </div>
+      </div>
+      <!-- //div -->
+
+      <!-- mobile nav -->
+      <nav>
+        <div id="mb_container">
+          <div class="nav_my">
+            <div class="mb_nav_left">
+              <div>
+                <img src="../../03.assets/index/nav_my.png" alt="my" />
+              </div>
+              <p class="p2">
+                <a href="login.html">로그인을 해주세요.</a>
+              </p>
+            </div>
+            <div class="nav_btn"><a href="login.html">로그인</a></div>
+          </div>
+          <ul class="main">
+            <li class="main_menu" id="main_mb_1">
+              <a href="#">브랜드</a>
+              <ul class="sub_menu" id="sub_mb_1">
+                <li><a href="brand.html">브랜드</a></li>
+                <li><a href="#">설빙 광고/영상</a></li>
+                <li><a href="#">뉴스&공지사항</a></li>
+              </ul>
+            </li>
+            <li class="main_menu" id="main_mb_2">
+              <a href="#">메뉴</a>
+              <ul class="sub_menu" id="sub_mb_2">
+                <li><a href="menu.html">신제품</a></li>
+                <li><a href="menu.html">설빙</a></li>
+                <li><a href="menu.html">디저트</a></li>
+                <li><a href="menu.html">음료</a></li>
+                <li><a href="#">MD</a></li>
+              </ul>
+            </li>
+            <li class="main_menu" id="main_mb_3">
+              <a href="#">이벤트</a>
+              <ul class="sub_menu" id="sub_mb_3">
+                <li><a href="event.html">이벤트</a></li>
+                <li><a href="#">e쿠폰</a></li>
+              </ul>
+            </li>
+            <li class="main_menu" id="main_mb_4">
+              <a href="#main_s4">매장찾기</a>
+              <ul class="sub_menu" id="sub_mb_4">
+                <li><a href="#main_s4">매장찾기</a></li>
+              </ul>
+            </li>
+            <li class="main_menu" id="main_mb_5">
+              <a href="#">고객지원</a>
+              <ul class="sub_menu" id="sub_mb_5">
+                <li><a href="faq.html">고객지원</a></li>
+                <li><a href="#">제휴/제안</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="nav_sub">
+          <ul>
+            <li><a href="faq.html">고객센터</a></li>
+            <li><a href="faq.html">공지사항</a></li>
+            <li><a href="#">보도자료</a></li>
+            <li><a href="#">칭찬점포</a></li>
+          </ul>
+          <div class="kakao">
+            <p class="p2">설빙 선물하기</p>
+            <a href="#">카카오톡 선물하기</a>
+          </div>
+        </div>
+      </nav>
+      <!-- //nav -->
+    </header>
+    <!-- //header mb tb -->
+    <!-- //header -->
+
+    <!-- 로그인시작 -->
+    <div class="login-wrap">
+      <div class="login-container">
+        <div class="login-header">
+          <a href="#">로그인</a>
+          <a href="#">회원가입</a>
+        </div>
+        <div class="sub-container">
+          <div class="login-left">
+            <ul>
+              <li class="login-mb"><a href="#mbConts">회원 로그인</a></li>
+              <li class="non-mb"><a href="#nonmbConts">비회원 주문확인</a></li>
+            </ul>
+            <div id="mbConts" class="tab-on">
+              <form action="#">
+                <input
+                  class="login-id"
+                  type="text"
+                  placeholder="아이디를 입력하세요"
+                />
+                <input
+                  class="login-pw"
+                  type="text"
+                  placeholder="비밀번호를 입력하세요"
+                />
+              </form>
+              <div class="login-smallbtns">
+                <input type="radio" name="attend" checked="checked" /><label
+                  class="label1"
+                  for=""
+                  >로그인 상태 유지</label
+                >
+                <input type="radio" name="attend" /><label for=""
+                  >아이디 저장</label
+                >
+              </div>
+              <div class="login-bigbtn">
+                <a href="#">로그인</a>
+              </div>
+              <div class="id-query">
+                <span>아이디 찾기</span>
+                <span>비밀번호 찾기</span>
+                <span></span>
+              </div>
+              <div class="simple-login">
+                <p>또는 간편하게 로그인</p>
+                <div class="login-icons">
+                  <a href="#"
+                    ><img src="../../login/login_images/naver.png" alt="네이버"
+                  /></a>
+                  <a href="#"
+                    ><img
+                      class="kakao2"
+                      src="../../login/login_images/kakao.png"
+                      alt="카카오"
+                  /></a>
+                  <a href="#"
+                    ><img src="../../login/login_images/google.png" alt="구글"
+                  /></a>
+                  <a href="#"
+                    ><img src="../../login/login_images/apple.png" alt="애플"
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <div id="nonmbConts">
+              <form action="#">
+                <input
+                  class="order-num"
+                  type="text"
+                  placeholder="주문번호를 입력하세요"
+                />
+                <input
+                  class="order-pw"
+                  type="text"
+                  placeholder="주문 비밀번호를 입력하세요"
+                />
+              </form>
+              <p>조회하실 주문번호와 주문 비밀번호를 입력하세요.</p>
+              <div class="login-btn2">
+                <a href="#">확인</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div id="nonmbConts">
-          <form action="#">
-            <input class="order-num" type="text" placeholder="주문번호를 입력하세요">
-            <input class="order-pw" type="text" placeholder="주문 비밀번호를 입력하세요">
-          </form>
-          <p>조회하실 주문번호와 주문 비밀번호를 입력하세요.</p>
-          <div class="login-btn2">
-            <a href="#">확인</a>
+          <div class="image-right">
+            <a href="#"
+              ><img
+                src="../../login/login_images/login_right.jpg"
+                alt="bigimage"
+            /></a>
           </div>
         </div>
       </div>
-      <div class="image-right">
-        <a href="#"><img src="../../login/login_images/login_right.jpg" alt="bigimage"></a>
-      </div>
     </div>
-  </div>
-
-</body>
-
+  </body>
 </html>
