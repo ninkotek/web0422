@@ -134,22 +134,28 @@ section li:not(:nth-of-type(4n)) {
     height: 100%;    
 }
 
-#sec2 ul li:first-child {
+#sec2 ul li {
    position: relative;
    
 }
-#sec2 ul li:first-child span{
+#sec2 ul li span{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    visibility: hidden;
-    transition: 0.7s;
+    /* visibility: hidden; */
+    opacity: 0;
+    transition: 0.3s;
 }
-#sec2 ul li:first-child:hover >span{
-     visibility: visible;
+#sec2 ul li:hover >span{
+     /* visibility: visible; */
+     opacity: 1;
+     font-size: 18px;
+     font-weight: 600;
 }
-
+#sec2 ul li:hover img{
+    opacity: 0.3;
+}
 
 /* 섹션3 */
 #sec3 h2 {
