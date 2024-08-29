@@ -14,6 +14,7 @@
 }
 .event-wrap h2 {
   font-size: 2vw;
+  font-weight: 400;
   text-align: center;
   padding: 4.2vw 0;
 }
@@ -491,6 +492,10 @@ span.prev-btn:hover {
     max-width: 100%;
     height: auto;
     background-color: #fff;
+  }
+  #tabs-wrap>ul>li>a {
+    display: block;
+    transform: translateY(-1.px);
   }
 
   #total-list > ul > li,

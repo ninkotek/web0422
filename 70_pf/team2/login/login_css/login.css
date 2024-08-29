@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 body {
-   background: #fff;
+    background: #fff;
+    font-family: '프리텐다드';
 }
 
 /* 전체 */
@@ -9,11 +10,17 @@ body {
     margin-top: 160px;
 }
 
+.login-id,
+.login-pw {
+    border: 1px solid #ccc;
+}
+
 .login-container {
-    width: 820px; 
+    width: 820px;
     /* width: 42vw; */
     margin: 0 auto;
 }
+
 .login-header {
     display: flex;
     justify-content: space-between;
@@ -21,68 +28,82 @@ body {
     padding-bottom: 12px;
     border-bottom: 1px solid #ccc;
 }
+
 .sub-container {
     display: flex;
-    position: relative;   
+    position: relative;
+}
+.login-left>ul>li>a {
+    font-size: 16px;
 }
 
 /* image-right */
 .image-right img {
-    width: 340px; 
+    width: 340px;
     /* width: 17.86vw; */
-    height: 500px; 
+    height: 500px;
     /* height: 26.27vw; */
     position: absolute;
     right: 0;
 }
+
 .login-left {
-    width: 440px; 
+    width: 440px;
     /* width: 23.12vw; */
-    height: 500px; 
+    height: 500px;
     /* height: 26.27vw; */
     border: 1px solid #ccc;
     position: relative;
 }
+
 .login-left>ul {
     display: flex;
     justify-content: space-between;
 }
+
 .login-left>ul>li {
-    width: 220px; 
+    width: 220px;
     /* width: 11.56vw; */
-    height: 50px; 
+    height: 50px;
     /* height: 2.62vw; */
     line-height: 50px;
-    text-align: center;  
+    text-align: center;
     border-bottom: 1px solid #ccc;
 }
+
 .login-left>ul>li:first-child {
     border-right: 1px solid #ccc;
 }
+
 /* member */
-#mbConts {   
+#mbConts {
     padding: 30px 40px 0;
 }
 
-.login-id, .login-pw {
-    width: 360px; 
+.login-id,
+.login-pw {
+    width: 360px;
     /* width: 18.91vw; */
-    height: 34px; 
+    height: 34px;
     /* height: 1.78vw; */
 }
+
 .login-pw {
     margin: 10px 0 20px 0;
 }
+
 .login-smallbtns {
     margin-bottom: 20px;
 }
+
 .login-smallbtns input {
     display: inline-block;
     margin-right: 4px;
     width: 16px;
     height: 16px;
-    vertical-align: bottom;  
+    vertical-align: bottom;
 }
+
 .label1 {
     margin-right: 30px;
 }
@@ -90,11 +111,12 @@ body {
 .login-bigbtn {
     margin-bottom: 24px;
 }
+
 .login-bigbtn>a {
     display: block;
-    width: 360px; 
+    width: 360px;
     /* width: 18.91vw; */
-    height: 50px; 
+    height: 50px;
     /* height: 2.62vw; */
     line-height: 50px;
     background: #4aaf70;
@@ -103,6 +125,7 @@ body {
     font-weight: 600;
     text-align: center;
 }
+
 .id-query span {
     color: #646465;
     font-size: 12px;
@@ -112,54 +135,65 @@ body {
 .id-query span:first-child::after {
     content: "|";
     margin-left: 12px;
-    
+
 }
+
 .simple-login {
     margin: 40px 0 34px 0;
-    width: 360px; 
+    width: 360px;
     /* width: 18.91vw; */
     text-align: center;
 }
+
 .login-icons {
     margin-top: 20px;
     display: flex;
     justify-content: center;
 }
+
 .login-icons a {
     display: inline;
     margin-left: 8px;
 }
+
 .login-icons a img {
     width: 40px;
-    height: 40px;    
+    height: 40px;
 }
 
 /* non-member */
-#nonmbConts {   
+#nonmbConts {
     position: absolute;
     top: 50px;
     padding: 30px 40px 0;
 }
-.order-num, .order-pw {
-    width: 360px; 
+
+.order-num,
+.order-pw {
+    width: 360px;
     /* width: 18.91vw; */
-    height: 34px; 
+    height: 34px;
     /* height: 1.78vw; */
+    border: 1px solid #ccc;
 }
+
 .order-pw {
     margin: 10px 0 10px 0;
 }
+
 #nonmbConts>p {
     margin-bottom: 34px;
 }
+
 .login-bigbtn2 {
     margin-bottom: 24px;
 }
+
 .login-btn2>a {
     display: block;
-    width: 360px; 
+    width: 360px;
     /* width: 18.91vw; */
-    height: 50px; 
+    height: 50px;
     /* height: 2.62vw; */
     line-height: 50px;
     background: #4aaf70;
@@ -173,17 +207,19 @@ body {
 .login-left>div.tab-on {
     display: block;
 }
+
 .login-left>div {
     display: none;
 }
+
 /* tablet */
 @media (max-width: 992px) {
 
     .login-container {
-        width: 800px;        
+        width: 800px;
         position: absolute;
         /* left: 20px; */
-        top: 100px;    
+        top: 100px;
     }
 
     .login-left {
@@ -191,52 +227,59 @@ body {
         height: 500px;
         margin: 0 auto;
     }
-  
+
     .login-header {
         display: none;
     }
+
     .sub-container {
         margin-left: 34px;
         margin-top: 40px;
     }
-    
+
 
     .simple-login>p {
         display: none;
     }
+
     .login-left {
         width: 440px;
         height: 600px;
-        border: 1px solid #ccc;     
-    }
-    .login-icons>a>img {
-        display: none;       
-    }
-    .login-icons>a {
-        display: block;
-        margin-bottom: 10px;        
-        width: 360px;
-        height: 34px;
         border: 1px solid #ccc;
     }
+
+    .login-icons>a>img {
+        display: none;
+    }
+
+    .login-icons>a {
+        display: block;
+        margin-bottom: 10px;
+        width: 360px;
+        height: 34px;       
+    }
+
     .login-icons>a:nth-of-type(1) {
         background-image: url(../login_images/naver.png);
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: center;       
+        background-position: center;
     }
+
     .login-icons>a:nth-of-type(2) {
         background-image: url(../login_images/kakao.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
     }
+
     .login-icons>a:nth-of-type(3) {
         background-image: url(../login_images/google.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
     }
+
     .login-icons>a:nth-of-type(4) {
         background-image: url(../login_images/apple.png);
         background-repeat: no-repeat;
@@ -248,16 +291,18 @@ body {
         display: none;
     }
 
+ 
+
 }
 
 @media (max-width: 576px) {
 
-    .login-container { 
-        width: 100%;       
+    .login-container {
+        width: 100%;
         /* position: absolute;   */
-        left: -46px;  
-        top: 5%; 
-        transform: scale(0.8);       
+        left: -46px;
+        top: 5%;
+        transform: scale(0.8);
     }
 
     form {
