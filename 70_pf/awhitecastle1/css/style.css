@@ -70,6 +70,29 @@ section li {
 }
 
 /* 섹션2 */
+#sec2 li {
+    position: relative;
+}
+#sec2 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.5s;
+}
+#sec2 li:hover span {
+    opacity: 1;
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+}
+#sec2 ul li:hover img {
+    opacity: 0.3;
+}
+
+
+
 #sec2 h2 {
     margin-bottom: 48px;
 }
@@ -80,12 +103,14 @@ section li {
 }
 
 /* 섹션3 */
+
 #sec3 li {
     margin-bottom: 48px;
 }
 
 #sec3>p {
     margin-bottom: 48px;
+  
 }
 
 #sec3 li h3 {
@@ -93,13 +118,19 @@ section li {
     text-wrap: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center;
 }
 
 #sec3 li h3,
 #sec3 li p:last-of-type {
     margin: 24px 0;
 }
-
+#sec3 li p:nth-of-type(1) {
+    text-align: center;
+}
+#sec3 li p {
+    padding: 0 8px;
+}
 #sec3 li a {
     display: block;
     text-align: center;
