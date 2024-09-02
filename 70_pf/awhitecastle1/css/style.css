@@ -348,5 +348,26 @@ nav.change {
         border: 1px solid #bbb;
     }
 
+    /* slick slider */
+    #sec3 {
+        position: relative;
+    }
+    .slackNextBtn {
+        width: 40px;
+        height: 42px;
+        position: absolute;
+        top: 60%;
+        right: -100px;
+        cursor: pointer;
+    }
+    .slackPrevBtn{
+        width: 40px;
+        height: 42px;
+        position: absolute;
+        top: 60%;
+        left: -100px;
+        cursor: pointer;
+    }
+   
  
 }
