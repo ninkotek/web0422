@@ -9,9 +9,8 @@ function App() {
     <div className="wrapper">
       <Card
         title="BORA BORA"
-        img={pic01}
-        description="Lose yourself in a private island paradise, where the waters teem with
-          exotic fish and colorful coral."
+        img="https://ninkotek.github.io/web0422/assets/borabora/pic01.jpg"
+        description="Lose yourself in a private island paradise, where the waters teem with exotic fish and colorful coral."
         button="VIEW PROPERTY" />
       <Card
         title="ANGUILLA"
@@ -20,13 +19,13 @@ function App() {
         button="VIEW PROPERTY" />
       <Card
         title="THE OCEAN CLUB A FOUR SEASONS RESORT, BAHAMAS"
-        img={pic02}
+        img="https://ninkotek.github.io/web0422/assets/borabora/pic02.jpg"
         description="Connect with true Bahamian beauty and enjoy remarkable seclusion at this legendary Caribbean hideaway."
         button="VIEW PROPERTY" />
 
       <Card
         title="O'AHU AT KO OLINA"
-        img={pic03}
+        img="https://ninkotek.github.io/web0422/assets/borabora/pic03.jpg"
         description="Join us in Ko Olina and find laid-back luxury at our beachfront Resort on Oahu's sunny western."
         button="VIEW PROPERTY" />
     </div>
