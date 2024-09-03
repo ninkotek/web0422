@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        /* 
+        부모 -> 그리드 컨테이너
+            정렬
+                justify-content-> 수평
+                align-content-> 수직
+                    값: start, end, center, space-between, space-around, space-evenly
+
+
+        자식 -> 그리드 아이템
+        grid-column
+        */
+     .grid-container {
+        display: grid;
+        grid-template-columns: auto;    
+        /* 지정 크기가 무시된다 콘텐츠 크기로 지정*/ 
+        /* justify-content: start;
+        부모 높이가 자식 요소 높이 보다 커야 지정된다 align-content: 경우*/
+        background-color: #2196F3;
+        padding: 24px;
+     }
+     .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+     
+      }
+  
+  
+      @media (min-width: 992px) {
+        .grid-container {
+           
+            grid-template-columns: auto auto auto auto;
+            /* grid-template-columns: 80px 200px auto 40px;*/
+           
+         }
+         .item1 {
+            grid-column: 1 / 5;
+         }
+         .item6 {
+            grid-column: 1 / 5;
+         }
+
+      }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1">header</div>
+        <div class="grid-item item2">2</div>
+        <div class="grid-item item3">3</div>
+        <div class="grid-item item4">4</div>
+        <div class="grid-item item5">5</div>
+        <div class="grid-item item6">footer</div>
+
+      </div>
+</body>
+</html>

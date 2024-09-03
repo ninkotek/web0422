@@ -1,34 +1,24 @@
 @charset "utf-8";
 @import url(reset.css);
 @import url(typo.css);
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-html {
-    /* to the top을 부드럽게 스크롤 */
+/* :root는 HTML 태그를 가리킨다. */
+:root {
+    /*  to the top 버튼을 부드럽게 스크롤 */
     scroll-behavior: smooth;
 }
-body {
-    font-family: "Noto Sans KR", sans-serif;
-}
 
-/* layout */
-/* 박스모델 속성, display, position */
+/* navigation */
 nav {
-
-    height: 100px;
-    line-height: 100px;   
-}
-
-nav li {
-    display: inline-block;
-
+    /* height: 100px;  */
+    line-height: 100px;
 }
 
 nav section {
     display: flex;
     justify-content: flex-end;
-    /* align-items: center; */
-    /* height 100px이 같이 사용되야 함 section에 높이 지정필수 */
+    /* align-items: center;
+    height: 100px; */
 }
 
 nav ul {
@@ -38,19 +28,16 @@ nav ul {
 nav li:first-child::after {
     content: "";
     display: inline-block;
-    border-radius: 50%;
-    margin: 0 8px;
     width: 6px;
     height: 6px;
+    border-radius: 50%;
     margin: 0 12px 4px;
     background: #999;
 }
 
-
-
 /* header */
 header {
-    /* 패렐렉스 스크롤링 기법 background-attachement: fixed; */
+    /* 패럴렉스 스크롤링 기법 */
     background: url(../assets/bg-light.png) no-repeat 50% 50%/cover fixed;
     line-height: 200px;
 }
@@ -59,13 +46,36 @@ header {
 main {
     padding-bottom: 200px;
 }
+
+section {
+    /* width: 940px; */
+    margin: auto;
+    border: 1px solid red;
+}
+
 h2 {
     margin: 56px 0;
 }
 
-section {
-    width: 940px;
-    margin: 0 auto;
+.inner {
+    padding: 24px;
+}
+
+.home-card {
+    display: grid;
+    grid-template-columns: 100px auto;
+    column-gap: 24px;
+}
+
+.home-icon {
+    grid-row: 1/span 3;
+}
+
+@media (min-width:992px) {
+    .home-card {
+        width: 50%;
+        margin: 0 auto;
+    }
 }
 
 .home-card {
@@ -76,22 +86,26 @@ section {
 .home-icon {
     width: 100px;
     height: 100px;
-    background: #ccc;
+    background: #ffef11;
     border-radius: 8px;
-   
+    overflow:hidden;
+    border: 1px solid #f1f1f1;
+    transition: .3s;
+}
+.home-icon:hover {
+    box-shadow: 0px 0px 5px 2px #ccc;
 }
 
 .home-description {
-    width: 790px;   
+    /* width: 790px; */
+    border: 1px solid blue;
 }
 
+h3 span {
+    font-weight: 400;
+}
 
-
-/* section */
 /* footer */
 footer {
     text-align: center;
 }
-
-
-/* 
