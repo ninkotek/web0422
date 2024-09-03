@@ -1,11 +1,14 @@
 @charset "utf-8";
-@import url(reset.css);
-@import url(typo.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 /* 전체 선택자 
 */
 
 
-/* common */
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font: 1.5rem/1.5 Arial, Helvetica, sans-serif; 
+}
 
 body,
 ul,
@@ -59,10 +62,7 @@ nav li:first-child::after {
     background: #999;
 }
 
-body {
-    font: 1.5rem/1.5 Arial, Helvetica, sans-serif;  
 
-}
 
 h1,
 h2,
@@ -103,8 +103,6 @@ nav a {
     text-decoration: none;
 }
 
-
-
 /* header */
 header {
  
@@ -140,7 +138,6 @@ section {
     grid-row: 1/span 3;
 }
 
-
 .home-icon {
     width: 100px;
     height: 100px;
@@ -153,8 +150,6 @@ section {
 .home-icon:hover {
     box-shadow: 0px 0px 5px 2px #ccc;
 }
-
-
 
 h3 span {
     font-weight: 400;
@@ -193,6 +188,17 @@ nav a {
     font-size: 2rem;
     color: #444;
     text-decoration: none;
+}
+
+.description>p::before {
+    content: "√";
+    margin-right: 8px;
+}
+.description p span {    
+    padding-right: 80px;
+}
+.edu h3{
+    margin-top: 40px;
 }
 
 }

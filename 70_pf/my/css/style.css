@@ -86,7 +86,7 @@ p{
     background: no-repeat 50% 50%/cover fixed;
 }
 #s1 .container-fluid {
-    height: 100vh;
+    height: 80vh;
     background-image: url(../assets/avengers.jpg); 
 }
 #s3 .container-fluid {
@@ -118,7 +118,6 @@ p{
 }
 #s3 img {
     width: 100%;
-    
 }
 
 footer {
@@ -128,8 +127,7 @@ footer {
     color: #fff;
 }
 footer a {
-    color: #fff;
-    
+    color: #fff;    
 }
 footer .sns {
     margin: 16px 0;
