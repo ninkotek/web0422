@@ -201,4 +201,23 @@ nav a {
     margin-top: 40px;
 }
 
+.home-description p span {
+
+   font-weight: 600;
+   margin-left: 200px;
+}
+.home-description p .sp {
+    margin-left: 110px;
+}
+.home-description p .fd_sp {
+    margin-left: 270px;
+}
+.home-description p .my_sp {
+    margin-left: 270px;
+}
+.home-description p:nth-of-type(5) {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 24px;
+}
+
 }

@@ -7,12 +7,30 @@
     <title>KANG YOUSIK</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/clock.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/clock.js" defer></script>
 </head>
 
 <body>
     <div id="s1">
-        <div class="container-fluid">디지털 시계</div>
+        <div class="container-fluid">
+            <!-- <span>디지털 시계</span> -->
+            <div id="clock">
+                <div class="ddate">
+                    <span>년</span>
+                    <span>월</span>
+                    <span>일</span>
+                    <span>요일</span>
+                </div>
+                <div class="dtime">
+                    <span>시</span>
+                    <span>분</span>
+                    <span>초</span>
+                </div>
+            </div> <!-- #clock end -->
+        </div>
     </div>
     <div id="s2">
         <div class="container">
@@ -86,16 +104,16 @@
         <!-- counter -->
         <div class="container-fluid counter">
             <div class="row">
-                <div class="col">
+                <div class="col-sm">
                     <span>2+</span>Team Projects
                 </div>
-                <div class="col">
+                <div class="col-sm">
                     <span>3+</span>Personal Projects
                 </div>
-                <div class="col">
+                <div class="col-sm">
                     <span>5+</span>Total Projects
                 </div>
-                <div class="col">
+                <div class="col-sm">
                     <span>2+</span>National technical certification
                 </div>
             </div>
@@ -111,34 +129,34 @@
             <h2>MY WORK</h2>
             <p class="mb-5">다음은 내 최신 작업 중 일부입니다.<br>이미지를 더 크게 보려면 클릭해보세요.</p>
             <div class="row">
-                <div class="col">
+                <div class="col-sm">
                     <a href="https://ninkotek.github.io/web0422/70_pf/Subway/" target="_blank">
                     <img src="assets/subway_thumbnail.svg" alt="작품1"></a>
                 </div>
-                <div class="col">
+                <div class="col-sm">
                     <a href="https://ninkotek.github.io/web0422/70_pf/awhitecastle1/" target="_blank">
                     <img src="assets/wcastle_thumb.svg" alt="작품2"></a>
                 </div>
-                <div class="col">
+                <div class="col-sm">
                     <a href="https://ninkotek.github.io/web0422/70_pf/caesars/" target="_blank">
                     <img src="assets/caesars_thumbnail.svg" alt="작품3"></a>
                 </div>
-                <div class="col">
+                <div class="col-sm">
                     <a href="https://ninkotek.github.io/web0422/70_pf/rw_project0810/" target="_blank">
                     <img src="assets/finedigi_thumbnail.svg" alt="작품4"></a>
                 </div>
             </div>
             <div class="row">
-                <div class="col">
+                <div class="col-sm">
                     <a href="https://ninkotek.github.io/web0422/70_pf/team" target="_blank">
                     <img src="assets/shilla_thumb.svg" alt="작품5"></a>
                 </div>
-                <div class="col">
+                <div class="col-sm">
                     
                     <a href="https://ninkotek.github.io/web0422/70_pf/team2/event/event.html" target="_blank">
                     <img src="assets/sulbing_thumb.svg" alt="작품6"></a>
                 </div>
-                <div class="col">
+                <div class="col-sm">
                     <img src="assets/p7.jpg" alt="작품7">
                 </div>
                 <div class="col">
@@ -156,17 +174,14 @@
             <span>CONTACT</span>
         </div>
         <div class="container">
-            <h2>WHERE I WORK</h2>
+            <h2>WHERE I LIVE</h2>
             <p class="mb-5">여러분의 피드백을 환영합니다!</p>
 
             <div class="row">
-                <div class="col">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.672085941141!2d127.1074390763351!3d37.350271236498884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b59c5d7697313%3A0xbba08f656485ef2c!2z7J207KCg7JWE7Lm0642w66-47Lu07ZOo7YSw7ZWZ7JuQIOyEseuCqOu2hOuLueygkA!5e0!3m2!1sko!2skr!4v1725351691378!5m2!1sko!2skr"
-                        width="280" height="160" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="col-sm col-md-4 ">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.6349735898275!2d127.12466427631733!3d37.39846393374714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca8070d23c611%3A0xd2a74a2e2c20fe7b!2z6rK96riw64-EIOyEseuCqOyLnCDrtoTri7nqtawg7JaR7ZiE66GcMTY267KI6ri4!5e0!3m2!1sko!2skr!4v1725405189824!5m2!1sko!2skr" width="280" height="160" ;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    
                 </div>
-                <div class="col">
+                <div class="col-sm col-md-8">
                     <div class="row">
                         <div class="col">
                             <ul>
@@ -179,10 +194,10 @@
                     <p>들러서 커피 한잔 하시거나 메모를 남겨주세요.</p>
                     <div class="row">
                         <div class="col">
-                            <form action="memo.jsp">
-                                <input type="text" placeholder="이름">
-                                <input type="email" placeholder="이메일">
-                                <input type="text" placeholder="메시지">
+                            <form action="message.jsp" class="text-right">
+                                <input type="text" name="user_name" placeholder="이름">
+                                <input type="email" name="user_email" placeholder="이메일">
+                                <input type="text" name="message" placeholder="메시지">
                                 <button class="btn btn-dark">메시지 전송하기</button>
                             </form>
                         </div>

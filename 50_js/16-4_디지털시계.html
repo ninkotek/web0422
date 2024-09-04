@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        
+        <script>
+            // DOM 요소를 모두 로딩한 후 - load 이벤트
+            window.addEventListener("DOMContentLoaded", () => {
+                const clock = document.querySelector("#clock");
+                
+
+                // 1초마다 clock 호출
+                setInterval(clockFn, 1000);
+
+                function clockFn() {
+                    // d라는 날짜 인스턴스 생성
+                    const d = new Date();
+
+                 // 오전 오후 날짜/시간표시
+                    clock.innerText = d.toLocaleString();                    
+               
+                } // clock_fn
+            }); // DOMContentLoaded
+        </script>
+    </head>
+    <body>
+        <div id="clock">
+     
+        </div>
+    </body>
+</html>
