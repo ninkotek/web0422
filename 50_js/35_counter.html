@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+    <style>
+ 
+
+/*counter 
+=============================================================*/
+.counter {
+    display: block;
+    background: #616161;
+    color: #fff;
+    text-align: center;
+    padding: 32px;
+}
+.counter .col-sm {
+    padding: 20px 0;
+}
+.counter span {
+    font-size: 2.4rem;
+    display: block;
+}
+</style>
+
+  
+    <script>
+        $(()=>{
+            //요소 찾기
+            const btn = $("button");
+            const bEle =$("b");
+
+            btn.click(()=>counterFn());
+
+            //재귀 호출 함수: 함수 안에서 자신을 호출
+
+            //setTimeout(function, 1000); 
+
+            let count=1;
+            function counterFn(){
+                //1씩 증가
+                    count++;
+                    //출력
+                    //첫 번째 b태그에 내용으로 count 지정
+                    bEle.eq(0).text(count);
+                    // count가 100이상이면 함수 탈출
+                    if(count >= 5) return;
+                    //0.1초 간격으로 counterFn 호출, 그러나 재귀 호출(함수가 자기자신을 호출)
+                    setTimeout(counterFn, 300); 
+            }
+            //counterFn();
+        
+
+
+        }); // ready end
+    </script>
+</head>
+
+<body>
+    <button>클릭하면 숫자가 올라가요</button>
+    <!-- counter -->
+    <div class="container-fluid counter">
+        <div class="row">
+            <div class="col-sm">
+                <span><b>0</b>+</span>Team Projects
+            </div>
+            <div class="col-sm">
+                <span><b>0</b>+</span>Personal Projects
+            </div>
+            <div class="col-sm">
+                <span><b>0</b>+</span>Total Projects
+            </div>
+            <div class="col-sm">
+                <span><b>0</b>+</span>National technical certification
+            </div>
+        </div>
+    </div> <!-- .counter -->
+</body>
+
+</html>
