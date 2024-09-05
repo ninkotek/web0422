@@ -89,6 +89,33 @@ iframe {
     text-align: center;
     margin-bottom: 16px;
 }
+#s2 .row .col-md {
+    position: relative;
+}
+.photo img {
+    width: 200px;
+    height: 240px;
+    position: absolute;
+    top: 0;
+    right: 40%;
+}
+
+/* SECTION 2 SKill*/
+#s2 .row {
+    overflow: hidden;
+}
+.profile1 {
+    transform: translateY(300px);
+    transition: transform .5s .2s;
+}
+.profile2 {
+    transform: translateY(300px);
+    transition: transform .5s .4s;
+}
+.photo {
+    transform: translateY(300px);
+    transition: transform .5s .7s;
+}
 
 /* progress bar 
 ================================================================*/
@@ -98,21 +125,6 @@ iframe {
     padding: 0;
 }
 
-.progress:nth-of-type(1) .progress-bar {
-    width: 70%;
-}
-
-.progress:nth-of-type(2) .progress-bar {
-    width: 80%;
-}
-
-.progress:nth-of-type(3) .progress-bar {
-    width: 90%;
-}
-
-.progress:nth-of-type(4) .progress-bar {
-    width: 80%;
-}
 
 /* parallax background-image: parallax scrolling */
 .container-fluid {

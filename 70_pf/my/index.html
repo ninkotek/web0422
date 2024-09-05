@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KANG YOUSIK</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/clock.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.0/jquery-ui.min.js"></script>   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     
     <script src="js/clock.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -65,7 +70,7 @@
             <!-- 프로필1: 보편적 -->
             <div class="row">
                 <div class="col">
-                    <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby
+                    <p class="profile1">We have created a fictional "personal" website/blog, and our fictional character is a hobby
                         photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
@@ -81,10 +86,10 @@
             <div class="row pb-5">
                 <div class="col-md">
                     <div class="text-center mb-5 me">Kang Yousik</div>
-                    <div><img src="https://www.w3schools.com/w3images/avatar_hat.jpg" alt="내 사진"></div>
+                    <div class="photo"><img src="../my/assets/me03.svg" alt="내 사진"></div>
                 </div>
                 <div class="col-md mt-5">
-                    <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor
+                    <p class="profile2">Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
@@ -130,16 +135,16 @@
         <div class="container-fluid counter">
             <div class="row">
                 <div class="col-sm">
-                    <span>2+</span>Team Projects
+                    <span><b>2</b>+</span>Team Projects
                 </div>
                 <div class="col-sm">
-                    <span>3+</span>Personal Projects
+                    <span><b>3</b>+</span>Personal Projects
                 </div>
                 <div class="col-sm">
-                    <span>5+</span>Total Projects
+                    <span><b>5</b>+</span>Total Projects
                 </div>
                 <div class="col-sm">
-                    <span>2+</span>National technical certification
+                    <span><b>2</b>+</span>National technical certification
                 </div>
             </div>
         </div> <!-- .counter -->
@@ -155,6 +160,7 @@
             <p class="mb-5">다음은 내 최신 작업 중 일부입니다.<br>이미지를 더 크게 보려면 클릭해보세요.</p>
             <div class="row">
                 <div class="col-sm">
+                    <!-- <a href="images/image-2.jpg" data-lightbox="roadtrip">Image #2</a> -->
                     <a href="https://ninkotek.github.io/web0422/70_pf/Subway/" target="_blank">
                     <img src="../my/assets/subway_thumb01.svg" alt="작품1"></a>
                 </div>
@@ -173,7 +179,7 @@
             </div>
             <div class="row">
                 <div class="col-sm">
-                    <a href="https://ninkotek.github.io/web0422/70_pf/team" target="_blank">
+                    <a href="https://ninkotek.github.io/web0422/70_pf/team">
                     <img src="../my/assets/shilla.svg" alt="작품5"></a>
                 </div>
                 <div class="col-sm">
@@ -182,7 +188,8 @@
                     <img src="../my/assets/sulbing_thumb01.svg" alt="작품6"></a>
                 </div>
                 <div class="col-sm">
-                    <img src="assets/p7.jpg" alt="작품7">
+                    <a href="../my/assets/mywc02.png" data-lightbox="roadtrip" data-title="My caption">
+                    <img src="assets/p7.jpg" alt="작품7"></a>
                 </div>
                 <div class="col-sm">
                     <img src="assets/p8.jpg" alt="작품8">
