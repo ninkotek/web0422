@@ -44,7 +44,9 @@ video {
     height: auto;
     object-fit: cover;
     object-position: center;
+    vertical-align: top;
 }
+
 #s3 .container .row .col-sm img {
     border: 1px solid #ccc;
 }
@@ -68,6 +70,7 @@ p {
 input {
     border: none;
 }
+
 iframe {
     width: 100%;
     border: 0;
@@ -89,9 +92,11 @@ iframe {
     text-align: center;
     margin-bottom: 16px;
 }
+
 #s2 .row .col-md {
     position: relative;
 }
+
 .photo img {
     width: 200px;
     height: 240px;
@@ -100,22 +105,48 @@ iframe {
     right: 40%;
 }
 
-/* SECTION 2 SKill*/
+/* SECTION 2 SKill
+====================================================*/
 #s2 .row {
     overflow: hidden;
 }
+
 .profile1 {
     transform: translateY(300px);
     transition: transform .5s .2s;
 }
+
 .profile2 {
     transform: translateY(300px);
     transition: transform .5s .4s;
 }
+
 .photo {
     transform: translateY(300px);
     transition: transform .5s .7s;
-   
+}
+
+/* video 
+e.preventDefault(); -> a태그 클릭하면 현재 페이지 상단 올라가는 것 막는 메소드
+========================================================*/
+#s2 .vid {
+    position: relative;
+
+}
+
+#s2 .vid i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    opacity: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#s2 .vid:hover i {
+    opacity: 1;
 }
 
 /* progress bar 
@@ -152,7 +183,7 @@ iframe {
 
 /* background-imag: title */
 .container-fluid>span {
-    font-size: 3.6rem; 
+    font-size: 3.6rem;
     letter-spacing: 10px;
     color: #fff;
 }
@@ -165,7 +196,7 @@ iframe {
 /* clock */
 
 #clock {
-    left: 50%;   
+    left: 50%;
     transform: translateX(-50%);
     right: 0;
     bottom: 7%;
@@ -181,9 +212,11 @@ iframe {
     text-align: center;
     padding: 32px;
 }
+
 .counter .col-sm {
     padding: 20px 0;
 }
+
 .counter span {
     font-size: 2.4rem;
     display: block;
@@ -199,9 +232,11 @@ iframe {
 #s3 .col {
     padding: 8px;
 }
+
 #s3 .col-sm {
     margin-bottom: 12px;
 }
+
 /* #s3 img {
     width: 100%;
 } */
@@ -213,15 +248,19 @@ iframe {
     padding: 10px;
     margin: 4px 0;
 }
+
 #s4 .row p {
     margin: 24px 0 8px;
 }
+
 #s4 ul {
     margin-top: 16px;
 }
+
 #s4 li {
     line-height: 2;
 }
+
 #s4 button.btn {
     margin-top: 16px;
     margin-bottom: 40px;
@@ -234,6 +273,8 @@ footer {
     background: #000;
     text-align: center;
     color: #fff;
+    background: url(../assets/patten3.png) #111;
+    
 }
 
 footer a {
@@ -245,25 +286,56 @@ footer .sns {
     font-size: 2.4rem;
 }
 
+
+/* 마우스 포인터 
+=====================================================*/
+.mp {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.mp1 {
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid black; */
+    /* background: url(mouse-cursor.png) no-repeat; */
+    background: url(../assets/fire.png) no-repeat   50% 50%/cover; 
+    /* ease-out을 사용! */
+    transition: .7s ease-out;
+}
+
+/*  작은 원*/
+.mp2 {
+    width: 10px;
+    height: 10px;
+    background: #000;
+    /* ease-out을 사용! */
+    transition: .1s ease-out;
+    opacity: 0;
+}
+
+/* 미디어 퀄리 992px 
+=================================================================*/
 @media (min-width: 992px) {
-    
+
     .skill {
         margin-top: 48px;
     }
-    
+
     #s4 [name="user_name"] {
         margin-right: 1%;
     }
-    
+
     #s4 [name*="user"] {
         width: 49.2%;
     }
-    
+
     #s4 [name="message"] {
         width: 100%;
     }
+
     footer {
         padding: 60px 0;
-        
+
     }
 }

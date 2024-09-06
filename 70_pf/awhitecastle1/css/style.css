@@ -383,19 +383,29 @@ nav.change {
     left: 20%;
 }
 .location-info li p {
-    font-size: 60px;
+    font-size: 80px;
     font-weight: 600;
-    margin-left: 12px;
+    margin-left: 24px;
+    color: #fff;   
     
  }
  .location-info li:last-child {
-    background: skyblue;
+    background: #0848e7;
     height: 200px;
  }
  .location-info li p span {
     font-size: 24px;
     text-align: center;
+    margin-left: 60px;
+    transform: translateY(24px);
    
+ }
+ footer {
+    background: #fff;
+ }
+ footer img {
+    width: 40px;
+    height: 40px;
  }
 
 
