@@ -41,20 +41,22 @@ $(document).ready(function(){
 
 const secTwoLists = document.querySelectorAll('#sec2>ul>li');
 
-const frames = [
-    {transform: 'rotate(90deg)'},
-    {transform: 'rotate(0deg)'},
-    {backgroundColor: '#888'}   
-];
 
-const options = {
-    duration: 2000,
-    delay: 700,
-    easing: 'ease',
-    fill: 'forwards'
-}
 
 secTwoLists.forEach(item=>{
+    const frames = [
+        {transform: 'rotate(90deg)'},
+        {transform: 'rotate(0deg)'},
+        {backgroundColor: '#888'},       
+    ];
+    
+    const options = {
+        duration: 2000,
+        delay: 700,
+        easing: 'ease',
+        fill: 'forwards'
+    }
+
     item.addEventListener('mouseover', function(){
         item.animate(frames, options);
     });

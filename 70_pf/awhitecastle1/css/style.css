@@ -348,6 +348,57 @@ nav.change {
         border: 1px solid #bbb;
     }
 
+
+ /* 섹션4 지도 */
+ .map {
+    display: flex;
+ }
+ .map iframe {
+    width: 600px;
+    height: 400px;
+    margin-right: 40px;
+ }
+
+ .home {
+    transform: translateY(20px);
+ }
+ .location-info {
+    display: flex;
+    flex-direction: column;
+ }
+ .location-info li {
+    width: 800px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+ }
+.location-info img {
+    width: 40px;
+    height: 36px;
+    margin-right: 40px;
+}
+.location-info li span:not(last-child) {
+    position: absolute;
+    left: 20%;
+}
+.location-info li p {
+    font-size: 60px;
+    font-weight: 600;
+    margin-left: 12px;
+    
+ }
+ .location-info li:last-child {
+    background: skyblue;
+    height: 200px;
+ }
+ .location-info li p span {
+    font-size: 24px;
+    text-align: center;
+   
+ }
+
+
     /* slick slider */
     #sec3 {
         position: relative;

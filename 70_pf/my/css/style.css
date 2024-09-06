@@ -115,6 +115,7 @@ iframe {
 .photo {
     transform: translateY(300px);
     transition: transform .5s .7s;
+   
 }
 
 /* progress bar 
