@@ -71,17 +71,19 @@ const mousein = document.querySelector('#sec3');
 
 mousein.addEventListener('mouseenter', scrolling);
 function scrolling(){
-    const secframres = {
-        opacity: [0, 1],
-        translate: ['600px 0', 0]
-    }
-    const secoptions = {
-        duration: 2000,  
-        delay: 300,
-        easing: "ease",      
-        fill: "forwards"
-    }
+    
     for(let i=0; i<scrolledItems.length; i++){
+        const secframres = {
+            // opacity: [0, 1],
+            translate: ['2000px 0', 0],
+            filter: ['blur(20px)', 'blur(0)']
+        }
+        const secoptions = {
+            duration: 2000,  
+            delay: 300*i,
+            easing: "ease",      
+            fill: "forwards"
+        }
         scrolledItems[i].animate(secframres, secoptions);
     }
 

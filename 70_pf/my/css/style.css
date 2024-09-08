@@ -237,10 +237,6 @@ e.preventDefault(); -> a태그 클릭하면 현재 페이지 상단 올라가는
     margin-bottom: 12px;
 }
 
-/* #s3 img {
-    width: 100%;
-} */
-
 /* section4: contact */
 #s4 input {
     width: 100%;
@@ -255,10 +251,22 @@ e.preventDefault(); -> a태그 클릭하면 현재 페이지 상단 올라가는
 
 #s4 ul {
     margin-top: 16px;
+    position: relative;
 }
 
 #s4 li {
-    line-height: 2;
+    line-height: 2;  
+    display: flex;
+    padding: 0 4px;   
+  
+}
+#s4 li img {
+    width: 26px;
+    height: 28px;
+    object-fit: cover;
+    margin: 8px 24px 0 0;
+    text-align: center;
+    transform: translate(4px, -4PX);     
 }
 
 #s4 button.btn {
@@ -266,15 +274,12 @@ e.preventDefault(); -> a태그 클릭하면 현재 페이지 상단 올라가는
     margin-bottom: 40px;
 }
 
-
-
 footer {
     padding: 30px 0;
-    background: #000;
+    background: #111;
     text-align: center;
     color: #fff;
-    background: url(../assets/patten3.png) #111;
-    
+    /* background: url(../assets/patten3.png) #111;     */
 }
 
 footer a {
@@ -337,5 +342,9 @@ footer .sns {
     footer {
         padding: 60px 0;
 
+    }
+    iframe {
+        width: 360px;
+        height: 280px;
     }
 }
