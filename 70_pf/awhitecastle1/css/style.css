@@ -570,6 +570,8 @@ nav.change {
     width: 400px;
     height: 200px;
     position: relative;  
+    margin-top: 30px;
+    cursor: pointer;
  }
  .location-info li p span {
     font-size: 24px;
