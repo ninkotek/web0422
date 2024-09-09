@@ -126,6 +126,9 @@ section {
 .about p {
     text-indent: 32px;
 }
+.description1 p {
+    text-indent: 30px;
+}
 
 .home-card {
     display: grid;
