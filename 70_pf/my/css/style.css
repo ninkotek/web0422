@@ -95,6 +95,7 @@ iframe {
 
 #s2 .row .col-md {
     position: relative;
+    border: 1xp solid red;
 }
 
 .photo img {

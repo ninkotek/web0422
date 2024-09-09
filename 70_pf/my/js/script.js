@@ -35,8 +35,6 @@ $(() => {
     });
 
 
-
-
     // progress bar & counter
     // 요소 찾기
     const cntNumEle = $(".counter b");
