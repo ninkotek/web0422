@@ -37,11 +37,9 @@ $(document).ready(function(){
 
 });
 
-//section 2
+//section 2 이미지 90도 회전후 제자리
 
 const secTwoLists = document.querySelectorAll('#sec2>ul>li');
-
-
 
 secTwoLists.forEach(item=>{
     const frames = [

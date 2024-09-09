@@ -243,7 +243,7 @@ nav.change {
  }
 .location-info img {
     width: 40px;
-    height: 36px;
+    height: 40px;
     margin-right: 40px;
     /* display: block; */
   
@@ -257,12 +257,14 @@ nav.change {
     font-weight: 600;
     margin-left: 24px;
     color: #fff;   
+   
     
  }
  .location-info li:last-child {
     background: #0848e7;
     /* height: 200px; */
     height: 24.50vw;
+
  }
  .location-info li p span {
     font-size: 24px;
@@ -520,6 +522,7 @@ nav.change {
  }
  .map {
     display: flex;
+    height: auto;
  }
  .map iframe {
     /* width: 600px; */
@@ -546,7 +549,7 @@ nav.change {
  }
 .location-info img {
     width: 40px;
-    height: 36px;
+    height: 40px;
     margin-right: 40px;
     /* display: block; */
   
@@ -564,16 +567,30 @@ nav.change {
  }
  .location-info li:last-child {
     background: #0848e7;
+    width: 400px;
     height: 200px;
+    position: relative;  
  }
  .location-info li p span {
     font-size: 24px;
     text-align: center;
-    margin-left: 100px;
+    margin-left: 160px;
     transform: translateY(24px);
-   
  }
- /* footer
+ .location-info li:last-child::after {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 400px; 
+    width: 400px;
+    height: 200px;
+    background-image: url('../assets/signup.png');
+    background-repeat: no-repeat;
+    z-index: 3;
+ }
+
+
+/* footer
  ===================================================== */
  footer {
     width: 100%;
@@ -581,9 +598,8 @@ nav.change {
     background: #bbb;
     display: flex;
     justify-content: space-between;
-    align-items: center;  
-    /* margin-top: -300px; */
- 
+    align-items: center;    
+    margin-top: -400px;  
  }
 
 .sns-icons {
