@@ -84,15 +84,19 @@ nav {
 .sub::before {
   content: "";
   position: absolute;
-  opacity: 0;
-  left: 30%;
-  width: 60px;
-  height: 1px;
-  background-image: url(../images/line_nav.svg);
+  /* opacity: 0; */
+  left: 25%;  
+  /* width: 60px; */
+  width: 80px;
+  border: 1px solid red;
+  /* height: 1px; */
+  /* background-image: url(../images/line_nav.svg); */
   transition: 0.3s;
+  transform: scaleX(0);
 }
 .sub:hover::before {
-  opacity: 1;
+  /* opacity: 1; */
+  transform: scaleX(1);
 }
 
 .sub {
@@ -117,6 +121,7 @@ nav {
 }
 .sub > li:hover > a {
   text-decoration: underline;
+  margin-bottom: -2px;
 }
 .main::after {
   position: absolute;
