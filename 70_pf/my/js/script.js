@@ -221,4 +221,19 @@ $(() => {
     }
 */
 
+ //요소찾기
+//  const nav1 = $(".gnb1");
+//  const nav2 = $(".gnb2");
+
+//  $(window).scroll(()=>{
+//      let st = $(this).scrollTop();
+//      if (st > 100) {
+//          nav1.css({opacity:0});
+//          nav2.addClass("down");
+//      } else {
+//          nav1.css({opacity:1});
+//          nav2.removeClass("down");
+//      }
+//  });
+
 }); // ready end
