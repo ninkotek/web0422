@@ -1,11 +1,566 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>설빙</title>
+    <!-- 파비콘 -->
+    <link rel="icon" href="pabicon.png">
+    <!-- bx-slider CSS 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+    <!-- slick slider CSS 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <!-- jQuery 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- bx-slider 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <!-- slick 슬라이더 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+
+    <!-- 사용자 CSS -->
+    <link rel="stylesheet" href="02.css/reset.css">
+    <link rel="stylesheet" href="02.css/typo.css">
+    <link rel="stylesheet" href="02.css/header.css">
+    <link rel="stylesheet" href="02.css/index.css">
+    <link rel="stylesheet" href="02.css/footer.css">
+
+    <script src="04.js/header.js"></script>
+    <script src="04.js/index.js"></script>
+    <script src="04.js/mouse.js"></script>
 </head>
+
 <body>
-    
+    <!-- 이 p의 위치로 헤더 스크롤 모션 -->
+    <p id="mathfoor">1111</p>
+
+    <!-- header -->
+    <!-- header pc -->
+    <header class="pc">
+        <div class="logo">
+            <div>
+                <a href="#">
+                    <img src="03.assets/index/logo.svg" alt="header_logo">
+                </a>
+            </div>
+        </div><!-- //logo -->
+        <nav>
+            <ul class="main">
+                <li class="main_menu" id="main_menu1">
+                    <a href="01.html/sub/brand.html">브랜드</a>
+                    <ul class="sub_menu" id="sub_menu1">
+                        <li><a href="01.html/sub/brand.html">브랜드</a></li>
+                        <li><a href="#">설빙 광고/영상</a></li>
+                        <li><a href="#">뉴스&공지사항</a></li>
+                    </ul><!-- //#sub1 -->
+                </li><!-- //#main1 -->
+                <li class="main_menu" id="main_menu2">
+                    <a href="01.html/sub/menu.html">메뉴</a>
+                    <ul class="sub_menu" id="sub_menu2">
+                        <li><a href="01.html/sub/menu.html">신제품</a></li>
+                        <li><a href="01.html/sub/menu.html">설빙</a></li>
+                        <li><a href="01.html/sub/menu.html">디저트</a></li>
+                        <li><a href="01.html/sub/menu.html">음료</a></li>
+                        <li><a href="#">MD</a></li>
+                    </ul><!-- //#sub2 -->
+                </li><!-- //#main2 -->
+                <li class="main_menu" id="main_menu3">
+                    <a href="01.html/sub/event.html">이벤트</a>
+                    <ul class="sub_menu" id="sub_menu3">
+                        <li><a href="01.html/sub/event.html">이벤트</a></li>
+                        <li><a href="#">e쿠폰</a></li>
+                    </ul><!-- //#sub3 -->
+                </li><!-- //#main3 -->
+                <li class="main_menu" id="main_menu4">
+                    <a href="#main_s4">매장찾기</a>
+                    <ul class="sub_menu" id="sub_menu4">
+                        <li><a href="#main_s4">매장찾기</a></li>
+                    </ul><!-- //#sub4 -->
+                </li><!-- //#main4 -->
+                <li class="main_menu" id="main_menu5">
+                    <a href="01.html/sub/faq.html">고객지원</a>
+                    <ul class="sub_menu" id="sub_menu5">
+                        <li><a href="01.html/sub/faq.html">고객센터</a></li>
+                        <li><a href="#">제휴/제안</a></li>
+                    </ul><!-- //#sub5 -->
+                </li><!-- //#main5 -->
+
+            </ul><!-- //.main -->
+        </nav><!-- //nav -->
+        <div class="logo2">
+            <div class="serch">
+                <input type="search">
+                <div><img src="03.assets/index/serch_ico.svg" alt="serch"></div>
+            </div><!-- //.serch -->
+            <div class="my_page">
+                <a href="01.html/sub/login.html"><img src="03.assets/index/My_page_ico.svg" alt="my_page"></a>
+            </div>
+        </div>
+    </header><!-- //header pc -->
+
+    <!-- header mb tb -->
+    <header class="mb tb">
+        <div id="hd1">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="03.assets/index/logo.svg" alt="header_logo">
+                </a>
+            </div>
+            <div class="icon">
+                <div id="x_logo">
+                    <div id="bar1"><!-- hambuger btn --></div>
+                    <div id="bar2"><!-- hambuger btn --></div>
+                    <div id="bar3"><!-- hambuger btn --></div>
+                </div>
+                <div class="serch">
+                    <div>
+                        <img src="03.assets/index/serch_ico.svg" alt="검색창">
+                    </div>
+                    <input type="text" placeholder="검색하기.">
+                </div>
+                <div class="my_page">
+                    <a href="01.html/sub/login.html"><img src="03.assets/index/My_page_ico.svg" alt="마이페이지"></a>
+                </div>
+            </div>
+        </div><!-- //div -->
+
+        <!-- mobile nav -->
+        <nav>
+            <div id="mb_container">
+                <div class="nav_my">
+                    <div class="mb_nav_left">
+                        <div>
+                            <img src="03.assets/index/nav_my.png" alt="my">
+                        </div>
+                        <p class="p2">
+                            <a href="01.html/sub/login.html">로그인을 해주세요.</a>
+                        </p>
+                    </div>
+                    <div class="nav_btn"><a href="01.html/sub/login.html">로그인</a></div>
+                </div>
+                <ul class="main">
+                    <li class="main_menu" id="main_mb_1">
+                        <a href="#">브랜드</a>
+                        <ul class="sub_menu" id="sub_mb_1">
+                            <li><a href="01.html/sub/brand.html">브랜드</a></li>
+                            <li><a href="#">설빙 광고/영상</a></li>
+                            <li><a href="#">뉴스&공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li class="main_menu" id="main_mb_2">
+                        <a href="#">메뉴</a>
+                        <ul class="sub_menu" id="sub_mb_2">
+                            <li><a href="01.html/sub/menu.html">신제품</a></li>
+                            <li><a href="01.html/sub/menu.html">설빙</a></li>
+                            <li><a href="01.html/sub/menu.html">디저트</a></li>
+                            <li><a href="01.html/sub/menu.html">음료</a></li>
+                            <li><a href="#">MD</a></li>
+                        </ul>
+                    </li>
+                    <li class="main_menu" id="main_mb_3">
+                        <a href="#">이벤트</a>
+                        <ul class="sub_menu" id="sub_mb_3">
+                            <li><a href="01.html/sub/event.html">이벤트</a></li>
+                            <li><a href="#">e쿠폰</a></li>
+                        </ul>
+                    </li>
+                    <li class="main_menu" id="main_mb_4">
+                        <a href="#main_s4">매장찾기</a>
+                        <ul class="sub_menu" id="sub_mb_4">
+                            <li><a href="#main_s4">매장찾기</a></li>
+                        </ul>
+                    </li>
+                    <li class="main_menu" id="main_mb_5">
+                        <a href="#">고객지원</a>
+                        <ul class="sub_menu" id="sub_mb_5">
+                            <li><a href="01.html/sub/faq.html">고객지원</a></li>
+                            <li><a href="#">제휴/제안</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav_sub">
+                <ul>
+                    <li><a href="01.html/sub/faq.html">고객센터</a></li>
+                    <li><a href="01.html/sub/faq.html">공지사항</a></li>
+                    <li><a href="#">보도자료</a></li>
+                    <li><a href="#">칭찬점포</a></li>
+                </ul>
+                <div class="kakao">
+                    <p class="p2">설빙 선물하기</p>
+                    <a href="#">카카오톡 선물하기</a>
+                </div>
+            </div>
+        </nav><!-- //nav -->
+
+    </header><!-- //header mb tb -->
+    <!-- //header -->
+
+    <!-- ㅡㅡㅡㅡ 섹션 시작! ㅡㅡㅡㅡ -->
+    <!-- #sec1 -->
+    <div class="section" id="main_s1">
+
+        <div class="s1_content pc"><!-- pc전용 -->
+
+            <!-- s1_sub 부분 -->
+            <div id="sec1_wrap">
+                <!-- 버튼 -->
+                <div class="x_button">
+                    <img src="03.assets/index/sec1_exit_ico.png" alt="슬라이드on/off버튼">
+                </div><!-- //.x_button -->
+                <div id="s1_sub_cont">
+                    <div id="sec1_sub1">
+                        <a href="#">
+                            <img src="03.assets/index/sec1_sub_1.png" alt="매운디저트출시">
+                        </a>
+                    </div>
+                    <div id="sec1_sub2">
+                        <a href="#">
+                            <img src="03.assets/index/sec1_sub_2.png" alt="설빙아이스">
+                        </a>
+                    </div>
+                    <div id="sec1_sub3">
+                        <a href="#">
+                            <img src="03.assets/index/sec1_sub_3.png" alt="캔디/메론소다출시">
+                        </a>
+                    </div>
+                </div><!-- //#s1_sub_cont -->
+            </div><!-- //#sec1_wrap -->
+
+            <!-- section1 main! -->
+            <div class="main_bg"><!-- bg-로 img 삽입 --></div>
+
+        </div><!-- //.s1_content.pc -->
+
+        <!-- section1 main! -->
+        <div class="main_bg mb"><!-- bg-로 img 삽입 --></div>
+
+    </div><!-- //#sec1 -->
+
+    <!-- #sec2 -->
+    <section class="section" id="main_s2">
+        <h1>New & Hot Menu</h1>
+        <p class="p2">새로나온 설빙의 신 메뉴와 인기 메뉴를 소개합니다.</p>
+        <!-- PC버전 섹션2 슬라이드 -->
+        <div id="sec2_pc_wrap">
+            <div id="sec2_pc_new_ui">
+                <a href="01.html/sub/menu.html">
+                    <img src="03.assets/index/sec2_UI_card1_NEW.svg" alt="Ui_Card_NEW">
+                </a>
+            </div>
+            <ul class="bxslider2">
+                <!-- ui1 -->
+                <li>
+                    <div>
+                        <a href="01.html/sub/menu.html">
+                            <img src="03.assets/index/sec2_UI_card1.svg" alt="UI-card1">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="01.html/sub/menu.html">
+                            <img src="03.assets/index/sec2_UI_card2.svg" alt="UI-card2">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="01.html/sub/menu.html">
+                            <img src="03.assets/index/sec2_UI_card3.svg" alt="UI-card3">
+                        </a>
+                    </div>
+                </li>
+                <!-- ui2 -->
+                <li>
+                    <div>
+                        <a href="01.html/sub/menu.html">
+                            <img src="03.assets/index/sec2_UI_card4.svg" alt="UI-card4">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="01.html/sub/menu.html">
+                            <img src="03.assets/index/sec2_UI_card5.svg" alt="UI-card5">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 모바일,테블릿버전 섹션2 슬라이드 -->
+        <div id="sec2_mb-tb_wrap">
+            <div class="bxslider1">
+                <div id="mb-tb_ui1">
+                    <a href="01.html/sub/menu.html">
+                        <img src="03.assets/index/sec2_mb_card1.svg" alt="section2-ui-card1">
+                    </a>
+                </div>
+                <div id="mb-tb_ui2">
+                    <a href="01.html/sub/menu.html">
+                        <img src="03.assets/index/sec2_mb_card2.svg" alt="section2-ui-card2">
+                    </a>
+                </div>
+                <div id="mb-tb_ui3">
+                    <a href="01.html/sub/menu.html">
+                        <img src="03.assets/index/sec2_mb_card3.svg" alt="section2-ui-card3">
+                    </a>
+                </div>
+                <div id="mb-tb_ui4">
+                    <a href="01.html/sub/menu.html">
+                        <img src="03.assets/index/sec2_mb_card4.svg" alt="section2-ui-card4">
+                    </a>
+                </div>
+                <div id="mb-tb_ui5">
+                    <a href="01.html/sub/menu.html">
+                        <img src="03.assets/index/sec2_mb_card5.svg" alt="section2-ui-card5">
+                    </a>
+                </div>
+                <div id="mb-tb_ui6">
+                    <a href="01.html/sub/menu.html">
+                        <img src="03.assets/index/sec2_mb_card6.svg" alt="section2-ui-card6">
+                    </a>
+                </div>
+            </div><!-- //#sec2_mb-tb-slider -->
+        </div>
+    </section><!-- //#sec2 -->
+
+    <!-- #sec3 -->
+    <section class="section" id="main_s3">
+        <h1>New & Notion</h1>
+        <p class="p2">설빙의 새로운 소식들을 만나보세요.</p>
+        <!-- slick_slider -->
+        <div id="slider_wrap2">
+            <div class="sec3_slider">
+                <div>
+                    <a href="01.html/sub/event.html"><img src="03.assets/index/sec3/ui-1.png" alt="ui1"></a>
+                    <div class="s3-title">
+                        <h3><a href="01.html/sub/event.html">[24년 7월] 설빙 SPECIAL COUPON DAY! 🎁</a></h3>
+                        <p><a href="01.html/sub/event.html">담으면 담을수록 혜택이 커지는 시~원한 세일!</a></p>
+                        <p><a href="01.html/sub/event.html">2024-08-02</a></p>
+                    </div><!-- //.s3-title -->
+                </div><!-- //ui-card1 -->
+                <div>
+                    <a href="01.html/sub/event.html"><img src="03.assets/index/sec3/ui-2.png" alt="ui2"></a>
+                    <div class="s3-title">
+                        <h3><a href="01.html/sub/event.html">[24년 7월] 설빙과 함께라면 한여름도 두렵지 않지!</a></h3>
+                        <p><a href="01.html/sub/event.html">본격적인 무더위 시작이라니... 메론설빙을 더 맛있게 즐길 수 있겠내 😋</a></p>
+                        <p><a href="01.html/sub/event.html">2024-08-02</a></p>
+                    </div><!-- //.s3-title -->
+                </div><!-- //ui-card2 -->
+                <div>
+                    <a href="01.html/sub/event.html"><img src="03.assets/index/sec3/ui-3.png" alt="ui3"></a>
+                    <div class="s3-title">
+                        <h3><a href="01.html/sub/event.html">[24년 7월] 달콤하고 푸짐한 메론설빙 3형제 등장이요!🍈</a></h3>
+                        <p><a href="01.html/sub/event.html">
+                                뭐지... 이 귀여운 빙수는? 🙄
+                                각자의 매력이 확실한 빙수 3형제!
+                            </a></p>
+                        <p><a href="01.html/sub/event.html">2024-07-19</a></p>
+                    </div><!-- //.s3-title -->
+                </div><!-- //ui-card3 -->
+                <div>
+                    <a href="01.html/sub/event.html"><img src="03.assets/index/sec3/ui-4.png" alt="ui4"></a>
+                    <div class="s3-title">
+                        <h3><a href="01.html/sub/event.html">[24년 7월] 설빙에서 시~원한 설캉스 가자!</a></h3>
+                        <p><a href="01.html/sub/event.html">가득 찬 단팥과 메론을 한번에 즐길 수 있는 리얼통통메론설빙🤎</a></p>
+                        <p><a href="01.html/sub/event.html">2024-07-15</a></p>
+                    </div><!-- //.s3-title -->
+                </div><!-- //ui-card4 -->
+                <div>
+                    <a href="01.html/sub/event.html"><img src="03.assets/index/sec3/ui-5.png" alt="ui5"></a>
+                    <div class="s3-title">
+                        <h3>[<a href="01.html/sub/event.html">24년 7월] 설빙에서 빙수만 먹기 아쉽다면?</a></h3>
+                        <p><a href="01.html/sub/event.html">맵단맵단 조합으로 더 다채롭게 즐기자! =͟͟͞͞♡</a></p>
+                        <p><a href="01.html/sub/event.html">2024-07-12</a></p>
+                    </div><!-- //.s3-title -->
+                </div><!-- //ui-card5 -->
+                <div>
+                    <a href="01.html/sub/event.html"><img src="03.assets/index/sec3/ui-6.png" alt="ui6"></a>
+                    <div class="s3-title">
+                        <h3><a href="01.html/sub/event.html">[24년 7월] 메론이 통으로 나오는 빙수가 있다고?</a></h3>
+                        <p><a href="01.html/sub/event.html">통으로 나온 메론을 벌집 모양으로 잘라먹으면 얼~마나 맛있게요? ☆</a></p>
+                        <p><a href="01.html/sub/event.html">2024-07-12</a></p>
+                    </div><!-- //.s3-title -->
+                </div><!-- //ui-card6 -->
+                <div>
+                    <a href="01.html/sub/event.html"><img src="03.assets/index/sec3/ui-7.png" alt="ui7"></a>
+                    <div class="s3-title">
+                        <h3><a href="01.html/sub/event.html">[공지] 설빙 위생등급 매장을 소개합니다.</a></h3>
+                        <p><a href="01.html/sub/event.html">2024년 1월 기준 위생등급 인증 매장 현황입니다.</a></p>
+                        <p><a href="01.html/sub/event.html">2024-01-19</a></p>
+                    </div><!-- //.s3-title -->
+                </div><!-- //ui-card7 -->
+                <div>
+                    <a href="01.html/sub/event.html"><img src="03.assets/index/sec3/ui-8.png" alt="ui8"></a>
+                    <div class="s3-title">
+                        <h3><a href="01.html/sub/event.html">[공지] 소비자패널 8기 합격자 발표</a></h3>
+                        <p><a href="01.html/sub/event.html">참여해주신 모든 분들께 진심으로 감사드립니다.</a></p>
+                        <p><a href="01.html/sub/event.html">2023-12-26</a></p>
+                    </div><!-- //.s3-title -->
+                </div><!-- //ui-card8 -->
+
+            </div><!-- //.slick_slider -->
+        </div><!-- //#slider_wrap2 -->
+        <div id="s3_btn"><a href="01.html/sub/event.html">MORE</a></div>
+    </section><!-- //#sec3 -->
+
+    <!-- #sec4 -->
+    <section class="section" id="main_s4">
+        <h1>Store</h1>
+        <p class="p2">내 주변 가까운 설빙 매장을 찾아보세요.</p>
+        <div id="s4_cont">
+            <div id="panner">
+                <div id="s4_bx1">
+                    <select name="option" id="option">
+                        <option value="op">옵션 선택</option>
+                        <option value="jucha">주차</option>
+                        <option value="bd">배달</option>
+                        <option value="pick">픽업</option>
+                        <option value="food">취식여부</option>
+                    </select>
+                    <div class="op2">
+                        <select name="op1" id="option1">
+                            <option value="dc">도/시 선택</option>
+                        </select>
+                        <select name="op2" id="option2">
+                            <option value="gg">구/군 선택</option>
+                        </select>
+                    </div>
+                    <form action="search">
+                        <input type="search" placeholder="매장명">
+                        <button class="pc">
+                            <p class="p4">검색</p>
+                        </button>
+                    </form>
+                    <div>
+                        <p class="p3 pc">검색결과 <span>1</span>개</p>
+                    </div>
+                </div><!-- //#s4_bx1 -->
+                <div id="s4_bx2">
+                    <ul class="s4_serch pc">
+                        <li>
+                            <h3><a href="#">설빙 성남미금역점</a></h3>
+                            <p class="p2"><a href="#">경기 성남시 분당구 성남대로 151<br>031-724-1355</a></p>
+                            <p class="p2"><a href="#">AM 11:30 ~ PM 22:30</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.6984604725612!2d127.10593497631557!3d37.34964693653465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5912ddc75267%3A0x210c057a484c072d!2z7ISk67mZIOuvuOq4iOyXreygkA!5e0!3m2!1sko!2skr!4v1724764238007!5m2!1sko!2skr"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div><!-- //#map -->
+        </div><!-- //#s4_cont -->
+    </section><!-- //#sec4 -->
+
+    <!-- 푸터 -->
+    <footer>
+        <div id="ft_main1">
+            <div class="ft_cont1">
+                <div class="ft_title_bx">
+                    <div class="ft_logo">
+                        <img src="03.assets/index/sulbing_footer_logo.png" alt="footer_logo">
+                    </div>
+                    <button>창업안내</button>
+                </div>
+                <div id="ft_sns">
+                    <a href="#"><img src="03.assets/index/youtube_ico.svg" alt="유튜브"></a>
+                    <a href="#"><img src="03.assets/index/insta_ico.svg" alt="인스타"></a>
+                    <a href="#"><img src="03.assets/index/facebook_ico.svg" alt="페이스북"></a>
+                </div>
+                <div class="ft_bx1">
+                    <p class="p1">
+                        본사주소 : 서울특별시 중구 소월로 10 단암빌딩 5층
+                    </p>
+                    <div class="ft_bx2">
+                        <p class="p1">사업자 등록번호 : 602-81-62460</p>
+                        <p class="p1">법인명 : (주)설빙</p>
+                    </div>
+                    <div class="ft_bx2">
+                        <p class="p1">TEL : 02-3401-7900</p>
+                        <p class="p1">팩스 : 02-447-8455</p>
+                    </div>
+                    <p class="p1">
+                        COPYRIGHT ⓒ 2024 BRKOREA COMPANY ALL RIGHTS RESERVED
+                    </p>
+                    <ul class="ft_menu1">
+                        <li><a href="01.html/sub/login.html">로그인</a></li>
+                        <li><a href="01.html/sub/sign_up.html">회원가입</a></li>
+                        <li><a href="01.html/sub/faq.html">고객센터</a></li>
+                    </ul>
+                </div><!-- //ft_bx1 -->
+
+                <hr>
+            </div><!-- //ft_cont1 -->
+            <div id="ft_menu2">
+                <ul><!-- ft_mn -> footer menu / ft_sn -> footer submenu 줄임말이다. -->
+                    <li class="ft_mn">
+                        <a href="01.html/sub/brand.html">브랜드</a>
+                        <ul class="ft_sn">
+                            <li><a href="01.html/sub/brand.html">브랜드</a></li>
+                            <li><a href="#">설빙 광고/영상</a></li>
+                            <li><a href="#">뉴스&공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li class="ft_mn">
+                        <a href="01.html/sub/menu.html">메뉴</a>
+                        <ul class="ft_sn">
+                            <li><a href="#">신제품</a></li>
+                            <li><a href="#">설빙</a></li>
+                            <li><a href="#">디저트</a></li>
+                            <li><a href="#">음료</a></li>
+                            <li><a href="#">MD</a></li>
+                        </ul>
+                    </li>
+                    <li class="ft_mn">
+                        <a href="01.html/sub/event.html">이벤트</a>
+                        <ul class="ft_sn">
+                            <li><a href="01.html/sub/event.html">이벤트</a></li>
+                            <li><a href="#">e쿠폰</a></li>
+                        </ul>
+                    </li>
+                    <li class="ft_mn">
+                        <a href="#">매장찾기</a>
+                        <ul class="ft_sn">
+                            <li><a href="#">매장찾기</a></li>
+                        </ul>
+                    </li>
+                    <li class="ft_mn">
+                        <a href="01.html/sub/faq.html">고객지원</a>
+                        <ul class="ft_sn">
+                            <li><a href="01.html/sub/faq.html">고객센터</a></li>
+                            <li><a href="#">제휴/제안</a></li>
+                        </ul>
+                    </li><!-- //.ft_mn -->
+                </ul>
+                <div id="ft_pc_sns">
+                    <a href="#"><img src="03.assets/index/youtube_ico.svg" alt="유튜브"></a>
+                    <a href="#"><img src="03.assets/index/insta_ico.svg" alt="인스타"></a>
+                    <a href="#"><img src="03.assets/index/facebook_ico.svg" alt="페이스북"></a>
+                </div>
+            </div><!-- //#ft_menu2 -->
+        </div>
+        <!-- //#ft_main1 -->
+
+        <div id="ft_main2">
+            <div class="ft_btn"><button>창업안내</button></div>
+            <div class="ft2_bx2">
+                <ul>
+                    <li><a href="01.html/sub/faq.html">고객센터</a></li>
+                    <li><a href="#">경영주 전용 페이지</a></li>
+                    <li><a href="#">서비스 이용 약관</a></li>
+                    <li><a href="#">개인정보 처리 방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">법적고지</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="ft_ill">
+            <img src="03.assets/index/ft_snow_1.svg" alt="snow1">
+            <img src="03.assets/index/ft_snow_2.svg" alt="snow2">
+            <img src="03.assets/index/footer_ill.svg" alt="main_ill">
+        </div>
+    </footer>
 </body>
+
 </html>

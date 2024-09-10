@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 페이지 시안</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top
+        }
+
+        .desktop {
+            display: block;
+        }
+
+        .menu768 {
+            display: none;
+        }
+
+        .menu360 {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .desktop {
+                display: none;
+            }
+
+            .menu768 {
+                display: block;
+            }
+
+            .menu360 {
+                display: none;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .desktop {
+                display: none;
+            }
+
+            .menu768 {
+                display: none;
+            }
+
+            .menu360 {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop" usemap="#image-map-desktop">
+        <img src="menu_desktop.png" alt="데스크탑 시안">
+    </div>
+    <div class="menu768" usemap="#image-map-tablet">
+        <img src="menu_tablet.png" alt="태블릿 시안">
+    </div>
+    <div class="menu360" usemap="#image-map-phone">
+        <img src="menu_mobile.png" alt="모바일 시안">
+    </div>
+    <map name="image-map-desktop">
+        <!-- 헤더 -->
+        <area alt="로고" title="메인페이지로 이동됩니다." href="#" coords="177,0,307,90" shape="rect">
+        <area alt="브랜드" title="브랜드 소개 페이지로 이동됩니다." href="#" coords="329,0,379,90" shape="rect">
+        <area alt="메뉴" title="메뉴 페이지로 이동됩니다." href="#" coords="388,0,438,90" shape="rect">
+        <area alt="고객지원" title="고객지원 페이지로 이동됩니다." href="#" coords="591,0,641,90" shape="rect">
+        <area alt="로그인" title="로그인 페이지로 이동됩니다." href="#" coords="1665,0,1735,90" shape="rect">
+        <!-- 푸터 -->
+        <area alt="로그인" title="로그인 페이지로 이동됩니다." href="#" coords="212,2934,272,2964" shape="rect">
+        <area alt="회원가입" title="회원가입 페이지로 이동됩니다." href="#" coords="274,2934,344,2964" shape="rect">
+        <area alt="고객지원" title="고객지원 페이지로 이동됩니다." href="#" coords="348,2934,418,2964" shape="rect">
+    </map>
+    <map name="image-map-tablet">
+        <area alt="로고" title="로고" href="#" coords="0,0,60,36" shape="rect">
+    </map>
+    <map name="image-map-phone">
+        <area alt="로고" title="로고" href="#" coords="0,0,60,43" shape="rect">
+    </map>
+</body>
+</html>

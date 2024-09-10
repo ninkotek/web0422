@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css");
+
+        /* counter */
+        .counter {
+            display: block;
+            background: #616161;
+            color: #fff;
+            text-align: center;
+            padding: 32px;
+        }
+
+        .counter .col-sm {
+            padding: 20px 0;
+        }
+
+        .counter span {
+            display: block;
+            font-size: 2.4rem;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // 문제? 4개의 숫자가 동작되게 만들기
+        $(() => {
+            // 요소 찾기
+            const btn = $("button");
+            const bEle = $("b");
+            const cnts = [0,0,0,0];
+            const nums = [2,5,7,5];
+
+            btn.click(() => {
+                nums.forEach((ele, idx)=>{
+                    // console.log(ele, idx);
+                    // idx: 0,1,2,3
+                    // ele: 2,5,7,5
+                    counterFn(idx, ele);
+                });
+            });
+                      
+            function counterFn(i, maxNum) {
+                // 각 요소 별 증가 값 지정
+                cnts[i]++;
+                // <b>에 출력
+                bEle.eq(i).text(cnts[i]);
+                // 한계점
+                if (cnts[i] >= maxNum) return;
+                // 재귀 호출: 함수가 자기 자신을 다시 호출
+                setTimeout(()=>counterFn(i, maxNum), 300);
+            }
+
+        }); // ready end
+    </script>
+</head>
+
+<body>
+    <button>클릭하면 숫자가 올라가요!</button>
+    <!-- counter -->
+    <div class="container-fluid counter">
+        <div class="row">
+            <div class="col-sm">
+                <span><b>0</b>+</span>Team Projects
+            </div>
+            <div class="col-sm">
+                <span><b>0</b>+</span>Personal Projects
+            </div>
+            <div class="col-sm">
+                <span><b>0</b>+</span>Total Projects
+            </div>
+            <div class="col-sm">
+                <span><b>0</b>+</span>National technical certification
+            </div>
+        </div>
+    </div><!-- .counter -->
+</body>
+
+</html>
