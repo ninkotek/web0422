@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브랜드</title>
+    <link rel="icon" href="../../pabicon.png">
+    <link rel="stylesheet" href="../../02.css/reset.css">
+    <link rel="stylesheet" href="../../02.css/typo.css">
+    <link rel="stylesheet" href="../../02.css/header.css">
+    <link rel="stylesheet" href="../../02.css/footer.css">
+    <link rel="stylesheet" href="../../02.css/sub/brand.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./../../04.js/header.js"></script>
+    <script src="./../../04.js/sub/brand.js"></script>
+    <script src="../../04.js/mouse.js"></script>
+</head>
+
+<body>
+    <!-- 이 p의 위치로 스크롤 모션 -->
+    <p id="mathfoor">1111</p>
+    <!-- header pc -->
+    <header class="pc">
+        <div class="logo">
+            <div>
+                <a href="../../index.html">
+                    <img src="../../03.assets/index/logo.svg" alt="header_logo">
+                </a>
+            </div>
+        </div><!-- //logo -->
+        <nav>
+            <ul class="main">
+                <li class="main_menu" id="main_menu1">
+                    <a href="brand.html">브랜드</a>
+                    <ul class="sub_menu" id="sub_menu1">
+                        <li><a href="brand.html">브랜드</a></li>
+                        <li><a href="#">설빙 광고/영상</a></li>
+                        <li><a href="#">뉴스&공지사항</a></li>
+                    </ul><!-- //#sub1 -->
+                </li><!-- //#main1 -->
+                <li class="main_menu" id="main_menu2">
+                    <a href="menu.html">메뉴</a>
+                    <ul class="sub_menu" id="sub_menu2">
+                        <li><a href="menu.html">신제품</a></li>
+                        <li><a href="menu.html">설빙</a></li>
+                        <li><a href="menu.html">디저트</a></li>
+                        <li><a href="menu.html">음료</a></li>
+                        <li><a href="#">MD</a></li>
+                    </ul><!-- //#sub2 -->
+                </li><!-- //#main2 -->
+                <li class="main_menu" id="main_menu3">
+                    <a href="event.html">이벤트</a>
+                    <ul class="sub_menu" id="sub_menu3">
+                        <li><a href="event.html">이벤트</a></li>
+                        <li><a href="#">e쿠폰</a></li>
+                    </ul><!-- //#sub3 -->
+                </li><!-- //#main3 -->
+                <li class="main_menu" id="main_menu4">
+                    <a href="#main_s4">매장찾기</a>
+                    <ul class="sub_menu" id="sub_menu4">
+                        <li><a href="#main_s4">매장찾기</a></li>
+                    </ul><!-- //#sub4 -->
+                </li><!-- //#main4 -->
+                <li class="main_menu" id="main_menu5">
+                    <a href="faq.html">고객지원</a>
+                    <ul class="sub_menu" id="sub_menu5">
+                        <li><a href="faq.html">고객센터</a></li>
+                        <li><a href="#">제휴/제안</a></li>
+                    </ul><!-- //#sub5 -->
+                </li><!-- //#main5 -->
+
+            </ul><!-- //.main -->
+        </nav><!-- //nav -->
+        <div class="logo2">
+            <div class="serch">
+                <input type="search">
+                <div><img src="../../03.assets/index/serch_ico.svg" alt="serch"></div>
+            </div><!-- //.serch -->
+            <div class="my_page">
+                <a href="login.html"><img src="../../03.assets/index/My_page_ico.svg" alt="my_page"></a>
+            </div>
+        </div>
+    </header><!-- //header pc -->
+
+    <!-- header mb tb -->
+    <header class="mb tb">
+        <div id="hd1">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../../03.assets/index/logo.svg" alt="header_logo">
+                </a>
+            </div>
+            <div class="icon">
+                <div id="x_logo">
+                    <div id="bar1"><!-- hambuger btn --></div>
+                    <div id="bar2"><!-- hambuger btn --></div>
+                    <div id="bar3"><!-- hambuger btn --></div>
+                </div>
+                <div class="serch">
+                    <div>
+                        <img src="../../03.assets/index/serch_ico.svg" alt="검색창">
+                    </div>
+                    <input type="text" placeholder="검색하기.">
+                </div>
+                <div class="my_page">
+                    <a href="login.html"><img src="../../03.assets/index/My_page_ico.svg" alt="마이페이지"></a>
+                </div>
+            </div>
+        </div><!-- //div -->
+
+        <!-- mobile nav -->
+        <nav>
+            <div id="mb_container">
+                <div class="nav_my">
+                    <div class="mb_nav_left">
+                        <div>
+                            <img src="../../03.assets/index/nav_my.png" alt="my">
+                        </div>
+                        <p class="p2">
+                            <a href="login.html">로그인을 해주세요.</a>
+                        </p>
+                    </div>
+                    <div class="nav_btn"><a href="login.html">로그인</a></div>
+                </div>
+                <ul class="main">
+                    <li class="main_menu" id="main_mb_1">
+                        <a href="#">브랜드</a>
+                        <ul class="sub_menu" id="sub_mb_1">
+                            <li><a href="brand.html">브랜드</a></li>
+                            <li><a href="#">설빙 광고/영상</a></li>
+                            <li><a href="#">뉴스&공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li class="main_menu" id="main_mb_2">
+                        <a href="#">메뉴</a>
+                        <ul class="sub_menu" id="sub_mb_2">
+                            <li><a href="menu.html">신제품</a></li>
+                            <li><a href="menu.html">설빙</a></li>
+                            <li><a href="menu.html">디저트</a></li>
+                            <li><a href="menu.html">음료</a></li>
+                            <li><a href="#">MD</a></li>
+                        </ul>
+                    </li>
+                    <li class="main_menu" id="main_mb_3">
+                        <a href="#">이벤트</a>
+                        <ul class="sub_menu" id="sub_mb_3">
+                            <li><a href="event.html">이벤트</a></li>
+                            <li><a href="#">e쿠폰</a></li>
+                        </ul>
+                    </li>
+                    <li class="main_menu" id="main_mb_4">
+                        <a href="#main_s4">매장찾기</a>
+                        <ul class="sub_menu" id="sub_mb_4">
+                            <li><a href="#main_s4">매장찾기</a></li>
+                        </ul>
+                    </li>
+                    <li class="main_menu" id="main_mb_5">
+                        <a href="#">고객지원</a>
+                        <ul class="sub_menu" id="sub_mb_5">
+                            <li><a href="faq.html">고객지원</a></li>
+                            <li><a href="#">제휴/제안</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav_sub">
+                <ul>
+                    <li><a href="faq.html">고객센터</a></li>
+                    <li><a href="faq.html">공지사항</a></li>
+                    <li><a href="#">보도자료</a></li>
+                    <li><a href="#">칭찬점포</a></li>
+                </ul>
+                <div class="kakao">
+                    <p class="p2">설빙 선물하기</p>
+                    <a href="#">카카오톡 선물하기</a>
+                </div>
+            </div>
+        </nav><!-- //nav -->
+
+    </header><!-- //header mb tb -->
+    <!-- //header -->
+
+    <!-- brand page -->
+    <div class="ban_img">
+        <img src="./../../03.assets/sub/brand/banner.jfif" alt="배너이미지">
+    </div>
+
+    <div class="title"><a href="#">브랜드 스토리</a></div>
+
+    <div id="inner">
+        <div class="top">
+            <h1>설빙</h1>
+            <p>본격적인 한국식 디저트 사업을 위해 코리안디저트카페 '설빙'을 오픈합니다. 결과는 대 성공! 설빙 론칭 1년 만에 490여 개점이 문을 열었으며, 이제는 건강한 한국식 디저트의 세계화를
+                꿈꾸며 16개국 해외진출을 준비하고 있어요.</p>
+        </div>
+
+        <div class="s1">
+            <div class="info">
+                <h1>사계절,<br> 누구에게나<br>통한다!</h1>
+                <p>
+                    수많은 디저트 카페들이 앞다투어 출시하고 있는 인절미 빙수! 그 시작은 바로 설빙입니다. 국내 빙수 시장과 디저트 카페의 신조어를 만들면서 소비자의 입맛을 사로잡은 ‘인절미
+                    설빙’을 시작으로, 다양한 한국식 디저트를 사계절 내내 선보이고 있습니다. 커피에 편중된 국내 디저트 문화에 지친 소비자에게 새로운 문화를 제공하는 디저트 카페의 창안 기업 설빙.
+                    설빙에서는 빙수를 설빙으로 표현합니다.
+                </p>
+
+            </div>
+            <div class="photo">
+                <img src="./../../03.assets/sub/brand/brand_01.jpg" alt="브랜드1">
+            </div>
+
+        </div>
+
+        <div class="s2">
+
+            <div class="ord">
+                <h1>좋은 재료와<br>
+                    정통방식으로!</h1>
+                <p>
+                    소중한 고객님을 위해 가장 좋은 재료만을 꼼꼼히
+                    선별 후 전통방식으로 조리하여 건강한 한국식 디저트를
+                    만들고자 항상 노력하고 입습니다.
+                    이러한 노력으로 설빙은 건강한 맛, 착한 가격, 편안한
+                    분위기로 누구나 편히 디저트를 즐길 수 있어
+                    모두에게 사랑받고 있습니다.
+
+                    -100% 국산 찹쌀로만 빚은 인절미
+                    -전통방식으로 끓인 단팥
+                    -정성과 사랑으로 만든 디저트
+                    -청정지역인 경남 산청 딸기, 프리미엄 애플망고, 제철 과일
+                    -자연 그대로의 맛과 향을 오롯이 담은 코리안 드링크
+                </p>
+            </div>
+
+            <div class="photo">
+                <img src="./../../03.assets/sub/brand/brand_02.jpg" alt="브랜드2">
+            </div>
+
+
+        </div>
+
+        <div class="s3">
+            <div>
+                <h1>세계에<br>통한다!</h1>
+                <p>
+                    가장 한국적인 것이 가장 세계적인 것!
+                    설빙은 ‘건강한 코리안 디 저트를 세계화시킨다’라는 목표 아래 설빙은 끊임없는
+                    도전과 혁신적인 메뉴개발로, 국내를 넘어 해외 디저트 시장에 진출하고 있습니다.
+                    한식이 몸에 좋은 건강식이라는 이미지가 세계속에 자리잡아 가고있고
+                    한식에 대한 세계적 관심이 높아지고 있는 지금, 설빙을 ‘세계화’에 앞장서는‘최고의 코리안 디저트 카페 브랜드’로 만들어 갑니다
+                </p>
+            </div>
+            <div class="photo">
+                <img src="./../../03.assets/sub/brand/brand_03.jpg" alt="브랜드3">
+            </div>
+        </div>
+
+        <div class="bottom_image">
+            <img src="./../../03.assets/sub/brand/image.jpg" alt="이미지">
+        </div>
+
+        <div class="bottom">
+            <h2>설빙은 건강한 코리안 디저트를 세계에 알리고 있습니다.</h2>
+            <p>
+                설빙은 2013년 직영매장을 시작으로, 현재는 No.1 코리안 디저트 카페 브랜드로서 한국의 전통 디저트 문화를 선도하고 있습니다.
+
+                이는 끊임없는 도전과 혁신적인 메뉴 개발로 우리나라 전통 식재료를 활용한 창의적이고 대중적인 건강 디저트와 음료를 사계절 다양하게 제공하는 한편, 시대가 공감하고 세대가 공감하며 즐겨
+                찾는 공간, 머물고 싶은 공간을 만들고자 노력한 결과라고 생각합니다.
+                하지만 설빙은 지금의 자리에 만족하지 않고 소비자 만족도를 높이기 위한 맛과 서비스의 질 향상에 더욱 노력할 것이며,
+                웰빙을 기본으로 힐링을 느낄 수 있는 환경, 고객만족을 우선으로 하는 외식사업을 지속하는데 최선을 다할 것입니다.
+                아울러 국내를 넘어 한국식 디저트의 세계화에 앞장서겠습니다.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="bottom_banner"><img src="./../../03.assets/sub/brand/banner2.jpg" alt="하단 배너 이미지"></div>
+
+    <!-- footer -->
+    <footer>
+        <div id="ft_main1">
+            <div class="ft_cont1">
+                <div class="ft_title_bx">
+                    <div class="ft_logo">
+                        <a href="../../index.html">
+                            <img src="../../03.assets/index/sulbing_footer_logo.png" alt="footer_logo">
+                        </a>
+                    </div>
+                    <button>창업안내</button>
+                </div>
+                <div id="ft_sns">
+                    <a href="#"><img src="../../03.assets/index/youtube_ico.svg" alt="유튜브"></a>
+                    <a href="#"><img src="../../03.assets/index/insta_ico.svg" alt="인스타"></a>
+                    <a href="#"><img src="../../03.assets/index/facebook_ico.svg" alt="페이스북"></a>
+                </div>
+                <div class="ft_bx1">
+                    <p class="p1">
+                        본사주소 : 서울특별시 중구 소월로 10 단암빌딩 5층
+                    </p>
+                    <div class="ft_bx2">
+                        <p class="p1">사업자 등록번호 : 602-81-62460</p>
+                        <p class="p1">법인명 : (주)설빙</p>
+                    </div>
+                    <div class="ft_bx2">
+                        <p class="p1">TEL : 02-3401-7900</p>
+                        <p class="p1">팩스 : 02-447-8455</p>
+                    </div>
+                    <p class="p1">
+                        COPYRIGHT ⓒ 2024 BRKOREA COMPANY ALL RIGHTS RESERVED
+                    </p>
+                    <ul class="ft_menu1">
+                        <li><a href="https://ninkotek.github.io/web0422/70_pf/team2/01.html/sub/login.html">로그인</a></li>
+                        <li><a href="https://naeun0605.github.io/web0422/70_pf/team2/01.html/sub/sign_up.html">회원가입</a>
+                        </li>
+                        <li><a
+                                href="https://oceanflavorstarcandy.github.io/web0422/70_pf/team2/01.html/sub/faq.html">고객센터</a>
+                        </li>
+                    </ul>
+                </div><!-- //ft_bx1 -->
+
+                <hr>
+            </div><!-- //ft_cont1 -->
+            <div id="ft_menu2">
+                <ul><!-- ft_mn -> footer menu / ft_sn -> footer submenu 줄임말이다. -->
+                    <li class="ft_mn">
+                        <a href="https://naeun0605.github.io/web0422/70_pf/team2/01.html/sub/brand.html">브랜드</a>
+                        <ul class="ft_sn">
+                            <li><a href="https://naeun0605.github.io/web0422/70_pf/team2/01.html/sub/brand.html">브랜드</a>
+                            </li>
+                            <li><a href="#">설빙 광고/영상</a></li>
+                            <li><a href="#">뉴스&공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li class="ft_mn">
+                        <a
+                            href="https://oceanflavorstarcandy.github.io/web0422/70_pf/team2/01.html/sub/menu.html">메뉴</a>
+                        <ul class="ft_sn">
+                            <li><a href="#">신제품</a></li>
+                            <li><a href="#">설빙</a></li>
+                            <li><a href="#">디저트</a></li>
+                            <li><a href="#">음료</a></li>
+                            <li><a href="#">MD</a></li>
+                        </ul>
+                    </li>
+                    <li class="ft_mn">
+                        <a href="https://ninkotek.github.io/web0422/70_pf/team2/01.html/sub/event.html">이벤트</a>
+                        <ul class="ft_sn">
+                            <li><a href="https://ninkotek.github.io/web0422/70_pf/team2/01.html/sub/event.html">이벤트</a>
+                            </li>
+                            <li><a href="#">e쿠폰</a></li>
+                        </ul>
+                    </li>
+                    <li class="ft_mn">
+                        <a href="#">매장찾기</a>
+                        <ul class="ft_sn">
+                            <li><a href="#">매장찾기</a></li>
+                        </ul>
+                    </li>
+                    <li class="ft_mn">
+                        <a
+                            href="https://oceanflavorstarcandy.github.io/web0422/70_pf/team2/01.html/sub/faq.html">고객지원</a>
+                        <ul class="ft_sn">
+                            <li><a
+                                    href="https://oceanflavorstarcandy.github.io/web0422/70_pf/team2/01.html/sub/faq.html">고객센터</a>
+                            </li>
+                            <li><a href="#">제휴/제안</a></li>
+                        </ul>
+                    </li><!-- //.ft_mn -->
+                </ul>
+                <div id="ft_pc_sns">
+                    <a href="#"><img src="../../03.assets/index/youtube_ico.svg" alt="유튜브"></a>
+                    <a href="#"><img src="../../03.assets/index/insta_ico.svg" alt="인스타"></a>
+                    <a href="#"><img src="../../03.assets/index/facebook_ico.svg" alt="페이스북"></a>
+                </div>
+            </div><!-- //#ft_menu2 -->
+        </div>
+        <!-- //#ft_main1 -->
+
+        <div id="ft_main2">
+            <div class="ft_btn"><button>창업안내</button></div>
+            <div class="ft2_bx2">
+                <ul>
+                    <li><a href="faq.html">고객센터</a></li>
+                    <li><a href="#">경영주 전용 페이지</a></li>
+                    <li><a href="#">서비스 이용 약관</a></li>
+                    <li><a href="#">개인정보 처리 방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">법적고지</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="ft_ill">
+            <img src="../../03.assets/index/ft_snow_1.svg" alt="snow1">
+            <img src="../../03.assets/index/ft_snow_2.svg" alt="snow2">
+            <img src="../../03.assets/index/footer_ill.svg" alt="main_ill">
+        </div>
+    </footer>
+
+</body>
+
+</html>

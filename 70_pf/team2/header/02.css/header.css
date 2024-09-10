@@ -1,0 +1,465 @@
+@charset "utf-8";
+
+header.mb.tb,
+header.pc {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    /* top 추가하는 이유는 안넣으면 스샷 찍을때 헤더가 중간으로 내려옴 */
+    z-index: 9990;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border-bottom: 1px solid var(--main2);
+    transition: .5s;
+}
+
+header input {
+    background: var(--white);
+}
+
+#mathfoor {
+    position: fixed;
+    opacity: 0;
+}
+
+#hd1 {
+    padding: 0 16px;
+}
+
+header.mb.tb>div {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header.mb.tb div.logo {
+    display: flex;
+    align-items: center;
+    width: 35px;
+}
+
+header.mb.tb .x_logo hr {
+    margin: 0;
+    width: 18px;
+    border: 2px solid var(--main1);
+}
+
+header.mb.tb .x_logo hr:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+
+header.mb.tb div.icon {
+    display: flex;
+    align-items: center;
+}
+
+header.mb.tb div.icon>div:not(:first-of-type) {
+    margin-left: 16px;
+}
+
+header.mb.tb .serch>div {
+    position: relative;
+    width: 18px;
+}
+
+header.mb.tb .serch input {
+    position: absolute;
+    height: 35px;
+    padding: 8px;
+    top: -40px;
+    right: 0;
+    transition: .3s;
+}
+
+header.mb.tb input.active {
+    position: absolute;
+    top: 40px;
+}
+
+header.mb.tb .my_page {
+    width: 24px;
+}
+
+#x_logo {
+    position: fixed;
+    right: 87px;
+    z-index: 9999;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#x_logo>div {
+    width: 25px;
+    height: 3px;
+    margin: 6px 0;
+    border-radius: 2px;
+    background: var(--main1);
+    transition: .5s;
+}
+
+#x_logo.active #bar1 {
+    transform: translate(0, 9px) rotate(-45deg);
+}
+
+#x_logo.active #bar2 {
+    opacity: 0;
+}
+
+#x_logo.active #bar3 {
+    transform: translate(0, -9px) rotate(45deg);
+}
+
+header.mb.tb>nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100%;
+    top: 40px;
+    right: -100%;
+    position: fixed;
+    z-index: 8000;
+    transition: .5s;
+    background: var(--white);
+}
+
+header.mb.tb>nav.active {
+    right: 0;
+}
+
+/* header mb,tb menu */
+header.mb.tb .nav_my {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    height: 82px;
+    border-bottom: 2px solid #ccc;
+}
+
+header.mb.tb .nav_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 92px;
+    height: 34px;
+    background: var(--main1);
+    border-radius: 15px;
+}
+
+header.mb.tb .nav_btn a {
+    color: var(--white);
+    font-size: 14px;
+}
+
+.mb_nav_left {
+    display: flex;
+    align-items: center;
+}
+
+.mb_nav_left a {
+    margin-left: 16px;
+    color: var(--text2);
+}
+
+header.mb.tb .main_menu {
+    position: relative;
+    transition: .3s;
+}
+
+header.mb.tb .main_menu>a {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 16px;
+    font-size: 16px;
+    color: var(--text2);
+}
+
+header.mb.tb .sub_menu {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: .3s;
+}
+
+header.mb.tb .sub_menu>li {
+    height: 45px;
+    line-height: 45px;
+}
+
+header.mb.tb .main_menu>a::after {
+    content: url(../03.assets/index/nav_under.png);
+}
+
+header.mb.tb .main_menu>a:hover::after {
+    content: url(../03.assets/index/nav_top.png);
+}
+
+header.mb.tb .main_menu:hover>a {
+    color: var(--main1);
+    font-weight: 700;
+}
+
+header.mb.tb .sub_menu>li>a {
+    width: 100%;
+    padding: 0 24px;
+    color: var(--main1);
+    font-weight: 700;
+}
+
+header.mb.tb #main_mb_1:hover #sub_mb_1 {
+    height: 135px;
+    opacity: 1;
+    overflow: visible;
+}
+
+header.mb.tb #main_mb_2:hover #sub_mb_2 {
+    height: 225px;
+    opacity: 1;
+    overflow: visible;
+}
+
+header.mb.tb #main_mb_3:hover #sub_mb_3,
+header.mb.tb #main_mb_5:hover #sub_mb_5 {
+    height: 90px;
+    opacity: 1;
+    overflow: visible;
+}
+
+header.mb.tb #main_mb_4:hover #sub_mb_4 {
+    height: 45px;
+    opacity: 1;
+    overflow: visible;
+}
+
+/* nav내의 하단 부분 */
+.nav_sub {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    background: var(--white);
+}
+
+.nav_sub ul {
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 24px;
+    padding: 16px;
+}
+
+.nav_sub ul a {
+    color: var(--text2);
+    font-size: 14px;
+}
+
+.nav_sub ul>li:not(:last-of-type)::after {
+    content: "|";
+    margin: 0 0 0 18px;
+}
+
+.kakao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px;
+    padding: 16px 32px;
+    background: var(--main1);
+}
+
+.kakao p {
+    color: var(--white);
+}
+
+.kakao a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 16px;
+    background: #FFD900;
+}
+
+.kakao a::before {
+    margin-top: 24px;
+    content: url(../03.assets/index/카카오톡_선물하기.svg);
+}
+
+.kakao a::after {
+    content: url(../03.assets/index/kakao_right.svg);
+}
+
+/* pc.header 가리기 */
+header.pc,
+header.pc>div.logo {
+    display: none;
+}
+
+/* 태블릿 */
+@media (min-width:768px) {}
+
+/* 데스크탑 */
+@media (min-width:1025px) {
+
+    /* 꺼내기 */
+    header.pc>div.logo {
+        display: flex;
+        margin-left: 200px;
+        box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.7);
+    }
+
+    header input {
+        background: none;
+    }
+
+    /* header */
+    header.pc {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+    }
+
+    header.pc div.logo2 {
+        display: flex;
+        align-items: center;
+        margin-right: 200px;
+    }
+
+    /* serch */
+    header.pc div.serch {
+        display: flex;
+    }
+
+    header.pc div.serch>input {
+        width: 185px;
+        height: 40px;
+        font-size: 16px;
+        border-bottom: 1px solid var(--main1);
+    }
+
+    header.pc div.serch>div {
+        width: 19px;
+    }
+
+    header.pc div.serch>div img {
+        margin-top: 8px;
+    }
+
+    /* my_page */
+    div.my_page {
+        width: 24px;
+        margin-left: 30px;
+    }
+
+    /* header.pc nav */
+    header.pc nav {
+        position: absolute;
+        left: 344px;
+    }
+
+    /* header.pc menu */
+
+    header.pc .main>.main_menu {
+        position: relative;
+        margin-right: 30px;
+    }
+
+    header.pc .main {
+        display: flex;
+    }
+
+    header.pc .main_menu>a {
+        padding: 8px 16px;
+    }
+
+    /* sub_menu 개별 left 위치 잡기 */
+    header.pc #sub_menu1 {
+        margin-left: -75px;
+    }
+
+    header.pc #sub_menu2 {
+        margin-left: -175px;
+    }
+
+    header.pc #sub_menu3 {
+        margin-left: -260px;
+    }
+
+    header.pc #sub_menu4 {
+        margin-left: -355px;
+    }
+
+    header.pc #sub_menu5 {
+        margin-left: -465px;
+    }
+
+    /* sub_menu */
+    header.pc .sub_menu {
+        width: 1000px;
+        height: 0;
+        display: flex;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+        z-index: 9900;
+        padding: 45px 0 0 80px;
+    }
+
+    header.pc .main_menu:hover .sub_menu {
+        height: 190px;
+        opacity: 1;
+        padding: 95px 0 0 80px;
+        visibility: visible;
+    }
+
+    header.pc .sub_menu::before {
+        position: absolute;
+        content: "";
+        width: 150vw;
+        height: 150px;
+        top: 38px;
+        left: -800px;
+        background: var(--main2);
+        z-index: -1;
+    }
+
+    /* header.pc sub_menu 위치 잡기 */
+    header.pc .sub_menu>li {
+        margin-right: 50px;
+    }
+
+    header.pc.down {
+        background: #ffffff79;
+        backdrop-filter: blur(5px);
+    }
+
+    header.pc .sub_menu a {
+        padding: 8px 16px;
+        border-radius: 5px;
+    }
+
+
+
+    /* 가리기 */
+    header.mb.tb {
+        display: none;
+    }
+
+}

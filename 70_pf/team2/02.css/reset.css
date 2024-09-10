@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+    cursor: url("../03.assets/index/mouse.png") 2 2, auto;
 }
 
 body,
@@ -13,7 +14,8 @@ ul {
     margin: 0;
 }
 
-ul {
+ul,
+li {
     padding: 0;
     list-style: none;
 }
@@ -34,11 +36,17 @@ video {
     width: 100%;
     max-width: 100%;
     height: auto;
+    vertical-align: middle;
 }
 
 input {
     border: none;
     background: none;
+}
+
+/* input 클릭 시 검은선 없애주는 css */
+input:focus {
+    outline: none;
 }
 
 button {

@@ -1,449 +1,522 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이벤트 설빙</title>
-    <link rel="icon" type="image/x-icon" href="event_images/sulbing_favicon.svg">
-    <!-- <link rel="stylesheet" href="../event_css/event.css"> -->
-    <script src="../../event/js/event.js" defer></script>
-    <link rel="stylesheet" href="../../02.css/reset.css">
-    <link rel="stylesheet" href="../../02.css/typo.css">
-    <link rel="stylesheet" href="../../02.css/header.css">
-    <link rel="stylesheet" href="../../02.css/sub/event.css">
-    
-    <script src="../../04.js/header.js"></script>
-  </head>
 
-  <body>
-     <!-- header pc -->
-     <header class="pc">
-      <div class="logo">
-          <div>
-              <a href="../../index.html">
-                  <img src="../../03.assets/index/logo.svg" alt="header_logo">
-              </a>
-          </div>
-      </div><!-- //logo -->
-      <nav>
-          <ul class="main">
-              <li class="main_menu" id="main_menu1">
-                  <a href="brand.html">브랜드</a>
-                  <ul class="sub_menu" id="sub_menu1">
-                      <li><a href="brand.html">브랜드</a></li>
-                      <li><a href="#">설빙 광고/영상</a></li>
-                      <li><a href="#">뉴스&공지사항</a></li>
-                  </ul><!-- //#sub1 -->
-              </li><!-- //#main1 -->
-              <li class="main_menu" id="main_menu2">
-                  <a href="menu.html">메뉴</a>
-                  <ul class="sub_menu" id="sub_menu2">
-                      <li><a href="menu.html">신제품</a></li>
-                      <li><a href="menu.html">설빙</a></li>
-                      <li><a href="menu.html">디저트</a></li>
-                      <li><a href="menu.html">음료</a></li>
-                      <li><a href="#">MD</a></li>
-                  </ul><!-- //#sub2 -->
-              </li><!-- //#main2 -->
-              <li class="main_menu" id="main_menu3">
-                  <a href="event.html">이벤트</a>
-                  <ul class="sub_menu" id="sub_menu3">
-                      <li><a href="event.html">이벤트</a></li>
-                      <li><a href="#">e쿠폰</a></li>
-                  </ul><!-- //#sub3 -->
-              </li><!-- //#main3 -->
-              <li class="main_menu" id="main_menu4">
-                  <a href="#main_s4">매장찾기</a>
-                  <ul class="sub_menu" id="sub_menu4">
-                      <li><a href="#main_s4">매장찾기</a></li>
-                  </ul><!-- //#sub4 -->
-              </li><!-- //#main4 -->
-              <li class="main_menu" id="main_menu5">
-                  <a href="faq.html">고객지원</a>
-                  <ul class="sub_menu" id="sub_menu5">
-                      <li><a href="faq.html">고객센터</a></li>
-                      <li><a href="#">제휴/제안</a></li>
-                  </ul><!-- //#sub5 -->
-              </li><!-- //#main5 -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 설빙</title>
+  <link rel="icon" href="../../pabicon.png">
 
-          </ul><!-- //.main -->
-      </nav><!-- //nav -->
-      <div class="logo2">
-          <div class="serch">
-              <input type="search">
-              <div><img src="../../03.assets/index/serch_ico.svg" alt="serch"></div>
-          </div><!-- //.serch -->
-          <div class="my_page">
-              <a href="login.html"><img src="../../03.assets/index/My_page_ico.svg" alt="my_page"></a>
-          </div>
+  <link rel="stylesheet" href="../../02.css/reset.css">
+  <link rel="stylesheet" href="../../02.css/typo.css">
+  <link rel="stylesheet" href="../../02.css/header.css">
+  <link rel="stylesheet" href="../../02.css/sub/event.css">
+  <link rel="stylesheet" href="../../02.css/footer.css">
+
+  <script src="../../04.js/header.js"></script>
+  <script src="../../04.js/sub/event.js" defer></script>
+  <script src="../../04.js/mouse.js"></script>
+</head>
+
+<body>
+  <!-- 이 p의 위치로 스크롤 모션 -->
+  <p id="mathfoor">1111</p>
+  <!-- header pc -->
+  <header class="pc">
+    <div class="logo">
+      <div>
+        <a href="../../index.html">
+          <img src="../../03.assets/index/logo.svg" alt="header_logo">
+        </a>
       </div>
-  </header><!-- //header pc -->
-  
-    <!-- header mb tb -->
-    <header class="mb tb">
-        <div id="hd1">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="../../03.assets/index/logo.svg" alt="header_logo">
-                </a>
-            </div>
-            <div class="icon">
-                <div id="x_logo">
-                    <div id="bar1"><!-- hambuger btn --></div>
-                    <div id="bar2"><!-- hambuger btn --></div>
-                    <div id="bar3"><!-- hambuger btn --></div>
-                </div>
-                <div class="serch">
-                    <div>
-                        <img src="../../03.assets/index/serch_ico.svg" alt="검색창">
-                    </div>
-                    <input type="text" placeholder="검색하기.">
-                </div>
-                <div class="my_page">
-                    <a href="login.html"><img src="../../03.assets/index/My_page_ico.svg" alt="마이페이지"></a>
-                </div>
-            </div>
-        </div><!-- //div -->
+    </div><!-- //logo -->
+    <nav>
+      <ul class="main">
+        <li class="main_menu" id="main_menu1">
+          <a href="brand.html">브랜드</a>
+          <ul class="sub_menu" id="sub_menu1">
+            <li><a href="brand.html">브랜드</a></li>
+            <li><a href="#">설빙 광고/영상</a></li>
+            <li><a href="#">뉴스&공지사항</a></li>
+          </ul><!-- //#sub1 -->
+        </li><!-- //#main1 -->
+        <li class="main_menu" id="main_menu2">
+          <a href="menu.html">메뉴</a>
+          <ul class="sub_menu" id="sub_menu2">
+            <li><a href="menu.html">신제품</a></li>
+            <li><a href="menu.html">설빙</a></li>
+            <li><a href="menu.html">디저트</a></li>
+            <li><a href="menu.html">음료</a></li>
+            <li><a href="#">MD</a></li>
+          </ul><!-- //#sub2 -->
+        </li><!-- //#main2 -->
+        <li class="main_menu" id="main_menu3">
+          <a href="event.html">이벤트</a>
+          <ul class="sub_menu" id="sub_menu3">
+            <li><a href="event.html">이벤트</a></li>
+            <li><a href="#">e쿠폰</a></li>
+          </ul><!-- //#sub3 -->
+        </li><!-- //#main3 -->
+        <li class="main_menu" id="main_menu4">
+          <a href="../../index.html">매장찾기</a>
+          <ul class="sub_menu" id="sub_menu4">
+            <li><a href="../../index.html">매장찾기</a></li>
+          </ul><!-- //#sub4 -->
+        </li><!-- //#main4 -->
+        <li class="main_menu" id="main_menu5">
+          <a href="faq.html">고객지원</a>
+          <ul class="sub_menu" id="sub_menu5">
+            <li><a href="faq.html">고객센터</a></li>
+            <li><a href="#">제휴/제안</a></li>
+          </ul><!-- //#sub5 -->
+        </li><!-- //#main5 -->
 
-        <!-- mobile nav -->
-        <nav>
-            <div id="mb_container">
-                <div class="nav_my">
-                    <div class="mb_nav_left">
-                        <div>
-                            <img src="../../03.assets/index/nav_my.png" alt="my">
-                        </div>
-                        <p class="p2">
-                            <a href="login.html">로그인을 해주세요.</a>
-                        </p>
-                    </div>
-                    <div class="nav_btn"><a href="login.html">로그인</a></div>
-                </div>
-                <ul class="main">
-                    <li class="main_menu" id="main_mb_1">
-                        <a href="#">브랜드</a>
-                        <ul class="sub_menu" id="sub_mb_1">
-                            <li><a href="brand.html">브랜드</a></li>
-                            <li><a href="#">설빙 광고/영상</a></li>
-                            <li><a href="#">뉴스&공지사항</a></li>
-                        </ul>
-                    </li>
-                    <li class="main_menu" id="main_mb_2">
-                        <a href="#">메뉴</a>
-                        <ul class="sub_menu" id="sub_mb_2">
-                            <li><a href="menu.html">신제품</a></li>
-                            <li><a href="menu.html">설빙</a></li>
-                            <li><a href="menu.html">디저트</a></li>
-                            <li><a href="menu.html">음료</a></li>
-                            <li><a href="#">MD</a></li>
-                        </ul>
-                    </li>
-                    <li class="main_menu" id="main_mb_3">
-                        <a href="#">이벤트</a>
-                        <ul class="sub_menu" id="sub_mb_3">
-                            <li><a href="event.html">이벤트</a></li>
-                            <li><a href="#">e쿠폰</a></li>
-                        </ul>
-                    </li>
-                    <li class="main_menu" id="main_mb_4">
-                        <a href="#main_s4">매장찾기</a>
-                        <ul class="sub_menu" id="sub_mb_4">
-                            <li><a href="#main_s4">매장찾기</a></li>
-                        </ul>
-                    </li>
-                    <li class="main_menu" id="main_mb_5">
-                        <a href="#">고객지원</a>
-                        <ul class="sub_menu" id="sub_mb_5">
-                            <li><a href="faq.html">고객지원</a></li>
-                            <li><a href="#">제휴/제안</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="nav_sub">
-                <ul>
-                    <li><a href="faq.html">고객센터</a></li>
-                    <li><a href="faq.html">공지사항</a></li>
-                    <li><a href="#">보도자료</a></li>
-                    <li><a href="#">칭찬점포</a></li>
-                </ul>
-                <div class="kakao">
-                    <p class="p2">설빙 선물하기</p>
-                    <a href="#">카카오톡 선물하기</a>
-                </div>
-            </div>
-        </nav><!-- //nav -->
-
-    </header><!-- //header mb tb -->
-    <!-- //header -->
-     
-    <!-- 이벤트 -->
-    <div id="event-container">
-      <div class="event-wrap">
-        <h2><span>이벤트</span>프로모션</h2>
-        <div class="event-promotion" id="promotion-s">
-          <div class="main-image">
-            <div class="slideImages">
-              <a href="#"
-                ><img
-                  src="../../event/event_images/event-prom.png"
-                  class="active"
-                  alt="event image1"></a>
-              <a href="#"
-                ><img src="../../event/event_images/event01.svg" alt="event image2"></a>
-              <a href="#"
-                ><img src="../../event/event_images/event02.svg" alt="event image3"></a>
-              <a href="#"
-                ><img src="../../event/event_images/event03.svg" alt="event image4"></a>
-              <a href="#"
-                ><img src="../../event/event_images/event04.svg" alt="event image5"></a>
-            </div>
-            <div class="imageText">
-              <p class="text1">
-                <span>2024.07.01~</span> <br /><br />딸기 팥빙수 출시
-              </p>
-              <p class="text2">
-                신선함과 담백함을 그대로 담아 <br />맛도 영양도 사로잡은 딸기
-                팥빙수
-              </p>
-              <p class="text3"><a href="#">자세히 보기</a></p>
-            </div>
-          </div>
-          <div class="evtBtn">
-            <div>
-              <span class="next-btn" href="#"
-                ><img src="../../event/event_images/next333.svg" alt="next button"></span>
-            </div>
-            <div>
-              <span class="prev-btn" href="#"
-                ><img src="../../event/event_images/prev333.svg" alt="prev button"></span>
-            </div>
-          </div>
-          <div class="dots-container">
-            <div
-              class="dot eventon"
-              data-attr="0"
-              onclick="imageSwitch(this)"
-            ></div>
-            <div class="dot" data-attr="1" onclick="imageSwitch(this)"></div>
-            <div class="dot" data-attr="2" onclick="imageSwitch(this)"></div>
-            <div class="dot" data-attr="3" onclick="imageSwitch(this)"></div>
-            <div class="dot" data-attr="4" onclick="imageSwitch(this)"></div>
-          </div>
-        </div>
-        <div class="event-details" id="details-s">
-          <div id="tabs-wrap">
-            <ul>
-              <li class="round1"><a href="#total-list">전체</a></li>
-              <li><a href="#ongoing-list">진행중인 이벤트</a></li>
-              <li class="round2"><a href="#closing-list">종료된 이벤트</a></li>
-            </ul>
-          </div>
-          <div id="content-wrap">
-            <div id="total-list" class="on">
-              <ul>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb04.svg" alt="images"></a>
-                  <p>설빙 도리화가이벤트</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb05.svg" alt="image"></a>
-                  <p>설빙 Facebook 문화이벤트</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb02.svg" alt="image"></a>
-                  <p>설빙 & 오늘의 수프 이벤트</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb03.svg" alt="image"></a>
-                  <p>설빙 가래떡데이 이벤트</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb01.svg" alt="image"></a>
-                  <p>설빙 리솜 리조트이벤트</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb02.svg" alt="image"></a>
-                  <p>설빙 감사이벤트</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-              </ul>
-            </div>
-            <div id="ongoing-list" class="ongoing-s">
-              <ul>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb01.svg" alt="image"></a>
-                  <p>설빙 문화이벤트</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb02.svg" alt="image"></a>
-                  <p>설빙 감사이벤트</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb05.svg" alt="image"></a>
-                  <p>한딸기 감사</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb03.svg" alt="image"></a>
-                  <p>설빙 문화이벤트</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb03.svg" alt="image"></a>
-                  <p>설빙 문화이벤트</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb04.svg" alt="image"></a>
-                  <p>설빙 감사이벤트</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-              </ul>
-            </div>
-            <div id="closing-list" class="closing-s">
-              <ul>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb01.svg" alt="image"></a>
-                  <p>설빙 문화이벤트</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb02.svg" alt="image"></a>
-                  <p>설빙 감사이벤트</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb03.svg" alt="image"></a>
-                  <p>한딸기 감사</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb04.svg" alt="image"></a>
-                  <p>설빙 문화이벤트</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb05.svg" alt="image"></a>
-                  <p>한딸기 감사</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../event/event_images/event-thumb01.svg" alt="image"></a>
-                  <p>설빙 문화이벤트</p>
-                  <span>2024.07.01~2024.07.24</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div id="eventmore-wrap" class="eventmore-s">
-          <div class="eventmore-items event-active">
-            <ul>
-              <li>
-                <a href="#"
-                  ><img src="../../event/event_images/event-thumb01.svg" alt="image"></a>
-                <p>설빙 문화이벤트</p>
-                <span>이벤트가 종료되었습니다</span>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="../../event/event_images/event-thumb02.svg" alt="image"></a>
-                <p>설빙 감사이벤트</p>
-                <span>이벤트가 종료되었습니다</span>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="../../event/event_images/event-thumb03.svg" alt="image"></a>
-                <p>한딸기 감사</p>
-                <span>이벤트가 종료되었습니다</span>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="../../event/event_images/event-thumb04.svg" alt="image"></a>
-                <p>설빙 문화이벤트</p>
-                <span>이벤트가 종료되었습니다</span>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="../../event/event_images/event-thumb05.svg" alt="image"></a>
-                <p>한딸기 감사</p>
-                <span>이벤트가 종료되었습니다</span>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="../../event/event_images/event-thumb01.svg" alt="image"></a>
-                <p>설빙 문화이벤트</p>
-                <span>이벤트가 종료되었습니다</span>
-              </li>
-
-              <li>
-                <a href="#"
-                  ><img src="../../event/event_images/event-thumb01.svg" alt="image"></a>
-                <p>설빙 문화이벤트</p>
-                <span>이벤트가 종료되었습니다</span>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="../../event/event_images/event-thumb02.svg" alt="image"></a>
-                <p>설빙 감사이벤트</p>
-                <span>이벤트가 종료되었습니다</span>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="../../event/event_images/event-thumb03.svg" alt="image"></a>
-                <p>한딸기 감사</p>
-                <span>이벤트가 종료되었습니다</span>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="../../event/event_images/event-thumb04.svg" alt="image"></a>
-                <p>설빙 문화이벤트</p>
-                <span>이벤트가 종료되었습니다</span>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="../../event/event_images/event-thumb05.svg" alt="image"></a>
-                <p>한딸기 감사</p>
-                <span>이벤트가 종료되었습니다</span>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="../../event/event_images/event-thumb01.svg" alt="image"></a>
-                <p>설빙 문화이벤트</p>
-                <span>이벤트가 종료되었습니다</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <button class="eventMoreBtn">더보기</button>
+      </ul><!-- //.main -->
+    </nav><!-- //nav -->
+    <div class="logo2">
+      <div class="serch">
+        <input type="search">
+        <div><img src="../../03.assets/index/serch_ico.svg" alt="serch"></div>
+      </div><!-- //.serch -->
+      <div class="my_page">
+        <a href="login.html"><img src="../../03.assets/index/My_page_ico.svg" alt="my_page"></a>
       </div>
     </div>
-   
-  </body>
+  </header><!-- //header pc -->
+
+  <!-- header mb tb -->
+  <header class="mb tb">
+    <div id="hd1">
+      <div class="logo">
+        <a href="index.html">
+          <img src="../../03.assets/index/logo.svg" alt="header_logo">
+        </a>
+      </div>
+      <div class="icon">
+        <div id="x_logo">
+          <div id="bar1"><!-- hambuger btn --></div>
+          <div id="bar2"><!-- hambuger btn --></div>
+          <div id="bar3"><!-- hambuger btn --></div>
+        </div>
+        <div class="serch">
+          <div>
+            <img src="../../03.assets/index/serch_ico.svg" alt="검색창">
+          </div>
+          <input type="text" placeholder="검색하기.">
+        </div>
+        <div class="my_page">
+          <a href="login.html"><img src="../../03.assets/index/My_page_ico.svg" alt="마이페이지"></a>
+        </div>
+      </div>
+    </div><!-- //div -->
+
+    <!-- mobile nav -->
+    <nav>
+      <div id="mb_container">
+        <div class="nav_my">
+          <div class="mb_nav_left">
+            <div>
+              <img src="../../03.assets/index/nav_my.png" alt="my">
+            </div>
+            <p class="p2">
+              <a href="login.html">로그인을 해주세요.</a>
+            </p>
+          </div>
+          <div class="nav_btn"><a href="login.html">로그인</a></div>
+        </div>
+        <ul class="main">
+          <li class="main_menu" id="main_mb_1">
+            <a href="#">브랜드</a>
+            <ul class="sub_menu" id="sub_mb_1">
+              <li><a href="brand.html">브랜드</a></li>
+              <li><a href="#">설빙 광고/영상</a></li>
+              <li><a href="#">뉴스&공지사항</a></li>
+            </ul>
+          </li>
+          <li class="main_menu" id="main_mb_2">
+            <a href="#">메뉴</a>
+            <ul class="sub_menu" id="sub_mb_2">
+              <li><a href="menu.html">신제품</a></li>
+              <li><a href="menu.html">설빙</a></li>
+              <li><a href="menu.html">디저트</a></li>
+              <li><a href="menu.html">음료</a></li>
+              <li><a href="#">MD</a></li>
+            </ul>
+          </li>
+          <li class="main_menu" id="main_mb_3">
+            <a href="#">이벤트</a>
+            <ul class="sub_menu" id="sub_mb_3">
+              <li><a href="event.html">이벤트</a></li>
+              <li><a href="#">e쿠폰</a></li>
+            </ul>
+          </li>
+          <li class="main_menu" id="main_mb_4">
+            <a href="../../index.html">매장찾기</a>
+            <ul class="sub_menu" id="sub_mb_4">
+              <li><a href="../../index.html">매장찾기</a></li>
+            </ul>
+          </li>
+          <li class="main_menu" id="main_mb_5">
+            <a href="#">고객지원</a>
+            <ul class="sub_menu" id="sub_mb_5">
+              <li><a href="faq.html">고객지원</a></li>
+              <li><a href="#">제휴/제안</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="nav_sub">
+        <ul>
+          <li><a href="faq.html">고객센터</a></li>
+          <li><a href="faq.html">공지사항</a></li>
+          <li><a href="#">보도자료</a></li>
+          <li><a href="#">칭찬점포</a></li>
+        </ul>
+        <div class="kakao">
+          <p class="p2">설빙 선물하기</p>
+          <a href="#">카카오톡 선물하기</a>
+        </div>
+      </div>
+    </nav><!-- //nav -->
+
+  </header><!-- //header mb tb -->
+  <!-- //header -->
+
+  <!-- 이벤트 -->
+  <div id="event-container">
+    <div class="event-wrap">
+      <h2><span>이벤트</span>프로모션</h2>
+      <div class="event-promotion" id="promotion-s">
+        <div class="main-image">
+          <div class="slideImages">
+            <a href="#"><img src="../../03.assets/sub/event/event-prom.png" class="active" alt="event image1"></a>
+            <a href="#"><img src="../../03.assets/sub/event/event01.svg" alt="event image2"></a>
+            <a href="#"><img src="../../03.assets/sub/event/event02.svg" alt="event image3"></a>
+            <a href="#"><img src="../../03.assets/sub/event/event03.svg" alt="event image4"></a>
+            <a href="#"><img src="../../03.assets/sub/event/event04.svg" alt="event image5"></a>
+          </div>
+          <div class="imageText">
+            <p class="text1">
+              <span>2024.07.01~</span> <br /><br />딸기 팥빙수 출시
+            </p>
+            <p class="text2">
+              신선함과 담백함을 그대로 담아 <br />맛도 영양도 사로잡은 딸기
+              팥빙수
+            </p>
+            <p class="text3"><a href="#">자세히 보기</a></p>
+          </div>
+        </div>
+        <div class="evtBtn">
+          <div>
+            <span class="next-btn" href="#"><img src="../../03.assets/sub/event/next333.svg" alt="next button"></span>
+          </div>
+          <div>
+            <span class="prev-btn" href="#"><img src="../../03.assets/sub/event/prev333.svg" alt="prev button"></span>
+          </div>
+        </div>
+        <div class="dots-container">
+          <div class="dot eventon" data-attr="0" onclick="imageSwitch(this)"></div>
+          <div class="dot" data-attr="1" onclick="imageSwitch(this)"></div>
+          <div class="dot" data-attr="2" onclick="imageSwitch(this)"></div>
+          <div class="dot" data-attr="3" onclick="imageSwitch(this)"></div>
+          <div class="dot" data-attr="4" onclick="imageSwitch(this)"></div>
+        </div>
+      </div>
+      <div class="event-details" id="details-s">
+        <div id="tabs-wrap">
+          <ul>
+            <li class="round1"><a href="#total-list">전체</a></li>
+            <li><a href="#ongoing-list">진행중인 이벤트</a></li>
+            <li class="round2"><a href="#closing-list">종료된 이벤트</a></li>
+          </ul>
+        </div>
+        <div id="content-wrap">
+          <div id="total-list" class="on">
+            <ul>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb04.svg" alt="images"></a>
+                <p>설빙 도리화가이벤트</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb05.svg" alt="image"></a>
+                <p>설빙 Facebook 문화이벤트</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb02.svg" alt="image"></a>
+                <p>설빙 & 오늘의 수프 이벤트</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb03.svg" alt="image"></a>
+                <p>설빙 가래떡데이 이벤트</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb01.svg" alt="image"></a>
+                <p>설빙 리솜 리조트이벤트</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb02.svg" alt="image"></a>
+                <p>설빙 감사이벤트</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+            </ul>
+          </div>
+          <div id="ongoing-list" class="ongoing-s">
+            <ul>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb01.svg" alt="image"></a>
+                <p>설빙 문화이벤트</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb02.svg" alt="image"></a>
+                <p>설빙 감사이벤트</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb05.svg" alt="image"></a>
+                <p>한딸기 감사</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb03.svg" alt="image"></a>
+                <p>설빙 문화이벤트</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb03.svg" alt="image"></a>
+                <p>설빙 문화이벤트</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb04.svg" alt="image"></a>
+                <p>설빙 감사이벤트</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+            </ul>
+          </div>
+          <div id="closing-list" class="closing-s">
+            <ul>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb01.svg" alt="image"></a>
+                <p>설빙 문화이벤트</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb02.svg" alt="image"></a>
+                <p>설빙 감사이벤트</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb03.svg" alt="image"></a>
+                <p>한딸기 감사</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb04.svg" alt="image"></a>
+                <p>설빙 문화이벤트</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb05.svg" alt="image"></a>
+                <p>한딸기 감사</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+              <li>
+                <a href="#"><img src="../../03.assets/sub/event/event-thumb01.svg" alt="image"></a>
+                <p>설빙 문화이벤트</p>
+                <span>2024.07.01~2024.07.24</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="eventmore-wrap" class="eventmore-s">
+        <div class="eventmore-items event-active">
+          <ul>
+            <li>
+              <a href="#"><img src="../../03.assets/sub/event/event-thumb01.svg" alt="image"></a>
+              <p>설빙 문화이벤트</p>
+              <span>이벤트가 종료되었습니다</span>
+            </li>
+            <li>
+              <a href="#"><img src="../../03.assets/sub/event/event-thumb02.svg" alt="image"></a>
+              <p>설빙 감사이벤트</p>
+              <span>이벤트가 종료되었습니다</span>
+            </li>
+            <li>
+              <a href="#"><img src="../../03.assets/sub/event/event-thumb03.svg" alt="image"></a>
+              <p>한딸기 감사</p>
+              <span>이벤트가 종료되었습니다</span>
+            </li>
+            <li>
+              <a href="#"><img src="../../03.assets/sub/event/event-thumb04.svg" alt="image"></a>
+              <p>설빙 문화이벤트</p>
+              <span>이벤트가 종료되었습니다</span>
+            </li>
+            <li>
+              <a href="#"><img src="../../03.assets/sub/event/event-thumb05.svg" alt="image"></a>
+              <p>한딸기 감사</p>
+              <span>이벤트가 종료되었습니다</span>
+            </li>
+            <li>
+              <a href="#"><img src="../../03.assets/sub/event/event-thumb01.svg" alt="image"></a>
+              <p>설빙 문화이벤트</p>
+              <span>이벤트가 종료되었습니다</span>
+            </li>
+
+            <li>
+              <a href="#"><img src="../../03.assets/sub/event/event-thumb01.svg" alt="image"></a>
+              <p>설빙 문화이벤트</p>
+              <span>이벤트가 종료되었습니다</span>
+            </li>
+            <li>
+              <a href="#"><img src="../../03.assets/sub/event/event-thumb02.svg" alt="image"></a>
+              <p>설빙 감사이벤트</p>
+              <span>이벤트가 종료되었습니다</span>
+            </li>
+            <li>
+              <a href="#"><img src="../../03.assets/sub/event/event-thumb03.svg" alt="image"></a>
+              <p>한딸기 감사</p>
+              <span>이벤트가 종료되었습니다</span>
+            </li>
+            <li>
+              <a href="#"><img src="../../03.assets/sub/event/event-thumb04.svg" alt="image"></a>
+              <p>설빙 문화이벤트</p>
+              <span>이벤트가 종료되었습니다</span>
+            </li>
+            <li>
+              <a href="#"><img src="../../03.assets/sub/event/event-thumb05.svg" alt="image"></a>
+              <p>한딸기 감사</p>
+              <span>이벤트가 종료되었습니다</span>
+            </li>
+            <li>
+              <a href="#"><img src="../../03.assets/sub/event/event-thumb01.svg" alt="image"></a>
+              <p>설빙 문화이벤트</p>
+              <span>이벤트가 종료되었습니다</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button class="eventMoreBtn">더보기</button>
+    </div><!-- //event.wrap -->
+    <!-- 푸터 -->
+    <footer>
+      <div id="ft_main1">
+        <div class="ft_cont1">
+          <div class="ft_title_bx">
+            <div class="ft_logo">
+              <a href="../../index.html">
+                <img src="../../03.assets/index/sulbing_footer_logo.png" alt="footer_logo">
+              </a>
+            </div>
+            <button>창업안내</button>
+          </div>
+          <div id="ft_sns">
+            <a href="#"><img src="../../03.assets/index/youtube_ico.svg" alt="유튜브"></a>
+            <a href="#"><img src="../../03.assets/index/insta_ico.svg" alt="인스타"></a>
+            <a href="#"><img src="../../03.assets/index/facebook_ico.svg" alt="페이스북"></a>
+          </div>
+          <div class="ft_bx1">
+            <p class="p1">
+              본사주소 : 서울특별시 중구 소월로 10 단암빌딩 5층
+            </p>
+            <div class="ft_bx2">
+              <p class="p1">사업자 등록번호 : 602-81-62460</p>
+              <p class="p1">법인명 : (주)설빙</p>
+            </div>
+            <div class="ft_bx2">
+              <p class="p1">TEL : 02-3401-7900</p>
+              <p class="p1">팩스 : 02-447-8455</p>
+            </div>
+            <p class="p1">
+              COPYRIGHT ⓒ 2024 BRKOREA COMPANY ALL RIGHTS RESERVED
+            </p>
+            <ul class="ft_menu1">
+              <li><a href="login.html">로그인</a></li>
+              <li><a href="sign_up.html">회원가입</a></li>
+              <li><a href="faq.html">고객센터</a></li>
+            </ul>
+          </div><!-- //ft_bx1 -->
+
+          <hr>
+        </div><!-- //ft_cont1 -->
+        <div id="ft_menu2">
+          <ul><!-- ft_mn -> footer menu / ft_sn -> footer submenu 줄임말이다. -->
+            <li class="ft_mn">
+              <a href="brand.html">브랜드</a>
+              <ul class="ft_sn">
+                <li><a href="brand.html">브랜드</a></li>
+                <li><a href="#">설빙 광고/영상</a></li>
+                <li><a href="#">뉴스&공지사항</a></li>
+              </ul>
+            </li>
+            <li class="ft_mn">
+              <a href="menu.html">메뉴</a>
+              <ul class="ft_sn">
+                <li><a href="#">신제품</a></li>
+                <li><a href="#">설빙</a></li>
+                <li><a href="#">디저트</a></li>
+                <li><a href="#">음료</a></li>
+                <li><a href="#">MD</a></li>
+              </ul>
+            </li>
+            <li class="ft_mn">
+              <a href="event.html">이벤트</a>
+              <ul class="ft_sn">
+                <li><a href="event.html">이벤트</a></li>
+                <li><a href="#">e쿠폰</a></li>
+              </ul>
+            </li>
+            <li class="ft_mn">
+              <a href="#">매장찾기</a>
+              <ul class="ft_sn">
+                <li><a href="#">매장찾기</a></li>
+              </ul>
+            </li>
+            <li class="ft_mn">
+              <a href="faq.html">고객지원</a>
+              <ul class="ft_sn">
+                <li><a href="faq.html">고객센터</a></li>
+                <li><a href="#">제휴/제안</a></li>
+              </ul>
+            </li><!-- //.ft_mn -->
+          </ul>
+          <div id="ft_pc_sns">
+            <a href="#"><img src="../../03.assets/index/youtube_ico.svg" alt="유튜브"></a>
+            <a href="#"><img src="../../03.assets/index/insta_ico.svg" alt="인스타"></a>
+            <a href="#"><img src="../../03.assets/index/facebook_ico.svg" alt="페이스북"></a>
+          </div>
+        </div><!-- //#ft_menu2 -->
+      </div>
+      <!-- //#ft_main1 -->
+
+      <div id="ft_main2">
+        <div class="ft_btn"><button>창업안내</button></div>
+        <div class="ft2_bx2">
+          <ul>
+            <li><a href="faq.html">고객센터</a></li>
+            <li><a href="#">경영주 전용 페이지</a></li>
+            <li><a href="#">서비스 이용 약관</a></li>
+            <li><a href="#">개인정보 처리 방침</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="#">법적고지</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="ft_ill">
+        <img src="../../03.assets/index/ft_snow_1.svg" alt="snow1">
+        <img src="../../03.assets/index/ft_snow_2.svg" alt="snow2">
+        <img src="../../03.assets/index/footer_ill.svg" alt="main_ill">
+      </div>
+    </footer>
+  </div>
+
+
+</body>
+
 </html>

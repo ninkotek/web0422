@@ -102,6 +102,10 @@ header input {
     background: var(--main1);
 }
 
+.s4_serch h3 {
+    font-family: "프리텐다드", sans-serif;
+}
+
 /* 회원가입 창 font */
 .su_title {
     font-family: '온글잎 은별', sans-serif;
@@ -157,6 +161,9 @@ footer button {
 }
 
 /* 팀원 별 추가 font */
+.point {
+    color: var(--point);
+}
 
 /* 김은지님 */
 #FAQ_top h2,

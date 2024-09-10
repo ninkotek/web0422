@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+@import url(style_guide.css);
+
+@font-face {
+    font-family: 'HS새마을체';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSSaemaul-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '온글잎 은별';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_eunbyul21-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '프리텐다드';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    font-size: 10px;
+    color: var(--text1);
+}
+
+h1 {
+    font-family: 'HS새마을체', sans-serif;
+    font-size: 4.8em;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'HS새마을체', sans-serif;
+    font-size: 3.2em;
+}
+
+h3 {
+    font-family: 'HS새마을체', sans-serif;
+    font-size: 2.4em;
+}
+
+p {
+    font-family: '프리텐다드', sans-serif;
+    line-height: 1.5;
+}
+
+p.p1 {
+    font-size: 1.2em;
+}
+
+p.p2 {
+    font-size: 1.4em;
+}
+
+p.p3 {
+    font-size: 1.6em;
+}
+
+p.p4 {
+    font-size: 1.8em;
+}
+
+a {
+    font-family: "프리텐다드", sans-serif;
+}
+
+/* 추가 폰트 */
+/* header nav-font */
+header {
+    font-family: '프리텐다드', sans-serif;
+}
+
+.main_menu a {
+    font-size: 13px;
+    color: var(--text1);
+}
+
+.sub_menu_title a {
+    font-size: 22px;
+    color: var(--text1);
+}
+
+.sub_menu a {
+    font-size: 16px;
+    color: var(--text1);
+}
+
+.sub_menu a:hover {
+    font-size: 16px;
+    color: var(--point);
+}
+
+/* 회원가입 창 font */
+.su_title {
+    font-family: '온글잎 은별', sans-serif;
+    font-size: 3.2em;
+}
+
+/* footer */
+/* footer button */
+footer button {
+    font-family: '프리텐다드', sans-serif;
+    font-weight: 700;
+}
+
+.ft_title_bx button {
+    font-size: 14px;
+}
+
+#ft_main2 button {
+    font-size: 24px;
+}
+
+.ft_menu1 li a {
+    font-size: 14px;
+}
+
+.ft_menu1 li:first-child a {
+    font-weight: 700;
+    color: var(--point);
+}
+
+#ft_menu2 {
+    text-align: right;
+}
+
+#ft_menu2 a {
+    font-size: 1.4rem;
+    color: var(--main1);
+}
+
+.ft_mn>a {
+    font-weight: 700;
+}
+
+/* footer 2 */
+
+.ft2_bx2 li a {
+    font-size: 1.4rem;
+}
+
+.ft2_bx2 li:nth-of-type(4) a {
+    font-weight: 700;
+    color: var(--point);
+}
+
+/* 팀원 별 추가 font */
+
+/* 김은지님 */
+#FAQ_top h2,
+#menu_top h2 {
+    font-size: 80px;
+}
