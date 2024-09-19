@@ -203,7 +203,9 @@ nav a {
 .edu h3{
     margin-top: 40px;
 }
-
+.home-description {
+    width: 900px;   
+}
 .home-description p span {
 
    font-weight: 600;
