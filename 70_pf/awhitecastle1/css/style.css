@@ -626,7 +626,7 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: -400px;
+        /* margin-top: -400px; */
     }
 
     .sns-icons {
