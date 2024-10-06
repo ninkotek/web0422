@@ -146,6 +146,12 @@ section {
     color: tomato;
     font-weight: 500;     
 }
+.workText{
+    font-size: 14px;
+    color: #333;
+    padding: 0 16px;
+   
+}
 
 .home-card {
     display: grid;
