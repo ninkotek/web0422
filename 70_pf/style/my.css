@@ -126,8 +126,25 @@ section {
 .about p {
     text-indent: 32px;
 }
+.description1 h3{
+    padding-top: 20px;
+}
 .description1 p {
     text-indent: 30px;
+}
+.details{
+    transform: translateX(30px);
+}
+.details::before {
+    content: "★";
+ 
+}
+.details a{
+    font-size: 2rem;      
+}
+.details a:hover{
+    color: tomato;
+    font-weight: 500;     
 }
 
 .home-card {
