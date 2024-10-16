@@ -140,7 +140,7 @@ section {
  
 }
 .details a{
-    font-size: 2rem;      
+    font-size: 1.5rem;      
 }
 .details a:hover{
     color: tomato;
@@ -196,8 +196,7 @@ footer, footer p {
 }
 
 @media (min-width:992px) {
-    header {
- 
+    header { 
         background: url(../assets/bg-light.png) no-repeat 50% 50%/cover fixed;
         line-height: 200px;
     }
